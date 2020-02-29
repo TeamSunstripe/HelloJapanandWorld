@@ -1,11 +1,116 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<title>HelloWorld!!</title>
+<title>Hello World!!</title>
 </head>
+<style>
+    * {
+        margin : 0;
+        padding: 0;
+    }
+    body {
+        background-color:rgba(244,244,255,0.1);
+    }
+    .bg-img{
+        left: 0;
+        background-image:url(https://www.hdwallpapers.in/walls/morning_universe-normal.jpg);             /* 画像のURLを指定       */
+        background-repeat:  no-repeat;             
+        width:100%;
+        /*height:400px;*/
+    }
+    h1 {
+        padding-top: 2%;
+    }
+    h2 {
+        
+    }
+    h2 {
+        
+    }
+    p {
+        padding: 2%;
+    }
+
+    .title  {
+        color: #364e96;/*文字色*/
+        padding: 0.5em 0;/*上下の余白*/
+        border-top: solid 3px #364e96;/*上線*/
+        border-bottom: solid 3px #364e96;/*下線*/
+    }
+    
+    header {
+        padding-left : 5%;
+        background-color:rgba(0,0,255,0.3);
+    }
+    nav {
+        background-color:rgba(0,0,255,0.3);
+        color: white;
+    }
+    article {
+
+        padding-top : 10%;
+        background-color:rgba(255,255,255,0.8);
+    }
+    article:hover{
+
+        padding-top : 10%;
+        background-color:rgba(255,255,255,0.1);
+    }
+    aside {
+
+    }
+
+    main {
+        background-color: black;
+        background-image:url(https://www.1zoom.me/big2/13/239352-Sepik.jpg);
+        background-repeat:  no-repeat;             
+        width:100%;
+
+        color: white;
+        height: 400px;
+    }
+    section {
+        background-color:rgba(255,255,255,0.5);
+        padding-left : 5%;
+    }
+    .aside-list {
+        padding-left : 5%;
+    }
+    .button:before{
+        display: block;
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+        }
+    .button:hover{
+        background-color: #f00;
+    }
+    .float-left30 {
+        float: left;
+        width: 30%;
+        height: 400px;
+    }
+    .float-center40 {
+        float: left;
+        width: 40%;
+        height: 400px;
+    }
+    .float-right30 {
+        float: right;
+        width: 30%;
+        height: 400px;
+    }
+    .clearline {
+        clear: both;
+    }
+    </style>
 <body>
+    <aside class="bg-img">
     <header>
-        <h1>HelloWorld!!</h1>
+        <h1>Hello World!!</h1>
     </header>
     <section>
         <h2>使い方</h2>
@@ -34,62 +139,65 @@
     </section>
         
     <section>
-        <h1>HTML / CSS / JavaScript</h1>
+        <h1 class="title">HTML / CSS / JavaScript</h1>
         ./html/
     </section>
 
     <section>
-        <h1>PHP</h1>
+        <h1 class="title">PHP</h1>
         ./php/
     </section>
 
     <section>
-        <h1>PHP</h1>
+        <h1 class="title">PHP</h1>
         ./php/
     </section>
 
     <section>
-        <h1>Objective-C</h1>
+        <h1 class="title">Objective-C</h1>
         ./iOS/ObjectiveC/
     </section>
 
     <section>
-        <h1>Swift</h1>
+        <h1 class="title">Swift</h1>
         ./iOS/ObjectiveC/
     </section>
          
     <section>
-        <h1>Java</h1>
+        <h1 class="title">Java</h1>
         ./Android/Java/
     </section>
          
     <section>
-        <h1>その他</h1>
+        <h1 class="title">その他</h1>
         ./other/
     </section>
-         
+    
+    </aside>
+
+    <aside>
     <section>
         <p>様々なジャンルでみんなでチェックして、コードを見てもらう習慣を Githubの良さはいつでもどこでもネットで見れます。</p>
     </section>
 
     <section>
-        <h1>Issues で みんなからアドバイス!!</h1>
+        <h1 class="title">Issues で みんなからアドバイス!!</h1>
         <p>あなたのIssues を作って、週の目的を明確に決めていきます。</p>
     </section>
 
     <section>
-        <h1>PullRequests でみんなからコードチェック!!</h1>
+        <h1 class="title">PullRequests でみんなからコードチェック!!</h1>
         <p>あなたのコードをみんなでコードレビュー、問題解決やコードの見方</p>
     </section>
 
     <section>
-        <h1>まずはじめに</h1>
+        <h1 class="title">まずはじめに</h1>
         <p>自分のブランチを切って、自分のフォルダーで作業してください。 それぞれのフォルダーはこちらで管理していくので、他人のフォルダーを消すのはNGです。 まずは、プロフィールページを作成していきましょう！！</p>
     </section>
 
 
     <section>
-        <h1>プログラミング学習のルーティン</h1>
+        <h1 class="title">プログラミング学習のルーティン</h1>
         <ul>
         <li>（1）プログラミング 定義・用語・規則 を学びます</li>
         <li>（2）プログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
@@ -102,7 +210,7 @@
 
 
     <section>
-        <h1>ブログラミング学習のルーティン</h1>
+        <h1 class="title">ブログラミング学習のルーティン</h1>
         <ul>
         <li>（1）ブログラミング 定義・用語・規則 を学びます</li>
         <li>（2）ブログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
@@ -112,6 +220,9 @@
         </ul>
         <p>これの繰り返し(2)へ</p>
     </section>
+</aside>
+
+<aside>
 
     <section>
         困ったらここにつぶやこう！ プログラミングSOS
@@ -123,30 +234,33 @@
         完全公開にしているのでシェアしたものに関しては、みんなのものになるので、個人情報やコンプライアンスを注意をお願いいたします。
     </section>
 
-    <h1>記事一覧</h1>
+</aside>
+
+<aside class="aside-list">
+    <h1 class="title">記事一覧</h1>
     <p>みんながおすすめするブログ・ツール</p>
 
-    <h3>ツール一覧</h3>
+    <h3 class="title">ツール一覧</h3>
 
     <article>
     <h2>#Progate　プログラミングの基礎を勉強したい方へ</h2>
     <span>2020.02.29</span>
-    <a href="https://prog-8.com/" target="_blank">#Progate</p>
+    <a href="https://prog-8.com/" target="_blank">#Progate</a>
     </article>
 
     <article>
         <h2>note.com　ブログを発信したい方へ</h2>
         <span>2020.02.29</span>
-        <a href="https://note.com/" target="_blank">note.com</p>
+        <a href="https://note.com/" target="_blank">note.com</a>
     </article>
     
     <article>
         <h2>qiita.com　IT技術などの知識を発信したい方へ</h2>
         <span>2020.02.29</span>
-        <a href="https://qiita.com/" target="_blank">qiita.com</p>
+        <a href="https://qiita.com/" target="_blank">qiita.com</a>
     </article>
     
-    <h1>参加者メンバー 一覧</h1>
+    <h1 class="title">参加者メンバー 一覧</h1>
  
     <article>
     <h2>THE メディア（代表：大熊 月）</h2>
@@ -154,9 +268,66 @@
     <p>頑張るプログラマーを応援したい</p>
     <a href="https://twitter.com/sunstripe2011" target="_blank">Twitterへ</a>
     </article>
+</aside>
+
+<a href="https://twitter.com/sunstripe2011" target="_blank"><h1 class="button" style="text-align: center;">登録</h1></a><br />
 
     <footer>
-        TOP | About | Rule |  <a href="https://twitter.com/sunstripe2011" target="_blank">Contacts</a>
+        <nav>
+            <h1>
+            TOP | About | Rule |  <a href="https://twitter.com/sunstripe2011" target="_blank">Contacts</a>
+            </h1>
+        </nav>
+    
+        <p>
+            IT／WEBエンジニアに特化した学習サイト「Hello World!!」。 プログラミングスキルチェックであなたのプログラミング力をみんなでチェックすることを目的にしていきます。<br />
+            自分の学習のチェックをアウトプット可視化し、スキルも含めみんなでチェックしていけばいくほど、現場とほぼ同じスキルをマスターしていけるという無料コンテンツです。<br />
+            これからIT／WEBエンジニアとして就職や転職をしたいと思っている方には、かなり有利になる画期的なサービスです。<br />
+            さらに、プログラミング初心者向けの学習方法として、それぞれのプロフィール（紹介ページ）を作成して、自分自身のポートフォリオを作成していくことも目的にしていくので<br />
+            みんなのスキルやみんなの成長がみんなで確認できるのである種成長ゲームのようにコンテンツを活用してほしいと思います。<br />
+        </p>
+
+        <main>
+            <section class="float-left30">
+                <h2>Hello World!!のサービス</h2>
+
+                <!--Hello World!!新卒 就職先<br /-->
+                <!--コードで採用！プログラミング就活<br /-->
+                <!--Hello World!!転職<br /-->
+                <!--コードを書いてシゴト選び<br /-->
+                <!--スキルを磨くシゴト選び<br /-->
+                <h4>Hello World!!ラーニング</h4>
+                課題は、希望者と話して決めていきます。みんなで学ぶ<br />
+                <h4>Hello World!!</h4>
+                プログラミング実行 環境<br />
+                <a href="https://github.com/TeamSunstripe/HelloWorld" target="_blank">Hello World!! Github</a><br />
+            </section>
+            <section class="float-center40">
+                <h2>みんなが作ったコンテンツ</h2>
+    
+                <h2>みんなが作ったコンテンツ</h2>
+                    Hello World!!とは<br />
+                    Hello World!! 運営サークル<br />
+                <!--サイトマップ<br /-->
+                <br />
+                    <a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
+                    <br />
+                <!--中途求人掲載はこちら<br /-->
+                <!--新卒求人掲載はこちら<br /-->
+                <br />
+                <h4>ブログ・SNS</h4>
+                <br />
+                <a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
+                THE メディア
+                <a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
+                <br />
+            </section>
+            <section class="float-right30">
+            </section>
+        </main>
+        <hr class="clearline"/>
+     <h5 style="text-align: center;">(C) Hello World!!(THE メディア) 2020.02.29</h5>
     </footer>
+
 </body>
 </html>
