@@ -5,7 +5,10 @@ Hello World!! 自分たちのプログラミングをみんなにチェックし
 使い方、ここのコードは全てみんなのもの。
 
 まずは、GitHub から GitHubの使い方を学びます
+## Github を使ったことがない方はこちらを読んで見てください
 https://techacademy.jp/magazine/6235
+
+各種プログラミングの学習ページを生やしていきます。
 
 ## HTML / CSS / JavaScript
 
