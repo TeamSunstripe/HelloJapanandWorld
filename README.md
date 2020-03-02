@@ -8,6 +8,9 @@ Hello World!! 自分たちのプログラミングをみんなにチェックし
 ## Github を使ったことがない方はこちらを読んで見てください
 https://techacademy.jp/magazine/6235
 
+## Github 用語がまとまってます
+https://twitter.com/sunstripe2011/status/1234510417398882306
+
 各種プログラミングの学習ページを生やしていきます。
 
 ## HTML 
