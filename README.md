@@ -4,7 +4,32 @@ Hello World!! 自分たちのプログラミングをみんなにチェックし
 みんなで Hellow World!!!
 使い方、ここのコードは全てみんなのもの。
 
-まずは、GitHub から GitHubの使い方を学びます
+#今日の積み上げ
+おはようございます！
+いよいよ、始動しました！
+
+ここでやりたいこと
+初心者の方がまず迷子にならないためのプログラミング言語への道をご紹介していきたいと思います。
+🕯みんなでHello World!!！
+
+🕯Github で開始しました
+
+🕯社会貢献 活動の一環です。
+
+世間にはたくさんのプログラミング言語が転がっています。
+ただ、時間を経て、流行りのプログラミングがあったり、その他の言語と同じようにコーディング規約なども様々です。
+ただ、コードの支援のソフトウェアに誘導されながら進めるだけでは物成ない。
+ただ、仕事をこなしているだけで成長してないなって思う人のために
+🕯みんなでコードレビュー会を行なっていきます。そんな支援です。
+
+↓↓みんなのレビュー無料↓↓
+https://twitter.com/sunstripe2011/status/1233789044481392640
+↑↑みんなのレビュー無料↑↑
+
+チーム開発には、欠かせないこのGithub を用いていきます。
+
+まずは、GitHub から GitHubの使い方を学びます。
+
 ## Github を使ったことがない方はこちらを読んで見てください
 https://techacademy.jp/magazine/6235
 
@@ -15,17 +40,35 @@ https://twitter.com/sunstripe2011/status/1234510417398882306
 
 ## HTML 
 
+https://github.com/TeamSunstripe/HTMLLab
+
 ## CSS
+
+https://github.com/TeamSunstripe/CSSLab
 
 ## JavaScript
 
+https://github.com/TeamSunstripe/JavaScriptLab
+
 ## PHP
 
-## Objective-C / Swift
+https://github.com/TeamSunstripe/PHPLab
+
+## Objective-C
+
+https://github.com/TeamSunstripe/ObjectiveCLab
+
+## Swift
+
+https://github.com/TeamSunstripe/SwiftLab
 
 ## Java
 
 ## ドットインストール
+
+## GitMaster
+
+https://github.com/TeamSunstripe/GitMaster
 
 その他
 
