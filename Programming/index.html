@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>Programming</title>
+</head>
+<style>
+    h3 {
+        padding-top: 30px;
+        height: 60px;
+    }
+</style>
+<body>
+    <header>
+        <h1>プログラミング現場まで</h1>
+        の
+        <h2>#フローチャート</h2>
+    </header>
+<section> 
+    <h3>Q あなたは、どのタイプ？</h3>
+</section>
+<script>
+
+var programmingList = [
+    { title:"#プログラミング初心者",idx:"p01"},
+    { title:"#プログラミング学習",idx:"p02" },
+    { title:"#プログラミング復習",idx:"p03" },
+    { title:"#プログラミング挑戦",idx:"p04" },
+    { title:"#プログラミング求人",idx:"p05" },
+    { title:"#プログラミング現場",idx:"p06" }
+]; 
+
+for (let index = 0; index < programmingList.length; index++) {
+    document.write("<a href='#" + programmingList[index].idx + "' onclick='selectItem(" + index + ")'>" + programmingList[index].title + "</a> / ");
+}
+
+function selectItem (i) {
+    alert(programmingList[i].title);
+    var idx = document.getElementById(programmingList[i].idx);
+    idx.style.backgroundColor = "rgba(100,0,0,0.3)";
+
+    /// 前後のエレメントは、元に戻す
+    for (let index = 0; index < programmingList.length; index++) {
+        if (i != index) {
+            var index_idx = document.getElementById(programmingList[index].idx);
+            index_idx.style.backgroundColor = "rgba(0,0,0,0.1)";
+        }
+    }
+
+}
+</script>
+例<br />
+<h3 id="p01">#プログラミング初心者 </h3>
+↓<br />
+<h3 id="p02">学習</h3>
+↑   <br />
+　　繰り返し<br />　
+↓　　<br />
+<div style="text-align: right;">
+    <a href="#top">TOP ⬆︎</a>
+</div>    
+<h3 id="p03">復習</h3>
+↑<br />
+↓<br />
+<div style="text-align: right;">
+    <a href="#top">TOP ⬆︎</a>
+</div>    
+<h3 id="p04">挑　戦</h3>
+#プロフィール<br />
+↓　やりたいこと<br />
+<div style="text-align: right;">
+    <a href="#top">TOP ⬆︎</a>
+</div>
+<h3 id="p05">求人探す</h3>
+　#ポートフォリオ<br />
+↓　やってきたこと<br />
+<div style="text-align: right;">
+    <a href="#top">TOP ⬆︎</a>
+</div>
+<h3 id="p06">#プログラミング現場</h3>
+ → やれること → ∞<br />
+ 　　　　　　　　#職務経歴書<br />
+ <div style="text-align: right;">
+    <a href="#top">TOP ⬆︎</a>
+</div>
+
+<a href="https://twitter.com/sunstripe2011" target="_blank"><h1 class="button" style="text-align: center;">登録</h1></a><br />
+
+    <footer>
+        <nav>
+            <h1>
+            <a href="../index.html">TOP</a> | About | Rule |  <a href="https://twitter.com/sunstripe2011" target="_blank">Contacts</a>
+            </h1>
+        </nav>
+
+        <p>
+            IT／WEBエンジニアに特化した学習サイト「Hello World!!」。 プログラミングスキルチェックであなたのプログラミング力をみんなでチェックすることを目的にしていきます。<br />
+            自分の学習のチェックをアウトプット可視化し、スキルも含めみんなでチェックしていけばいくほど、現場とほぼ同じスキルをマスターしていけるという無料コンテンツです。<br />
+            これからIT／WEBエンジニアとして就職や転職をしたいと思っている方には、かなり有利になる画期的なサービスです。<br />
+            さらに、プログラミング初心者向けの学習方法として、それぞれのプロフィール（紹介ページ）を作成して、自分自身のポートフォリオを作成していくことも目的にしていくので<br />
+            みんなのスキルやみんなの成長がみんなで確認できるのである種成長ゲームのようにコンテンツを活用してほしいと思います。<br />
+        </p>
+
+        <main>
+            <section class="float-left30">
+                <h2>Hello World!!のサービス</h2>
+
+                <!--Hello World!!新卒 就職先<br /-->
+                <!--コードで採用！プログラミング就活<br /-->
+                <!--Hello World!!転職<br /-->
+                <!--コードを書いてシゴト選び<br /-->
+                <!--スキルを磨くシゴト選び<br /-->
+                <h4>Hello World!!ラーニング</h4>
+                課題は、希望者と話して決めていきます。みんなで学ぶ<br />
+                <h4>Hello World!!</h4>
+                プログラミング実行 環境<br />
+                <a href="https://github.com/TeamSunstripe/HelloWorld" target="_blank">Hello World!! Github</a><br />
+            </section>
+            <section class="float-center40">
+                <h2>みんなが作ったコンテンツ</h2>
+
+                <h2>みんなが作ったコンテンツ</h2>
+                    Hello World!!とは<br />
+                    Hello World!! 運営サークル<br />
+                <!--サイトマップ<br /-->
+                <br />
+                    <a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
+                    <br />
+                <!--中途求人掲載はこちら<br /-->
+                <!--新卒求人掲載はこちら<br /-->
+                <br />
+                <h4>ブログ・SNS</h4>
+                <br />
+                <a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
+                THE メディア
+                <a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
+                <br />
+            </section>
+            <section class="float-right30">
+            </section>
+        </main>
+        <hr class="clearline"/>
+     <h5 style="text-align: center;">(C) Hello World!!(THE メディア) 2020.02.29</h5>
+    </footer>
+
+</body>
+</html>
