@@ -90,6 +90,22 @@ https://github.com/TeamSunstripe/GitMaster
 それぞれのフォルダーはこちらで管理していくので、他人のフォルダーを消すのはNGです。
 まずは、プロフィールページを作成していきましょう！！
 
+## ツールに関して
+
+### ソースツリー（Sourcetree） 
+Git管理する時に便利なものです。
+
+インストールの仕方、使い方はこちら参考に
+
+https://qiita.com/tetsu831018/items/bb6ecf15ca5f67e5879a
+
+### VisualStudioCode
+
+ソースコードを変更することが可能です
+
+https://azure.microsoft.com/ja-jp/products/visual-studio-code/
+
+
 # プログラミング学習のルーティン
 - （１）プログラミング 定義・用語・規則 を学びます
 - （2）プログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます
