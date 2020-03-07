@@ -1,0 +1,215 @@
+
+    * {
+        margin : 0;
+        padding: 0;
+    }
+    body {
+        background-color:rgba(244,244,255,0.1);
+    }
+    .main-nav {
+        color:rgba(244,244,255,0.9);
+        background-color:rgba(0,0,0,0.5);
+        padding: 10px;
+    }
+    .main-nav a {
+        text-decoration: none;
+    }
+    .main-nav a:hover {
+        background-color:rgba(0,0,0,0.3);
+        text-decoration: underline;
+        box-shadow: 10px 1px;
+    }
+    .main-nav a:visited {
+        background-color:rgba(244,244,255,1.0);
+    }
+    .main-nav a:active {
+        background-color:rgba(244,244,255,0.9);
+    }
+    .main-nav a:link {
+        background-color:rgba(244,244,255,0.5);
+        padding: 10px;
+    }
+    .main-nav a:focus {
+        background-color:rgba(255,255,200,0.8);
+    }
+
+
+    .sub-nav {
+        font-size: 2vw;
+    }
+    .bg-img{
+        left: 0;
+        background-image:url(https://www.hdwallpapers.in/walls/morning_universe-normal.jpg);             /* 画像のURLを指定       */
+        background-repeat:  no-repeat;
+        width:100%;
+        /*height:400px;*/
+    }
+    .fsize20 {
+        font-size: 2vw;
+    }
+    h1 {
+        padding-top: 2%;
+    }
+    h2 {
+
+    }
+    h2 {
+
+    }
+    p {
+        padding: 2%;
+    }
+
+    .title  {
+        color: #364e96;/*文字色*/
+        padding: 0.5em 0;/*上下の余白*/
+        border-top: solid 3px #364e96;/*上線*/
+        border-bottom: solid 3px #364e96;/*下線*/
+    }
+
+    header {
+        padding-left : 5%;
+        background-color:rgba(0,0,255,0.3);
+    }
+    nav {
+        background-color:rgba(0,0,255,0.3);
+        color: white;
+    }
+    article {
+
+        padding-top : 10%;
+        background-color:rgba(255,255,255,0.8);
+    }
+    article:hover{
+
+        padding-top : 10%;
+        background-color:rgba(255,255,255,0.1);
+    }
+    aside {
+
+    }
+
+    main {
+        background-color: black;
+        background-image:url(https://www.1zoom.me/big2/13/239352-Sepik.jpg);
+        background-repeat:  no-repeat;
+        width:100%;
+
+        color: white;
+        height: 400px;
+    }
+    section {
+        background-color:rgba(255,255,255,0.5);
+        padding-left : 5%;
+    }
+    .aside-list {
+        padding-left : 5%;
+    }
+    .button {
+        padding-top : 5px;
+        padding-bottom : 5px;
+    }
+    .button:before{
+        display: block;
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #333;
+        text-align: center;
+        color: #fff;
+    }
+    .button:hover{
+        background-color: #f00;
+    }
+    .float-left30 {
+        float: left;
+        width: 30%;
+        height: 400px;
+    }
+    .float-center40 {
+        float: left;
+        width: 40%;
+        height: 400px;
+    }
+    .float-right30 {
+        float: right;
+        width: 30%;
+        height: 400px;
+    }
+    .clearline {
+        clear: both;
+    }
+    .figure {
+        text-align: center;
+    }
+    .w300h300 {
+        padding-left: auto;
+        padding-right: auto;
+        max-width: 300px;
+        width: 100%;
+        height: 400px;
+    }
+    h4.ofit {
+        background-color: rgba(255, 255, 244, 0.5);
+    }
+    .ofit_contain {
+        object-fit:contain;
+    }
+    .ofit_cover {
+        object-fit:cover;
+    }
+
+    .ofit_none {
+        object-fit:none;
+    }
+
+    .ofit_scale-down {
+        object-fit:scale-down;
+    }
+.imgflex {
+  display: flex;
+}
+
+img.imgflex{
+  width: calc(33.3% - 10px);
+  margin: 5px;
+}
+.scrall {
+    overflow: scroll;
+}
+
+
+/*
+@media以外の所は全てのサイズで読み込まれます。
+*/
+p {
+        background-color: rgba(0,0,0,0.0);
+}
+@media screen and (min-width:480px) {
+    /*　画面サイズが480pxからはここを読み込む　*/
+
+    section {
+        padding-left  : 20px;
+        padding-right : 20px;
+    }
+    .aside-list {
+        padding-left  : 20px;
+        padding-right : 20px;
+    }
+}
+@media screen and (min-width:768px) and ( max-width:1024px) {
+    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+
+    section {
+        padding-left  : 5%;
+        padding-right : 5%;
+    }
+    .aside-list {
+        padding-left  : 5%;
+        padding-right : 5%;
+    }
+}
+@media screen and (min-width:1024px) {
+    /*　画面サイズが1024pxからはここを読み込む　*/
+
+}
