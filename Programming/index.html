@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <title>Programming</title>
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
 </head>
 <style>
     h3 {
@@ -9,8 +10,18 @@
         height: 60px;
     }
 </style>
+
 <body>
-    <header>
+
+
+    <aside class="bg-img">
+        <nav class="main-nav">
+            <a href="../index.html">HOME</a> | About | <a href="./index.html">プログラミング（Programming）</a> |  Rule |  <a href="https://twitter.com/sunstripe2011" target="_blank">Contacts</a>
+        </nav>
+        <nav class="sub-nav">
+            <a href="../index.html">HOME</a> > プログラミング現場までの #フローチャート
+        </nav>
+        <header>
         <h1>プログラミング現場まで</h1>
         の
         <h2>#フローチャート</h2>
@@ -30,7 +41,7 @@ var programmingList = [
 ]; 
 
 for (let index = 0; index < programmingList.length; index++) {
-    document.write("<a href='#" + programmingList[index].idx + "' onclick='selectItem(" + index + ")'>" + programmingList[index].title + "</a> / ");
+    document.write("<a href='#" + programmingList[index].idx + "' onclick='selectItem(" + index + ")'><span class='fsize20'>" + programmingList[index].title + "</span></a> / ");
 }
 
 function selectItem (i) {
@@ -48,6 +59,8 @@ function selectItem (i) {
 
 }
 </script>
+
+<section>
 例<br />
 <h3 id="p01">#プログラミング初心者 </h3>
 ↓<br />
@@ -82,6 +95,9 @@ function selectItem (i) {
  <div style="text-align: right;">
     <a href="#top">TOP ⬆︎</a>
 </div>
+</section>
+
+</aside>
 
 <a href="https://twitter.com/sunstripe2011" target="_blank"><h1 class="button" style="text-align: center;">登録</h1></a><br />
 
