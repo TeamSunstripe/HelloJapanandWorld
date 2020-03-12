@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>JavaScript - 理想の身長 (Ideal Height)</title>
+<link rel="stylesheet" type="text/css" href="../../css/main.css" />
+</head>
+<body>
+  <style>
+
+  .titleStyle {
+    font-weight: bold;
+    display: block;
+  }
+  .contentStyle {
+    font-weight: bold;
+    display: block;
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+  }
+
+  .notArea {
+    margin: 0;
+    padding: 0 auto;
+  }
+
+  .maxWidth {
+    width: 225px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding:20px;
+  }
+
+  #formMyHeight {
+    width: 225px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding:20px;
+  }
+
+  .select {
+    width: 225px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 2px 0 white;
+    border-radius: 2px;
+  }
+
+  .myHeight {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #232323;
+    background: #fff8e8;
+    border-left: solid 10px #ffc06e;
+  }
+  .myHeight p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .text-test {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    padding: 0.4em 0.8em;
+    width: 100%;
+  }
+
+  .text-test:focus {
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    box-shadow: none;
+    outline: none;
+  }
+
+  select {
+    background-color:rgba(200, 200, 255, 0.32);
+    max-height:50px;
+  }
+
+  option:nth-child(2n+1){
+    background:lightgray;
+  }
+
+  input:focus {
+    background-color:rgba(200, 200, 255, 0.32);
+  }
+
+  </style>
+    <aside class="bg-img">
+    <header>
+        <h1>JavaScript - Hello World!!</h1>
+    </header>
+
+    <section>
+        <a href="../index.html"><h2>このサイトの使い方</h2></a>
+    </section>
+
+    <section>
+        <h1>JavaScript</h1>
+        <h2>理想の身長 (Ideal Height)</h2>
+        以下の項目を使ってます。
+        <h3>HTML</h3>
+        <p>
+          tags : form,select,option,input
+        </p>
+        <h3>CSS</h3>
+        <p>
+          select,option,input<br />
+          #formMyHeight<br />
+          .myHeight<br />
+        </p>
+        <h3>JavaScript</h3>
+        <p>
+          id,nameの呼び出し<br />
+          document.write("文字列")<br />
+          innerHTML<br />
+          for (var i = 0; i < XXX; i++)<br />
+        </p>
+    </section>
+
+    <section class="myHeight">
+      <div id="formMyHeight">
+    <form action="#" method="post" name="formMyHeight">
+    <select name="selectMyHeight" class="select" onchange="clickSelectMyHeight()">
+      <script>
+      for (var i = 0; i < 300; i++) {
+        document.write('<option class="select" value="' + i + 'cm"' + ((i == 160)?"selected":"") + '>' + i + 'cm' + '</option>');
+      }
+      </script>
+    </select>
+    <input class="select contentStyle" type="button" value="身長の選択" onclick="clickSelectMyHeight()"/>
+    <p>自分の身長：<span id="myHeight"></span><br />
+    </div>
+    </section>
+    <script>
+          function clickSelectMyHeight(){
+            const selectMyHeight = document.formMyHeight.selectMyHeight;
+            // 値(数値)を取得
+            const num = selectMyHeight.selectedIndex;
+            //const num = document.form1.color1.selectedIndex;
+            // 値(数値)から値(value値)を取得
+            var htmlString = "<h3>" + selectMyHeight.options[num].value + "</h3>";
+
+            htmlString += "<p>";
+            htmlString += "<span class='titleStyle'>理想のキス 12cm差</span>";
+            htmlString += "<span class='contentStyle notArea'>" + (num - 12) + "cm" + " / " + (num + 12) + "cm</span>";
+            htmlString += "</p>";
+            htmlString += "<p>";
+            htmlString += "<span class='titleStyle'>理想のカップル 15cm差</span>";
+            htmlString += "<span class='contentStyle notArea'>" + (num - 15) + "cm" + " / " + (num + 15) + "cm</span>";
+            htmlString += "</p>";
+            htmlString += "<p>";
+            htmlString += "<span class='titleStyle'>理想のなでなで 16cm差</span>";
+            htmlString += "<span class='contentStyle notArea'>" + (num - 16) + "cm" + " / " + (num + 16) + "cm</span>";
+            htmlString += "</p>";
+            htmlString += "<p>";
+            htmlString += "<span class='titleStyle'>理想のエッチ 22cm差</span>";
+            htmlString += "<span class='contentStyle notArea'>" + (num - 22) + "cm" + " / " + (num + 22) + "cm</span>";
+            htmlString += "</p>";
+            htmlString += "<p>";
+            htmlString += "<span class='titleStyle'>理想の結婚 25cm差</span>";
+            htmlString += "<span class='contentStyle notArea'>" + (num - 25) + "cm" + " / " + (num + 25) + "cm</span>";
+            htmlString += "</p>";
+
+            const selectString = htmlString;
+            //const str = document.form1.color1.options[num].value;
+            document.getElementById("myHeight").innerHTML = selectString;
+          }
+          clickSelectMyHeight();
+    </script>
+
+    <section>
+        <a href="./Programming/index.html"><h2>プログラミング現場へのステップ</h2></a>
+    </section>
+
+    <section>
+        <h1>Github</h1>
+        <p>
+            <a href="https://techacademy.jp/magazine/6235">https://techacademy.jp/magazine/6235</a>
+        </p>
+    </section>
+
+    <section>
+        <p>各種プログラミングの学習ページを生やしていきます。</p>
+    </section>
+
+<a href="https://twitter.com/sunstripe2011" target="_blank"><h1 class="button" style="text-align: center;">登録</h1></a><br />
+
+    <footer>
+        <nav>
+            <h1>
+            TOP | About | Rule |  <a href="https://twitter.com/sunstripe2011" target="_blank">Contacts</a>
+            </h1>
+        </nav>
+
+        <p>
+            IT／WEBエンジニアに特化した学習サイト「Hello World!!」。 プログラミングスキルチェックであなたのプログラミング力をみんなでチェックすることを目的にしていきます。<br />
+            自分の学習のチェックをアウトプット可視化し、スキルも含めみんなでチェックしていけばいくほど、現場とほぼ同じスキルをマスターしていけるという無料コンテンツです。<br />
+            これからIT／WEBエンジニアとして就職や転職をしたいと思っている方には、かなり有利になる画期的なサービスです。<br />
+            さらに、プログラミング初心者向けの学習方法として、それぞれのプロフィール（紹介ページ）を作成して、自分自身のポートフォリオを作成していくことも目的にしていくので<br />
+            みんなのスキルやみんなの成長がみんなで確認できるのである種成長ゲームのようにコンテンツを活用してほしいと思います。<br />
+        </p>
+
+        <main>
+            <section class="float-left30">
+                <h2>Hello World!!のサービス</h2>
+
+                <!--Hello World!!新卒 就職先<br /-->
+                <!--コードで採用！プログラミング就活<br /-->
+                <!--Hello World!!転職<br /-->
+                <!--コードを書いてシゴト選び<br /-->
+                <!--スキルを磨くシゴト選び<br /-->
+                <h4>Hello World!!ラーニング</h4>
+                課題は、希望者と話して決めていきます。みんなで学ぶ<br />
+                <h4>Hello World!!</h4>
+                プログラミング実行 環境<br />
+                <a href="https://github.com/TeamSunstripe/HelloWorld" target="_blank">Hello World!! Github</a><br />
+            </section>
+            <section class="float-center40">
+                <h2>みんなが作ったコンテンツ</h2>
+
+                <h2>みんなが作ったコンテンツ</h2>
+                    Hello World!!とは<br />
+                    Hello World!! 運営サークル<br />
+                <!--サイトマップ<br /-->
+                <br />
+                    <a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
+                    <br />
+                <!--中途求人掲載はこちら<br /-->
+                <!--新卒求人掲載はこちら<br /-->
+                <br />
+                <h4>ブログ・SNS</h4>
+                <br />
+                <a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
+                THE メディア
+                <a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
+                <br />
+            </section>
+            <section class="float-right30">
+            </section>
+        </main>
+        <hr class="clearline"/>
+     <h5 style="text-align: center;">(C) Hello World!!(THE メディア) 2020.02.29</h5>
+    </footer>
+
+</body>
+</html>
