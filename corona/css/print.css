@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/*
+======== context ======================================
+
+Last Updated:YYMMDD
+Summary:印刷用画面レイアウト調整
+
+- 
+- 
+=======================================================
+*/
+
+* html body{
+	zoom:60%;
+}
+
+html body{
+	background-color:#FFFFFF;
+}
