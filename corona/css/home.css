@@ -1,0 +1,262 @@
+@charset "Shift_JIS";
+
+/* 共通ヘッダー＆フッター */
+@import "base.css";
+
+/****************************** コンテンツ ********************************/
+#content{
+	margin:1em 1%;
+	}
+
+.sub-col{
+	width:25%;
+	float:right;
+	}
+.main-col{
+padding-right:26%;
+	}
+
+#content h2{
+	background:url("../images-top/bg-heading.gif") right repeat-y  #44a;
+	color:#fff;
+	font-size:medium;
+	margin:0%;
+	padding:0.2em;
+	}
+
+#content h2 a{
+	color:#fff;
+	display:block;
+	width:100%;
+	}
+
+/********** 画像バナーエリア **********/
+#resource{
+	margin-bottom:0.5em;
+	}
+
+#resource ul{
+	margin:0%;
+	padding:0%;
+	list-style:none;
+	}
+#resource ul li{
+	margin:0%;
+	padding:0%;
+	border-top:1px solid #99c;
+	border-right:1px solid #33c;
+	border-bottom:1px solid #33c;
+	border-left:1px solid #33c;
+	background:#66c;
+	}
+#resource li a{
+	display:block;
+	color:#ff0;
+	padding:4px 0.4em 0%;
+	}
+#resource img{
+	max-width:100%;
+	}
+
+/********** 各府省共通カテゴリー **********/
+#archive{
+	border:1px solid #99f;
+	}
+#archive{
+	margin-bottom:0.5em;
+	}
+#archive h2{
+	font-size:small;
+	padding:0.2em 0.5em;
+	margin:0%;
+	background:url("../images/bg_heading.gif") repeat-y center #44a;
+	color:#fff;
+	}
+#archive ul{
+	margin:0%;
+	padding:0%;
+	list-style:none;
+	}
+#archive li{
+	border-bottom:1px solid #99f;
+	border-top:1px solid #fff;
+	padding:0.4em;
+	background:#ccf;
+	margin:0%;
+	}
+#archive li a{
+	display:block;
+	width:100%;
+	}
+
+/********** 緊急情報、お知らせなど **********/
+#urgent,
+#news{
+	width:100%;
+	margin-bottom:0.5em;
+	border:1px solid #99f;
+	}
+#urgent ul{
+	margin:0;
+	padding:0.5em 0.5em 0.5em 1.5em;
+	}
+#urgent li{
+	margin-bottom:0.5em;
+	}
+
+#news h3{
+	font-size:small;
+	margin:0.5em;
+	padding:0;
+	}
+#news>h3{
+	font-size:medium;
+	}
+#news .items{margin:0.5em 0.2em; padding:0; list-style:none;}
+#news .items li{display:inline; white-space:nowrap;}
+#news .items li a{border-right:1px solid #000; padding:0 0.4em 0 0.2em;}
+#news .items li.last a{border-right:0;}
+#news p{
+	margin:0.5em;
+	padding:0;
+	}
+#news dl{
+	margin:0.5em;
+	padding:0.5em;
+	border:1px solid #ccc;
+	}
+
+
+/********** キャンペーン **********/
+#campaign{
+	border-top:1px solid #ccc;
+	/*text-align:center;*/
+	text-align:left;
+	}
+#campaign img{
+	margin:1%;
+	border:1px solid #ccc;
+	/*vertical-align:top;*/
+	}
+
+/********** その他リンク **********/
+#link{
+
+	margin-bottom:0.5em;
+	}
+#link ul{
+	margin:0%;
+	padding:0%;
+	list-style:none;
+	}
+#link ul li{
+	border:1px solid #99f;
+	margin:1% 0%;
+	padding:0.4em;
+	background:#cfc;
+	}
+#link ul li a{
+	display:block;
+	width:100%;
+	}
+[class="malf10"] {margin-right:0.5em;
+	}
+
+/********** 行政分野ごとの情報 **********/
+#categorized{
+	width:100%;
+	border:1px solid #99f;
+	padding-bottom:0.5em;
+	margin-bottom:0.5em;
+	overflow:hidden;
+	}
+#categorized dl{
+	float:left;
+	padding:0%;
+	margin:0%;
+	width:24.9%;
+	line-height:1.2em;
+	}
+div[id="categorized"]>dl{
+	width:25% !important;
+	}
+
+#categorized dt{
+	margin:2% 2% 0%;
+	border:1px solid #99f;
+	background:#ccf;
+	padding:0.2em;
+	}
+#categorized dl.item2 dt.item4{
+	font-size:x-small;
+	letter-spacing:-0.05em;
+	}
+#categorized>dl.item2>dt.item4{
+	font-size:small !important;
+	padding:0.25em 0.2em !important;
+	}
+#categorized dt a{
+	display:block;
+	}
+#categorized dd{
+	padding:0.2em;
+	margin:0% 2%;
+	height:4em;
+	line-height:1em;
+	border:solid #99f;
+	border-width:0 1px 1px;
+	}
+div[id="categorized"]>dl>dd{
+	min-height:4em;
+	height:auto !important;
+	}
+
+#categorized dd a{
+	background:#fff;
+	color:#000;
+	font-size:x-small;
+	}
+#categorized>dl>dd>a{
+font-size:small !important;
+}
+#categorized dd a:hover{
+	font-size:small;
+	line-height:1.2em;
+	text-decoration:none;
+	}
+#categorized>dl>dd>a:hover{
+font-size:medium !important;
+}
+
+/****************************** フッター ********************************/
+#footer ul{
+	background:#44a;
+	padding:0.2em;
+	margin:0;
+	text-align:center;
+	}
+#footer li{
+	display:inline;
+	margin:0;
+	padding:0;
+	white-space:nowrap;
+	}
+#footer li a{
+	color:#fff;
+	padding:0 0.4em 0 0.2em;
+	border-right:1px solid #fff;
+	}
+#footer li.last a{
+	border-right:none;
+	}
+address{
+	font:small normal;
+	text-align:center;
+	margin:1% 0 0;
+	}
+#copyright{
+	margin:0;
+	padding:1%;
+	text-align:center;
+	font-size:small;
+	}

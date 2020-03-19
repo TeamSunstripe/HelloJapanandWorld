@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/*
+======== context ======================================
+
+Last Updated:20130328
+Summary:基本用CSSの読み込み
+
+- reset.css
+- layout.css
+- common.css
+- parts.css
+- clear.css
+- ie.css
+=======================================================
+*/
+
+@import "reset.css"; /* デフォルト設定 CSS */
+@import "layout.css"; /* 基本レイアウト CSS */
+@import "parts.css"; /* 各要素別デザイン CSS */
+
+/*　各個別CSS */ 
+@import "home.css"; /* トップページ CSS */
