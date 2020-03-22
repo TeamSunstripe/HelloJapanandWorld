@@ -157,27 +157,40 @@ footer {
 }
 
 .imgflex {
-  display: flex;
+    display: flex;
 }
 
 img.imgflex{
-  width: calc(33.3% - 10px);
-  margin: 5px;
+    width: calc(33.3% - 10px);
+    margin: 5px;
 }
 .scrall {
     overflow: scroll;
 }
 
+.side_text {
+    height:55px;
+    vertical-align: middle;
+}
+.side_image {
+    height:55px;
+    display:inline;
+    vertical-align: middle;
+}
+.side_title {
+    height:55px;
+    vertical-align: middle;
+}
 
 /*
-@media以外の所は全てのサイズで読み込まれます。
-*/
+ @media以外の所は全てのサイズで読み込まれます。
+ */
 p {
-        background-color: rgba(0,0,0,0.0);
+    background-color: rgba(0,0,0,0.0);
 }
 @media screen and (max-width:480px) {
     /*　画面サイズが480pxからはここを読み込む　*/
-
+    
     section {
         padding-left  : 20px;
         padding-right : 20px;
@@ -188,15 +201,38 @@ p {
     }
     
     #side-nav {
-        width: 100%;
-        text-align: left;
+/*        position:absolute;
+        top:0px;
+        right:0px;
+        width: 30%;
+        height : 55px;
+        text-align: right;
+        background-color: rgba(200,200,255,0.5);
+ overflow: scroll;*/
+width :55px;
     }
-
+    
+    .side_text {
+        width :55px;
+        height:55px;
+    }
+    
+    .side_image {
+        height:55px;
+        display:inline;
+        vertical-align: middle;
+    }
+    .side_title {
+        height:55px;
+        vertical-align: middle;
+        display:none;
+    }
+    
     main {
-        width: 100%;
+        width: calc(100% - 55px);
         float: right;
     }
-
+    
 }
 @media screen and (min-width:480px) and ( max-width:768px) {
     /*　画面サイズが480pxからはここを読み込む　*/
@@ -209,22 +245,43 @@ p {
         padding-left  : 20px;
         padding-right : 20px;
     }
-
+    
     #side-nav {
-        width: 100%;
-        text-align: left;
+        width  : 55px;
+/*        position:absolute;
+        top:0px;
+        right:0px;
+        height : 55px;
+        text-align: right;
+        background-color: rgba(200,200,255,0.5);
+        overflow: scroll;*/
     }
-
-
+    
+    .side_text {
+        width :55px;
+        height:55px;
+    }
+    
+    .side_image {
+        height:55px;
+        display:inline;
+        vertical-align: middle;
+    }
+    .side_title {
+        height:55px;
+        vertical-align: middle;
+        display:none;
+    }
+    
     main {
-        width: 100%;
+        width: calc(100% - 55px);
         float: right;
     }
     
 }
 @media screen and (min-width:768px) and ( max-width:1024px) {
     /*　画面サイズが768pxから1024pxまではここを読み込む　*/
-
+    
     section {
         padding-left  : 5%;
         padding-right : 5%;
@@ -233,8 +290,43 @@ p {
         padding-left  : 5%;
         padding-right : 5%;
     }
+    
+    #side-nav {
+        width  : 30%;
+        min-width  : 200px;
+        /*        position:absolute;
+         top:0px;
+         right:0px;
+         height : 55px;
+         text-align: right;
+         background-color: rgba(200,200,255,0.5);
+         overflow: scroll;*/
+    }
+    
+    main {
+        width: calc(100% - 30%);
+        float: right;
+    }
+
 }
 @media screen and (min-width:1024px) {
     /*　画面サイズが1024pxからはここを読み込む　*/
-
+    
+    #side-nav {
+        width  : 30%;
+        min-width  : 200px;
+        /*        position:absolute;
+         top:0px;
+         right:0px;
+         height : 55px;
+         text-align: right;
+         background-color: rgba(200,200,255,0.5);
+         overflow: scroll;*/
+    }
+    
+    main {
+        width: calc(100% - 30%);
+        float: right;
+    }
+    
 }
