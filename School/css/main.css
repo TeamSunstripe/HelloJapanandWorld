@@ -1,0 +1,240 @@
+* {
+    margin : 0;
+    padding: 0;
+}
+body {
+    background-color:rgba(244,244,255,0.1);
+}
+.bg-img{
+    left: 0;
+    background-image:url(https://www.hdwallpapers.in/walls/morning_universe-normal.jpg);             /* 画像のURLを指定       */
+    background-repeat:  no-repeat;
+    width:100%;
+    /*height:400px;*/
+}
+h1 {
+    padding-top: 2%;
+}
+h2 {
+    
+}
+h2 {
+    
+}
+p {
+    padding: 2%;
+}
+
+.title  {
+    color: #364e96;/*文字色*/
+    padding: 0.5em 0;/*上下の余白*/
+    border-top: solid 3px #364e96;/*上線*/
+    border-bottom: solid 3px #364e96;/*下線*/
+}
+
+header {
+    padding-left : 5%;
+    background-color:rgba(0,0,255,0.3);
+}
+nav {
+    background-color:rgba(0,0,255,0.3);
+    color: white;
+}
+article {
+    
+    padding-top : 10%;
+    background-color:rgba(255,255,255,0.8);
+}
+article:hover{
+    
+    padding-top : 10%;
+    background-color:rgba(255,255,255,0.1);
+}
+aside {
+    
+}
+
+main {
+    background-color: black;
+    background-image:url(https://www.1zoom.me/big2/13/239352-Sepik.jpg);
+    background-repeat:  no-repeat;
+    width:100%;
+    
+    color: white;
+}
+section {
+    background-color:rgba(255,255,255,0.5);
+    padding-left : 5%;
+}
+.aside-list {
+    padding-left : 5%;
+}
+.button:before{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+}
+.button:hover{
+    background-color: #f00;
+}
+.float-left30 {
+    float: left;
+    width: 30%;
+}
+.float-center40 {
+    float: left;
+    width: 40%;
+}
+.float-right30 {
+    float: right;
+    width: 30%;
+}
+
+.float-left33 {
+    float: left;
+    width: 33%;
+}
+.float-center34 {
+    float: left;
+    width: 34%;
+}
+.float-right33 {
+    float: left;
+    width: 33%;
+}
+
+.clearline {
+    clear: both;
+}
+
+
+header {
+    
+}
+#header-nav {
+    text-align: right;
+}
+#header-nav li{
+    display: inline-block;
+}
+
+#side-nav {
+    width: 30%;
+    float: left;
+    text-align: left;
+}
+#side-nav li{
+    display: block;
+}
+
+#sub-nav {
+    text-align: left;
+}
+#sub-nav li{
+    display: inline-block;
+}
+
+main {
+    width: 70%;
+    float: right;
+}
+#news {
+    clear: both;
+}
+footer {
+    
+}
+
+#footer-nav {
+    text-align: center;
+}
+#footer-nav li{
+    display: inline-block;
+}
+
+.imgflex {
+  display: flex;
+}
+
+img.imgflex{
+  width: calc(33.3% - 10px);
+  margin: 5px;
+}
+.scrall {
+    overflow: scroll;
+}
+
+
+/*
+@media以外の所は全てのサイズで読み込まれます。
+*/
+p {
+        background-color: rgba(0,0,0,0.0);
+}
+@media screen and (max-width:480px) {
+    /*　画面サイズが480pxからはここを読み込む　*/
+
+    section {
+        padding-left  : 20px;
+        padding-right : 20px;
+    }
+    .aside-list {
+        padding-left  : 20px;
+        padding-right : 20px;
+    }
+    
+    #side-nav {
+        width: 100%;
+        text-align: left;
+    }
+
+    main {
+        width: 100%;
+        float: right;
+    }
+
+}
+@media screen and (min-width:480px) and ( max-width:768px) {
+    /*　画面サイズが480pxからはここを読み込む　*/
+    
+    section {
+        padding-left  : 20px;
+        padding-right : 20px;
+    }
+    .aside-list {
+        padding-left  : 20px;
+        padding-right : 20px;
+    }
+
+    #side-nav {
+        width: 100%;
+        text-align: left;
+    }
+
+
+    main {
+        width: 100%;
+        float: right;
+    }
+    
+}
+@media screen and (min-width:768px) and ( max-width:1024px) {
+    /*　画面サイズが768pxから1024pxまではここを読み込む　*/
+
+    section {
+        padding-left  : 5%;
+        padding-right : 5%;
+    }
+    .aside-list {
+        padding-left  : 5%;
+        padding-right : 5%;
+    }
+}
+@media screen and (min-width:1024px) {
+    /*　画面サイズが1024pxからはここを読み込む　*/
+
+}
