@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>JavaScript - Hello World!!</title>
+<link rel="stylesheet" type="text/css" href="../../css/main.css" />
+</head>
+<body>
+    <aside class="bg-img">
+    <header>
+        <h1>JavaScript - Hello World!!</h1>
+    </header>
+
+    <script type="text/javascript">
+      function draw1() {
+        var canvas1 = document.getElementById('tutorial1');
+        if (canvas1.getContext) {
+          var ctx = canvas1.getContext('2d');
+        }
+      }
+    </script>
+    <style type="text/css">
+      canvas {
+        border: 1px solid #999;
+      }
+      button {
+        height: 100px;
+        background-color: rgba(255,200,0,0.5);
+        border: 1px solid #900;
+      }
+    </style>
+    <canvas id="tutorial1" width="400" height="300" onclick="draw1()"></canvas>
+
+    <script type="text/javascript">
+      function draw2() {
+        var canvas2 = document.getElementById('tutorial2');
+        if (canvas2.getContext) {
+          var ctx = canvas2.getContext('2d');
+          var x = Math.floor(Math.random() * 100) + 100;
+          var y = Math.floor(Math.random() * 200) + 100;
+          ctx.globalAlpha = 0.3;
+            var r1 = Math.floor(Math.random() * 256);
+            var g1 = Math.floor(Math.random() * 256);
+            var b1 = Math.floor(Math.random() * 256);
+          ctx.fillStyle = 'rgb(' + r1 + ',' + g1 + ',' + b1 + ')';
+          ctx.fillRect(50, 50, y, x);
+          ctx.clearRect(120, 80, x, 140);
+            var r2 = Math.floor(Math.random() * 256);
+            var g2 = Math.floor(Math.random() * 256);
+            var b2 = Math.floor(Math.random() * 256);
+          ctx.strokeStyle = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
+          ctx.strokeRect(x, 20, 180, y);
+        }
+      }
+    </script>
+
+    <canvas id="tutorial2" width="400" height="300" onclick="draw2()"></canvas>
+
+    <script type="text/javascript">
+      function draw3() {
+        var canvas3 = document.getElementById('tutorial3');
+        if (canvas3.getContext) {
+          var ctx = canvas3.getContext('2d');
+          ctx.globalAlpha = 0.3;
+          //輪郭線による描画
+          ctx.beginPath();
+            var r1 = Math.floor(Math.random() * 256);
+            var g1 = Math.floor(Math.random() * 256);
+            var b1 = Math.floor(Math.random() * 256);
+          ctx.strokeStyle = 'rgb(' + r1 + ',' + g1 + ',' + b1 + ')';
+          ctx.moveTo(50, 50);
+          ctx.lineTo(360, 200);
+          ctx.lineTo(140, 250);
+          ctx.closePath();
+          ctx.stroke();
+
+          //塗り潰しによる描画
+          ctx.beginPath();
+            var r2 = Math.floor(Math.random() * 256);
+            var g2 = Math.floor(Math.random() * 256);
+            var b2 = Math.floor(Math.random() * 256);
+          ctx.fillStyle = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
+          ctx.moveTo(50, 250);
+          ctx.lineTo(160, 20);
+          ctx.lineTo(340, 50);
+          ctx.closePath();
+          ctx.fill();
+        }
+      }
+    </script>
+
+    <canvas id="tutorial3" width="400" height="300" onclick="draw3()"></canvas>
+
+    <script type="text/javascript">
+      function draw4() {
+        var canvas4 = document.getElementById('tutorial4');
+        if (canvas4.getContext) {
+          var ctx = canvas4.getContext('2d');
+          ctx.globalAlpha = 0.5;
+          //円弧1
+          var x1 = Math.random() * 2;
+          var y1 = Math.random() * 2;
+          var arc1 = Math.floor(Math.random() * 10) * 10;
+            var r1 = Math.floor(Math.random() * 256);
+            var g1 = Math.floor(Math.random() * 256);
+            var b1 = Math.floor(Math.random() * 256);
+          ctx.strokeStyle = 'rgb(' + r1 + ',' + g1 + ',' + b1 + ')';
+          ctx.beginPath();
+          ctx.arc(200, 150, arc1, Math.PI * x1, Math.PI * y1, false);
+          ctx.stroke();
+          //円弧2
+          ctx.beginPath();
+          var x2 = Math.random() * 2;
+          var y2 = Math.random() * 2;
+          var arc2 = Math.floor(Math.random() * 10) * 20;
+            var r2 = Math.floor(Math.random() * 256);
+            var g2 = Math.floor(Math.random() * 256);
+            var b2 = Math.floor(Math.random() * 256);
+          ctx.strokeStyle = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
+          ctx.arc(200, 150, 80, Math.PI * x2, Math.PI * y2, false);
+          ctx.stroke();
+          //円弧3
+          ctx.beginPath();
+          var x3 = Math.random() * 2;
+          var y3 = Math.random() * 2;
+          var arc3 = Math.floor(Math.random() * 100);
+            var r3 = Math.floor(Math.random() * 256);
+            var g3 = Math.floor(Math.random() * 256);
+            var b3 = Math.floor(Math.random() * 256);
+          ctx.strokeStyle = 'rgb(' + r3 + ',' + g3 + ',' + b3 + ')';
+          ctx.arc(200, 150, arc3, Math.PI * x3, Math.PI * y3, true);
+          ctx.stroke();
+          //円弧4
+          ctx.beginPath();
+          var x4 = Math.random() * 2;
+          var y4 = Math.random() * 2;
+          var arc4 = Math.floor(Math.random() * 100);
+            var r4 = Math.floor(Math.random() * 256);
+            var g4 = Math.floor(Math.random() * 256);
+            var b4 = Math.floor(Math.random() * 256);
+          ctx.fillStyle = 'rgb(' + r4 + ',' + g4 + ',' + b4 + ')';
+          ctx.arc(200, 150, arc4, Math.PI * x4, Math.PI * y4, true);
+          ctx.fill();
+        }
+      }
+    </script>
+
+    <canvas id="tutorial4" width="400" height="300" onclick="draw4()"></canvas>
+
+    <script type="text/javascript">
+    //ランダムな色を生成
+      function randomColor() {
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+      }
+
+      function randomColorWithAlpha(a) {
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        return 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')';
+      }
+
+
+      function draw5() {
+        var canvas5 = document.getElementById('tutorial5');
+        if (canvas5.getContext) {
+          var ctx = canvas5.getContext('2d');
+          //全体の透明度
+          ctx.globalAlpha = 0.5;
+
+          //円弧1
+          ctx.beginPath();
+            var r1 = Math.floor(Math.random() * 256);
+            var g1 = Math.floor(Math.random() * 256);
+            var b1 = Math.floor(Math.random() * 256);
+          ctx.fillStyle = 'rgb(' + r1 + ',' + g1 + ',' + b1 + ')';
+          ctx.arc(150, 150, 80, 0, Math.PI * 2.0, true);
+          ctx.fill();
+
+          //円弧2
+          ctx.beginPath();
+            var r2 = Math.floor(Math.random() * 256);
+            var g2 = Math.floor(Math.random() * 256);
+            var b2 = Math.floor(Math.random() * 256);
+          ctx.fillStyle = 'rgb(' + r2 + ',' + g2 + ',' + b2 + ')';
+          ctx.arc(250, 150, 80, 0, Math.PI * 2.0, true);
+          ctx.fill();
+        }
+      }
+    </script>
+
+    <canvas id="tutorial5" width="400" height="300" onclick="draw5()"></canvas>
+
+    <script type="text/javascript">
+      var timeout = null;
+      var count = 0;
+      function draw6() {
+        var canvas6 = document.getElementById('tutorial6');
+        if (canvas6.getContext) {
+          var ctx = canvas6.getContext('2d');
+          //全体の透明度
+          ctx.globalAlpha = 0.3;
+          //1000回処理をくりかえす
+          for (i = 0; i < 1000; i++) {
+            //ランダムな色を生成
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            ctx.strokeStyle = 'rgb(' + r + ',' + g + ',' + b + ')';
+            //ランダムな場所に始点を移動
+            ctx.moveTo(Math.random() * 400, Math.random() * 300);
+            //ランダムな場所まで線を描く
+            ctx.lineTo(Math.random() * 400, Math.random() * 300);
+            ctx.stroke();
+          }
+        }
+      }
+
+      function draw6_roop() {
+          draw6();
+          timeout = setTimeout(draw6_roop, 1000);
+          console.log(count++);
+      }
+
+      function draw6_lifecycle() {
+        var button6 = document.getElementById('button6');
+        if (timeout) {
+          clearTimeout(timeout);
+          count = 0;
+          button6.innerHTML = "ループする";
+          timeout = null;
+        } else {
+          draw6_roop();
+          button6.innerHTML = "ストップする";
+        }
+      }
+
+    </script>
+
+    <canvas id="tutorial6" width="400" height="300" onclick="draw6()"></canvas>
+    <br />
+    <button id="button6" style="width:100%" onclick="draw6_lifecycle()" >ループする</button><br />
+
+    <script type="text/javascript">
+      var speedX = 3.0;
+      var speedY = 4.0;
+      /// 初期位置
+      var ctx7;
+      var ball = {
+        position:{
+          x:200,
+          y:150,
+        },
+        size:4,
+        color:randomColorWithAlpha(0.3),
+      };
+
+      function init7() {
+        var canvas7 = document.getElementById('tutorial7');
+        if (canvas7.getContext) {
+          ctx7 = canvas7.getContext('2d');
+          setInterval(draw7, 33);
+        }
+
+      }
+      function draw7() {
+        ctx7.globalCompositeOperation = "source-over";
+        ctx7.fillStyle = "rgba(8,8,12,.2)";
+        ctx7.fillRect(0, 0, 400, 300);
+        ctx7.globalCompositeOperation = "lighter";
+
+                //位置を更新
+        ball.position.x += speedX;
+        ball.position.y += speedY;
+
+        document.getElementsByName('ball.position.x')[0].value = ball.position.x;
+        document.getElementsByName('ball.position.y')[0].value = ball.position.y;
+        document.getElementsByName('ball.size')[0].value = ball.size;
+
+        if (ball.position.x < 0 || ball.position.x > 400) {
+          speedX *= -1;
+          ball.color = randomColorWithAlpha(0.3);
+        }
+
+        if (ball.position.y < 0 || ball.position.y > 300) {
+          speedY *= -1;
+          ball.color = randomColorWithAlpha(0.3);
+        }
+
+        //更新した座標で円を描く
+        ctx7.beginPath();
+        ctx7.fillStyle = ball.color;
+        ctx7.arc(ball.position.x, ball.position.y, ball.size, 0, Math.PI * 2.0, true);
+        ctx7.fill();
+      }
+
+      function ooo() {
+        var x = document.getElementsByName('ball.position.x')[0].value;
+        var y = document.getElementsByName('ball.position.y')[0].value;
+        var size = document.getElementsByName('ball.size')[0].value;
+        console.log(x + " + " + y + " + " + size);
+        ball.size = (size);
+        ball.position.x = (x);
+        ball.position.y = (y);
+      }
+    </script>
+    <style type="text/css">
+      #tutorial7 {
+        background-color: #000;
+        border: 1px solid #999;
+      }
+    </style>
+
+    <canvas id="tutorial7" width="400" height="300" onclick="init7()"></canvas>
+    <br />
+    <label>ball.size :<input type="number" name="ball.size" value="10"/></label><br />
+    <label>ball.position.x :<input type="number" name="ball.position.x" value="200"/></label><br />
+    <label>ball.position.y :<input type="number" name="ball.position.y" value="150"/></label><br />
+    <button onclick="ooo()">ooo</button>
+    <section>
+        <a href="../index.html"><h2>このサイトの使い方</h2></a>
+    </section>
+
+    <section>
+        <h1>Hello World!!</h1>
+        <p>
+            Hello World!! 自分たちのプログラミングをみんなにチェックしてもらおう！
+            <br />
+            みんなで Hellow World!!! 使い方、ここのコードは全てみんなのもの。
+            <br />
+            まずは、GitHub から GitHubの使い方を学びます
+        </p>
+    </section>
+
+    <section>
+        <a href="./Programming/index.html"><h2>プログラミング現場へのステップ</h2></a>
+    </section>
+
+    <section>
+        <h1>Github</h1>
+        <p>
+            <a href="https://techacademy.jp/magazine/6235">https://techacademy.jp/magazine/6235</a>
+        </p>
+    </section>
+
+    <section>
+        <p>各種プログラミングの学習ページを生やしていきます。</p>
+    </section>
+
+
+    <section class="figure imgflex scrall">
+        <figure class="figure imgflex">
+            <h4 class="ofit">object-fit: contain;</h4>
+            <img src="../img/sample.png" class="w300h300 ofit_contain" />
+        </figure>
+        <figure class="figure imgflex">
+            <h4 class="ofit">object-fit: cover;</h4>
+            <img src="../img/sample.png" class="w300h300 ofit_cover" />
+        </figure>
+        <figure class="figure imgflex">
+            <h4 class="ofit">object-fit: none;</h4>
+            <img src="../img/sample.png" class="w300h300 ofit_none" />
+        </figure>
+        <figure class="figure imgflex">
+            <h4 class="ofit">object-fit: scale-down;</h4>
+            <img src="../img/sample.png" class="w300h300 ofit_scale-down" />
+        </figure>
+        <figure class="figure imgflex">
+            <img src="../img/sample.png" class="w300h300" />
+        </figure>
+        <figure class="figure imgflex">
+            <img src="../img/sample.png" class="w300h300" />
+        </figure>
+    </section>
+
+
+    https://pbs.twimg.com/profile_images/557396519037325312/rrbkKLh2_400x400.jpeg
+    <section>
+        <h1 class="title">HTML / CSS / JavaScript</h1>
+        ./html/
+    </section>
+
+    <section>
+        <h1 class="title">PHP</h1>
+        ./php/
+    </section>
+
+    <section>
+        <h1 class="title">PHP</h1>
+        ./php/
+    </section>
+
+    <section>
+        <h1 class="title">Objective-C</h1>
+        ./iOS/ObjectiveC/
+    </section>
+
+    <section>
+        <h1 class="title">Swift</h1>
+        ./iOS/ObjectiveC/
+    </section>
+
+    <section>
+        <h1 class="title">Java</h1>
+        ./Android/Java/
+    </section>
+
+    <section>
+        <h1 class="title">その他</h1>
+        ./other/
+    </section>
+
+    </aside>
+
+    <aside>
+    <section>
+        <p>様々なジャンルでみんなでチェックして、コードを見てもらう習慣を Githubの良さはいつでもどこでもネットで見れます。</p>
+    </section>
+
+    <section>
+        <h1 class="title">Issues で みんなからアドバイス!!</h1>
+        <p>あなたのIssues を作って、週の目的を明確に決めていきます。</p>
+    </section>
+
+    <section>
+        <h1 class="title">PullRequests でみんなからコードチェック!!</h1>
+        <p>あなたのコードをみんなでコードレビュー、問題解決やコードの見方</p>
+    </section>
+
+    <section>
+        <h1 class="title">まずはじめに</h1>
+        <p>自分のブランチを切って、自分のフォルダーで作業してください。 それぞれのフォルダーはこちらで管理していくので、他人のフォルダーを消すのはNGです。 まずは、プロフィールページを作成していきましょう！！</p>
+    </section>
+
+
+    <section>
+        <h1 class="title">プログラミング学習のルーティン</h1>
+        <ul>
+        <li>（1）プログラミング 定義・用語・規則 を学びます</li>
+        <li>（2）プログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
+        <li>（3）プログラミング Githubの使い方を駆使し、コードの書き方に注意しつつ、自分のコードを、みんなでチェック、コードレビューを学ぼう</li>
+        <li>（4）プログラミング 発展：支援活動リフレッシュなども学びます。求職活動、サービス展開へのステップアップ、ビジネス展開へのステップアップ</li>
+        <li>（5）プログラミング プログラミング の　まとめ</li>
+        </ul>
+        <p>これの繰り返し(2)へ</p>
+    </section>
+
+
+    <section>
+        <h1 class="title">ブログラミング学習のルーティン</h1>
+        <ul>
+        <li>（1）ブログラミング 定義・用語・規則 を学びます</li>
+        <li>（2）ブログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
+        <li>（3）ブログラミング 苦労したことなど note、Qiita にまとめてここで学んだことを自分なりにまとめます</li>
+        <li>（4）ブログラミング 学んだことを、まとめて発信して動画配信などをアップしていきましょう</li>
+        <li>（5）ブログラミング ブログラミング の　まとめ</li>
+        </ul>
+        <p>これの繰り返し(2)へ</p>
+    </section>
+</aside>
+
+<aside>
+
+    <section>
+        困ったらここにつぶやこう！ プログラミングSOS
+        <br />
+        <br />
+        基本的なルールは、全世代問わず トラブルのないように！！ 心配りをご協力お願いいたします。
+        <br />
+        <br />
+        完全公開にしているのでシェアしたものに関しては、みんなのものになるので、個人情報やコンプライアンスを注意をお願いいたします。
+    </section>
+
+</aside>
+
+<aside class="aside-list">
+    <h1 class="title">記事一覧</h1>
+    <p>みんながおすすめするブログ・ツール</p>
+
+    <h3 class="title">ツール一覧</h3>
+
+    <article>
+    <h2>#Progate　プログラミングの基礎を勉強したい方へ</h2>
+    <span>2020.02.29</span>
+    <a href="https://prog-8.com/" target="_blank">#Progate</a>
+    </article>
+
+    <article>
+        <h2>note.com　ブログを発信したい方へ</h2>
+        <span>2020.02.29</span>
+        <a href="https://note.com/" target="_blank">note.com</a>
+    </article>
+
+    <article>
+        <h2>qiita.com　IT技術などの知識を発信したい方へ</h2>
+        <span>2020.02.29</span>
+        <a href="https://qiita.com/" target="_blank">qiita.com</a>
+    </article>
+
+    <h1 class="title">参加者メンバー 一覧</h1>
+
+    <article>
+    <h2>THE メディア（代表：大熊 月）</h2>
+    <span>2020.02.29 - </span>
+    <p>頑張るプログラマーを応援したい</p>
+    <a href="https://twitter.com/sunstripe2011" target="_blank">Twitterへ</a>
+    </article>
+</aside>
+
+<a href="https://twitter.com/sunstripe2011" target="_blank"><h1 class="button" style="text-align: center;">登録</h1></a><br />
+
+    <footer>
+        <nav>
+            <h1>
+            TOP | About | Rule |  <a href="https://twitter.com/sunstripe2011" target="_blank">Contacts</a>
+            </h1>
+        </nav>
+
+        <p>
+            IT／WEBエンジニアに特化した学習サイト「Hello World!!」。 プログラミングスキルチェックであなたのプログラミング力をみんなでチェックすることを目的にしていきます。<br />
+            自分の学習のチェックをアウトプット可視化し、スキルも含めみんなでチェックしていけばいくほど、現場とほぼ同じスキルをマスターしていけるという無料コンテンツです。<br />
+            これからIT／WEBエンジニアとして就職や転職をしたいと思っている方には、かなり有利になる画期的なサービスです。<br />
+            さらに、プログラミング初心者向けの学習方法として、それぞれのプロフィール（紹介ページ）を作成して、自分自身のポートフォリオを作成していくことも目的にしていくので<br />
+            みんなのスキルやみんなの成長がみんなで確認できるのである種成長ゲームのようにコンテンツを活用してほしいと思います。<br />
+        </p>
+
+        <main>
+            <section class="float-left30">
+                <h2>Hello World!!のサービス</h2>
+
+                <!--Hello World!!新卒 就職先<br /-->
+                <!--コードで採用！プログラミング就活<br /-->
+                <!--Hello World!!転職<br /-->
+                <!--コードを書いてシゴト選び<br /-->
+                <!--スキルを磨くシゴト選び<br /-->
+                <h4>Hello World!!ラーニング</h4>
+                課題は、希望者と話して決めていきます。みんなで学ぶ<br />
+                <h4>Hello World!!</h4>
+                プログラミング実行 環境<br />
+                <a href="https://github.com/TeamSunstripe/HelloWorld" target="_blank">Hello World!! Github</a><br />
+            </section>
+            <section class="float-center40">
+                <h2>みんなが作ったコンテンツ</h2>
+
+                <h2>みんなが作ったコンテンツ</h2>
+                    Hello World!!とは<br />
+                    Hello World!! 運営サークル<br />
+                <!--サイトマップ<br /-->
+                <br />
+                    <a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
+                    <br />
+                <!--中途求人掲載はこちら<br /-->
+                <!--新卒求人掲載はこちら<br /-->
+                <br />
+                <h4>ブログ・SNS</h4>
+                <br />
+                <a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
+                THE メディア
+                <a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
+                <br />
+            </section>
+            <section class="float-right30">
+            </section>
+        </main>
+        <hr class="clearline"/>
+     <h5 style="text-align: center;">(C) Hello World!!(THE メディア) 2020.02.29</h5>
+    </footer>
+
+</body>
+</html>
