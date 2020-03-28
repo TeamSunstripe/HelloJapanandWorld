@@ -95,7 +95,7 @@ function instagramSearch() {
     var instagramHTML = "https://www.instagram.com/explore/tags/" + inputSearchWord.value;
     var result = window.confirm("Instagram で[" + inputSearchWord.value + "]を検索する");
     if(result){
-        window.open(instagramHTML, "Instagram検索", features);
+        window.open(instagramHTML, "Instagram検索");
     } else {
 
     }
