@@ -1,7 +1,7 @@
 var val = getURLVars();
 var inputSearchWord = "";
 var searchListArea = "";
-
+var amazonID = "karaage1112-22";
 /**
  * URL解析して、クエリ文字列を返す
  * @returns {Array} クエリ文字列
@@ -107,6 +107,17 @@ function wikipediaSearch() {
     var result = window.confirm("Wikipedia で[" + inputSearchWord.value + "]を検索する");
     if(result){
         window.open(wikipediaHTML, "Wikipedia検索");
+    } else {
+
+    }
+    saveSearchList();
+}
+
+function amazonSearch() {
+    var amazonHTML = "https://www.amazon.co.jp/gp/search/ref=as_li_qf_sp_sr_il_tl?ie=UTF8&tag=" + amazonID + "&index=aps&camp=247&creative=1211&linkCode=xm2&linkId=f2b0c2685ecd3f42eac03385d41ccb54&keywords=" + inputSearchWord.value;
+    var result = window.confirm("Amazon で[" + inputSearchWord.value + "]を検索する");
+    if(result){
+        window.open(amazonHTML, "Amazon検索");
     } else {
 
     }
