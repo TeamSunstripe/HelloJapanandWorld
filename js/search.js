@@ -147,6 +147,18 @@ function wordSearch() {
   saveSearchList();
 }
 
+// 通販サイト
+function mercariSearch() {
+  var mercariHTML = "https://www.mercari.com/jp/search/?keyword=" + inputSearchWord.value;
+  var result = window.confirm("mercari で[" + inputSearchWord.value + "]を検索する");
+  if(result){
+      window.open(mercariHTML, "mercari検索");
+  } else {
+
+  }
+  saveSearchList();
+}
+
 function saveSearchList() {
   var key = "2e8b24d2b18d7ad40ad4c2ee774401e7a91a797837bee809c65954ba19f4a4fc";
   var saveData = searchSaveList();
