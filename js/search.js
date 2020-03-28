@@ -176,7 +176,7 @@ function employmentEnJapanSearch() {
   var employmentEnJapanHTML = "https://employment.en-japan.com/keyword/" + inputSearchWord.value;
   var result = window.confirm("EnJapan で[" + inputSearchWord.value + "]を検索する");
   if(result){
-      window.open(employmentEnJapan, "employmentEnJapan検索");
+      window.open(employmentEnJapanHTML, "employmentEnJapan検索");
   } else {
 
   }
