@@ -135,6 +135,18 @@ function noteSearch() {
     saveSearchList();
 }
 
+// IT系検索
+function qiitaSearch() {
+    var qiitaHTML = "https://qiita.com/search?q=" + inputSearchWord.value;
+    var result = window.confirm("qiita.com で[" + inputSearchWord.value + "]を検索する");
+    if(result){
+        window.open(qiitaHTML, "qiita.com検索");
+    } else {
+
+    }
+    saveSearchList();
+}
+
 // 辞書系検索サイト
 function wordSearch() {
   var wordHTML = "https://sakura-paris.org/dict/%E5%BA%83%E8%BE%9E%E8%8B%91/prefix/" + inputSearchWord.value;
