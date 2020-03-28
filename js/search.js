@@ -57,6 +57,28 @@ function googleSearchList() {
     saveSearchList();
 }
 
+function googleImageSearch() {
+    var googleHTML = "https://www.google.co.jp/search?tbm=isch&q=" + inputSearchWord.value;
+    var result = window.confirm("Googleイメージ検索 で[" + inputSearchWord.value + "]を表示する");
+    if(result){
+        window.open(googleHTML, "Googleイメージ検索");
+    } else {
+
+    }
+    saveSearchList();
+}
+
+function googleTranslateSearch(to) {
+  var from = "hl=ja#auto";
+    var googleHTML = "https://translate.google.com/?" +from + "/" + to + "/" + inputSearchWord.value;
+    var result = window.confirm("Google翻訳 で[" + inputSearchWord.value + "]を表示する");
+    if(result){
+        window.open(googleHTML, "Google翻訳検索");
+    } else {
+    }
+    saveSearchList();
+}
+
 function twitterSearch() {
     var features = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
     var twitterHTML = "https://twitter.com/search?q=" + inputSearchWord.value;
