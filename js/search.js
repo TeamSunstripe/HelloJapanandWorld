@@ -172,6 +172,17 @@ function coconalaSearch() {
 }
 
 // お仕事検索サイト
+function employmentEnJapanSearch() {
+  var employmentEnJapanHTML = "https://employment.en-japan.com/keyword/" + inputSearchWord.value;
+  var result = window.confirm("EnJapan で[" + inputSearchWord.value + "]を検索する");
+  if(result){
+      window.open(employmentEnJapan, "employmentEnJapan検索");
+  } else {
+
+  }
+  saveSearchList();
+}
+
 function greenJapanSearch() {
   var greenJapanHTML = "https://www.green-japan.com/search_key/01?case=&key=&keyword=" + inputSearchWord.value;
   var result = window.confirm("greenJapan で[" + inputSearchWord.value + "]を検索する");
