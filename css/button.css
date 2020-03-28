@@ -1,0 +1,33 @@
+.push_button--input--text {
+    position: relative;
+    width: 80%;
+    margin: 40px 3%;
+}
+.push_button--input--text input[type=text] {
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 8px 0;
+    padding: 0.3em;
+    transition: 0.3s;
+    border: 1px solid #1b2538;
+    border-radius: 4px;
+    outline: none;
+}
+.push_button--input--text input[type=text]:focus {
+    border-color: #da3c41;
+}
+.push_button--input--text input[type=text] {
+    padding-left: 40px;
+}
+.push_button--input--text i {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    padding: 9px 8px;
+    transition: 0.3s;
+    color: #aaaaaa;
+}
+.push_button--input--text input[type=text]:focus + i {
+    color: #da3c41;
+}

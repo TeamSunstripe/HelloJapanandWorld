@@ -7,76 +7,12 @@
 <script type="text/javascript" src="../db/db.js"></script>
 </head>
 <style>
-.cp_iptxt {
-    position: relative;
-    width: 80%;
-    margin: 40px 3%;
-}
-.cp_iptxt input[type=text] {
-    font: 15px/24px sans-serif;
-    box-sizing: border-box;
-    width: 100%;
-    margin: 8px 0;
-    padding: 0.3em;
-    transition: 0.3s;
-    border: 1px solid #1b2538;
-    border-radius: 4px;
-    outline: none;
-}
-.cp_iptxt input[type=text]:focus {
-    border-color: #da3c41;
-}
-.cp_iptxt input[type=text] {
-    padding-left: 40px;
-}
-.cp_iptxt i {
-    position: absolute;
-    top: 8px;
-    left: 0;
-    padding: 9px 8px;
-    transition: 0.3s;
-    color: #aaaaaa;
-}
-.cp_iptxt input[type=text]:focus + i {
-    color: #da3c41;
-}
 
 .widthMax{
     width: 100%;
     height: 100%;
     padding: 10px;
 }
-
-.googleColorRed{
-    color:red;
-}
-.googleColorYellow{
-    color:yellow;
-}
-.googleColorBlue{
-    color:blue;
-}
-.googleColorGreen{
-    color:green;
-}
-/*
- Google
- 青→赤→黄色→青
- */
-.twitterColor {
-    background-color: #00acee;
-    color: #FFFFFF;
-}
-
-.yahooColor {
-    color: #FF0000;
-}
-
-.deleteColor {
-    color: #FFFFFF;
-    background-color: #FF0000;
-}
-
 
 #search_list_area {
   margin-left: 30px;
@@ -234,13 +170,14 @@
                     </ul>
                 </nav>
                 <section style="text-align:center;">
-    <div class="cp_iptxt">
+    <div class="push_button--input--text">
       <input id="input_search_word" type="text" placeholder="検索ワード">
       <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
     </div>
 </section>
 
 <section style="text-align:center;">
+  <h3>検索サイト</h3>
   <button class="button googleColorBlue" onclick="googleSearch();">G<span class="googleColorRed">o</span><span class="googleColorYellow">o</span>g<span class="googleColorGreen">l</span><span class="googleColorRed">e</span>で調べる</button>
   <button class="button googleColorBlue" onclick="googleSearchList();">G<span class="googleColorRed">o</span><span class="googleColorYellow">o</span>g<span class="googleColorGreen">l</span><span class="googleColorRed">e</span>の検索候補一覧を調べる</button>
   <button class="button googleColorBlue" onclick="googleImageSearch();">G<span class="googleColorRed">o</span><span class="googleColorYellow">o</span>g<span class="googleColorGreen">l</span><span class="googleColorRed">e</span>の画像検索を調べる</button>
@@ -249,6 +186,8 @@
   <button class="button" onclick="wikipediaSearch()">wikipediaで調べる</button>
   <button class="button" onclick="wordSearch()">辞書で調べる</button>
   <button class="button" onclick="noteSearch()">note.comで調べる</button>
+  <h3>ショッピング</h3>
+  <button class="button" onclick="amazonSearch()">Amazonで調べる</button>
   <h3>翻訳</h3>
   <button class="button googleColorBlue" onclick="googleTranslateSearch('en');">G<span class="googleColorRed">o</span><span class="googleColorYellow">o</span>g<span class="googleColorGreen">l</span><span class="googleColorRed">e</span>の英語で翻訳する</button>
   <button class="button googleColorBlue" onclick="googleTranslateSearch('ja');">G<span class="googleColorRed">o</span><span class="googleColorYellow">o</span>g<span class="googleColorGreen">l</span><span class="googleColorRed">e</span>の日本語で翻訳する</button>
