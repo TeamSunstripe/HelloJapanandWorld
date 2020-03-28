@@ -102,6 +102,19 @@ function noteSearch() {
     saveSearchList();
 }
 
+// 辞書系検索サイト
+function wordSearch() {
+
+  var wordHTML = "https://sakura-paris.org/dict/%E6%97%A5%E6%9C%AC%E5%9B%BD%E8%AA%9E%E5%A4%A7%E8%BE%9E%E5%85%B8/prefix/" + inputSearchWord.value;
+  var result = window.confirm("辞書 で[" + inputSearchWord.value + "]を検索する");
+  if(result){
+      window.open(wordHTML, "辞書系検索");
+  } else {
+
+  }
+  saveSearchList();
+
+
 function saveSearchList() {
   var key = "2e8b24d2b18d7ad40ad4c2ee774401e7a91a797837bee809c65954ba19f4a4fc";
   var saveData = searchSaveList();
