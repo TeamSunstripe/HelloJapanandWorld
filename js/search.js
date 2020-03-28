@@ -91,6 +91,17 @@ function twitterSearch() {
     saveSearchList();
 }
 
+function instagramSearch() {
+    var instagramHTML = "https://www.instagram.com/explore/tags/" + inputSearchWord.value;
+    var result = window.confirm("Instagram で[" + inputSearchWord.value + "]を検索する");
+    if(result){
+        window.open(instagramHTML, "Instagram検索", features);
+    } else {
+
+    }
+    saveSearchList();
+}
+
 function yahooSearch() {
     var yahooHTML = "https://search.yahoo.co.jp/search?p=" + inputSearchWord.value;
     var result = window.confirm("Yahoo! で[" + inputSearchWord.value + "]を検索する");
