@@ -1,0 +1,33 @@
+/*
+ Colors
+ */
+.googleColorRed{
+    color:red;
+}
+.googleColorYellow{
+    color:yellow;
+}
+.googleColorBlue{
+    color:blue;
+}
+.googleColorGreen{
+    color:green;
+}
+/*
+ Google
+ 青→赤→黄色→青
+ */
+ 
+.twitterColor {
+    background-color: #00acee;
+    color: #FFFFFF;
+}
+
+.yahooColor {
+    color: #FF0000;
+}
+
+.deleteColor {
+    color: #FFFFFF;
+    background-color: #FF0000;
+}

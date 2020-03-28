@@ -1,3 +1,6 @@
+@import url("../css/color.css");
+@import url("../css/button.css");
+
 * {
     margin : 0;
     padding: 0;
