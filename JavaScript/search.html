@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>調べてみることから学習</title>
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+<script type="text/javascript" src="../js/search.js"></script>
+<script type="text/javascript" src="../db/db.js"></script>
+<script type="text/javascript" src="./cryptico-master/cryptico.min.js"></script>
+</head>
+<style>
+.cp_iptxt {
+    position: relative;
+    width: 80%;
+    margin: 40px 3%;
+}
+.cp_iptxt input[type=text] {
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 8px 0;
+    padding: 0.3em;
+    transition: 0.3s;
+    border: 1px solid #1b2538;
+    border-radius: 4px;
+    outline: none;
+}
+.cp_iptxt input[type=text]:focus {
+    border-color: #da3c41;
+}
+.cp_iptxt input[type=text] {
+    padding-left: 40px;
+}
+.cp_iptxt i {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    padding: 9px 8px;
+    transition: 0.3s;
+    color: #aaaaaa;
+}
+.cp_iptxt input[type=text]:focus + i {
+    color: #da3c41;
+}
+
+.widthMax{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.googleColorRed{
+    color:red;
+}
+.googleColorYellow{
+    color:yellow;
+}
+.googleColorBlue{
+    color:blue;
+}
+.googleColorGreen{
+    color:green;
+}
+/*
+ Google
+ 青→赤→黄色→青
+ */
+.twitterColor {
+    background-color: #00acee;
+    color: #FFFFFF;
+}
+
+.yahooColor {
+    color: #FF0000;
+}
+
+.deleteColor {
+    color: #FFFFFF;
+    background-color: #FF0000;
+}
+
+
+#search_list_area {
+  margin-left: 30px;
+}
+
+.search_list_item {
+  padding-left: 30px;
+}
+
+.search_list_item:hover {
+  background-color: rgba(200,200,200,0.3);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+  font-size: 20px;
+}
+.button:hover {
+  background-color: rgba(200,200,200,0.3);
+}
+.button:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+</style>
+
+<script>
+
+</script>
+
+<body onload="openURLVars();">
+    <header>
+        <h2>コンセプト</h2>
+        <h1>調べてみたいことを気になることを調べてみよう</h1>
+        <nav id="header-nav">
+            <ul>
+                <li><a rel="canonical" href="https://note.com/thecardgame/n/nc0eead00f5d0" target="_blank"><h5>このサイトについて</h2></a></li>
+                <li><a rel="contact" href="https://twitter.com/sunstripe2011" target="_blank"><h5>お問い合わせ</h5></a></li>
+                <li><a rel="author" href="https://qiita.com/sunstripe2011" target="_blank"><h5>サンストライプ</h5></a></li>
+            </ul>
+        </nav>
+    </header>
+
+            <nav id="side-nav">
+                <ul>
+                  <script>
+                    var baseDir = "../";
+                    var imgDir = "../img/";
+                    sideNavMenus = [
+
+                    /// JavaScript start
+                    {
+                      header : {
+                        title : "JavaScript",
+                        img : "school.png",
+                      },
+                      items : [
+                        /// JavaScript
+                        {
+                          title : "JavaScript",
+                          href : "javascript.html",
+                          img : "javascript_icon.png",
+                          hidden:true,
+                        },
+                        /// jQuery
+                        {
+                          title : "jQuery",
+                          href : "jquery.html",
+                          img : "jquery_icon.png",
+                          hidden:true,
+                        },
+                        /// JSON
+                        {
+                          title : "JSON",
+                          href : "json.html",
+                          img : "json_icon.png",
+                          hidden:true,
+                        },
+                      ],
+                    },
+                    /// JavaScript end
+                    ];
+                    for (var snh = 0;snh < sideNavMenus.length;snh++) {
+                      var headerInfo = sideNavMenus[snh].header;
+                      document.write('<li class="side_header">');
+                      document.write('<h4 class="side_text">');
+                      var headerImageURL = imgDir + headerInfo.img;
+                      if (!headerImageURL) {
+                        headerImageURL = imgDir + "school.png";
+                      }
+                      document.write('<img src="');
+                      document.write(headerImageURL);
+                      document.write('" class="side_image" alt="');
+                      document.write(headerInfo.title);
+                      document.write('" title="');
+                      document.write(headerInfo.title);
+                      document.write('"/>');
+                      document.write('<span class="side_title">');
+                      document.write(headerInfo.title);
+                      document.write('</span>');
+                      document.write('</h4>');
+                      document.write('</li>');
+                      var menuItems = sideNavMenus[snh].items;
+                      for (var snm = 0;snm < menuItems.length;snm++) {
+                        var menuItem = menuItems[snm];
+                        document.write('<li class="side_hover');
+                        if (menuItem.hidden != true) {
+                          document.write(' display_none');
+                        }
+                        document.write('">');
+                        var itemHrefURL = baseDir + menuItem.href;
+                        if (!itemHrefURL) {
+                          itemHrefURL = "#";
+                        }
+                        document.write('<a href="');
+                        document.write(itemHrefURL);
+                        document.write('">');
+                        document.write('<h4 class="side_text">');
+                        var itemImageURL = imgDir + menuItem.img;
+                        if (!itemImageURL) {
+                          itemImageURL = imgDir + "school.png";
+                        }
+                        document.write('<img src="');
+                        document.write(itemImageURL);
+                        document.write('" class="side_image" alt="');
+                        document.write(menuItem.title);
+                        document.write('" title="');
+                        document.write(menuItem.title);
+                        document.write('"/>');
+                        document.write('<span class="side_title">');
+                        document.write(menuItem.title);
+                        document.write('</span>');
+                        document.write('</h4>');
+                        document.write('</a>');
+                        document.write('</li>');
+                      }
+                    }
+                  </script>
+                </ul>
+            </nav>
+
+            <main>
+
+                <nav id="sub-nav" hidden>
+                    <ul>
+                        <li><a href="index.html"><h4>TOP</h4></a></li>
+                        <li><a name="facility" href="facility.html"><h4>施設</h4></a></li>
+                    </ul>
+                </nav>
+                <section style="text-align:center;">
+    <div class="cp_iptxt">
+      <input id="input_search_word" type="text" placeholder="検索ワード">
+      <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+    </div>
+</section>
+
+<section style="text-align:center;">
+  <button class="button googleColorBlue" onclick="googleSearch();">G<span class="googleColorRed">o</span><span class="googleColorYellow">o</span>g<span class="googleColorGreen">l</span><span class="googleColorRed">e</span>で調べる</button>
+  <button class="button googleColorBlue" onclick="googleSearchList();">G<span class="googleColorRed">o</span><span class="googleColorYellow">o</span>g<span class="googleColorGreen">l</span><span class="googleColorRed">e</span>の検索候補一覧を調べる</button>
+  <button class="button twitterColor" onclick="twitterSearch();">Twitterで調べる</button>
+  <button class="button yahooColor" onclick="yahooSearch()">Yahooで調べる</button>
+  <button class="button" onclick="wikipediaSearch()">wikipediaで調べる</button>
+  <button class="button" onclick="noteSearch()">note.comで調べる</button>
+</section>
+
+<section style="text-align:right;">
+  <button class="button deleteColor" style="text-align:right;" onclick="clearSearchList();">検索した言葉を削除する</button>
+</section>
+<section>
+  <h3>検索した言葉</h3>
+  <div id="search_list_area"></div>
+</section>
+</main>
+</body>
+</html>
