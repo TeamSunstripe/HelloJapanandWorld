@@ -184,9 +184,8 @@ var sideNavMenus = [
       // ShellScript
       {
         title : "ShellScript",
-        href : "shellscript.html",
+        href : "ShellScript/index.html",
         img : "ios_shellscript_icon.png",
-        hidden:true,
       },
 
     ],
