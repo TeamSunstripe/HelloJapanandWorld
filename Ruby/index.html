@@ -66,7 +66,7 @@
               );
                 for (var snh = 0;snh < sideNavMenus.length;snh++) {
                   var headerInfo = sideNavMenus[snh].header;
-                  if (headerInfo.title != "iOS" && headerInfo.title != "Ruby") {
+                  if (headerInfo.title != "Server Side" && headerInfo.title != "Ruby") {
                       continue;
                   }
                   document.write('<li class="side_header">');
@@ -90,10 +90,6 @@
                   var menuItems = sideNavMenus[snh].items;
                   for (var snm = 0;snm < menuItems.length;snm++) {
                     var menuItem = menuItems[snm];
-                    if (menuItem.title != "Ruby") {
-                        continue;
-                    }
-
                     document.write('<li class="side_hover');
                     if (menuItem.hidden == true) {
                       document.write(' display_none');
