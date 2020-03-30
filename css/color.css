@@ -98,3 +98,29 @@ a.file {
   color: #FFFFFF;
   background-color: #005500;
 }
+
+a.redChalkColor {
+  color: rgba(255,100,100,0.8);
+}
+.chalk {
+  padding-left:20px;
+  padding-right:20px;
+  vertical-align:bottom;
+}
+a.chalkColor {
+  padding-bottom: 8px;
+  text-decoration: none;
+  color: rgba(100,100,255,0.8);
+  display:inline;
+}
+a:visited.chalkColor {
+  color: rgba(255,100,100,0.8);
+}
+a:hover.chalkColor {
+  text-decoration: underline;
+  color: #FFFFFF;
+  background-color: rgba(255,100,100,0.8);
+}
+a:active.chalkColor {
+  color: rgba(255,255,255,0.8);
+}
