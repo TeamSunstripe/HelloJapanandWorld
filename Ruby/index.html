@@ -66,7 +66,7 @@
               );
                 for (var snh = 0;snh < sideNavMenus.length;snh++) {
                   var headerInfo = sideNavMenus[snh].header;
-                  if (headerInfo.title != "iOS" && headerInfo.title != "Ruby") {
+                  if (headerInfo.title != "Server Side" && headerInfo.title != "Ruby") {
                       continue;
                   }
                   document.write('<li class="side_header">');
@@ -90,10 +90,6 @@
                   var menuItems = sideNavMenus[snh].items;
                   for (var snm = 0;snm < menuItems.length;snm++) {
                     var menuItem = menuItems[snm];
-                    if (menuItem.title != "Ruby") {
-                        continue;
-                    }
-
                     document.write('<li class="side_hover');
                     if (menuItem.hidden == true) {
                       document.write(' display_none');
@@ -103,7 +99,6 @@
                     if (!itemHrefURL) {
                       itemHrefURL = "#";
                     }
-                    console.log(itemHrefURL);
                     document.write('<a href="');
                     document.write(itemHrefURL);
                     document.write('">');
@@ -220,6 +215,20 @@ Hello, Ruby World!
 </pre>
 </article>
 
+            </section>
+
+            <section>
+              <article class="p20px blackboard-top cleanerColor">
+                <h1>他のプログラミング言語と比較してみる</h1>
+                <script>
+                  document.write(displayProgrammingList("index.html#index"));
+                </script>
+              </article>
+              <a href="#index"><aside class="cleaner cleanerColor">
+                <img style="width:100px;" src="../img/cleaner.png"/>
+                </aside>
+              </a>
+              <br />
             </section>
 
             <section>
@@ -380,6 +389,20 @@ Hello, Ruby World!
             </section>
             <!-- end -->
 
+            <section>
+              <article class="p20px blackboard-top cleanerColor">
+                <h1>他のプログラミング言語と比較してみる</h1>
+                <script>
+                  document.write(displayProgrammingList("index.html#comment"));
+                </script>
+              </article>
+              <a href="#index"><aside class="cleaner cleanerColor">
+                <img style="width:100px;" src="../img/cleaner.png"/>
+                </aside>
+              </a>
+              <br />
+            </section>
+
             <!--section>
                 <h1 class="title">その他</h1>
                 ./other/
@@ -395,7 +418,7 @@ Hello, Ruby World!
 
         </aside>
 
-        <footer>
+        <footer id="footer">
           <section>
             <h1>Hello,Japan and World!!</h1>
                       <p>

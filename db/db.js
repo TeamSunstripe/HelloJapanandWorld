@@ -153,9 +153,8 @@ var sideNavMenus = [
       /// Python
       {
         title : "Ruby",
-        href : "ruby.html",
+        href : "Ruby/index.html",
         img : "ruby_icon.png",
-        hidden:true,
       },
     ],
   },
