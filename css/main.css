@@ -29,10 +29,10 @@ p {
 }
 
 .title  {
-    color: #364e96;/*文字色*/
+    color: #FFFFFF;/*文字色*/
     padding: 0.5em 0;/*上下の余白*/
-    border-top: solid 3px #364e96;/*上線*/
-    border-bottom: solid 3px #364e96;/*下線*/
+    border-top: solid 3px rgba(255,255,255,0.3);/*上線*/
+    border-bottom: solid 3px rgba(255,255,255,0.3);/*下線*/
 }
 
 header {
@@ -59,13 +59,19 @@ section {
     background-color:rgba(255,255,255,0.5);
     padding-left : 5%;
 }
+
 section.main {
     padding-bottom: 30px;
+}
+
+.padding_left_5 {
+  padding-left : 6%;
 }
 
 .aside-list {
     padding-left : 5%;
 }
+
 .button:before{
     display: block;
     width: 200px;
@@ -75,6 +81,7 @@ section.main {
     text-align: center;
     color: #fff;
 }
+
 .button:hover{
     background-color: #f00;
 }
@@ -283,7 +290,6 @@ img.imgflex{
 .p20px {
   padding: 20px;
 }
-
 /*
  @media以外の所は全てのサイズで読み込まれます。
  */
