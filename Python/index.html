@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Hello,Python World!!|ようこそシェアプログラミング</title>
+        <link rel="stylesheet" type="text/css" href="../css/main.css" />
+        <script type="text/javascript" src="../js/main.js"></script>
+        <script type="text/javascript" src="../db/db.js"></script>
+    </head>
+    <style>
+        </style>
+    <body>
+        <header>
+            <h2>Hello,Python World!!</h2>
+            <h1>ようこそシェアプログラミング[Python]</h1>
+            <nav id="header-nav">
+                <ul>
+                    <li><a rel="canonical" href="https://note.com/thecardgame/n/nc0eead00f5d0" target="_blank"><h5>このサイトについて</h2></a></li>
+                    <li><a rel="contact" href="https://twitter.com/sunstripe2011" target="_blank"><h5>お問い合わせ</h5></a></li>
+                    <li><a rel="author" href="https://qiita.com/sunstripe2011" target="_blank"><h5>サンストライプ</h5></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section style="margin:30px auto;text-align:center;">
+            <h1>Hello Python World!!</h1>
+            <p>
+                Hello Python World!! 自分たちのプログラミングをみんなにチェックしてもらおう！
+                <br />
+                みんなで Hellow Python World!!! 使い方、ここのコードは全てみんなのもの。
+                <br />
+                まずは、GitHub から GitHubの使い方を学びます
+            </p>
+            <p>
+              あなたの可能性を<br />
+              活かしませんか？<br />
+              <br />
+              かんたん1分<br />
+            </p>
+            <button style="width:300px;height:100px;" onclick=openURL('https://twitter.com/sunstripe2011','こちらにDMにておしらせください');>ご登録はこちら</button>
+        </section>
+
+        <nav id="side-nav">
+            <ul>
+              <script>
+                var baseDir = "../";
+                var imgDir = "../img/";
+
+                /// Python
+                sideNavMenus.unshift(
+                  /// Python start
+                {
+                  header : {
+                    title : "Python",
+                    img : "school.png",
+                  },
+                  items : [
+                    {
+                      title : "Python",
+                      href : "./Python/index.html",
+                      img : "howto_icon.png",
+                    },
+                  ],
+                }
+                /// Python end
+              );
+                for (var snh = 0;snh < sideNavMenus.length;snh++) {
+                  var headerInfo = sideNavMenus[snh].header;
+                  if (headerInfo.title != "Server Side" && headerInfo.title != "Python") {
+                      continue;
+                  }
+                  document.write('<li class="side_header">');
+                  document.write('<h4 class="side_text">');
+                  var headerImageURL = imgDir + headerInfo.img;
+                  if (!headerImageURL) {
+                    headerImageURL = imgDir + "school.png";
+                  }
+                  document.write('<img src="');
+                  document.write(headerImageURL);
+                  document.write('" class="side_image" alt="');
+                  document.write(headerInfo.title);
+                  document.write('" title="');
+                  document.write(headerInfo.title);
+                  document.write('"/>');
+                  document.write('<span class="side_title">');
+                  document.write(headerInfo.title);
+                  document.write('</span>');
+                  document.write('</h4>');
+                  document.write('</li>');
+                  var menuItems = sideNavMenus[snh].items;
+                  for (var snm = 0;snm < menuItems.length;snm++) {
+                    var menuItem = menuItems[snm];
+
+                    document.write('<li class="side_hover');
+                    if (menuItem.hidden == true) {
+                      document.write(' display_none');
+                    }
+                    document.write('">');
+                    var itemHrefURL = baseDir + menuItem.href;
+                    if (!itemHrefURL) {
+                      itemHrefURL = "#";
+                    }
+                    console.log(itemHrefURL);
+                    document.write('<a href="');
+                    document.write(itemHrefURL);
+                    document.write('">');
+                    document.write('<h4 class="side_text">');
+                    var itemImageURL = imgDir + menuItem.img;
+                    if (!itemImageURL) {
+                      itemImageURL = imgDir + "school.png";
+                    }
+                    document.write('<img src="');
+                    document.write(itemImageURL);
+                    document.write('" class="side_image" alt="');
+                    document.write(menuItem.title);
+                    document.write('" title="');
+                    document.write(menuItem.title);
+                    document.write('"/>');
+                    document.write('<span class="side_title">');
+                    document.write(menuItem.title);
+                    document.write('</span>');
+                    document.write('</h4>');
+                    document.write('</a>');
+                    document.write('</li>');
+                  }
+                }
+              </script>
+
+                              <!--li><a href="outline.html"><h4 class="side_text"><img src="./img/school.png" class="side_image"/><span class="side_title">幼稚園の概要</span></h4></a></li>
+                              <li><a href="schedule.html"><h4 class="side_text"><img src="./img/schedule.png" class="side_image"/><span class="side_title">スケジュール</span></h4></a></li>
+                              <li><a href="facility.html"><h4 class="side_text"><img src="./img/building.png" class="side_image"/><span class="side_title">施設</span></h4></a></li>
+                              <li><a href="map.html"><h4 class="side_text"><img src="./img/access.png" class="side_image"/><span class="side_title">アクセス</span></h4></a></li>
+                              <li><a href="help.html"><h4 class="side_text"><img src="./img/learning.png" class="side_image"/><span class="side_title">子育ての支援</span></h4></a></li>
+                              <li><a href="voice.html"><h4 class="side_text"><img src="./img/message.png" class="side_image"/><span class="side_title">保護者の声</span></h4></a></li>
+                              <li><a href="assessment.html"><h4 class="side_text"><img src="./img/star.png" class="side_image"/><span class="side_title">幼稚園の学校評価</h4></a></li>
+                              <li><a href="subsidy.html"><h4 class="side_text"><img src="./img/bookmark.png" class="side_image"/><span class="side_title">補助制度</span></h4></a></li>
+                              <li><a href="recruitment.html"><h4 class="side_text"><img src="./img/peaple.png" class="side_image"/><span class="side_title">園児募集</span></h4></a></li-->
+            </ul>
+        </nav>
+
+        <main>
+
+            <nav id="sub-nav">
+                <ul>
+                    <li><a href="../index.html"><h4>TOP</h4></a></li>
+                    <!--li><a name="facility" href="facility.html"><h4>施設</h4></a></li-->
+                </ul>
+            </nav>
+
+            <a name="index">
+            <section class="main" name="basic">
+              <h1>Python（パイソン）の基本</h1>
+              <nav id="index_contents_nav" class="blackboard-top cleanerColor">
+                <ul id="index_contents">
+                  <li class="index_content"><a href="#what"><h3>Pythonとは？</h3></a></li>
+                  <li class="index_content"><a href="#howto"><h3>Pythonの書き方</h3></a></li>
+                  <li class="index_content"><a href="#howtocall"><h3>Pythonの呼び出し方</h3></a></li>
+                  <li class="index_content"><a href="#howtosetting"><h3>Pythonの設定</h3></a></li>
+                  <li class="index_content"><a href="#coment1"><h3>Pythonの特徴</h3></a></li>
+                </ul>
+              </nav>
+              <a href="#index"><aside class="cleaner cleanerColor">
+                <img style="width:100px;" src="../img/cleaner.png"/>
+              </aside></a>
+            </section></a>
+
+            <section class="main" name="what">
+              <a name="what"><article class="p20px blackboard-top cleanerColor">
+                <h1>Pythonとは？</h1>
+                <p>
+                Pythonはさまざまな分野のアプリケーションで使われている、極めてパワフルな動的プログラミング言語です。Pythonはよく、Tcl、Perl、Scheme、Javaなどと比較されます。
+                </p>
+
+                <a class="redChalkColor" href="https://www.python.jp/" target="_blank"><h1>Pythonのサイト</h1></a>
+
+              </article>
+              </a>
+              <a href="#index"><aside class="cleaner cleanerColor">
+                <img style="width:100px;" src="../img/cleaner.png"/>
+              </aside></a>
+            </section>
+
+            <section class="main" name="howto">
+            <a name="howto">
+              <article class="p20px blackboard-top cleanerColor">
+                <h1>Pythonの書き方</h1>
+                <p>
+                  Pythonファイルは基本的に.pyの拡張子で作成します。
+                </p>
+              </article>
+              <a href="#index"><aside class="cleaner cleanerColor">
+                <img style="width:100px;" src="../img/cleaner.png"/>
+              </aside></a>
+            </a>
+            <h5><a class="file" href="test.py" alt="test.py" title="test.py" target="_blank">test.py</a></h5>
+
+            <article class="browser">
+<pre class="codeColor">
+print("Hello,Python World!\n")
+</pre>
+</article>
+            <!--a name="howto">
+              <article class="p20px blackboard-top cleanerColor">
+                <h1>Pythonの書き方</h1>
+                <p>
+                  パイソンファイルは基本的に.shの拡張子で作成します。
+                </p>
+              </article>
+              <a href="#index"><aside class="cleaner cleanerColor">
+                <img style="width:100px;" src="../img/cleaner.png"/>
+              </aside></a>
+            </a-->
+<!--a name="howtosetting"><h3>Pythonの設定</h3></a>
+
+<h5><a class="file" href="test.py" alt="test.py" title="test.py" target="_blank">ターミナル</a></h5>
+<article class="browser">
+<pre class="codeColor">
+$ chmod 755 test.py
+$ ./test.py
+</pre>
+</article-->
+
+<a name="howtocall"><h3>Pythonの呼び出し方</h3></a>
+
+<h5><a class="file" href="test.py" alt="test.py" title="test.py" target="_blank">ターミナル</a></h5>
+<article class="browser">
+<pre class="codeColor">
+$ python test.py
+Hello, Python World!
+</pre>
+</article>
+
+            </section>
+
+            <section>
+              <article class="p20px blackboard-top cleanerColor">
+                <h1>他のプログラミング言語と比較してみる</h1>
+                <script>
+                  document.write(displayProgrammingList("index.html#index"));
+                </script>
+              </article>
+              <a href="#index"><aside class="cleaner cleanerColor">
+                <img style="width:100px;" src="../img/cleaner.png"/>
+                </aside>
+              </a>
+              <br />
+            </section>
+
+            <section>
+                <a name="coment1">
+                  <article class="p20px blackboard-top cleanerColor">
+                    <h1>Pythonの特徴</h1>
+
+                    <details>
+                    <summary>とてもクリーンで読みやすい文法</summary>
+                      <p>
+                        ・・・工事中・・・
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>強力な内省(イントロスペクション)機能</summary>
+                      <p>
+                        ・・・工事中・・・
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>直感的なオブジェクト指向</summary>
+                      <p>
+                        ・・・工事中・・・
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>手続き型のコードによる、自然な表現</summary>
+                      <p>
+                        ・・・工事中・・・
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>手続き型のコードによる、自然な表現</summary>
+                      <p>
+                        ・・・工事中・・・
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>パッケージの階層化もサポートした、完全なモジュール化サポート</summary>
+                      <p>
+                        ・・・工事中・・・
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>例外ベースのエラーハンドリング</summary>
+                      <p>
+                        ・・・工事中・・・
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>高レベルな動的データ型</summary>
+                      <p>
+                        ・・・工事中・・・
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>事実上すべてのタスクをこなせる、広範囲に及ぶ標準ライブラリとサードパーティのモジュール</summary>
+                      <p>
+                        ・・・工事中・・・
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>拡張とモジュールはC/C++で書くのが容易(JythonではJava、IronPythonでは.NET言語を利用)</summary>
+                      <p>
+                        ・・・工事中・・・
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>アプリケーションに組み込んでスクリプトインタフェースとして利用することが可能</summary>
+                      <p>
+                        ・・・工事中・・・
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>Pythonはパワフル・・・そして高速</summary>
+                      <p>
+                        Pythonファンはよく、非同期プロセスからzipファイルの圧縮展開までこなす標準ライブラリを説明するのに、「バッテリー同梱(batteries included)」というフレーズを良く使います。言語そのものも、さまざまな問題ドメインを実用的に扱えるほど、柔軟な言語になっています。3行で自分のウェブサーバを構築することもできます。Pythonの強力な動的内省機能と、メタクラス、ダック・タイピング、デコレータなどの上級向けの機能を使うことで、柔軟なデータ駆動のコードを作成することもできます。
+                        <br />
+                        Pythonを使うと、書きたいコードをすばやく書くことができます。そして、高度に最適化されたバイトコードコンパイラとそのライブラリのお陰で、多くのアプリケーションで十分な速度で実行することができます。伝統的な処理系であるCPythonはバイトコード仮想マシンを使用しています。PyPyネイティブコードへのジャストインタイム(JIT)コンパイルをサポートしています。また、JythonとIronPython(後述)は、それぞれの環境の仮想マシン実装へのJITコンパイルをサポートしています。
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>Pythonと他のものを組み合わせる</summary>
+                      <p>
+                        Pythonは、COM、.NET、CORBAなどのオブジェクトと組み合わせることができます。
+                        <br />
+                        Javaのライブラリを利用する場合は、Java仮想マシン用に実装されたPythonインタプリタのJythonを使ってください。
+                        <br />
+                        .NETのライブラリを利用する場合は、Microsoftの新しいPython実装であるIronPythonか、Python for .NETを利用してください。
+                        <br />
+                        Pythonはインターネット・コミュニケーション・エンジン(ICE)や多くの他の技術との組み合わせもサポートしています。
+                        <br />
+                        もし、Pythonでできないことを、もしくは低レベルコードの高速性が必要になった場合は、C/C++で拡張モジュールを作成したり、既存のコードをSWIGやBoost.Pythonを使ってラップすることができます。ラップされたモジュールはネイティブのPythonコードと同じように、プログラムの中から利用することができます。言語への組み込みが簡単なように作られています。これとは反対方向になりますが、アプリケーションの中にPythonを組み込んでアプリケーションのユーザにPythonを使って楽しんでもらうこともできます。
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>Pythonはどこでも実行可能</summary>
+                      <p>
+                        Pythonは、Windows、Linux/Unix、OS/2、Mac、Amigaなど多くのメジャーなオペレーティング・システムで使うことができます。これ以外にも.NETやJava仮想マシン、Nokia Series 60携帯電話で動くバージョンもあります。一度書いたソースコードが、変更なしにすべての環境で動くことを知ると、うれしくなってくるでしょう。
+                        <br />
+                        あなたのお気に入りのシステムが登録されていない？もし、その環境でCコンパイラが利用できるのであれば、おそらくPythonが動作するでしょう。ぜひ、news:comp.lang.pythonに質問してみるか、自分でPythonをコンパイルしてみてください。
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>Pythonはフレンドリー、そして学習しやすい</summary>
+                      <p>
+                        Pythonのニューズグループは、もっともフレンドリーなグループとして知られています。熱心な開発者やユーザコミュニティが、wikiをメンテナンスしていたり、国際的なものからローカルなものまでさまざまなカンファレンスを運営していたり、開発スプリントを行なっていたり、オンラインのコードリポジトリに貢献しています。
+                        <br />
+                        Pythonは完全なドキュメントを提供しています。言語に組み込みのドキュメントと、ウェブページとして提供しているものがあります。また、既存の言語ユーザ向けのオンラインチュートリアルと、完全に新しくプログラミングをはじめるユーザ向けのオンラインチュートリアルも提供しています。どのドキュメントも、生産性をすばやく上げられるようにデザインされています。また、さまざまな一級の書籍がPythonの学習を補完してくれるでしょう。
+                      </p>
+                    </details>
+
+                    <details>
+                    <summary>Pythonはオープン</summary>
+                      <p>
+                        Pythonの実装は自由に使用でき、自由に配布でき、商用利用も可能なオープンソースライセンスで提供されています。PythonライセンスはPythonソフトウェア財団が管理しています。
+                        <br />
+                        ぜひ、どのアプリケーションの分野でPythonが利用されているのかを見て、自分自身でも最新版をダウンロードして試してみてください。
+                      </p>
+                    </details>
+                  </article>
+                  <a href="#index"><aside class="cleaner cleanerColor">
+                    <img style="width:100px;" src="../img/cleaner.png"/>
+                  </aside></a>
+                </a>
+            </section>
+
+            <section>
+                <h1 class="title">基本コマンド</h1>
+            </section>
+
+            <!-- start -->
+            <section class="main" name="comment">
+            <a name="comment">
+              <article class="p20px blackboard-top cleanerColor">
+                <h1>Pythonのコメント（comment）</h1>
+                <p>
+                  # を書いてコメントを書くことができます。
+                </p>
+              </article>
+              <a href="#index"><aside class="cleaner cleanerColor">
+                <img style="width:100px;" src="../img/cleaner.png"/>
+              </aside></a>
+            </a>
+<!--a><h3>Pythonの設定</h3></a>
+<h5><a class="file" href="test_comment.py" alt="test_comment.py" title="test_comment.py" target="_blank">test_comment.py</a></h5>
+<article class="browser">
+<pre class="codeColor">
+$ chmod 755 test_comment.py
+</pre>
+</article-->
+<a name="howtocall"><h3>Pythonの呼び出し方</h3></a>
+<h5><a class="file" href="test_comment.py" alt="test_comment.py" title="test.py" target="_blank">ターミナル</a></h5>
+<article class="browser">
+<pre class="codeColor">
+# update 2011.11.11
+
+print("Hello,Python World!\n") # output
+</pre>
+</article>
+            <!--a name="howto">
+              <article class="p20px blackboard-top cleanerColor">
+                <h1>Pythonの書き方</h1>
+                <p>
+                  パイソンファイルは基本的に.pyの拡張子で作成します。
+                </p>
+              </article>
+              <a href="#index"><aside class="cleaner cleanerColor">
+                <img style="width:100px;" src="../img/cleaner.png"/>
+              </aside></a>
+            </a-->
+<h5><a class="file" href="test_comment.py" alt="test_comment.py" title="test.py" target="_blank">ターミナル</a></h5>
+<article class="browser">
+<pre class="codeColor">
+$ python test_comment.sh
+Hello, Python World!
+</pre>
+
+# で書かれた行のコメントは実行されません
+* 初期だと、日本語が設定に関して、聞かないようです。
+* 後ほど解決しましょう。
+</article>
+
+            </section>
+            <!-- end -->
+
+            <section>
+              <article class="p20px blackboard-top cleanerColor">
+                <h1>他のプログラミング言語と比較してみる</h1>
+                <script>
+                  document.write(displayProgrammingList("index.html#comment"));
+                </script>
+              </article>
+              <a href="#index"><aside class="cleaner cleanerColor">
+                <img style="width:100px;" src="../img/cleaner.png"/>
+                </aside>
+              </a>
+              <br />
+            </section>
+
+            <!--section>
+                <h1 class="title">その他</h1>
+                ./other/
+            </section-->
+
+        </main>
+
+        <aside id="news">
+
+            <!--section>
+                <h1>公開行事や同窓会などのお知らせ</h1>
+            </section--->
+
+        </aside>
+
+        <footer id="footer">
+          <section>
+            <h1>Hello,Japan and World!!</h1>
+                      <p>
+              IT／WEBエンジニアに特化した学習サイト「Hello,Japan and World!!」。プログラミングスキルチェックであなたのプログラミング力をみんなでチェックすることを目的にしていきます。<br />
+              「シェアプログラミング」を行なっていくことで、現場に近い関係を行うことが可能です。
+              自分の学習のチェックをアウトプット可視化し、スキルも含めみんなでチェックしていけばいくほど、現場とほぼ同じスキルをマスターしていけるという無料の砂場スペースになります。<br />
+              これからIT／WEBエンジニアとして就職や転職をしたいと思っている方には、かなり有利になる画期的なサービスです。<br />
+              さらに、プログラミング初心者向けの学習方法として、それぞれのプロフィール（紹介ページ）を作成して、自分自身のポートフォリオを作成していくことも目的にしていくので<br />
+              みんなのスキルやみんなの成長がみんなで確認できるのである種、成長ゲームのようにコンテンツを活用してほしいと思います。<br />
+                      </p>
+          </section>
+            <nav id="footer-nav">
+                <ul>
+                    <li><a href="../index.html"><h4>Hello,Japan and World!!</h4></a></li>
+                    <li><a href="#" onclick="alert(ただいま工事中);"><h4>スケジュール</h4></a></li>
+                    <!--li><a href="#" onclick="alert(ただいま工事中);"><h4>施設</h4></a></li-->
+                    <!--li><a href="#" onclick="alert(ただいま工事中);"><h4>アクセス</h4></a></li-->
+                    <li><a href="#" onclick="alert(ただいま工事中);"><h4>学習支援</h4></a></li>
+                    <li><a href="#" onclick="alert(ただいま工事中);"><h4>みなさんからの声</h4></a></li>
+                    <li><a href="#" onclick="alert(ただいま工事中);"><h4>システム評価</h4></a></li>
+                    <li><a href="#" onclick="alert(ただいま工事中);"><h4>補助制度</h4></a></li>
+                    <li><a href="#" onclick="alert(ただいま工事中);"><h4>生徒募集</h4></a></li>
+                </ul>
+            </nav>
+
+            <hr class="clearline">
+
+            <section class="float-left30">
+                <h2>Hello,Japan and World!!のサービス</h2>
+
+                <!--Hello World!!新卒 就職先<br /-->
+                <!--コードで採用！プログラミング就活<br /-->
+                <!--Hello World!!転職<br /-->
+                <!--コードを書いてシゴト選び<br /-->
+                <!--スキルを磨くシゴト選び<br /-->
+                <h4>Hello,Japan and World!!ラーニング</h4>
+                課題は、希望者と話して決めていきます。みんなで学ぶ<br />
+                <h4>Hello,Japan and World!!</h4>
+                プログラミングの砂場提供<br />
+                <a href="https://github.com/TeamSunstripe/HelloWorld" target="_blank">Hello,Japan and World!! Github</a><br />
+                個人情報やコンプライアンスを守りましょう。
+            </section>
+            <section class="float-center40">
+                <h2>みんなが作ったコンテンツ</h2>
+                <p>
+                  ここではチーム作りをして行きます。テーマの決定やスケジュール管理などオンライン、インターネットを通じたサービス展開を行い集合時間を決めて、インターネット上でのサービスを用いながら開発を行っていくことを目的にしています。<br />
+                  ここで作った皆さんのポートフォリオ、チームで作ったサービスをシェアしてより質の高いサービスを展開するヒントをここから発信して行きましょう！！
+                </p>
+
+                <h2>みんなが作ったコンテンツ</h2>
+                    Hello,Japan and World!!とは<br />
+                    Hello,Japan and World!! 運営サークル<br />
+                <!--サイトマップ<br /-->
+                <br />
+                    <a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
+                    <br />
+                <!--中途求人掲載はこちら<br /-->
+                <!--新卒求人掲載はこちら<br /-->
+                <br />
+                <h4>ブログ・SNS</h4>
+                <br />
+                <a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
+                THE メディア
+                <a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
+                <br />
+            </section>
+            <section class="float-right30">
+              a
+            </section>
+            <hr class="clearline">
+            <h5 style="text-align: center;">(C) <a rel="author" href="https://qiita.com/sunstripe2011" target="_blank">サンストライプ</a> 2011.11.11 - (<a href="https://note.com/thecardgame/n/nbb2aab3e8ae6" target="_blank">プログラミング道の駅</a>) 2020.02.29 - <br /></h5>
+        </footer>
+
+    </body>
+</html>
