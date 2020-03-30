@@ -3,121 +3,25 @@
 <head>
 <title>Hello World!!</title>
 <link rel="stylesheet" type="text/css" href="./css/main.css" />
+<script type="text/javascript" src="./js/main.js"></script>
+<script type="text/javascript" src="./db/db.js"></script>
 </head>
 <style>
-    * {
-        margin : 0;
-        padding: 0;
-    }
-    body {
-        background-color:rgba(244,244,255,0.1);
-    }
-    .bg-img{
-        left: 0;
-        background-image:url(https://www.hdwallpapers.in/walls/morning_universe-normal.jpg);             /* 画像のURLを指定       */
-        background-repeat:  no-repeat;             
-        width:100%;
-        /*height:400px;*/
-    }
-    h1 {
-        padding-top: 2%;
-    }
-    h2 {
-        
-    }
-    h2 {
-        
-    }
-    p {
-        padding: 2%;
-    }
-
-    .title  {
-        color: #364e96;/*文字色*/
-        padding: 0.5em 0;/*上下の余白*/
-        border-top: solid 3px #364e96;/*上線*/
-        border-bottom: solid 3px #364e96;/*下線*/
-    }
-    
-    header {
-        padding-left : 5%;
-        background-color:rgba(0,0,255,0.3);
-    }
-    nav {
-        background-color:rgba(0,0,255,0.3);
-        color: white;
-    }
-    article {
-
-        padding-top : 10%;
-        background-color:rgba(255,255,255,0.8);
-    }
-    article:hover{
-
-        padding-top : 10%;
-        background-color:rgba(255,255,255,0.1);
-    }
-    aside {
-
-    }
-
-    main {
-        background-color: black;
-        background-image:url(https://www.1zoom.me/big2/13/239352-Sepik.jpg);
-        background-repeat:  no-repeat;             
-        width:100%;
-
-        color: white;
-        height: 400px;
-    }
-    section {
-        background-color:rgba(255,255,255,0.5);
-        padding-left : 5%;
-    }
-    .aside-list {
-        padding-left : 5%;
-    }
-    .button:before{
-        display: block;
-        width: 200px;
-        height: 40px;
-        line-height: 40px;
-        background-color: #333;
-        text-align: center;
-        color: #fff;
-        }
-    .button:hover{
-        background-color: #f00;
-    }
-    .float-left30 {
-        float: left;
-        width: 30%;
-        height: 400px;
-    }
-    .float-center40 {
-        float: left;
-        width: 40%;
-        height: 400px;
-    }
-    .float-right30 {
-        float: right;
-        width: 30%;
-        height: 400px;
-    }
-    .clearline {
-        clear: both;
-    }
     </style>
 <body>
-    <aside class="bg-img">
     <header>
-        <h1>Hello World!!</h1>
+        <h2>Hello,Japan and World!!</h2>
+        <h1>ようこそシェアプログラミング</h1>
+        <nav id="header-nav">
+            <ul>
+                <li><a rel="canonical" href="https://note.com/thecardgame/n/nc0eead00f5d0" target="_blank"><h5>このサイトについて</h2></a></li>
+                <li><a rel="contact" href="https://twitter.com/sunstripe2011" target="_blank"><h5>お問い合わせ</h5></a></li>
+                <li><a rel="author" href="https://qiita.com/sunstripe2011" target="_blank"><h5>サンストライプ</h5></a></li>
+            </ul>
+        </nav>
     </header>
-    <section>
-        <h2>このサイトの使い方</h2>
-    </section>
 
-    <section>
+    <section style="margin:30px auto;text-align:center;">
         <h1>Hello World!!</h1>
         <p>
             Hello World!! 自分たちのプログラミングをみんなにチェックしてもらおう！
@@ -126,212 +30,283 @@
             <br />
             まずは、GitHub から GitHubの使い方を学びます
         </p>
-    </section>
-
-    <section>
-        <a href="./Programming/index.html"><h2>プログラミング現場へのステップ</h2></a>
-    </section>
-
-    <section>
-        <h1>Github</h1>
         <p>
-            <a href="https://techacademy.jp/magazine/6235">https://techacademy.jp/magazine/6235</a>
+          あなたの可能性を<br />
+          活かしませんか？<br />
+          <br />
+          かんたん1分<br />
         </p>
+        <button style="width:300px;height:100px;" onclick=openURL('https://twitter.com/sunstripe2011','こちらにDMにておしらせください');>ご登録はこちら</button>
     </section>
 
-    <section>
-        <p>各種プログラミングの学習ページを生やしていきます。</p>
-    </section>
-        
-    <section>
-        <h1 class="title">HTML / CSS / JavaScript</h1>
-        ./html/
-    </section>
+    <nav id="side-nav">
+        <ul>
+          <script>
+            var baseDir = "./";
+            var imgDir = "./img/";
+            for (var snh = 0;snh < sideNavMenus.length;snh++) {
+              var headerInfo = sideNavMenus[snh].header;
+              document.write('<li class="side_header">');
+              document.write('<h4 class="side_text">');
+              var headerImageURL = imgDir + headerInfo.img;
+              if (!headerImageURL) {
+                headerImageURL = imgDir + "school.png";
+              }
+              document.write('<img src="');
+              document.write(headerImageURL);
+              document.write('" class="side_image" alt="');
+              document.write(headerInfo.title);
+              document.write('" title="');
+              document.write(headerInfo.title);
+              document.write('"/>');
+              document.write('<span class="side_title">');
+              document.write(headerInfo.title);
+              document.write('</span>');
+              document.write('</h4>');
+              document.write('</li>');
+              var menuItems = sideNavMenus[snh].items;
+              for (var snm = 0;snm < menuItems.length;snm++) {
+                var menuItem = menuItems[snm];
+                document.write('<li class="side_hover');
+                if (menuItem.hidden == true) {
+                  document.write(' display_none');
+                }
+                document.write('">');
+                var itemHrefURL = baseDir + menuItem.href;
+                if (!itemHrefURL) {
+                  itemHrefURL = "#";
+                }
+                document.write('<a href="');
+                document.write(itemHrefURL);
+                document.write('">');
+                document.write('<h4 class="side_text">');
+                var itemImageURL = imgDir + menuItem.img;
+                if (!itemImageURL) {
+                  itemImageURL = imgDir + "school.png";
+                }
+                document.write('<img src="');
+                document.write(itemImageURL);
+                document.write('" class="side_image" alt="');
+                document.write(menuItem.title);
+                document.write('" title="');
+                document.write(menuItem.title);
+                document.write('"/>');
+                document.write('<span class="side_title">');
+                document.write(menuItem.title);
+                document.write('</span>');
+                document.write('</h4>');
+                document.write('</a>');
+                document.write('</li>');
+              }
+            }
+          </script>
 
-    <section>
-        <h1 class="title">PHP</h1>
-        ./php/
-    </section>
+          <!--li><a href="outline.html"><h4 class="side_text"><img src="./img/school.png" class="side_image"/><span class="side_title">幼稚園の概要</span></h4></a></li>
+            <li><a href="schedule.html"><h4 class="side_text"><img src="./img/schedule.png" class="side_image"/><span class="side_title">スケジュール</span></h4></a></li>
+            <li><a href="facility.html"><h4 class="side_text"><img src="./img/building.png" class="side_image"/><span class="side_title">施設</span></h4></a></li>
+            <li><a href="map.html"><h4 class="side_text"><img src="./img/access.png" class="side_image"/><span class="side_title">アクセス</span></h4></a></li>
+            <li><a href="help.html"><h4 class="side_text"><img src="./img/learning.png" class="side_image"/><span class="side_title">子育ての支援</span></h4></a></li>
+            <li><a href="voice.html"><h4 class="side_text"><img src="./img/message.png" class="side_image"/><span class="side_title">保護者の声</span></h4></a></li>
+            <li><a href="assessment.html"><h4 class="side_text"><img src="./img/star.png" class="side_image"/><span class="side_title">幼稚園の学校評価</h4></a></li>
+            <li><a href="subsidy.html"><h4 class="side_text"><img src="./img/bookmark.png" class="side_image"/><span class="side_title">補助制度</span></h4></a></li>
+            <li><a href="recruitment.html"><h4 class="side_text"><img src="./img/peaple.png" class="side_image"/><span class="side_title">園児募集</span></h4></a></li-->
+        </ul>
+    </nav>
 
-    <section>
-        <h1 class="title">PHP</h1>
-        ./php/
-    </section>
+    <main>
 
-    <section>
-        <h1 class="title">Objective-C</h1>
-        ./iOS/ObjectiveC/
-    </section>
+        <nav id="sub-nav" hidden>
+            <ul>
+                <li><a href="index.html"><h4>TOP</h4></a></li>
+                <li><a name="facility" href="facility.html"><h4>施設</h4></a></li>
+            </ul>
+        </nav>
 
-    <section>
-        <h1 class="title">Swift</h1>
-        ./iOS/ObjectiveC/
-    </section>
-         
-    <section>
-        <h1 class="title">Java</h1>
-        ./Android/Java/
-    </section>
-         
-    <section>
-        <h1 class="title">その他</h1>
-        ./other/
-    </section>
-    
+          <script>
+            var baseDir = "./";
+            var imgDir = "./img/";
+            for (var snh = 0;snh < sideNavMenus.length;snh++) {
+              var headerInfo = sideNavMenus[snh].header;
+              document.write('<section>');
+              document.write('<h1 class="title">');
+              document.write('<span class="side_title">');
+              document.write(headerInfo.title);
+              document.write('</span>');
+              document.write('</h1>');
+              var menuItems = sideNavMenus[snh].items;
+              for (var snm = 0;snm < menuItems.length;snm++) {
+                var menuItem = menuItems[snm];
+                document.write('<article class="');
+                if (menuItem.hidden == true) {
+                  document.write(' display_none');
+                }
+                document.write('">');
+                var itemHrefURL = baseDir + menuItem.href;
+                if (!itemHrefURL) {
+                  itemHrefURL = "#";
+                }
+                document.write('<a href="');
+                document.write(itemHrefURL);
+                document.write('">');
+                document.write('<h3 class="">');
+                document.write('<span class="side_title">');
+                document.write(menuItem.title);
+                document.write('</span>');
+                document.write('</h3>');
+                document.write('</a>');
+                document.write('</article>');
+              }
+              document.write('</section>');
+              document.write('<br />');
+            }
+          </script>
+
+          <section name="github">
+            <h1>Github</h1>
+            <p>
+                <a href="https://techacademy.jp/magazine/6235">https://techacademy.jp/magazine/6235</a>
+            </p>
+          </section>
+          <section>
+              <p>各種プログラミングの学習ページを生やしていきます。</p>
+          </section>
+
+
+        <section>
+            <p>様々なジャンルでみんなでチェックして、コードを見てもらう習慣を Githubの良さはいつでもどこでもネットで見れます。</p>
+        </section>
+
+        <section>
+            <h1 class="title">Issues で みんなからアドバイス!!</h1>
+            <p>あなたのIssues を作って、週の目的を明確に決めていきます。</p>
+        </section>
+
+        <section>
+            <h1 class="title">PullRequests でみんなからコードチェック!!</h1>
+            <p>あなたのコードをみんなでコードレビュー、問題解決やコードの見方</p>
+        </section>
+
+        <section>
+            <h1 class="title">まずはじめに</h1>
+            <p>自分のブランチを切って、自分のフォルダーで作業してください。 それぞれのフォルダーはこちらで管理していくので、他人のフォルダーを消すのはNGです。 まずは、プロフィールページを作成していきましょう！！</p>
+        </section>
+
+
+        <section>
+            <h1 class="title">プログラミング学習のルーティン</h1>
+            <ul>
+            <li>（1）プログラミング 定義・用語・規則 を学びます</li>
+            <li>（2）プログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
+            <li>（3）プログラミング Githubの使い方を駆使し、コードの書き方に注意しつつ、自分のコードを、みんなでチェック、コードレビューを学ぼう</li>
+            <li>（4）プログラミング 発展：支援活動リフレッシュなども学びます。求職活動、サービス展開へのステップアップ、ビジネス展開へのステップアップ</li>
+            <li>（5）プログラミング プログラミング の　まとめ</li>
+            </ul>
+            <p>これの繰り返し(2)へ</p>
+        </section>
+
+
+        <section>
+            <h1 class="title">ブログラミング学習のルーティン</h1>
+            <ul>
+            <li>（1）ブログラミング 定義・用語・規則 を学びます</li>
+            <li>（2）ブログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
+            <li>（3）ブログラミング 苦労したことなど note、Qiita にまとめてここで学んだことを自分なりにまとめます</li>
+            <li>（4）ブログラミング 学んだことを、まとめて発信して動画配信などをアップしていきましょう</li>
+            <li>（5）ブログラミング ブログラミング の　まとめ</li>
+            </ul>
+            <p>これの繰り返し(2)へ</p>
+        </section>
     </aside>
 
     <aside>
-    <section>
-        <p>様々なジャンルでみんなでチェックして、コードを見てもらう習慣を Githubの良さはいつでもどこでもネットで見れます。</p>
-    </section>
 
-    <section>
-        <h1 class="title">Issues で みんなからアドバイス!!</h1>
-        <p>あなたのIssues を作って、週の目的を明確に決めていきます。</p>
-    </section>
+        <section>
+            困ったらここにつぶやこう！ プログラミングSOS
+            <br />
+            <br />
+            基本的なルールは、全世代問わず トラブルのないように！！ 心配りをご協力お願いいたします。
+            <br />
+            <br />
+            完全公開にしているのでシェアしたものに関しては、みんなのものになるので、個人情報やコンプライアンスを注意をお願いいたします。
+        </section>
 
-    <section>
-        <h1 class="title">PullRequests でみんなからコードチェック!!</h1>
-        <p>あなたのコードをみんなでコードレビュー、問題解決やコードの見方</p>
-    </section>
+    </aside>
 
-    <section>
-        <h1 class="title">まずはじめに</h1>
-        <p>自分のブランチを切って、自分のフォルダーで作業してください。 それぞれのフォルダーはこちらで管理していくので、他人のフォルダーを消すのはNGです。 まずは、プロフィールページを作成していきましょう！！</p>
-    </section>
+    </main>
 
+    <hr style="clear:both;"/>
 
-    <section>
-        <h1 class="title">プログラミング学習のルーティン</h1>
-        <ul>
-        <li>（1）プログラミング 定義・用語・規則 を学びます</li>
-        <li>（2）プログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
-        <li>（3）プログラミング Githubの使い方を駆使し、コードの書き方に注意しつつ、自分のコードを、みんなでチェック、コードレビューを学ぼう</li>
-        <li>（4）プログラミング 発展：支援活動リフレッシュなども学びます。求職活動、サービス展開へのステップアップ、ビジネス展開へのステップアップ</li>
-        <li>（5）プログラミング プログラミング の　まとめ</li>
-        </ul>
-        <p>これの繰り返し(2)へ</p>
-    </section>
+    <aside class="aside-list">
+        <h1 class="title">記事一覧</h1>
+        <p>みんながおすすめするブログ・ツール</p>
 
+        <h3 class="title">ツール一覧</h3>
 
-    <section>
-        <h1 class="title">ブログラミング学習のルーティン</h1>
-        <ul>
-        <li>（1）ブログラミング 定義・用語・規則 を学びます</li>
-        <li>（2）ブログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
-        <li>（3）ブログラミング 苦労したことなど note、Qiita にまとめてここで学んだことを自分なりにまとめます</li>
-        <li>（4）ブログラミング 学んだことを、まとめて発信して動画配信などをアップしていきましょう</li>
-        <li>（5）ブログラミング ブログラミング の　まとめ</li>
-        </ul>
-        <p>これの繰り返し(2)へ</p>
-    </section>
-</aside>
-
-<aside>
-
-    <section>
-        困ったらここにつぶやこう！ プログラミングSOS
-        <br />
-        <br />
-        基本的なルールは、全世代問わず トラブルのないように！！ 心配りをご協力お願いいたします。
-        <br />
-        <br />
-        完全公開にしているのでシェアしたものに関しては、みんなのものになるので、個人情報やコンプライアンスを注意をお願いいたします。
-    </section>
-
-</aside>
-
-<aside class="aside-list">
-    <h1 class="title">記事一覧</h1>
-    <p>みんながおすすめするブログ・ツール</p>
-
-    <h3 class="title">ツール一覧</h3>
-
-    <article>
-    <h2>#Progate　プログラミングの基礎を勉強したい方へ</h2>
-    <span>2020.02.29</span>
-    <a href="https://prog-8.com/" target="_blank">#Progate</a>
-    </article>
-
-    <article>
-        <h2>note.com　ブログを発信したい方へ</h2>
+        <article>
+        <h2>#Progate　プログラミングの基礎を勉強したい方へ</h2>
         <span>2020.02.29</span>
-        <a href="https://note.com/" target="_blank">note.com</a>
-    </article>
-    
-    <article>
-        <h2>qiita.com　IT技術などの知識を発信したい方へ</h2>
-        <span>2020.02.29</span>
-        <a href="https://qiita.com/" target="_blank">qiita.com</a>
-    </article>
-    
-    <h1 class="title">参加者メンバー 一覧</h1>
- 
-    <article>
-    <h2>THE メディア（代表：大熊 月）</h2>
-    <span>2020.02.29 - </span>
-    <p>頑張るプログラマーを応援したい</p>
-    <a href="https://twitter.com/sunstripe2011" target="_blank">Twitterへ</a>
-    </article>
-</aside>
+        <a href="https://prog-8.com/" target="_blank">#Progate</a>
+        </article>
 
-<a href="https://twitter.com/sunstripe2011" target="_blank"><h1 class="button" style="text-align: center;">登録</h1></a><br />
+        <article>
+            <h2>note.com　ブログを発信したい方へ</h2>
+            <span>2020.02.29</span>
+            <a href="https://note.com/" target="_blank">note.com</a>
+        </article>
 
-    <footer>
-        <nav>
-            <h1>
-            TOP | About | Rule |  <a href="https://twitter.com/sunstripe2011" target="_blank">Contacts</a>
-            </h1>
-        </nav>
-    
-        <p>
-            IT／WEBエンジニアに特化した学習サイト「Hello World!!」。 プログラミングスキルチェックであなたのプログラミング力をみんなでチェックすることを目的にしていきます。<br />
-            自分の学習のチェックをアウトプット可視化し、スキルも含めみんなでチェックしていけばいくほど、現場とほぼ同じスキルをマスターしていけるという無料コンテンツです。<br />
-            これからIT／WEBエンジニアとして就職や転職をしたいと思っている方には、かなり有利になる画期的なサービスです。<br />
-            さらに、プログラミング初心者向けの学習方法として、それぞれのプロフィール（紹介ページ）を作成して、自分自身のポートフォリオを作成していくことも目的にしていくので<br />
-            みんなのスキルやみんなの成長がみんなで確認できるのである種成長ゲームのようにコンテンツを活用してほしいと思います。<br />
-        </p>
+        <article>
+            <h2>qiita.com　IT技術などの知識を発信したい方へ</h2>
+            <span>2020.02.29</span>
+            <a href="https://qiita.com/" target="_blank">qiita.com</a>
+        </article>
 
-        <main>
-            <section class="float-left30">
-                <h2>Hello World!!のサービス</h2>
+        <h1 class="title">参加者メンバー 一覧</h1>
 
-                <!--Hello World!!新卒 就職先<br /-->
-                <!--コードで採用！プログラミング就活<br /-->
-                <!--Hello World!!転職<br /-->
-                <!--コードを書いてシゴト選び<br /-->
-                <!--スキルを磨くシゴト選び<br /-->
-                <h4>Hello World!!ラーニング</h4>
-                課題は、希望者と話して決めていきます。みんなで学ぶ<br />
-                <h4>Hello World!!</h4>
-                プログラミング実行 環境<br />
-                <a href="https://github.com/TeamSunstripe/HelloWorld" target="_blank">Hello World!! Github</a><br />
-            </section>
-            <section class="float-center40">
-                <h2>みんなが作ったコンテンツ</h2>
-    
-                <h2>みんなが作ったコンテンツ</h2>
-                    Hello World!!とは<br />
-                    Hello World!! 運営サークル<br />
-                <!--サイトマップ<br /-->
+        <article>
+        <h2>THE メディア（代表：大熊 月）</h2>
+        <span>2020.02.29 - </span>
+        <p>頑張るプログラマーを応援したい</p>
+        <a href="https://twitter.com/sunstripe2011" target="_blank">Twitterへ</a>
+        </article>
+    </aside>
+
+    <aside id="news">
+
+        <section>
+            <h1>公開行事や同窓会などのお知らせ</h1>
+        </section>
+
+    </aside>
+        </section>
+        <section class="float-center40 height_max">
+            <h2>みんなが作ったコンテンツ</h2>
+
+            <h2>みんなが作ったコンテンツ</h2>
+                Hello World!!とは<br />
+                Hello World!! 運営サークル<br />
+            <br />
+                <a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
                 <br />
-                    <a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
-                    <br />
-                <!--中途求人掲載はこちら<br /-->
-                <!--新卒求人掲載はこちら<br /-->
-                <br />
-                <h4>ブログ・SNS</h4>
-                <br />
-                <a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
-                THE メディア
-                <a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
-                <br />
-            </section>
-            <section class="float-right30">
-            </section>
-        </main>
-        <hr class="clearline"/>
-     <h5 style="text-align: center;">(C) Hello World!!(THE メディア) 2020.02.29</h5>
+            <br />
+            <h4>ブログ・SNS</h4>
+            <br />
+            <a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
+            THE メディア
+            <a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
+
+        </section>
+        <section class="float-right30 height_max">
+          <h1>カスタマーサポート</h1>
+          <p>返信が必要な場合はこちら</p>
+          <button style="width:100%" onclick="alert('ただいま工事中');">お問い合わせ</button>
+          <p>サンストライプへのご意見・ご要望をお聞かせください</p>
+          <textarea style="width:100%;height:400px;" >サービスへのご意見、ご要望をお聞かせください。ご意見・ご要望に返信できないことをあらかじめご了承ください。</textarea>
+          <button style="width:100%;" onclick="alert('ただいま工事中');">送信する</button>
+        </section>
+        </div>
+
+        <hr class="clearline">
+        <h5 style="text-align: center;">(C) <a rel="author" href="https://qiita.com/sunstripe2011" target="_blank">サンストライプ</a>(<a href="https://note.com/thecardgame/n/nbb2aab3e8ae6" target="_blank">プログラミング道の駅</a>) 2020.02.29<br /></h5>
     </footer>
 
 </body>
