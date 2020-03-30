@@ -69,8 +69,39 @@ function displayProgrammingList(htmlURL) {
     } else {
       HTML += '<a class="chalkColor" href="../' + programmingList[p].baseDir + '/' + programmingList[p].baseURL + '">';
     }
-    HTML += '<h4 style="display:inline;padding:20px 20px;">' + programmingList[p].baseDir + '</h4>';
+    HTML += '<h4 class="chalk">' + programmingList[p].baseDir + '</h4>';
     HTML += '</a>';
   }
   return HTML;
+}
+
+var sideNav;
+var footerDiv;
+
+window.onload = function() {
+  sideNav = document.getElementById("side-nav");
+  footerDiv = document.getElementById("footer");
+}
+
+window.onscroll = function() {
+  if (sideNav && footerDiv) {
+
+    var startOffsetTop = sideNav.offsetTop;
+    var footerOffsetTop = footerDiv.offsetTop;
+
+    var scrollTop = document.documentElement.scrollTop || // IE、Firefox、Opera
+    document.body.scrollTop;              // Chrome、Safari
+      if (startOffsetTop < scrollTop && footerOffsetTop - sideNav.clientHeight> scrollTop) {
+          if (sideNav) {
+            sideNav.style.position = "fixed";
+            sideNav.style.top = "0" + "px";
+            console.log("position : " + sideNav.style.position);
+          }
+      } else {
+        if (sideNav) {
+          sideNav.style.position = "static";
+          console.log("position : " + sideNav.style.position);
+        }
+      }
+    }
 }
