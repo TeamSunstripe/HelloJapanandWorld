@@ -95,12 +95,10 @@ window.onscroll = function() {
           if (sideNav) {
             sideNav.style.position = "fixed";
             sideNav.style.top = "0" + "px";
-            console.log("position : " + sideNav.style.position);
           }
       } else {
         if (sideNav) {
           sideNav.style.position = "static";
-          console.log("position : " + sideNav.style.position);
         }
       }
     }
