@@ -146,9 +146,8 @@ var sideNavMenus = [
       /// Python
       {
         title : "Python",
-        href : "python.html",
+        href : "Python/index.html",
         img : "python_icon.png",
-        hidden:true,
       },
       /// Python
       {
