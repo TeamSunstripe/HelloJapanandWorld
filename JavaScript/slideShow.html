@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>Hello World!!</title>
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../db/db.js"></script>
+</head>
+<style>
+    </style>
+<body>
+
+  <div id="noticePopupSection" class="fadeout">
+    <div id="noticePopupMessage" onclick="closeNoticePopup();"></div>
+  </div>
+
+  <div id="alertPopupSection" class="fadeout" style="background-color:#FFFFFF; visibility:hidden; position:absolute; border-width:thick; border-style:ridge; width:50%; box-shadow:10px 10px 10px rgba(0,0,0,0.5); border-radius:10px;">
+  <div style="float:right"><div onclick="alertMessageClose()"><img src="../img/close.png" style="width:33px;"></div></div>
+  <div id="alertTitle"></div>
+  <div style="margin:20px 20px 0px 0px;">
+  <div style="display:table; float:left; width:100px; height:100px;"><p style="display:table-cell;vertical-align:middle;text-align:center;"><img src="../img/alert.png" style="width:100px;"></p></div>
+  <div style="display:table; height:100px;"><div id="alertMessage" style="display:table-cell;vertical-align:middle;"></div></div>
+  <div style="padding:10px 0px; text-align:center;">
+  <input style="border-radius:5px; font-size:large; width:100px;" type="button" value="O K" onclick="alertMessageClose()"></div>
+  </div>
+  </div>
+
+  <script type="text/javascript"><!--
+
+  // --></script>
+
+    <header>
+        <h2>Hello,Japan and World!!</h2>
+        <h1>ようこそシェアプログラミング</h1>
+        <nav id="header-nav">
+            <ul>
+                <li><a rel="canonical" href="https://note.com/thecardgame/n/nc0eead00f5d0" target="_blank"><h5>このサイトについて</h2></a></li>
+                <li><a rel="contact" href="https://twitter.com/sunstripe2011" target="_blank"><h5>お問い合わせ</h5></a></li>
+                <li><a rel="author" href="https://qiita.com/sunstripe2011" target="_blank"><h5>サンストライプ</h5></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section style="margin:30px auto;text-align:center;">
+        <h1>Hello World!!</h1>
+        <p>
+            Hello World!! 自分たちのプログラミングをみんなにチェックしてもらおう！
+            <br />
+            みんなで Hellow World!!! 使い方、ここのコードは全てみんなのもの。
+            <br />
+            まずは、GitHub から GitHubの使い方を学びます
+        </p>
+        <p>
+          あなたの可能性を<br />
+          活かしませんか？<br />
+          <br />
+          かんたん1分<br />
+        </p>
+        <button style="width:300px;height:100px;" onclick=openURL('https://twitter.com/sunstripe2011','こちらにDMにておしらせください');>ご登録はこちら</button>
+        <button onclick=facebookShare(location.href);>シェア<button>
+    </section>
+    <button onclick='alertMessage("myTitle", "myMessage");'>alertMessage</button>
+    <button onclick='showNoticePopup("myMessage");'>noticePopup</button>
+
+    <nav id="side-nav">
+        <ul>
+          <script>
+            var baseDir = "../";
+            var imgDir = "../img/";
+            document.write(displaySideMenuNavList(baseDir,imgDir,sideNavMenus));
+          </script>
+
+          <!--li><a href="outline.html"><h4 class="side_text"><img src="./img/school.png" class="side_image"/><span class="side_title">幼稚園の概要</span></h4></a></li>
+            <li><a href="schedule.html"><h4 class="side_text"><img src="./img/schedule.png" class="side_image"/><span class="side_title">スケジュール</span></h4></a></li>
+            <li><a href="facility.html"><h4 class="side_text"><img src="./img/building.png" class="side_image"/><span class="side_title">施設</span></h4></a></li>
+            <li><a href="map.html"><h4 class="side_text"><img src="./img/access.png" class="side_image"/><span class="side_title">アクセス</span></h4></a></li>
+            <li><a href="help.html"><h4 class="side_text"><img src="./img/learning.png" class="side_image"/><span class="side_title">子育ての支援</span></h4></a></li>
+            <li><a href="voice.html"><h4 class="side_text"><img src="./img/message.png" class="side_image"/><span class="side_title">保護者の声</span></h4></a></li>
+            <li><a href="assessment.html"><h4 class="side_text"><img src="./img/star.png" class="side_image"/><span class="side_title">幼稚園の学校評価</h4></a></li>
+            <li><a href="subsidy.html"><h4 class="side_text"><img src="./img/bookmark.png" class="side_image"/><span class="side_title">補助制度</span></h4></a></li>
+            <li><a href="recruitment.html"><h4 class="side_text"><img src="./img/peaple.png" class="side_image"/><span class="side_title">園児募集</span></h4></a></li-->
+        </ul>
+    </nav>
+
+    <main>
+
+        <nav id="sub-nav" hidden>
+            <ul>
+                <li><a href="index.html"><h4>TOP</h4></a></li>
+                <li><a name="facility" href="facility.html"><h4>施設</h4></a></li>
+            </ul>
+        </nav>
+        <h5>表示部</h5>
+        <div id="HTMLCode">
+        <section id="slide_show">
+          <div id="slide_show_title"></div>
+          <div id="slide_show_area" style="width:100%">
+            <img id="slide_show_area_img" src="../images/sdg-cover-en-17a.png" style="width:100%"/>
+            <h3 id="slide_show_area_title">タイトル</h3>
+          </div>
+          <div id="slide_show_controler">
+            <button class="button" id="slide_show_play">Play</button>
+            <button class="button" id="slide_show_pouse">Pouse</button>
+            <button class="button" id="slide_show_prev"> < </button>
+            <button class="button" id="slide_show_next"> > </button>
+          </div>
+          <div id="slide_show_image_panels"></div>
+        </section>
+        </div>
+
+        <style id="CSSCode">
+
+        #slide_show_area_img {
+
+        }
+        #slide_show_area_title {
+          text-align: center;
+        }
+        #slide_show_controler {
+          text-align: center;
+        }
+        #slide_show_play {
+          width: 30%;
+          max-width: 300px;
+          height: 50px;
+        }
+        #slide_show_pouse {
+          width: 30%;
+          max-width: 300px;
+          height: 50px;
+        }
+        #slide_show_prev {
+          width: 30%;
+          max-width: 300px;
+          height: 50px;
+        }
+        #slide_show_next {
+          width: 30%;
+          max-width: 300px;
+          height: 50px;
+        }
+        .slide_show_image_panel {
+          width: calc(100% / 5);
+          max-width: 300px;
+        }
+        .button {
+          position: relative;
+          margin: 20px 0;
+          display: inline-block;
+          padding: 0.25em 0.5em;
+          text-decoration: none;
+          color: #FFF;
+          background: #fd9535;/*背景色*/
+          border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+          border-radius: 4px;/*角の丸み*/
+          box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+          font-weight: bold;
+          font-size: 2vw;
+        }
+        .button:hover {
+          background-color: #00FF00;
+          border-bottom: solid 2px #fd9535;
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+        }
+        .button:active {
+          border-bottom: solid 2px #fd9535;
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+        }
+        .button:focus {
+          outline: 5px groove rgba(255,255,255,0.3);
+        }
+
+        </style>
+
+        <script id="JavaScriptCode">
+
+        /**
+         * パラメーター
+         **/
+        let slide_show = document.getElementById('slide_show');
+        let slide_show_title = document.getElementById('slide_show_title');
+        let slide_show_area = document.getElementById('slide_show_area');
+        let slide_show_area_img = document.getElementById('slide_show_area_img');
+        let slide_show_area_title = document.getElementById('slide_show_area_title');
+        let slide_show_play = document.getElementById('slide_show_play');
+        let slide_show_pouse = document.getElementById('slide_show_pouse');
+        let slide_show_prev = document.getElementById('slide_show_prev');
+        let slide_show_next = document.getElementById('slide_show_next');
+        let slide_show_image_panels = document.getElementById('slide_show_image_panels');
+
+        var slideShowTitle = "スライドショー";
+        var slideShowIndex = slide_show_image_files.length - 1;
+        var slideShowAuto;
+
+        /// タイトル部
+        slide_show_title.innerHTML = slideShowTitle;
+
+        /**
+         * アクション設定
+         **/
+        // slide_show_area.innerHTML = "表示部";
+        /// プレイボタン
+        slide_show_play.addEventListener( "click", function() {
+          autoSlideShowImage();
+        });
+        /// ポーズボタン
+        slide_show_pouse.addEventListener( "click", function() {
+          pouseSlideShowImage();
+        });
+        /// 前へボタン
+        slide_show_prev.addEventListener( "click", function() {
+          prevSlideShowImage();
+        });
+        /// 次へボタン
+        slide_show_next.addEventListener( "click", function() {
+          nextSlideShowImage();
+        });
+
+        /**
+         * ファンクション設定
+         **/
+        // slide_show_image_panels　エリア
+        function createSlideShowImagePanels(list) {
+          for (var i = 0; i < list.length; i++) {
+            addImagePanel(i,list[i]);
+          }
+        }
+        /// イメージ表示部
+        function addImagePanel (i,item) {
+          const imgPanels = slide_show_image_panels;
+        	// 要素の追加
+          const imgPanel = document.createElement("img");
+          //要素にclass="hoge"を追加する
+          imgPanel.classList.add("slide_show_image_panel");
+          imgPanel.src = "../images/" + item.icon;
+          imgPanel.alt = item.img;
+          imgPanel.title = item.img;
+
+          /// 画像パネルを選択したアクション
+          imgPanel.addEventListener( "click", function() {
+            selectSlideShowImage(i); // 画像を選択する
+            pouseSlideShowImage();   // 自動表示をポーズにする
+          });
+          imgPanels.appendChild(imgPanel);
+        }
+
+        /// 画像選択
+        function selectSlideShowImage(index) {
+          var list = slide_show_image_files;
+          slide_show_area_img.src = "../images/" + list[index].img;
+          slide_show_area_title.innerHTML = list[index].title;
+        }
+
+        /// 自動スライドショー：開始
+        function autoSlideShowImage() {
+          prevSlideShowImage();
+          slideShowAuto = setTimeout(autoSlideShowImage,3000);
+          slide_show_play.style.display = "none";
+          slide_show_pouse.style.display = "inline";
+          displayConsole(slideShowAuto);
+        }
+
+        /// 自動スライドショー：解除
+        function pouseSlideShowImage() {
+          if (slideShowAuto) {
+            clearTimeout(slideShowAuto);
+          }
+          slide_show_play.style.display = "inline";
+          slide_show_pouse.style.display = "none";
+          displayConsole(slideShowAuto);
+        }
+        /// 前へ戻る
+        function prevSlideShowImage() {
+          var list = slide_show_image_files;
+          slideShowIndex++;
+          if (list.length - 1 < slideShowIndex) {
+            slideShowIndex = 0;
+          }
+          selectSlideShowImage(slideShowIndex);
+        }
+        /// 前へ進む
+        function nextSlideShowImage() {
+          var list = slide_show_image_files;
+          slideShowIndex--;
+          if (slideShowIndex < 0) {
+            slideShowIndex = list.length - 1;
+          }
+          selectSlideShowImage(slideShowIndex);
+        }
+        /**
+         * 初回実行部
+         **/
+        createSlideShowImagePanels(slide_show_image_files);
+        autoSlideShowImage();
+        </script>
+
+          <section name="JavaScriptCodeArea">
+            <h1>JavaScript：公開</h1>
+            <p>
+            </p>
+          </section>
+
+          <h5>コード部</h5>
+          <section name="JavaScriptCodeArea">
+              <h5>HTML</h5>
+            <pre class="codeColor" style="overflow:scroll;"><code id="displayHTMLCode"></code>
+            </pre>
+            <h5>CSS</h5>
+            <pre class="codeColor" style="overflow:scroll;"><code id="displayCSSCode"></code>
+            </pre>
+            <h5>JavaScript</h5>
+            <pre class="codeColor" style="overflow:scroll;"><code id="displayJavaScriptCode"></code>
+            </pre>
+            <h5>コンソール</h5>
+            <pre class="codeColor" style="overflow:scroll;"><code id="consoleCode"></code>
+            </pre>
+            <script>
+            let consoleCode = document.getElementById('consoleCode');
+            consoleCode.innerHTML = "<br />";
+            function displayConsole(HTML) {
+              consoleCode.innerHTML += "$ " + HTML + "<br />";
+            }
+            </script>
+            </article>
+
+            <script>
+            let displayHTMLCode = document.getElementById('displayHTMLCode');
+            let HTMLCode = document.getElementById('HTMLCode');
+            let displayCSSCode = document.getElementById('displayCSSCode');
+            let CSSCode = document.getElementById('CSSCode');
+            let displayJavaScriptCode = document.getElementById('displayJavaScriptCode');
+            let JavaScriptCode = document.getElementById('JavaScriptCode');
+            displayHTMLCode.innerHTML = replaceAll(HTMLCode.innerHTML);
+            displayCSSCode.innerHTML = CSSCode.innerText;
+            displayJavaScriptCode.innerHTML = JavaScriptCode.innerText;
+
+            function replaceAll(text) {
+              const startText = text.replace(/</g, '&lt;');
+              const endText = startText.replace(/>/g, '&gt;');
+              return endText;
+            }
+            </script>
+
+          </section>
+
+          <section>
+            <h1 class="title">シェアプログラミング</h1>
+              <p>各種プログラミングの学習ページを増やしていきます。</p>
+          </section>
+    </aside>
+
+    <aside>
+
+        <section>
+          <h1 class="title">プログラミングSOS</h1>
+          <p>
+            困ったらここにつぶやこう！ プログラミングSOS
+            <br />
+            <br />
+            基本的なルールは、全世代問わず トラブルのないように！！ 心配りをご協力お願いいたします。
+            <br />
+            <br />
+            完全公開にしているのでシェアしたものに関しては、みんなのものになるので、個人情報やコンプライアンスを注意をお願いいたします。
+          </p>
+        </section>
+
+    </aside>
+
+    </main>
+
+    <hr style="clear:both;"/>
+
+  <section style="background-color:orange;">
+    <aside class="aside-list">
+        <h1 class="title">記事一覧</h1>
+        <article style="background-color:white;padding:20px;">
+        <p>みんながおすすめするブログ・ツール</p>
+        </article>
+
+        <h3 class="title">ツール一覧</h3>
+
+        <article style="background-color:white;padding:20px;">
+        <h2>#Progate　プログラミングの基礎を勉強したい方へ</h2>
+        <span>2020.02.29</span>
+        <a href="https://prog-8.com/" target="_blank">#Progate</a>
+        </article>
+
+        <article style="background-color:white;padding:20px;">
+            <h2>note.com　ブログを発信したい方へ</h2>
+            <span>2020.02.29</span>
+            <a href="https://note.com/" target="_blank">note.com</a>
+        </article>
+
+        <article style="background-color:white;padding:20px;">
+            <h2>qiita.com　IT技術などの知識を発信したい方へ</h2>
+            <span>2020.02.29</span>
+            <a href="https://qiita.com/" target="_blank">qiita.com</a>
+        </article>
+
+        <h1 class="title">参加者メンバー 一覧</h1>
+
+        <article style="background-color:white;padding:20px;">
+        <h2>THE メディア（代表：大熊 月）</h2>
+        <span>2020.02.29 - </span>
+        <a href="https://twitter.com/sunstripe2011" target="_blank"><p>頑張るプログラマーを応援したい</p></a>
+        </article>
+
+    </aside>
+
+    <aside id="news" class="aside-list">
+      <h2 class="title">公開行事や同窓会などのお知らせ</h2>
+      <article style="background-color:white;padding:20px;">
+        <a href="https://note.com/thecardgame/n/n2f8ef482ed9a" target="_blank"><p>第７回青空プログラミング</p></a>
+      </article>
+
+      <article style="background-color:white;padding:20px;">
+        <a href="https://actcoin.jp/project/detail.php?id=600" target="_blank"><p>青空プログラミング</p></a>
+      </article>
+    </aside>
+
+  </section>
+    <footer id="footer">
+      <section style="background-color:black;color:white;">
+        <h1 class="title">サンストライプのお知らせ</h1>
+        <p>
+          IT／WEBエンジニアに特化した学習サイト「Hello World!!」。 プログラミングスキルチェックであなたのプログラミング力をみんなでチェックすることを目的にしていきます。<br />
+          自分の学習のチェックをアウトプット可視化し、スキルも含めみんなでチェックしていけばいくほど、現場とほぼ同じスキルをマスターしていけるという無料コンテンツです。<br />
+          これからIT／WEBエンジニアとして就職や転職をしたいと思っている方には、かなり有利になる画期的なサービスです。<br />
+          さらに、プログラミング初心者向けの学習方法として、それぞれのプロフィール（紹介ページ）を作成して、自分自身のポートフォリオを作成していくことも目的にしていくので<br />
+          みんなのスキルやみんなの成長がみんなで確認できるのである種成長ゲームのようにコンテンツを活用してほしいと思います。<br />
+        </p>
+      </section>
+
+        <hr class="clearline">
+        <div id="site-map">
+        <section class="float-left30 height_max">
+            <h2 class="title">サービス</h2>
+
+            <h4>Hello World!!ラーニング</h4>
+            課題は、希望者と話して決めていきます。みんなで学ぶ<br />
+            <h4>Hello World!!</h4>
+            プログラミング実行 環境<br />
+            <a href="https://github.com/TeamSunstripe/HelloWorld" target="_blank">Hello World!! Github</a><br />
+        </section>
+        <section class="float-center40 height_max">
+            <h2 class="title">みんなが作ったコンテンツ</h2>
+
+            <h2>みんなが作ったコンテンツ</h2>
+                Hello World!!とは<br />
+                Hello World!! 運営サークル<br />
+            <br />
+                <a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
+                <br />
+            <br />
+            <h4>ブログ・SNS</h4>
+            <br />
+            <a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
+            THE メディア
+            <a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
+
+        </section>
+        <section class="float-right30 height_max">
+          <h1 class="title">カスタマーサポート</h1>
+          <p>返信が必要な場合はこちら</p>
+          <button style="width:100%" onclick="alert('ただいま工事中');">お問い合わせ</button>
+          <p>サンストライプへのご意見・ご要望をお聞かせください</p>
+          <textarea style="width:100%;height:400px;" >サービスへのご意見、ご要望をお聞かせください。ご意見・ご要望に返信できないことをあらかじめご了承ください。</textarea>
+          <button style="width:100%;" onclick="alert('ただいま工事中');">送信する</button>
+        </section>
+        </div>
+
+        <hr class="clearline">
+
+              <style>
+              #links-list {
+                background-color: black;
+                height: 100%;
+              }
+              #links-list a{
+                color: white;
+              }
+              .float-center30 {
+                float:left;
+                width:20%;
+                background-color: black;
+              }
+              .float-right40 {
+                float:right;
+                width:30%;
+                background-color: black;
+              }
+              </style>
+        <div id="links-list">
+          <script>
+
+          function displayList(linkList) {
+            for (var i = 0; i < linkList.length; i++) {
+              document.write('<a href="');
+              document.write(linkList[ i ].href);
+              document.write('" target="');
+              var target = linkList[ i ].target;
+              if (!target) {
+                target = "_blank";
+              }
+              document.write(target);
+              document.write('">');
+              document.write('<h5>');
+              document.write(linkList[ i ].title);
+              document.write('</h5>');
+              document.write('</a>');
+            }
+          }
+
+          function displayListWithTag(tag,linkList) {
+            for (var i = 0; i < linkList.length; i++) {
+              document.write('<a href="');
+              document.write(linkList[ i ].href);
+              document.write('" target="');
+              var target = linkList[ i ].target;
+              if (!target) {
+                target = "_blank";
+              }
+              document.write(target);
+              document.write('">');
+              document.write(tag.start);
+              document.write('<img style="width:20%;max-width:200px;" src="');
+              document.write(linkList[ i ].img);
+              document.write('" alt="');
+              document.write(linkList[ i ].title);
+              document.write('" title="');
+              document.write(linkList[ i ].title);
+              document.write('"/>');
+              if (linkList[ i ].title_hidden != true) {
+                document.write(linkList[ i ].title);
+              }
+              document.write(tag.end);
+              document.write('</a>');
+            }
+          }
+
+
+          </script>
+        <section class="float-left30 height_max">
+
+          <script>
+
+          var a_links_list = [
+              {
+                title:"Qiita@sunstripe2011",
+                href:"https://qiita.com/sunstripe2011",
+              },
+              {
+                title:"THE CARD GAMEマガジン",
+                href:"https://note.com/thecardgame"
+              },
+          ];
+            displayList(a_links_list);
+          </script>
+
+        </section>
+        <section class="float-center30 height_max">
+          <script>
+
+          var b_links_list = [
+              {
+                title:"プログラミング",
+                href:"https://note.com/thecardgame/m/m5511291011ae",
+              },
+              {
+                title:"青空プログラミング",
+                href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1220739",
+              },
+              {
+                title:"シェアプログラミング",
+                href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1274188",
+              },
+              {
+                title:"プログラミング道の駅",
+                href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1240438",
+              },
+              {
+                title:"ブログラミング",
+                href:"https://note.com/thecardgame/m/mcc8f5da850af"
+              },
+              {
+                title:"THE メディアマガジン",
+                href:"https://note.com/thecardgame/m/ma9eb41a913e2"
+              },
+          ];
+            displayList(b_links_list);
+
+          </script>
+        </section>
+        <section class="float-right40 height_max">
+          <script>
+          var c_links_list = [
+              {
+                title:"分野別",
+                href:"#分野別",
+              },
+              {
+                title:"政治・外交",
+                href:"#政治・外交",
+              },
+              {
+                title:"経済・ビジネス",
+                href:"#経済・ビジネス",
+              },
+              {
+                title:"国際",
+                href:"#国際",
+              },
+              {
+                title:"社会",
+                href:"#社会"
+              },
+              {
+                title:"文化",
+                href:"#文化"
+              },
+              {
+                title:"技術",
+                href:"#技術"
+              },
+              {
+                title:"暮らし",
+                href:"#暮らし"
+              },
+              {
+                title:"スポーツ",
+                href:"#スポーツ"
+              },
+              {
+                title:"エンタメ",
+                href:"#エンタメ"
+              },
+              {
+                title:"環境",
+                href:"#環境"
+              },
+              {
+                title:"仕事・労働",
+                href:"#仕事・労働"
+              },
+              {
+                title:"家族・家庭",
+                href:"#家族・家庭"
+              },
+              {
+                title:"健康・医療",
+                href:"#健康・医療"
+              },
+              {
+                title:"歴史",
+                href:"#歴史"
+              },
+          ];
+          displayList(c_links_list);
+                    </script>
+        </section>
+        <hr class="clearline">
+        </div>
+
+        <hr class="clearline">
+        <div style="background-color:white;color:rgba(0,0,0,0.8);">
+          <h2 style="text-align:center;">SDGs:持続可能な開発目標</h2>
+      <script>
+        baseDir = "../";
+        imgDir = "../images/";
+        var d_links_list = [
+            {
+              title:"プログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/m5511291011ae",
+              img: imgDir + "sdg-ja-01.png",
+            },
+            {
+              title:"青空プログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1220739",
+              img: imgDir + "sdg-ja-02.png",
+            },
+            {
+              title:"シェアプログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1274188",
+              img: imgDir + "sdg-ja-03.png",
+            },
+            {
+              title:"プログラミング道の駅",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1240438",
+              img: imgDir + "sdg-ja-04.png",
+            },
+            {
+              title:"ブログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/mcc8f5da850af",
+              img: imgDir + "sdg-ja-05.png",
+            },
+            {
+              title:"THE メディアマガジン",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/ma9eb41a913e2",
+              img: imgDir + "sdg-ja-06.png",
+            },
+            {
+              title:"プログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/m5511291011ae",
+              img: imgDir + "sdg-ja-07.png",
+            },
+            {
+              title:"青空プログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1220739",
+              img: imgDir + "sdg-ja-08.png",
+            },
+            {
+              title:"シェアプログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1274188",
+              img: imgDir + "sdg-ja-09.png",
+            },
+            {
+              title:"プログラミング道の駅",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1240438",
+              img: imgDir + "sdg-ja-10.png",
+            },
+            {
+              title:"ブログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/mcc8f5da850af",
+              img: imgDir + "sdg-ja-11.png",
+            },
+            {
+              title:"THE メディアマガジン",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/ma9eb41a913e2",
+              img: imgDir + "sdg-ja-12.png",
+            },
+            {
+              title:"シェアプログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1274188",
+              img: imgDir + "sdg-ja-13.png",
+            },
+            {
+              title:"プログラミング道の駅",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1240438",
+              img: imgDir + "sdg-ja-14.png",
+            },
+            {
+              title:"ブログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/mcc8f5da850af",
+              img: imgDir + "sdg-ja-15.png",
+            },
+            {
+              title:"THE メディアマガジン",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/ma9eb41a913e2",
+              img: imgDir + "sdg-ja-16.png",
+            },
+            {
+              title:"THE メディアマガジン",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/m/ma9eb41a913e2",
+              img: imgDir + "sdg-ja-17.png",
+            },
+
+        ];
+        displayListWithTag({start:'<span>',end:'</span>'},d_links_list);
+      </script>
+      <img src="../images/sdgs_logo.png" style="width:calc(100%);max-width:calc(210px);margin:0 auto;"/>
+      <h4 style="text-align:center;">私たちは、積極的に活動に参加していきます</h4>
+      <hr class="clearline">
+    </div>
+        <hr class="clearline">
+        <h5 style="text-align: center;">(C) <a rel="author" href="https://qiita.com/sunstripe2011" target="_blank">サンストライプ</a>(<a href="https://note.com/thecardgame/n/nbb2aab3e8ae6" target="_blank">プログラミング道の駅</a>) 2020.02.29<br /></h5>
+    </footer>
+
+</body>
+</html>

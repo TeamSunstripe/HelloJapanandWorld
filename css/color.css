@@ -124,3 +124,26 @@ a:hover.chalkColor {
 a:active.chalkColor {
   color: rgba(255,255,255,0.8);
 }
+
+#alertPopup {
+  width:calc(100% - 160px);
+  margin :100px 0;
+  padding: 40px;
+}
+#alertPopup h1 {
+  text-align: center;
+}
+#alertPopup h3 {
+  text-align: center;
+}
+#alertPopup button {
+  width:calc(100% - 200px);
+  height: 60px;
+  margin: 100px;
+  text-align: center;
+  background-color: rgba(255,100,100,0.8);
+}
+
+#alertPopup button:hover {
+  background-color: rgba(255,100,100,0.3);
+}

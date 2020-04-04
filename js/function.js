@@ -91,20 +91,6 @@ function twitterSearch() {
     saveSearchList();
 }
 
-/**
- * facebook で検索を行う
- */
-function facebookSearch() {
-    var facebookHTML = "https://www.facebook.com/search/top/?q=" + inputSearchWord.value;
-    var result = window.confirm("Facebook で[" + inputSearchWord.value + "]を検索する");
-    if(result){
-        window.open(facebookHTML, "Facebook検索");
-    } else {
-
-    }
-    saveSearchList();
-}
-
 function instagramSearch() {
     var instagramHTML = "https://www.instagram.com/explore/tags/" + inputSearchWord.value;
     var result = window.confirm("Instagram で[" + inputSearchWord.value + "]を検索する");
