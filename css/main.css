@@ -34,6 +34,9 @@ p {
     border-top: solid 3px rgba(255,255,255,0.3);/*上線*/
     border-bottom: solid 3px rgba(255,255,255,0.3);/*下線*/
 }
+.py20x40 {
+  padding:20px 40px;
+}
 
 header {
     padding-left : 5%;
@@ -329,6 +332,17 @@ img.imgflex{
   border-radius:5px 5px 0px 0px;
   font-size: 20px;
 }
+.list li {
+  list-style: none;
+  border-bottom:solid;
+}
+.list li:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.list li:last-child {
+  border-bottom: none;
+}
+
 /*
  @media以外の所は全てのサイズで読み込まれます。
  */

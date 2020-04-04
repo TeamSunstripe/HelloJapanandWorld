@@ -288,3 +288,10 @@ function alertMessage(title,message,handler) {
   // 警告画面を隠す
   alertPopupSection.style.visibility = "hidden";
   }
+
+  /// 文字処理
+  function replaceAll(text) {
+    const startText = text.replace(/</g, '&lt;');
+    const endText = startText.replace(/>/g, '&gt;');
+    return endText;
+  }
