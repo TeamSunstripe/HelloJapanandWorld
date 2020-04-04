@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<title>Hello World!!</title>
+<title>Hello,JavaScript World!!|スライドショー</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="stylesheet" type="text/css" href="../css/main.css" />
 <script type="text/javascript" src="../js/main.js"></script>
 <script type="text/javascript" src="../js/share.js"></script>
@@ -25,10 +26,6 @@
   <input style="border-radius:5px; font-size:large; width:100px;" type="button" value="O K" onclick="alertMessageClose()"></div>
   </div>
   </div>
-
-  <script type="text/javascript"><!--
-
-  // --></script>
 
     <header>
         <h2>Hello,Japan and World!!</h2>
@@ -57,11 +54,9 @@
           <br />
           かんたん1分<br />
         </p>
-        <button style="width:300px;height:100px;" onclick=openURL('https://twitter.com/sunstripe2011','こちらにDMにておしらせください');>ご登録はこちら</button>
-        <button onclick=facebookShare(location.href);>シェア<button>
+        <button style="width:300px;height:100px;" class="button" onclick=openURL('https://twitter.com/sunstripe2011','こちらにDMにておしらせください');>ご登録はこちら</button>
+        <button style="width:300px;height:100px;" class="button" onclick=facebookShare(location.href);>シェア<button>
     </section>
-    <button onclick='alertMessage("myTitle", "myMessage");'>alertMessage</button>
-    <button onclick='showNoticePopup("myMessage");'>noticePopup</button>
 
     <nav id="side-nav">
         <ul>
@@ -70,16 +65,6 @@
             var imgDir = "../img/";
             document.write(displaySideMenuNavList(baseDir,imgDir,sideNavMenus));
           </script>
-
-          <!--li><a href="outline.html"><h4 class="side_text"><img src="./img/school.png" class="side_image"/><span class="side_title">幼稚園の概要</span></h4></a></li>
-            <li><a href="schedule.html"><h4 class="side_text"><img src="./img/schedule.png" class="side_image"/><span class="side_title">スケジュール</span></h4></a></li>
-            <li><a href="facility.html"><h4 class="side_text"><img src="./img/building.png" class="side_image"/><span class="side_title">施設</span></h4></a></li>
-            <li><a href="map.html"><h4 class="side_text"><img src="./img/access.png" class="side_image"/><span class="side_title">アクセス</span></h4></a></li>
-            <li><a href="help.html"><h4 class="side_text"><img src="./img/learning.png" class="side_image"/><span class="side_title">子育ての支援</span></h4></a></li>
-            <li><a href="voice.html"><h4 class="side_text"><img src="./img/message.png" class="side_image"/><span class="side_title">保護者の声</span></h4></a></li>
-            <li><a href="assessment.html"><h4 class="side_text"><img src="./img/star.png" class="side_image"/><span class="side_title">幼稚園の学校評価</h4></a></li>
-            <li><a href="subsidy.html"><h4 class="side_text"><img src="./img/bookmark.png" class="side_image"/><span class="side_title">補助制度</span></h4></a></li>
-            <li><a href="recruitment.html"><h4 class="side_text"><img src="./img/peaple.png" class="side_image"/><span class="side_title">園児募集</span></h4></a></li-->
         </ul>
     </nav>
 
@@ -91,6 +76,7 @@
                 <li><a name="facility" href="facility.html"><h4>施設</h4></a></li>
             </ul>
         </nav>
+
         <h5>表示部</h5>
         <div id="HTMLCode">
         <section id="slide_show">
@@ -110,13 +96,24 @@
         </div>
 
         <style id="CSSCode">
+        /* スライドショーエリア */
+        #slide_show {
 
+        }
+        #slide_show_title {
+
+        }
+        /* 表示するエリア部 */
+        #slide_show_area {
+
+        }
         #slide_show_area_img {
 
         }
         #slide_show_area_title {
           text-align: center;
         }
+        /* 表示のコントロール部 */
         #slide_show_controler {
           text-align: center;
         }
@@ -140,10 +137,16 @@
           max-width: 300px;
           height: 50px;
         }
+        /* 表示したいイメージパネル部 */
+        #slide_show_image_panels {
+
+        }
+        /* 表示したいイメージ各パネル */
         .slide_show_image_panel {
           width: calc(100% / 5);
           max-width: 300px;
         }
+        /* ボタン部分 */
         .button {
           position: relative;
           margin: 20px 0;
@@ -158,15 +161,18 @@
           font-weight: bold;
           font-size: 2vw;
         }
+        /* ボタン：選択時 */
         .button:hover {
           background-color: #00FF00;
           border-bottom: solid 2px #fd9535;
           box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
         }
+        /* ボタン：選択時 */
         .button:active {
           border-bottom: solid 2px #fd9535;
           box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
         }
+        /* ボタン：フォーカス時 */
         .button:focus {
           outline: 5px groove rgba(255,255,255,0.3);
         }
@@ -302,24 +308,26 @@
           </section>
 
           <h5>コード部</h5>
+
           <section name="JavaScriptCodeArea">
-              <h5>HTML</h5>
-            <pre class="codeColor" style="overflow:scroll;"><code id="displayHTMLCode"></code>
-            </pre>
-            <h5>CSS</h5>
-            <pre class="codeColor" style="overflow:scroll;"><code id="displayCSSCode"></code>
-            </pre>
-            <h5>JavaScript</h5>
-            <pre class="codeColor" style="overflow:scroll;"><code id="displayJavaScriptCode"></code>
-            </pre>
-            <h5>コンソール</h5>
-            <pre class="codeColor" style="overflow:scroll;"><code id="consoleCode"></code>
-            </pre>
+          <h5>HTML</h5>
+<pre class="codeColor" style="overflow:scroll;"><code id="displayHTMLCode"></code>
+</pre>
+          <h5>CSS</h5>
+<pre class="codeColor" style="overflow:scroll;"><code id="displayCSSCode"></code>
+</pre>
+          <h5>JavaScript</h5>
+<pre class="codeColor" style="overflow:scroll;"><code id="displayJavaScriptCode"></code>
+          </pre>
+          <h5>コンソール</h5>
+<pre class="codeColor" style="overflow:scroll;"><code id="consoleCode"></code>
+</pre>
+
             <script>
             let consoleCode = document.getElementById('consoleCode');
             consoleCode.innerHTML = "<br />";
             function displayConsole(HTML) {
-              consoleCode.innerHTML += "$ " + HTML + "<br />";
+              consoleCode.innerHTML += "$ : " + HTML + "<br />";
             }
             </script>
             </article>
