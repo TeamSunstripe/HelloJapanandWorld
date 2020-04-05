@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="author" content="@sunstripe2011" />
+  <meta name="keywords" content="目標作り,クリエーター,紹介,制作,仲間作り" />
+  <meta name="description" content="最強で最高のチーム作りサンストライプ-オフィシャルサイト。" />
+  <title>Hello,Japan and World!!|ようこそシェアプログラミング - CSS スタイルシートリファレンス</title>
+  <link rel="stylesheet" type="text/css" href="../css/main.css" />
+  <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+  <script type="text/javascript" src="../js/project.js"></script>
+  <script type="text/javascript" src="../db/db.js"></script>
+  <script type="text/javascript" src="./js/cssdata.js"></script>
+</head>
+<style>
+</style>
+<body>
+  <header>
+    <h2>プロジェクト</h2>
+    <h1>Project</h1>
+    <nav id="header-nav">
+    <ul>
+    <li><a rel="canonical" href="https://note.com/thecardgame/n/nc0eead00f5d0" target="_blank"><h5>このサイトについて</h2></a></li>
+    <li><a rel="contact" href="https://twitter.com/sunstripe2011" target="_blank"><h5>お問い合わせ</h5></a></li>
+    <li><a rel="author" href="https://qiita.com/sunstripe2011" target="_blank"><h5>サンストライプ</h5></a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <section style="margin:30px auto;text-align:center;">
+    <h1>Hello World!!</h1>
+    <p>
+    Hello World!! 自分たちのプログラミングをみんなにチェックしてもらおう！
+    <br />
+    みんなで Hellow World!!! 使い方、ここのコードは全てみんなのもの。
+    <br />
+    まずは、GitHub から GitHubの使い方を学びます
+    </p>
+    <p>
+    あなたの可能性を<br />
+    活かしませんか？<br />
+    <br />
+    かんたん1分<br />
+    </p>
+    <button style="width:300px;height:100px;">ご登録はこちら</button>
+  </section>
+
+<script>
+  document.write(displayProjectList("color",""));
+</script>
+
+
+<nav id="side-nav">
+<ul>
+<script>
+var baseDir = "../";
+var imgDir = "../img/";
+for (var snh = 0;snh < sideNavMenus.length;snh++) {
+    var headerInfo = sideNavMenus[snh].header;
+    document.write('<li class="side_header">');
+    document.write('<h4 class="side_text">');
+    var headerImageURL = imgDir + headerInfo.img;
+    if (!headerImageURL) {
+        headerImageURL = imgDir + "school.png";
+    }
+    document.write('<img src="');
+    document.write(headerImageURL);
+    document.write('" class="side_image" alt="');
+    document.write(headerInfo.title);
+    document.write('" title="');
+    document.write(headerInfo.title);
+    document.write('"/>');
+    document.write('<span class="side_title">');
+    document.write(headerInfo.title);
+    document.write('</span>');
+    document.write('</h4>');
+    document.write('</li>');
+    var menuItems = sideNavMenus[snh].items;
+    for (var snm = 0;snm < menuItems.length;snm++) {
+        var menuItem = menuItems[snm];
+        document.write('<li class="side_hover');
+        if (menuItem.hidden == true) {
+            document.write(' display_none');
+        }
+        document.write('">');
+        var itemHrefURL = baseDir + menuItem.href;
+        if (!itemHrefURL) {
+            itemHrefURL = "#";
+        }
+        document.write('<a href="');
+        document.write(itemHrefURL);
+        document.write('">');
+        document.write('<h4 class="side_text">');
+        var itemImageURL = imgDir + menuItem.img;
+        if (!itemImageURL) {
+            itemImageURL = imgDir + "school.png";
+        }
+        document.write('<img src="');
+        document.write(itemImageURL);
+        document.write('" class="side_image" alt="');
+        document.write(menuItem.title);
+        document.write('" title="');
+        document.write(menuItem.title);
+        document.write('"/>');
+        document.write('<span class="side_title">');
+        document.write(menuItem.title);
+        document.write('</span>');
+        document.write('</h4>');
+        document.write('</a>');
+        document.write('</li>');
+    }
+}
+</script>
+
+<!--li><a href="outline.html"><h4 class="side_text"><img src="./img/school.png" class="side_image"/><span class="side_title">幼稚園の概要</span></h4></a></li>
+<li><a href="schedule.html"><h4 class="side_text"><img src="./img/schedule.png" class="side_image"/><span class="side_title">スケジュール</span></h4></a></li>
+<li><a href="facility.html"><h4 class="side_text"><img src="./img/building.png" class="side_image"/><span class="side_title">施設</span></h4></a></li>
+<li><a href="map.html"><h4 class="side_text"><img src="./img/access.png" class="side_image"/><span class="side_title">アクセス</span></h4></a></li>
+<li><a href="help.html"><h4 class="side_text"><img src="./img/learning.png" class="side_image"/><span class="side_title">子育ての支援</span></h4></a></li>
+<li><a href="voice.html"><h4 class="side_text"><img src="./img/message.png" class="side_image"/><span class="side_title">保護者の声</span></h4></a></li>
+<li><a href="assessment.html"><h4 class="side_text"><img src="./img/star.png" class="side_image"/><span class="side_title">幼稚園の学校評価</h4></a></li>
+<li><a href="subsidy.html"><h4 class="side_text"><img src="./img/bookmark.png" class="side_image"/><span class="side_title">補助制度</span></h4></a></li>
+<li><a href="recruitment.html"><h4 class="side_text"><img src="./img/peaple.png" class="side_image"/><span class="side_title">園児募集</span></h4></a></li-->
+</ul>
+</nav>
+
+<main>
+
+<nav id="sub-nav" hidden>
+<ul>
+<li><a href="index.html"><h4>TOP</h4></a></li>
+<li><a name="facility" href="facility.html"><h4>施設</h4></a></li>
+</ul>
+</nav>
+
+<section name="css">
+<h1>CSS</h1>
+<h2>スタイルシートリファレンス</h2>
+<aside id="ad1">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- レクタングル（大） -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:320px;height:280px"
+data-ad-client="ca-pub-1616619771436459"
+data-ad-slot="5900513788"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</aside>
+</section>
+
+<section name="direction">
+<h1 class="title">タイトル･････簡単な説明</h1>
+<div id="cssProperties">
+</div>
+<!--/ #cssProperties-->
+<br />
+<h4>値</h4>
+<div id="cssElements">
+</div>
+<!--/ #cssElements-->
+</section>
+
+<section id="ad2">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- リンクユニット（小　モバイル用） -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:320px;height:50px"
+data-ad-client="ca-pub-1616619771436459"
+data-ad-slot="9019374983"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</section>
+
+<section id="howto">
+<h4>使用例</h4>
+<h5>外部ファイル（sample.css）</h5>
+<article id="cssUseExsample">
+<pre id="styleOutput"></pre>
+<style id="styleInput">
+/*
+ p {
+ color:blue;
+ //ここに書き込み
+ }
+ */
+</style>
+</article>
+<!--/ #cssUseExsample-->
+</section>
+<section id="source_code">
+<h4>HTML</h4>
+<h5>外部ファイル（sample.html）</h5>
+<article id="htmlSourceCode">
+<pre id="htmlOutput">
+</pre>
+</article>
+<!--/ #htmlSourceCode-->
+</section>
+
+<section id="htmlUseExsample">
+<h4>ブラウザ上の表示</h4>
+<article id="htmlInput">
+<link rel="stylesheet" href="./css/sample.css" type="text/css" />
+(sample.html)ここに書き込み
+</article>
+</section>
+<!--/ #htmlUseExsample-->
+
+<section id="ad3">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- レクタングル（中） -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-1616619771436459"
+data-ad-slot="1714745781"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</section>
+
+<section id="links_list">
+<h4>関連</h4>
+<article id="htmlList">
+</article>
+<!--/ #htmlList-->
+<script>
+var page = "";
+var htmlList = document.getElementById("htmlList");
+for(var l = 0; l < htmlData.links.length;l++){
+    var html = "";
+    var title = htmlData.links[l].title;
+    if(page == ""){
+        html += "<br />";
+        html += "<h3>" + title + "</h3>";
+        var items = htmlData.links[l].items;
+        for(var i = 0;i < items.length;i++){
+          html += "<a href='";
+          html += "http://sunstripe.main.jp/books/css/" + items[i].url;
+          html += "'>";
+          html += "<h5>";
+          html += items[i].title;
+          html += "</h5>";
+          html += "</a>";
+        }
+        htmlList.innerHTML += html;
+    } else if(page != title && page != ""){
+
+    } else {
+        var items = htmlData.links[l].items;
+        html += "<br />";
+        for(var i = 0;i < items.length;i++){
+          html += "<a href='";
+          html += "http://sunstripe.main.jp/books/css/" + items[i].url;
+          html += "'>";
+          html += "<h5>";
+          html += items[i].title;
+          html += "</h5>";
+          html += "</a>";
+        }
+        htmlList.innerHTML += html;
+    }
+}
+var styleOutput = document.getElementById("styleOutput");
+var styleInput = document.getElementById("styleInput");
+styleOutput.innerHTML = styleInput.innerHTML;
+var htmlOutput = document.getElementById("htmlOutput");
+var htmlInput = document.getElementById("htmlInput");
+var input = htmlInput.innerHTML;
+var re = /</gi;
+input = input.replace(re, "&#60;");
+re = />/gi;
+input = input.replace(re, "&#62;");
+htmlOutput.innerHTML = input;
+</script>
+</section>
+
+<section id="ad4">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- リンクユニット縦長(特大) -->
+<ins class="adsbygoogle"
+style="display:inline-block;width:200px;height:90px"
+data-ad-client="ca-pub-1616619771436459"
+data-ad-slot="2120848581"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</section>
+
+
+<section name="github">
+<h1>Github</h1>
+<p>
+<a href="https://techacademy.jp/magazine/6235">https://techacademy.jp/magazine/6235</a>
+</p>
+</section>
+<section>
+<p>各種プログラミングの学習ページを生やしていきます。</p>
+</section>
+
+<section>
+<h1 class="title">HTML / CSS / JavaScript</h1>
+./html/
+</section>
+
+<section>
+<h1 class="title">PHP</h1>
+./php/
+</section>
+
+<section>
+<h1 class="title">PHP</h1>
+./php/
+</section>
+
+<section>
+<h1 class="title">Objective-C</h1>
+./iOS/ObjectiveC/
+</section>
+
+<section>
+<h1 class="title">Swift</h1>
+./iOS/ObjectiveC/
+</section>
+
+<section>
+<h1 class="title">Java</h1>
+./Android/Java/
+</section>
+
+<section>
+<h1 class="title">その他</h1>
+./other/
+</section>
+
+</main>
+
+<aside id="news">
+
+<section>
+<h1>公開行事や同窓会などのお知らせ</h1>
+</section>
+
+</aside>
+
+<footer>
+<section>
+<h1>公開行事や同窓会などのお知らせ</h1>
+<p>
+IT／WEBエンジニアに特化した学習サイト「Hello World!!」。 プログラミングスキルチェックであなたのプログラミング力をみんなでチェックすることを目的にしていきます。<br />
+自分の学習のチェックをアウトプット可視化し、スキルも含めみんなでチェックしていけばいくほど、現場とほぼ同じスキルをマスターしていけるという無料コンテンツです。<br />
+これからIT／WEBエンジニアとして就職や転職をしたいと思っている方には、かなり有利になる画期的なサービスです。<br />
+さらに、プログラミング初心者向けの学習方法として、それぞれのプロフィール（紹介ページ）を作成して、自分自身のポートフォリオを作成していくことも目的にしていくので<br />
+みんなのスキルやみんなの成長がみんなで確認できるのである種成長ゲームのようにコンテンツを活用してほしいと思います。<br />
+</p>
+</section>
+<nav id="footer-nav">
+<ul>
+<li><a href="outline.html"><h4>幼稚園の概要</h4></a></li>
+<li><a href="schedule.html"><h4>スケジュール</h4></a></li>
+<li><a href="facility.html"><h4>施設</h4></a></li>
+<li><a href="map.html"><h4>アクセス</h4></a></li>
+<li><a href="help.html"><h4>子育ての支援</h4></a></li>
+<li><a href="voice.html"><h4>保護者の声</h4></a></li>
+<li><a href="assessment.html"><h4>幼稚園の学校評価</h4></a></li>
+<li><a href="subsidy.html"><h4>補助制度</h4></a></li>
+<li><a href="recruitment.html"><h4>園児募集</h4></a></li>
+</ul>
+</nav>
+
+<hr class="clearline">
+
+<section class="float-left30">
+<h2>Hello World!!のサービス</h2>
+
+<!--Hello World!!新卒 就職先<br /-->
+<!--コードで採用！プログラミング就活<br /-->
+<!--Hello World!!転職<br /-->
+<!--コードを書いてシゴト選び<br /-->
+<!--スキルを磨くシゴト選び<br /-->
+<h4>Hello World!!ラーニング</h4>
+課題は、希望者と話して決めていきます。みんなで学ぶ<br />
+<h4>Hello World!!</h4>
+プログラミング実行 環境<br />
+<a href="https://github.com/TeamSunstripe/HelloWorld" target="_blank">Hello World!! Github</a><br />
+</section>
+<section class="float-center40">
+<h2>みんなが作ったコンテンツ</h2>
+
+<h2>みんなが作ったコンテンツ</h2>
+Hello World!!とは<br />
+Hello World!! 運営サークル<br />
+<!--サイトマップ<br /-->
+<br />
+<a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
+<br />
+<!--中途求人掲載はこちら<br /-->
+<!--新卒求人掲載はこちら<br /-->
+<br />
+<h4>ブログ・SNS</h4>
+<br />
+<a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
+THE メディア
+<a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
+<br />
+</section>
+<section class="float-right30">
+a
+</section>
+<hr class="clearline">
+<h5 style="text-align: center;">(C) <a rel="author" href="https://qiita.com/sunstripe2011" target="_blank">サンストライプ</a>(<a href="https://note.com/thecardgame/n/nbb2aab3e8ae6" target="_blank">プログラミング道の駅</a>) 2020.02.29<br />○○○○幼稚園 〒000-0000 住所名</h5>
+</footer>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>
+</head>
+<body>
+<div id="wrapper">
+
+<footer>
+<address>
+&copy; <a href="http://sunstripe.main.jp/books/css/">Team. SunStripe</a> - <a href="http://sunstripe.main.jp/books/css/">CSS リファレンス</a>
+</address>
+</footer>
+</div>
+<!--/ #wrapper-->
+</body>
+</html>

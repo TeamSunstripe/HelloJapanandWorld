@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Hello World!!</title>
   <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <link rel="stylesheet" type="text/css" href="./css/button.css" />
   <script type="text/javascript" src="./js/main.js"></script>
   <script type="text/javascript" src="./db/db.js"></script>
 </head>
@@ -12,121 +13,386 @@
 </style>
 
 <body>
-    <header>
-        <h2>Hello,Japan and World!!</h2>
-        <h1>ようこそシェアプログラミング</h1>
-        <nav id="header-nav">
-            <ul>
-                <li><a rel="canonical" href="https://note.com/thecardgame/n/nc0eead00f5d0" target="_blank"><h5>このサイトについて</h2></a></li>
-                <li><a rel="contact" href="https://twitter.com/sunstripe2011" target="_blank"><h5>お問い合わせ</h5></a></li>
-                <li><a rel="author" href="https://qiita.com/sunstripe2011" target="_blank"><h5>サンストライプ</h5></a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section style="margin:30px auto;text-align:center;">
-        <h1>Hello World!!</h1>
-        <p>
-            Hello World!! 自分たちのプログラミングをみんなにチェックしてもらおう！
-            <br />
-            みんなで Hellow World!!! 使い方、ここのコードは全てみんなのもの。
-            <br />
-            まずは、GitHub から GitHubの使い方を学びます
-        </p>
-        <p>
-          あなたの可能性を<br />
-          活かしませんか？<br />
+  <div id="noticePopupSection" class="fadeout">
+    <div id="noticePopupMessage" onclick="closeNoticePopup();"></div>
+  </div>
+
+  <div id="alertPopupSection" class="fadeout" style="background-color:#FFFFFF; visibility:hidden; position:absolute; border-width:thick; border-style:ridge; width:50%; box-shadow:10px 10px 10px rgba(0,0,0,0.5); border-radius:10px;">
+  <div style="float:right"><div onclick="alertMessageClose()"><img src="./img/close.png" style="width:33px;"></div></div>
+  <div id="alertTitle"></div>
+  <div style="margin:20px 20px 0px 0px;">
+  <div style="display:table; float:left; width:100px; height:100px;"><p style="display:table-cell;vertical-align:middle;text-align:center;"><img src="./img/alert.png" style="width:100px;"></p></div>
+  <div style="display:table; height:100px;"><div id="alertMessage" style="display:table-cell;vertical-align:middle;"></div></div>
+  <div style="padding:10px 0px; text-align:center;">
+  <input style="border-radius:5px; font-size:large; width:100px;" type="button" value="O K" onclick="alertMessageClose()"></div>
+  </div>
+  </div>
+
+  <script type="text/javascript"><!--
+
+  function showNoticePopup(message) {
+    var noticePopupSection = document.getElementById("noticePopupSection");
+    var noticePopupMessage = document.getElementById("noticePopupMessage");
+    // タイトルとメッセージをセットする
+    message = message.replace(/\n/g, "<br />");
+    noticePopupMessage.innerHTML = message;
+    // いったん上端に移動する
+    var noticePopupX = 0;
+    var noticePopupY = (window.innerHeight !== undefined) ? window.innerHeight : document.body.clientHeight;
+    noticePopupSection.style.top = -1 * noticePopupY + "px"; // (適当な計算)
+    // 中央に移動する
+    var noticePopupXs = document.body.scrollLeft;
+    var noticePopupYs = document.body.scrollTop;
+    noticePopupX = (window.innerWidth !== undefined) ? window.innerWidth : document.body.clientWidth;
+    noticePopupY = (window.innerHeight !== undefined) ? window.innerHeight : document.body.clientHeight;
+    noticePopupSection.style.left = (noticePopupX - noticePopupSection.clientWidth)/ 2 + "px";
+    noticePopupSection.style.top = 0 + noticePopupYs + "px"; // (適当な計算)
+
+    // 警告画面を表示
+    noticePopupSection.style.visibility = "visible";
+    // フェードイン
+    noticePopupSection.className = "fadein";
+  }
+  function closeNoticePopup() {
+    var noticePopupSection = document.getElementById("noticePopupSection");
+    // 上端に移動する
+    var noticePopupY = (window.innerHeight !== undefined) ? window.innerHeight : document.body.clientHeight;
+    noticePopupSection.style.top = -1 * noticePopupY + "px"; // (適当な計算)
+
+    // フェードアウト
+    noticePopupSection.className = "fadeout";
+
+    // 警告画面を隠す
+    noticePopupSection.style.visibility = "hidden";
+  }
+
+  function alertMessage(title, message){
+    var alertTitleDiv = document.getElementById("alertTitle");
+    var alertMessageDiv = document.getElementById("alertMessage");
+    var alertPopupSection = document.getElementById("alertPopupSection");
+  // タイトルとメッセージをセットする
+  message = message.replace(/\n/g, "<br />");
+  alertTitleDiv.innerHTML = title;
+  alertMessageDiv.innerHTML = message;
+  // いったん上端に移動する
+  var alertX = 0;
+  var alertY = (window.innerHeight !== undefined) ? window.innerHeight : document.body.clientHeight;
+  alertPopupSection.style.top = -1 * alertY + "px"; // (適当な計算)
+
+  // 中央に移動する
+  var alertXs = document.body.scrollLeft;
+  var alertYs = document.body.scrollTop;
+  alertX = (window.innerWidth !== undefined) ? window.innerWidth : document.body.clientWidth;
+  alertY = (window.innerHeight !== undefined) ? window.innerHeight : document.body.clientHeight;
+  alertPopupSection.style.left = (alertX - alertPopupSection.clientWidth)/ 2 + "px";
+  alertPopupSection.style.top = (alertY - alertPopupSection.clientHeight)/ 2 + "px"; // (適当な計算)
+
+  // 警告画面を表示
+  alertPopupSection.style.visibility = "visible";
+
+  // フェードイン
+  alertPopupSection.className = "fadein";
+  }
+  function alertMessageClose(){
+  // 上端に移動する
+  var alertY = (window.innerHeight !== undefined) ? window.innerHeight : document.body.clientHeight;
+  alertPopupSection.style.top = -1 * alertY + "px"; // (適当な計算)
+
+  // フェードアウト
+  alertPopupSection.className = "fadeout";
+
+  // 警告画面を隠す
+  alertPopupSection.style.visibility = "hidden";
+  }
+  // --></script>
+
+  <header>
+      <h2>Hello,Japan and World!!</h2>
+      <h1>ようこそシェアプログラミング</h1>
+      <nav id="header-nav">
+          <ul>
+              <li><a rel="canonical" href="https://note.com/thecardgame/n/nc0eead00f5d0" target="_blank"><h5>このサイトについて</h2></a></li>
+              <li><a rel="contact" href="https://twitter.com/sunstripe2011" target="_blank"><h5>お問い合わせ</h5></a></li>
+              <li><a rel="author" href="https://qiita.com/sunstripe2011" target="_blank"><h5>サンストライプ</h5></a></li>
+          </ul>
+      </nav>
+  </header>
+
+  <section style="margin:30px auto;text-align:center;">
+      <h1>Hello World!!</h1>
+      <p>
+          Hello World!! 自分たちのプログラミングをみんなにチェックしてもらおう！
           <br />
-          かんたん1分<br />
-        </p>
-        <button style="width:300px;height:100px;" onclick=openURL('https://twitter.com/sunstripe2011','こちらにDMにておしらせください');>ご登録はこちら</button>
-    </section>
+          みんなで Hellow World!!! 使い方、ここのコードは全てみんなのもの。
+          <br />
+          まずは、GitHub から GitHubの使い方を学びます
+      </p>
+      <p>
+        あなたの可能性を<br />
+        活かしませんか？<br />
+        <br />
+        かんたん1分<br />
+      </p>
+      <button style="width:300px;height:100px;" class="button" onclick=openURL('https://twitter.com/sunstripe2011','こちらにDMにておしらせください');>ご登録はこちら</button>
+      <button  style="width:300px;height:100px;" class="button" onclick=facebookShare(location.href);>シェア<button>
+  </section>
 
-    <nav id="side-nav">
-        <ul>
-          <script>
-            var baseDir = "./";
-            var imgDir = "./img/";
-            for (var snh = 0;snh < sideNavMenus.length;snh++) {
-              var headerInfo = sideNavMenus[snh].header;
-              document.write('<li class="side_header">');
-              document.write('<h4 class="side_text">');
-              var headerImageURL = imgDir + headerInfo.img;
-              if (!headerImageURL) {
-                headerImageURL = imgDir + "school.png";
-              }
-              document.write('<img src="');
-              document.write(headerImageURL);
-              document.write('" class="side_image" alt="');
-              document.write(headerInfo.title);
-              document.write('" title="');
-              document.write(headerInfo.title);
-              document.write('"/>');
-              document.write('<span class="side_title">');
-              document.write(headerInfo.title);
-              document.write('</span>');
-              document.write('</h4>');
-              document.write('</li>');
-              var menuItems = sideNavMenus[snh].items;
-              for (var snm = 0;snm < menuItems.length;snm++) {
-                var menuItem = menuItems[snm];
-                document.write('<li class="side_hover');
-                if (menuItem.hidden == true) {
-                  document.write(' display_none');
-                }
-                document.write('">');
-                var itemHrefURL = baseDir + menuItem.href;
-                if (!itemHrefURL) {
-                  itemHrefURL = "#";
-                }
-                document.write('<a href="');
-                document.write(itemHrefURL);
-                document.write('">');
-                document.write('<h4 class="side_text">');
-                var itemImageURL = imgDir + menuItem.img;
-                if (!itemImageURL) {
-                  itemImageURL = imgDir + "school.png";
-                }
-                document.write('<img src="');
-                document.write(itemImageURL);
-                document.write('" class="side_image" alt="');
-                document.write(menuItem.title);
-                document.write('" title="');
-                document.write(menuItem.title);
-                document.write('"/>');
-                document.write('<span class="side_title">');
-                document.write(menuItem.title);
-                document.write('</span>');
-                document.write('</h4>');
-                document.write('</a>');
-                document.write('</li>');
-              }
-            }
-          </script>
+  <nav id="side-nav">
+      <ul>
+        <script>
+          var baseDir = "./";
+          var imgDir = "./img/";
+          document.write(displaySideMenuNavList(baseDir,imgDir,sideNavMenus));
+        </script>
 
-          <!--li><a href="outline.html"><h4 class="side_text"><img src="./img/school.png" class="side_image"/><span class="side_title">幼稚園の概要</span></h4></a></li>
-            <li><a href="schedule.html"><h4 class="side_text"><img src="./img/schedule.png" class="side_image"/><span class="side_title">スケジュール</span></h4></a></li>
-            <li><a href="facility.html"><h4 class="side_text"><img src="./img/building.png" class="side_image"/><span class="side_title">施設</span></h4></a></li>
-            <li><a href="map.html"><h4 class="side_text"><img src="./img/access.png" class="side_image"/><span class="side_title">アクセス</span></h4></a></li>
-            <li><a href="help.html"><h4 class="side_text"><img src="./img/learning.png" class="side_image"/><span class="side_title">子育ての支援</span></h4></a></li>
-            <li><a href="voice.html"><h4 class="side_text"><img src="./img/message.png" class="side_image"/><span class="side_title">保護者の声</span></h4></a></li>
-            <li><a href="assessment.html"><h4 class="side_text"><img src="./img/star.png" class="side_image"/><span class="side_title">幼稚園の学校評価</h4></a></li>
-            <li><a href="subsidy.html"><h4 class="side_text"><img src="./img/bookmark.png" class="side_image"/><span class="side_title">補助制度</span></h4></a></li>
-            <li><a href="recruitment.html"><h4 class="side_text"><img src="./img/peaple.png" class="side_image"/><span class="side_title">園児募集</span></h4></a></li-->
-        </ul>
-    </nav>
+        <!--li><a href="outline.html"><h4 class="side_text"><img src="./img/school.png" class="side_image"/><span class="side_title">幼稚園の概要</span></h4></a></li>
+          <li><a href="schedule.html"><h4 class="side_text"><img src="./img/schedule.png" class="side_image"/><span class="side_title">スケジュール</span></h4></a></li>
+          <li><a href="facility.html"><h4 class="side_text"><img src="./img/building.png" class="side_image"/><span class="side_title">施設</span></h4></a></li>
+          <li><a href="map.html"><h4 class="side_text"><img src="./img/access.png" class="side_image"/><span class="side_title">アクセス</span></h4></a></li>
+          <li><a href="help.html"><h4 class="side_text"><img src="./img/learning.png" class="side_image"/><span class="side_title">子育ての支援</span></h4></a></li>
+          <li><a href="voice.html"><h4 class="side_text"><img src="./img/message.png" class="side_image"/><span class="side_title">保護者の声</span></h4></a></li>
+          <li><a href="assessment.html"><h4 class="side_text"><img src="./img/star.png" class="side_image"/><span class="side_title">幼稚園の学校評価</h4></a></li>
+          <li><a href="subsidy.html"><h4 class="side_text"><img src="./img/bookmark.png" class="side_image"/><span class="side_title">補助制度</span></h4></a></li>
+          <li><a href="recruitment.html"><h4 class="side_text"><img src="./img/peaple.png" class="side_image"/><span class="side_title">園児募集</span></h4></a></li-->
+      </ul>
+  </nav>
 
     <main>
+      <nav id="sub-nav" hidden>
+          <ul>
+              <li><a href="index.html"><h4>TOP</h4></a></li>
+              <li><a name="facility" href="facility.html"><h4>施設</h4></a></li>
+          </ul>
+      </nav>
 
-        <nav id="sub-nav" hidden>
-            <ul>
-                <li><a href="index.html"><h4>TOP</h4></a></li>
-                <li><a name="facility" href="facility.html"><h4>施設</h4></a></li>
-            </ul>
-        </nav>
-      </main>
-          <hr  id="footer" style="clear:both;"/>
-      <section style="background-color:rgba(5,5,5,0.4);">
+      <style>
+      .HTMLColor {
+        background-color: white;
+        color:black;
+      }
+      .CSSColor {
+        background-color: pink;
+        color:white;
+      }
+      .DesignColor {
+        background-color: orange;
+        color:white;
+      }
+      .IllustratorColor {
+        background-color: green;
+        color:white;
+      }
+      .PHPColor {
+        background-color: rgba(200,100,255,1.0);
+        color:white;
+      }
+      .JavaScriptColor {
+        background-color: rgba(100,100,255,1.0);
+        color:white;
+      }
+      .AndroidColor {
+        background-color: rgba(0,255,0,1.0);
+        color:white;
+      }
+      .AndroidColor:hover {
+        background-color: rgba(0,255,0,0.5);
+        color:white;
+      }
+      .iOSColor {
+        background-color: rgba(100,100,100,1.0);
+        color:white;
+      }
+      .iOSColor:hover {
+        background-color: rgba(100,100,100,0.5);
+        color:white;
+      }
+      .GitColor {
+        background-color: rgba(255,0,0,1.0);
+        color:white;
+      }
+      .GitColor:hover {
+        background-color: rgba(255,0,0,0.5);
+        color:white;
+      }
+      .SchoolColor {
+        background-color: rgba(0,255,255,1.0);
+        color:white;
+      }
+      .SchoolColor:hover {
+        background-color: rgba(0,255,255,0.5);
+        color:white;
+      }
+      .SandBoxColor {
+        background-color: rgba(100,75,50,1.0);
+        color:white;
+      }
+      .SandBoxColor:hover {
+        background-color: rgba(100,75,50,0.5);
+        color:white;
+      }
+      .DBColor {
+        background-color: pink;
+        color:white;
+      }
+      .SQLColor {
+        background-color: pink;
+        color:white;
+      }
+      .RubyColor {
+        background-color: rgba(255,0,0,1.0);
+        color:white;
+      }
+      .PythonColor {
+        background-color: white;
+        color:black;
+      }
+      .ShellScriptColor {
+        background-color: pink;
+        color:white;
+      }
+      .MagazineColor {
+        background-color: rgba(0,255,0,1.0);
+        color:white;
+      }
+      .ProgrammingColor {
+        background-color: pink;
+        color:white;
+      }
+      .ManagementColor {
+        background-color: white;
+        color:black;
+      }
+      .ProjectColor {
+        background-color: rgba(0,255,0,1.0);
+        color:white;
+      }
+      .CoachingColor {
+        background-color: rgba(0,255,255,1.0);
+        color:white;
+      }
+      .TeachingColor {
+        background-color: rgba(255,0,255,1.0);
+        color:white;
+      }
+      .MemberColor {
+        background-color: rgba(200,255,255,1.0);
+        color:white;
+      }
+      .MyPageColor {
+        background-color: rgba(0,200,255,1.0);
+        color:white;
+      }
+      .CityColor {
+        background-color: rgba(200,200,200,1.0);
+        color:white;
+      }
+      .ParkColor {
+        background-color: rgba(0,200,0,1.0);
+        color:white;
+      }
+      .PlaySchoolColor {
+        background-color: rgba(0,150,0,1.0);
+        color:white;
+      }
+      .NewsColor {
+        background-color: rgba(255,0,0,1.0);
+        color:white;
+      }
+      .WordsColor {
+        background-color: rgba(255,255,255,1.0);
+        color:black;
+      }
+      </style>
+
+
+      <section>
+        <button class="button HTMLColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("HTML");'>HTML</button>
+        <button class="button CSSColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("CSS");'>CSS</button>
+      </section>
+
+      <section>
+        <button class="button DesignColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Design");'>Design</button>
+        <button class="button IllustratorColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Illustrator");'>Illustrator</button>
+      </section>
+
+      <section>
+        <button class="button PHPColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("PHP");'>PHP</button>
+        <button class="button JavaScriptColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("JavaScript");'>JavaScript</button>
+      </section>
+
+      <section>
+        <button class="button AndroidColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Android");'>Android</button>
+        <button class="button iOSColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("iOS");'>iOS</button>
+      </section>
+
+      <section>
+        <button class="button GitColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Git");'>Git</button>
+        <button class="button SchoolColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("School");'>School</button>
+      </section>
+
+      <section>
+        <button class="button GitColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Git");'>Git</button>
+        <button class="button SandBoxColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("CSS");'>SandBox</button>
+      </section>
+
+      <section>
+        <button class="button DBColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("DB");'>DB</button>
+        <button class="button SQLColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("SQL");'>SQL</button>
+      </section>
+
+      <section>
+        <button class="button RubyColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Ruby");'>Ruby</button>
+        <button class="button PythonColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Python");'>Python</button>
+      </section>
+
+      <section>
+        <button class="button ShellScriptColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("ShellScript");'>ShellScript</button>
+        <button class="button PythonColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Python");'>Python</button>
+      </section>
+
+      <section>
+        <button class="button MagazineColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Magazine");'>Magazine</button>
+        <button class="button ProgrammingColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Programming");'>Programming</button>
+      </section>
+
+      <section>
+        <button class="button ManagementColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Management");'>Management</button>
+        <button class="button ProjectColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Project");'>Project</button>
+      </section>
+
+      <section>
+        <button class="button CoachingColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Coaching");'>Coaching</button>
+        <button class="button TeachingColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Teaching");'>Teaching</button>
+      </section>
+
+      <section>
+        <button class="button MemberColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Member");'>Member</button>
+        <button class="button MyPageColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("MyPage");'>MyPage</button>
+      </section>
+
+      <section>
+        <button class="button CityColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("City");'>City</button>
+        <button class="button ParkColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Park");'>Park</button>
+      </section>
+
+      <section>
+        <button class="button PlaySchoolColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("PlaySchool");'>PlaySchool</button>
+        <button class="button SandBoxColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("SandBox");'>SandBox</button>
+      </section>
+
+      <section>
+        <button class="button NewsColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("News");'>News</button>
+        <button class="button WordsColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Words");'>Words</button>
+      </section>
+
+
+    </main>
+    <hr  id="footer" style="clear:both;"/>
+
+<div style="background-color:rgba(5,5,200,1.0);">
+  <h1 class="title py20x40">Hello World!!コンテンツ</h1>
+  <section style="background-color:rgba(5,5,5,0.4);">
 
         <script>
           var baseDir = "./";
@@ -238,7 +504,9 @@
 
       </aside>
 
+    </section>
       <hr style="clear:both;"/>
+    </div>
 
       <section style="background-color:orange;">
       <aside class="aside-list">

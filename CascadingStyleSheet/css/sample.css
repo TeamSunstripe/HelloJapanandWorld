@@ -1,0 +1,98 @@
+@charset "UTF-8";
+html{
+    width:100%;
+}
+*{
+    margin:0;
+    padding:0;
+}
+body {
+    text-align: center;
+}
+#wrapper {
+    width: 800px;
+    margin: 0 auto;
+    /*background-color:rgba(255,255,200,0.5);*/
+    border: 1px solid rgba(255,255,200,1.0);
+}
+
+#cssProperties{
+    background-color:rgba(255,255,255,1.0);
+    text-align:left;
+    margin: 0 10px;
+}
+#cssElements{
+    background-color:rgba(255,255,255,1.0);
+    text-align:left;
+    margin: 0 10px;
+}
+#cssUseExsample{
+    background-color:rgba(0,0,0,0.9);
+    text-align:left;
+    margin: 0 10px;
+    overflow:scroll;
+}
+#cssSourceCode{
+    background-color:rgba(0,0,0,0.9);
+    text-align:left;
+    overflow:scroll;
+}
+#htmlUseExsample{
+    background-color:rgba(0,0,0,0.9);
+    text-align:left;
+    overflow:scroll;
+}
+#htmlSourceCode{
+    background-color:rgba(0,200,0,0.9);
+    text-align:left;
+    overflow:scroll;
+}
+
+#htmlList {
+    text-align:left;
+}
+
+#htmlList a {
+    text-decoration:none;
+    color:white;
+}
+
+#htmlList a:visited {
+    text-decoration:none;
+}
+
+#htmlList a:hover {
+    text-decoration:underline;
+    color:blue;
+    background-color: white;
+    padding:10px;
+}
+
+#htmlList a:active {
+    text-decoration:none;
+}
+
+#ad1{
+    background-color:rgba(0,0,0,0.9);
+    text-align:center;
+}
+
+#ad2 {
+    background-color:rgba(0,0,0,0.9);
+    text-align:center;
+}
+
+#ad3 {
+    background-color:rgba(0,0,0,0.9);
+    text-align:center;
+}
+
+#ad4 {
+    background-color:rgba(0,0,0,0.9);
+    text-align:left;
+}
+
+footer{
+    position:static;
+    bottom:0px;
+}

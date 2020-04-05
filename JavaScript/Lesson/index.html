@@ -295,7 +295,7 @@ displayJavaScriptCode.innerHTML = JavaScriptCode.innerText;
 </a>
 <a name="howtocall"><h3>JavaScript の呼び出し方</h3></a>
 
-      <h5><a class="file" href="test_comment.js" alt="test_comment.js" title="test_comment.js" target="_blank">ターミナル</a></h5>
+      <h5><a class="file" href="test_comment.sh" alt="test_comment.sh" title="test.sh" target="_blank">ターミナル</a></h5>
       <article class="browser">
 <pre class="codeColor"><code>
   // 更新日 2011.11.11
@@ -314,15 +314,14 @@ displayJavaScriptCode.innerHTML = JavaScriptCode.innerText;
     <img style="width:100px;" src="../img/cleaner.png"/>
   </aside></a>
 </a-->
-      <h5><a class="file" href="test_comment.js" alt="test_comment.js" title="test_comment.js" target="_blank">ターミナル</a></h5>
+      <h5><a class="file" href="test_comment.js" alt="test_comment.js" title="test.js" target="_blank">ターミナル</a></h5>
       <article class="browser">
 <pre class="codeColor"><script>
 // 更新日 2011.11.11
 
 document.write("Hello,JavaScript World!\n"); // コメント
 </script></pre>
-<p>// で書かれた１行コメントは実行されません</p>
-<p>/*  */ で挟まれた行のコメントは実行されません</p>
+# で書かれた行のコメントは実行されません
 </article>
 
 </section>
@@ -342,54 +341,49 @@ document.write("Hello,JavaScript World!\n"); // コメント
   <br />
 </section>
 
-<h4 class="title py20x40">Element (要素) 特定の要素の幅と高さを取得</h4>
-<section>
-<nav class="list">
-<ul>
-<li><a href="width.html"><p>width</p></a></li>
-<li><a href="height.html"><p>height</p></a></li>
-<li><a href="clientWidth.html"><p>clientWidth</p></a></li>
-<li><a href="clientHeight.html"><p>clientHeight</p></a></li>
-</ul>
-</nav>
-</section>
+        <h4 class="title py20x40">Element (要素) 特定の要素の幅と高さを取得</h4>
+        <section>
+        <nav class="list">
+        <ul>
+        <li><a href="width.html"><p>width</p></a></li>
+        <li><a href="height.html"><p>height</p></a></li>
+        <li><a href="clientWidth.html"><p>clientWidth</p></a></li>
+        <li><a href="clientHeight.html"><p>clientHeight</p></a></li>
+        </ul>
+        </nav>
+        </section>
 
-<h4 class="title py20x40">JavaScript で作った</h4>
-<section>
-<nav class="list">
-<ul>
-<li><a href="nyamedia.html"><p>にゃめでぃあ</p></a></li>
-<li><a href="./canvas/index.html"><p>Canvas</p></a></li>
-<li><a name="./Game/index.html"><p>Game</p></a></li>
-<li><a href="./Game/homerun.html"><p>homerun</p></a></li>
-<li><a href="./Lesson/Basic/index.html"><p>Lesson/Basic</p></a></li>
-<li><a href="./Questions/index.html"><p>Questions</p></a></li>
-<li><a href="./Questions/anime.html"><p>アニメクイズ</p></a></li>
-<li><a href="./Questions/IdealHeight.html"><p>理想の身長</p></a></li>
-<li><a name="./Search/index.html"><p>Search</p></a></li>
-<li><a href="search.html"><p>検索サイトまとめ</p></a></li>
-<li><a href="function.html"><p>function</p></a></li>
-</ul>
-</nav>
-</section>
+        <h4 class="title py20x40">JavaScript で作った</h4>
+        <section>
+        <nav class="list">
+        <ul>
+        <li><a href="nyamedia.html"><p>にゃめでぃあ</p></a></li>
+        <li><a href="./canvas/index.html"><p>Canvas</p></a></li>
+        <li><a name="./Game/index.html"><p>Game</p></a></li>
+        <li><a href="./Game/homerun.html"><p>homerun</p></a></li>
+        <li><a href="./Lesson/Basic/index.html"><p>Lesson/Basic</p></a></li>
+        <li><a href="./Questions/index.html"><p>Questions</p></a></li>
+        <li><a href="./Questions/anime.html"><p>アニメクイズ</p></a></li>
+        <li><a href="./Questions/IdealHeight.html"><p>理想の身長</p></a></li>
+        <li><a name="./Search/index.html"><p>Search</p></a></li>
+        <li><a href="search.html"><p>検索サイトまとめ</p></a></li>
+        <li><a href="function.html"><p>function</p></a></li>
+        </ul>
+        </nav>
+        </section>
 
-<h4 class="title py20x40">オリジナルアラート：JavaScript</h4>
-<section>
-  <button style="width:300px;height:100px;" class="button" onclick='alertMessage("myTitle", "myMessage");'>alertMessage</button>
-  <button style="width:300px;height:100px;" class="button" onclick='showNoticePopup("myMessage");'>noticePopup</button>
-</section>
+        <h4 class="title py20x40">オリジナルアラート：JavaScript</h4>
+        <section>
+          <button style="width:300px;height:100px;" class="button" onclick='alertMessage("myTitle", "myMessage");'>alertMessage</button>
+          <button style="width:300px;height:100px;" class="button" onclick='showNoticePopup("myMessage");'>noticePopup</button>
+        </section>
 
-</main>
 
-<hr id="footer" style="clear:both;"/>
+        </main>
+            <hr  id="footer" style="clear:both;"/>
+        <section style="background-color:rgba(5,5,5,0.4);">
 
-<div style="background-color:rgba(5,5,150,1.0);">
-
-    <h1 class="title py20x40">コンテンツ</h1>
-
-    <section style="background-color:rgba(5,5,5,0.4);">
-
-            <script>
+          <script>
             var baseDir = "../";
             var imgDir = "../img/";
             for (var snh = 0;snh < sideNavMenus.length;snh++) {
@@ -499,9 +493,7 @@ itemHrefURL = "#";
 
     </aside>
 
-  </section>
     <hr style="clear:both;"/>
-  </div>
 
   <section style="background-color:orange;">
     <aside class="aside-list">
