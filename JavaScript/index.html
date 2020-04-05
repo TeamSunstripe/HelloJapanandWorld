@@ -3,260 +3,844 @@
 <head>
 <title>JavaScript - Hello World!!</title>
 <link rel="stylesheet" type="text/css" href="../css/main.css" />
+<link rel="stylesheet" type="text/css" href="../css/button.css" />
+<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="../js/share.js"></script>
+<script type="text/javascript" src="../db/db.js"></script>
 </head>
+<style>
+    </style>
 <body>
-    <aside class="bg-img">
+
+  <div id="noticePopupSection" class="fadeout">
+    <div id="noticePopupMessage" onclick="closeNoticePopup();"></div>
+  </div>
+
+  <div id="alertPopupSection" class="fadeout" style="background-color:#FFFFFF; visibility:hidden; position:absolute; border-width:thick; border-style:ridge; width:50%; box-shadow:10px 10px 10px rgba(0,0,0,0.5); border-radius:10px;">
+  <div style="float:right"><div onclick="alertMessageClose()"><img src="../img/close.png" style="width:33px;"></div></div>
+  <div id="alertTitle"></div>
+  <div style="margin:20px 20px 0px 0px;">
+  <div style="display:table; float:left; width:100px; height:100px;"><p style="display:table-cell;vertical-align:middle;text-align:center;"><img src="../img/alert.png" style="width:100px;"></p></div>
+  <div style="display:table; height:100px;"><div id="alertMessage" style="display:table-cell;vertical-align:middle;"></div></div>
+  <div style="padding:10px 0px; text-align:center;">
+  <input style="border-radius:5px; font-size:large; width:100px;" type="button" value="O K" onclick="alertMessageClose()"></div>
+  </div>
+  </div>
+
     <header>
-        <h1>JavaScript - Hello World!!</h1>
+        <h2>Hello,Japan and World!!</h2>
+        <h1>ようこそシェアプログラミング</h1>
+        <nav id="header-nav">
+            <ul>
+                <li><a rel="canonical" href="https://note.com/thecardgame/n/nc0eead00f5d0" target="_blank"><h5>このサイトについて</h2></a></li>
+                <li><a rel="contact" href="https://twitter.com/sunstripe2011" target="_blank"><h5>お問い合わせ</h5></a></li>
+                <li><a rel="author" href="https://qiita.com/sunstripe2011" target="_blank"><h5>サンストライプ</h5></a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section>
-        <a href="../index.html"><h2>このサイトの使い方</h2></a>
-    </section>
+    <nav id="sub-nav">
+        <ul>
+            <li><a href="../index.html"><h4>TOP</h4></a></li>
+            <li><a name="./index.html"><h4>JavaScript</h4></a></li>
+        </ul>
+    </nav>
 
-    <section>
-        <h1>Hello World!!</h1>
+    <section style="margin:30px auto;text-align:center;">
+        <h1>Hello,JavaScript World!!</h1>
         <p>
-            Hello World!! 自分たちのプログラミングをみんなにチェックしてもらおう！
+            Hello,JavaScript World!! 自分たちのプログラミングをみんなにチェックしてもらおう！
             <br />
-            みんなで Hellow World!!! 使い方、ここのコードは全てみんなのもの。
-            <br />
-            まずは、GitHub から GitHubの使い方を学びます
+            みんなで Hello,JavaScript World!!! 使い方、ここのコードは全てみんなのもの。
         </p>
-    </section>
-
-    <section>
-        <a href="./Programming/index.html"><h2>プログラミング現場へのステップ</h2></a>
-    </section>
-
-    <section>
-        <h1>Github</h1>
         <p>
-            <a href="https://techacademy.jp/magazine/6235">https://techacademy.jp/magazine/6235</a>
+          あなたの可能性を<br />
+          活かしませんか？<br />
+          <br />
+          かんたん1分<br />
         </p>
+        <button style="width:300px;height:100px;" class="button" onclick=openURL('https://twitter.com/sunstripe2011','こちらにDMにておしらせください');>ご登録はこちら</button>
+        <button style="width:300px;height:100px;" class="button" onclick=facebookShare(location.href);>シェア<button>
     </section>
 
-    <section>
-        <p>各種プログラミングの学習ページを生やしていきます。</p>
-    </section>
+    <nav id="side-nav">
+        <ul>
+          <script>
+            var baseDir = "../";
+            var imgDir = "../img/";
+            document.write(displaySideMenuNavList(baseDir,imgDir,sideNavMenus));
+          </script>
+
+          <!--li><a href="outline.html"><h4 class="side_text"><img src="./img/school.png" class="side_image"/><span class="side_title">幼稚園の概要</span></h4></a></li>
+            <li><a href="schedule.html"><h4 class="side_text"><img src="./img/schedule.png" class="side_image"/><span class="side_title">スケジュール</span></h4></a></li>
+            <li><a href="facility.html"><h4 class="side_text"><img src="./img/building.png" class="side_image"/><span class="side_title">施設</span></h4></a></li>
+            <li><a href="map.html"><h4 class="side_text"><img src="./img/access.png" class="side_image"/><span class="side_title">アクセス</span></h4></a></li>
+            <li><a href="help.html"><h4 class="side_text"><img src="./img/learning.png" class="side_image"/><span class="side_title">子育ての支援</span></h4></a></li>
+            <li><a href="voice.html"><h4 class="side_text"><img src="./img/message.png" class="side_image"/><span class="side_title">保護者の声</span></h4></a></li>
+            <li><a href="assessment.html"><h4 class="side_text"><img src="./img/star.png" class="side_image"/><span class="side_title">幼稚園の学校評価</h4></a></li>
+            <li><a href="subsidy.html"><h4 class="side_text"><img src="./img/bookmark.png" class="side_image"/><span class="side_title">補助制度</span></h4></a></li>
+            <li><a href="recruitment.html"><h4 class="side_text"><img src="./img/peaple.png" class="side_image"/><span class="side_title">園児募集</span></h4></a></li-->
+        </ul>
+    </nav>
+
+    <main>
+      <a name="index">
+        <h1 class="title py20x40">JavaScript（ジャバスクリプト）の基本</h1>
+      <section class="main" name="basic">
+        <nav id="index_contents_nav" class="blackboard-top cleanerColor">
+          <ul id="index_contents">
+            <li class="index_content"><a href="#what"><h3>JavaScriptとは？</h3></a></li>
+            <li class="index_content"><a href="#howto"><h3>JavaScriptの書き方</h3></a></li>
+            <li class="index_content"><a href="#howtocall"><h3>JavaScriptの呼び出し方</h3></a></li>
+            <li class="index_content"><a href="#coment1"><h3>JavaScriptの特徴</h3></a></li>
+          </ul>
+        </nav>
+        <a href="#index"><aside class="cleaner cleanerColor">
+          <img style="width:100px;" src="../img/cleaner.png"/>
+        </aside></a>
+      </section></a>
 
 
-    <section class="figure imgflex scrall">
-        <figure class="figure imgflex">
-            <h4 class="ofit">object-fit: contain;</h4>
-            <img src="./img/sample.png" class="w300h300 ofit_contain" />
-        </figure>
-        <figure class="figure imgflex">
-            <h4 class="ofit">object-fit: cover;</h4>
-            <img src="./img/sample.png" class="w300h300 ofit_cover" />
-        </figure>
-        <figure class="figure imgflex">
-            <h4 class="ofit">object-fit: none;</h4>
-            <img src="./img/sample.png" class="w300h300 ofit_none" />
-        </figure>
-        <figure class="figure imgflex">
-            <h4 class="ofit">object-fit: scale-down;</h4>
-            <img src="./img/sample.png" class="w300h300 ofit_scale-down" />
-        </figure>
-        <figure class="figure imgflex">
-            <img src="./img/sample.png" class="w300h300" />
-        </figure>
-        <figure class="figure imgflex">
-            <img src="./img/sample.png" class="w300h300" />
-        </figure>
-    </section>
+<section class="main" name="what">
+  <a name="what"><article class="p20px blackboard-top cleanerColor">
+    <h1>JavaScriptとは？</h1>
+    <p>
+      JavaScriptは、米Netscape Communications社（当時）とSun Microsystems社が共同で開発したWebページを操作するためのプログラミング言語です。
+      活用することによって、これまでのHTML（Hyper Text Markup Language）だけでは不可能だったインタラクティブなWEBページが作成できるようになりました。<br />
+    </p>
+  </article>
+  </a>
+  <a href="#index"><aside class="cleaner cleanerColor">
+    <img style="width:100px;" src="../img/cleaner.png"/>
+  </aside></a>
+</section>
+
+<section class="main" name="howto">
+<a name="howto">
+  <article class="p20px blackboard-top cleanerColor">
+    <h1>JavaScriptの書き方</h1>
+    <p>
+      JavaScriptファイルは基本的に.jsの拡張子で作成します。
+    </p>
+  </article>
+  <a href="#index"><aside class="cleaner cleanerColor">
+    <img style="width:100px;" src="../img/cleaner.png"/>
+  </aside></a>
+</a>
+<h5><a class="file" href="test.js" alt="test.js" title="test.js" target="_blank">test.js</a></h5>
+
+<article class="browser">
+<pre class="codeColor"><code>
+// JavaScript HTML 側に表示する場合
+document.write("Hello,JavaScript World!\n");
+// コンソール に表示する場合
+console.log("Hello,JavaScript World!\n");
+// オリジナルコンソール に表示する場合
+displayConsole("Hello,JavaScript World!\n");
+
+</code></pre>
+</article>
+<!--a name="howto">
+  <article class="p20px blackboard-top cleanerColor">
+    <h1>ShellScriptの書き方</h1>
+    <p>
+      シェルスクリプトファイルは基本的に.shの拡張子で作成します。
+    </p>
+  </article>
+  <a href="#index"><aside class="cleaner cleanerColor">
+    <img style="width:100px;" src="../img/cleaner.png"/>
+  </aside></a>
+</a-->
+
+      <a name="howtocall"><h3>JavaScriptの呼び出し方</h3></a>
+
+<h5><a class="file" href="test.js" alt="test.js" title="test.js" target="_blank">コンソール</a></h5>
+<article class="browser">
+
+<pre class="codeColor"><code>
+  <script type="text/javascript" src="test.js"></script>
+displayConsole("Hello,JavaScript World!\n");
+$ Hello,JavaScript World!
+
+</code></pre>
+</article>
+
+</section>
+
+<h5>コード部</h5>
+<section>
+<article>
+<h5>HTML</h5>
+<pre class="codeColor"><code id="displayHTMLCode"></code>
+</pre>
+<h5>CSS</h5>
+<pre class="codeColor"><code id="displayCSSCode"></code>
+</pre>
+<h5>JavaScript</h5>
+<pre class="codeColor"><code id="displayJavaScriptCode"></code>
+</pre>
+<h5>コンソール</h5>
+<pre class="codeColor"><code id="consoleCode"></code></pre>
+<script type="text/javascript" src="../js/debug.js"></script>
+</article>
+<br />
+</section>
+<h5>表示部</h5>
+<section>
+  <article>
+<div id="HTMLCode">
+  // 外部呼び出し<br />
+&lt;script type="text/javascript" src="test.js"&gt;&lt;/script&gt;
+</div>
+<style id="CSSCode">
+/* 特に指定なし*/
+</style>
+<script id="JavaScriptCode">
+// JavaScript HTML 側に表示する場合
+document.write("Hello,JavaScript World!\n");
+// コンソール に表示する場合
+console.log("Hello,JavaScript World!\n");
+// オリジナルコンソール に表示する場合
+displayConsole("Hello,JavaScript World!\n");
+</script>
+
+<script>
+let displayHTMLCode = document.getElementById('displayHTMLCode');
+let HTMLCode = document.getElementById('HTMLCode');
+let displayCSSCode = document.getElementById('displayCSSCode');
+let CSSCode = document.getElementById('CSSCode');
+let displayJavaScriptCode = document.getElementById('displayJavaScriptCode');
+let JavaScriptCode = document.getElementById('JavaScriptCode');
+if (replaceAll) {
+  displayHTMLCode.innerHTML = replaceAll(HTMLCode.innerHTML);
+} else {
+    alert("replaceAll","メソッドがありませんでした");
+}
+displayCSSCode.innerHTML = CSSCode.innerText;
+displayJavaScriptCode.innerHTML = JavaScriptCode.innerText;
+
+</script>
+</article>
+</section>
+
+<h1 class="title py20x40">JavaScript</h1>
+<!--ection>
+  <p>
+  </p>
+  <nav class="list">
+  <ul>
+  <li><a href="#JavaScriptとはどんな言語"><p>JavaScriptとはどんな言語</p></a></li>
+  <li><a href="#JavaScriptの概要"><p>JavaScriptの概要</p></a></li>
+  <li><a href="#基本的な組み込みオブジェクト"><p>基本的な組み込みオブジェクト</p></a></li>
+  <li><a href="#Webブラウザのオブジェクト"><p>Webブラウザのオブジェクト</p></a></li>
+  <li><a href="#フォームとJavaScript"><p>フォームとJavaScript</p></a></li>
+  <li><a href="#Imageオブジェクト"><p>Imageオブジェクト</p></a></li>
+  <li><a href="#JavaScriptの活用"><p>JavaScriptの活用</p></a></li>
+  </ul>
+  </nav>
+</section-->
+
+<section>
+  <article class="p20px blackboard-top cleanerColor">
+    <h1>他のプログラミング言語と比較してみる</h1>
+    <script>
+      document.write(displayProgrammingList("index.html#index"));
+    </script>
+  </article>
+  <a href="#index"><aside class="cleaner cleanerColor">
+    <img style="width:100px;" src="../img/cleaner.png"/>
+    </aside>
+  </a>
+  <br />
+</section>
+
+<section>
+    <a name="coment1">
+      <article class="p20px blackboard-top cleanerColor">
+        <h1>JavaとJavaScriptの歴史</h1>
+        <p>
+        </p>
+        <div>
+
+        </div>
+      </article>
+      <a href="#index"><aside class="cleaner cleanerColor">
+        <img style="width:100px;" src="../img/cleaner.png"/>
+      </aside></a>
+    </a>
+</section>
+
+<section>
+    <h1 class="title">基本コマンド</h1>
+</section>
+
+<!-- start -->
+<section class="main" name="comment">
+<a name="comment">
+  <article class="p20px blackboard-top cleanerColor">
+    <h1>JavaScript のコメント（comment）</h1>
+    <p>
+      // を書いて一行コメントを書くことができます。
+    </p>
+    <p>
+      /*
+       ここにコメント
+       */
+      を書いて複数行コメントを書くことができます。
+    </p>
+  </article>
+  <a href="#index"><aside class="cleaner cleanerColor">
+    <img style="width:100px;" src="../img/cleaner.png"/>
+  </aside></a>
+</a>
+<a name="howtocall"><h3>JavaScript の呼び出し方</h3></a>
+
+      <h5><a class="file" href="test_comment.sh" alt="test_comment.sh" title="test.sh" target="_blank">ターミナル</a></h5>
+      <article class="browser">
+<pre class="codeColor"><code>
+  // 更新日 2011.11.11
+
+  document.write("Hello,JavaScript World!\n"); // コメント
+</code></pre>
+</article>
+<!--a name="howto">
+  <article class="p20px blackboard-top cleanerColor">
+    <h1>ShellScriptの書き方</h1>
+    <p>
+      シェルスクリプトファイルは基本的に.shの拡張子で作成します。
+    </p>
+  </article>
+  <a href="#index"><aside class="cleaner cleanerColor">
+    <img style="width:100px;" src="../img/cleaner.png"/>
+  </aside></a>
+</a-->
+      <h5><a class="file" href="test_comment.js" alt="test_comment.js" title="test.js" target="_blank">ターミナル</a></h5>
+      <article class="browser">
+<pre class="codeColor"><script>
+// 更新日 2011.11.11
+
+document.write("Hello,JavaScript World!\n"); // コメント
+</script></pre>
+# で書かれた行のコメントは実行されません
+</article>
+
+</section>
+<!-- end -->
+
+<section>
+  <article class="p20px blackboard-top cleanerColor">
+    <h1>他のプログラミング言語と比較してみる</h1>
+    <script>
+      document.write(displayProgrammingList("index.html#comment"));
+    </script>
+  </article>
+  <a href="#index"><aside class="cleaner cleanerColor">
+    <img style="width:100px;" src="../img/cleaner.png"/>
+    </aside>
+  </a>
+  <br />
+</section>
+
+        <h4 class="title py20x40">Element (要素) 特定の要素の幅と高さを取得</h4>
+        <section>
+        <nav class="list">
+        <ul>
+        <li><a href="width.html"><p>width</p></a></li>
+        <li><a href="height.html"><p>height</p></a></li>
+        <li><a href="clientWidth.html"><p>clientWidth</p></a></li>
+        <li><a href="clientHeight.html"><p>clientHeight</p></a></li>
+        </ul>
+        </nav>
+        </section>
 
 
-    https://pbs.twimg.com/profile_images/557396519037325312/rrbkKLh2_400x400.jpeg
-    <section>
-        <h1 class="title">HTML / CSS / JavaScript</h1>
-        ./html/
-    </section>
+        <h4 class="title py20x40">オリジナルアラート：JavaScript</h4>
+        <section>
+          <button style="width:300px;height:100px;" class="button" onclick='alertMessage("myTitle", "myMessage");'>alertMessage</button>
+          <button style="width:300px;height:100px;" class="button" onclick='showNoticePopup("myMessage");'>noticePopup</button>
+        </section>
 
-    <section>
-        <h1 class="title">PHP</h1>
-        ./php/
-    </section>
 
-    <section>
-        <h1 class="title">PHP</h1>
-        ./php/
-    </section>
+        </main>
+            <hr  id="footer" style="clear:both;"/>
+        <section style="background-color:rgba(5,5,5,0.4);">
 
-    <section>
-        <h1 class="title">Objective-C</h1>
-        ./iOS/ObjectiveC/
-    </section>
+          <script>
+            var baseDir = "../";
+            var imgDir = "../img/";
+            for (var snh = 0;snh < sideNavMenus.length;snh++) {
+              var headerInfo = sideNavMenus[snh].header;
+              document.write('<section>');
+              document.write('<h1 class="title">');
+              document.write('<span class="side_title">');
+              document.write(headerInfo.title);
+              document.write('</span>');
+              document.write('</h1>');
+              var menuItems = sideNavMenus[snh].items;
+              for (var snm = 0;snm < menuItems.length;snm++) {
+                var menuItem = menuItems[snm];
+                document.write('<article class="');
+                if (menuItem.hidden == true) {
+document.write(' display_none');
+                }
+                document.write('">');
+                var itemHrefURL = baseDir + menuItem.href;
+                if (!itemHrefURL) {
+itemHrefURL = "#";
+                }
+                document.write('<a href="');
+                document.write(itemHrefURL);
+                document.write('">');
+                document.write('<h3 class="">');
+                document.write('<span class="side_title">');
+                document.write(menuItem.title);
+                document.write('</span>');
+                document.write('</h3>');
+                document.write('</a>');
+                document.write('</article>');
+              }
+              document.write('</section>');
+              document.write('<br />');
+            }
+          </script>
 
-    <section>
-        <h1 class="title">Swift</h1>
-        ./iOS/ObjectiveC/
-    </section>
+          <section name="github">
+            <h1>Github</h1>
+            <p>
+                <a href="https://techacademy.jp/magazine/6235">https://techacademy.jp/magazine/6235</a>
+            </p>
+          </section>
+          <section>
+              <p>各種プログラミングの学習ページを生やしていきます。</p>
+          </section>
 
-    <section>
-        <h1 class="title">Java</h1>
-        ./Android/Java/
-    </section>
 
-    <section>
-        <h1 class="title">その他</h1>
-        ./other/
-    </section>
+        <section>
+            <p>様々なジャンルでみんなでチェックして、コードを見てもらう習慣を Githubの良さはいつでもどこでもネットで見れます。</p>
+        </section>
 
+  <aside>
+        <section>
+            <h1 class="title">Issues で みんなからアドバイス!!</h1>
+            <p>あなたのIssues を作って、週の目的を明確に決めていきます。</p>
+        </section>
+
+        <section>
+            <h1 class="title">PullRequests でみんなからコードチェック!!</h1>
+            <p>あなたのコードをみんなでコードレビュー、問題解決やコードの見方</p>
+        </section>
+
+        <section>
+            <h1 class="title">まずはじめに</h1>
+            <p>自分のブランチを切って、自分のフォルダーで作業してください。 それぞれのフォルダーはこちらで管理していくので、他人のフォルダーを消すのはNGです。 まずは、プロフィールページを作成していきましょう！！</p>
+        </section>
+
+
+        <section>
+            <h1 class="title">プログラミング学習のルーティン</h1>
+            <ul>
+            <li>（1）プログラミング 定義・用語・規則 を学びます</li>
+            <li>（2）プログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
+            <li>（3）プログラミング Githubの使い方を駆使し、コードの書き方に注意しつつ、自分のコードを、みんなでチェック、コードレビューを学ぼう</li>
+            <li>（4）プログラミング 発展：支援活動リフレッシュなども学びます。求職活動、サービス展開へのステップアップ、ビジネス展開へのステップアップ</li>
+            <li>（5）プログラミング プログラミング の　まとめ</li>
+            </ul>
+            <p>これの繰り返し(2)へ</p>
+        </section>
+
+        <section>
+            <h1 class="title">ブログラミング学習のルーティン</h1>
+            <ul>
+            <li>（1）ブログラミング 定義・用語・規則 を学びます</li>
+            <li>（2）ブログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
+            <li>（3）ブログラミング 苦労したことなど note、Qiita にまとめてここで学んだことを自分なりにまとめます</li>
+            <li>（4）ブログラミング 学んだことを、まとめて発信して動画配信などをアップしていきましょう</li>
+            <li>（5）ブログラミング ブログラミング の　まとめ</li>
+            </ul>
+            <p>これの繰り返し(2)へ</p>
+        </section>
     </aside>
 
     <aside>
-    <section>
-        <p>様々なジャンルでみんなでチェックして、コードを見てもらう習慣を Githubの良さはいつでもどこでもネットで見れます。</p>
-    </section>
 
-    <section>
-        <h1 class="title">Issues で みんなからアドバイス!!</h1>
-        <p>あなたのIssues を作って、週の目的を明確に決めていきます。</p>
-    </section>
+        <section>
+            困ったらここにつぶやこう！ プログラミングSOS
+            <br />
+            <br />
+            基本的なルールは、全世代問わず トラブルのないように！！ 心配りをご協力お願いいたします。
+            <br />
+            <br />
+            完全公開にしているのでシェアしたものに関しては、みんなのものになるので、個人情報やコンプライアンスを注意をお願いいたします。
+        </section>
 
-    <section>
-        <h1 class="title">PullRequests でみんなからコードチェック!!</h1>
-        <p>あなたのコードをみんなでコードレビュー、問題解決やコードの見方</p>
-    </section>
+    </aside>
 
-    <section>
-        <h1 class="title">まずはじめに</h1>
-        <p>自分のブランチを切って、自分のフォルダーで作業してください。 それぞれのフォルダーはこちらで管理していくので、他人のフォルダーを消すのはNGです。 まずは、プロフィールページを作成していきましょう！！</p>
-    </section>
+    <hr style="clear:both;"/>
 
+  <section style="background-color:orange;">
+    <aside class="aside-list">
+        <h1 class="title">記事一覧</h1>
+        <article style="background-color:white;padding:20px;">
+        <p>みんながおすすめするブログ・ツール</p>
+        </article>
 
-    <section>
-        <h1 class="title">プログラミング学習のルーティン</h1>
-        <ul>
-        <li>（1）プログラミング 定義・用語・規則 を学びます</li>
-        <li>（2）プログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
-        <li>（3）プログラミング Githubの使い方を駆使し、コードの書き方に注意しつつ、自分のコードを、みんなでチェック、コードレビューを学ぼう</li>
-        <li>（4）プログラミング 発展：支援活動リフレッシュなども学びます。求職活動、サービス展開へのステップアップ、ビジネス展開へのステップアップ</li>
-        <li>（5）プログラミング プログラミング の　まとめ</li>
-        </ul>
-        <p>これの繰り返し(2)へ</p>
-    </section>
+        <h3 class="title">ツール一覧</h3>
 
-
-    <section>
-        <h1 class="title">ブログラミング学習のルーティン</h1>
-        <ul>
-        <li>（1）ブログラミング 定義・用語・規則 を学びます</li>
-        <li>（2）ブログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
-        <li>（3）ブログラミング 苦労したことなど note、Qiita にまとめてここで学んだことを自分なりにまとめます</li>
-        <li>（4）ブログラミング 学んだことを、まとめて発信して動画配信などをアップしていきましょう</li>
-        <li>（5）ブログラミング ブログラミング の　まとめ</li>
-        </ul>
-        <p>これの繰り返し(2)へ</p>
-    </section>
-</aside>
-
-<aside>
-
-    <section>
-        困ったらここにつぶやこう！ プログラミングSOS
-        <br />
-        <br />
-        基本的なルールは、全世代問わず トラブルのないように！！ 心配りをご協力お願いいたします。
-        <br />
-        <br />
-        完全公開にしているのでシェアしたものに関しては、みんなのものになるので、個人情報やコンプライアンスを注意をお願いいたします。
-    </section>
-
-</aside>
-
-<aside class="aside-list">
-    <h1 class="title">記事一覧</h1>
-    <p>みんながおすすめするブログ・ツール</p>
-
-    <h3 class="title">ツール一覧</h3>
-
-    <article>
-    <h2>#Progate　プログラミングの基礎を勉強したい方へ</h2>
-    <span>2020.02.29</span>
-    <a href="https://prog-8.com/" target="_blank">#Progate</a>
-    </article>
-
-    <article>
-        <h2>note.com　ブログを発信したい方へ</h2>
+        <article style="background-color:white;padding:20px;">
+        <h2>#Progate　プログラミングの基礎を勉強したい方へ</h2>
         <span>2020.02.29</span>
-        <a href="https://note.com/" target="_blank">note.com</a>
-    </article>
+        <a href="https://prog-8.com/" target="_blank">#Progate</a>
+        </article>
 
-    <article>
-        <h2>qiita.com　IT技術などの知識を発信したい方へ</h2>
-        <span>2020.02.29</span>
-        <a href="https://qiita.com/" target="_blank">qiita.com</a>
-    </article>
+        <article style="background-color:white;padding:20px;">
+            <h2>note.com　ブログを発信したい方へ</h2>
+            <span>2020.02.29</span>
+            <a href="https://note.com/" target="_blank">note.com</a>
+        </article>
 
-    <h1 class="title">参加者メンバー 一覧</h1>
+        <article style="background-color:white;padding:20px;">
+            <h2>qiita.com　IT技術などの知識を発信したい方へ</h2>
+            <span>2020.02.29</span>
+            <a href="https://qiita.com/" target="_blank">qiita.com</a>
+        </article>
 
-    <article>
-    <h2>THE メディア（代表：大熊 月）</h2>
-    <span>2020.02.29 - </span>
-    <p>頑張るプログラマーを応援したい</p>
-    <a href="https://twitter.com/sunstripe2011" target="_blank">Twitterへ</a>
-    </article>
-</aside>
+        <h1 class="title">参加者メンバー 一覧</h1>
 
-<a href="https://twitter.com/sunstripe2011" target="_blank"><h1 class="button" style="text-align: center;">登録</h1></a><br />
+        <article style="background-color:white;padding:20px;">
+        <h2>THE メディア（代表：大熊 月）</h2>
+        <span>2020.02.29 - </span>
+        <a href="https://twitter.com/sunstripe2011" target="_blank"><p>頑張るプログラマーを応援したい</p></a>
+        </article>
 
+    </aside>
+
+    <aside id="news" class="aside-list">
+      <h2 class="title">公開行事や同窓会などのお知らせ</h2>
+      <article style="background-color:white;padding:20px;">
+        <a href="https://note.com/thecardgame/n/n2f8ef482ed9a" target="_blank"><p>第７回青空プログラミング</p></a>
+      </article>
+
+      <article style="background-color:white;padding:20px;">
+        <a href="https://actcoin.jp/project/detail.php?id=600" target="_blank"><p>青空プログラミング</p></a>
+      </article>
+    </aside>
+
+  </section>
     <footer>
-        <nav>
-            <h1>
-            TOP | About | Rule |  <a href="https://twitter.com/sunstripe2011" target="_blank">Contacts</a>
-            </h1>
-        </nav>
-
+      <section style="background-color:black;color:white;">
+        <h1 class="title">サンストライプのお知らせ</h1>
         <p>
-            IT／WEBエンジニアに特化した学習サイト「Hello World!!」。 プログラミングスキルチェックであなたのプログラミング力をみんなでチェックすることを目的にしていきます。<br />
-            自分の学習のチェックをアウトプット可視化し、スキルも含めみんなでチェックしていけばいくほど、現場とほぼ同じスキルをマスターしていけるという無料コンテンツです。<br />
-            これからIT／WEBエンジニアとして就職や転職をしたいと思っている方には、かなり有利になる画期的なサービスです。<br />
-            さらに、プログラミング初心者向けの学習方法として、それぞれのプロフィール（紹介ページ）を作成して、自分自身のポートフォリオを作成していくことも目的にしていくので<br />
-            みんなのスキルやみんなの成長がみんなで確認できるのである種成長ゲームのようにコンテンツを活用してほしいと思います。<br />
+          IT／WEBエンジニアに特化した学習サイト「Hello World!!」。 プログラミングスキルチェックであなたのプログラミング力をみんなでチェックすることを目的にしていきます。<br />
+          自分の学習のチェックをアウトプット可視化し、スキルも含めみんなでチェックしていけばいくほど、現場とほぼ同じスキルをマスターしていけるという無料コンテンツです。<br />
+          これからIT／WEBエンジニアとして就職や転職をしたいと思っている方には、かなり有利になる画期的なサービスです。<br />
+          さらに、プログラミング初心者向けの学習方法として、それぞれのプロフィール（紹介ページ）を作成して、自分自身のポートフォリオを作成していくことも目的にしていくので<br />
+          みんなのスキルやみんなの成長がみんなで確認できるのである種成長ゲームのようにコンテンツを活用してほしいと思います。<br />
         </p>
+      </section>
 
-        <main>
-            <section class="float-left30">
-                <h2>Hello World!!のサービス</h2>
+        <hr class="clearline">
+        <div id="site-map">
+        <section class="float-left30 height_max">
+            <h2 class="title">サービス</h2>
 
-                <!--Hello World!!新卒 就職先<br /-->
-                <!--コードで採用！プログラミング就活<br /-->
-                <!--Hello World!!転職<br /-->
-                <!--コードを書いてシゴト選び<br /-->
-                <!--スキルを磨くシゴト選び<br /-->
-                <h4>Hello World!!ラーニング</h4>
-                課題は、希望者と話して決めていきます。みんなで学ぶ<br />
-                <h4>Hello World!!</h4>
-                プログラミング実行 環境<br />
-                <a href="https://github.com/TeamSunstripe/HelloWorld" target="_blank">Hello World!! Github</a><br />
-            </section>
-            <section class="float-center40">
-                <h2>みんなが作ったコンテンツ</h2>
+            <h4>Hello World!!ラーニング</h4>
+            課題は、希望者と話して決めていきます。みんなで学ぶ<br />
+            <h4>Hello World!!</h4>
+            プログラミング実行 環境<br />
+            <a href="https://github.com/TeamSunstripe/HelloWorld" target="_blank">Hello World!! Github</a><br />
+        </section>
+        <section class="float-center40 height_max">
+            <h2 class="title">みんなが作ったコンテンツ</h2>
 
-                <h2>みんなが作ったコンテンツ</h2>
-                    Hello World!!とは<br />
-                    Hello World!! 運営サークル<br />
-                <!--サイトマップ<br /-->
+            <h2>みんなが作ったコンテンツ</h2>
+                Hello World!!とは<br />
+                Hello World!! 運営サークル<br />
+            <br />
+                <a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
                 <br />
-                    <a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
-                    <br />
-                <!--中途求人掲載はこちら<br /-->
-                <!--新卒求人掲載はこちら<br /-->
-                <br />
-                <h4>ブログ・SNS</h4>
-                <br />
-                <a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
-                THE メディア
-                <a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
-                <br />
-            </section>
-            <section class="float-right30">
-            </section>
-        </main>
-        <hr class="clearline"/>
-     <h5 style="text-align: center;">(C) Hello World!!(THE メディア) 2020.02.29</h5>
+            <br />
+            <h4>ブログ・SNS</h4>
+            <br />
+            <a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
+            THE メディア
+            <a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
+
+        </section>
+        <section class="float-right30 height_max">
+          <h1 class="title">カスタマーサポート</h1>
+          <p>返信が必要な場合はこちら</p>
+          <button style="width:100%" onclick="alert('ただいま工事中');">お問い合わせ</button>
+          <p>サンストライプへのご意見・ご要望をお聞かせください</p>
+          <textarea style="width:100%;height:400px;" >サービスへのご意見、ご要望をお聞かせください。ご意見・ご要望に返信できないことをあらかじめご了承ください。</textarea>
+          <button style="width:100%;height:50px;" class="button" onclick="alert('ただいま工事中');">送信する</button>
+        </section>
+        </div>
+
+        <hr class="clearline">
+
+              <style>
+              #links-list {
+                background-color: black;
+                height: 100%;
+              }
+              #links-list a{
+                color: white;
+              }
+              .float-center30 {
+                float:left;
+                width:20%;
+                background-color: black;
+              }
+              .float-right40 {
+                float:right;
+                width:30%;
+                background-color: black;
+              }
+              </style>
+        <div id="links-list">
+          <script>
+
+          </script>
+        <section class="float-left30 height_max">
+
+          <script>
+
+          var a_links_list = [
+              {
+                title:"Qiita@sunstripe2011",
+                href:"https://qiita.com/sunstripe2011",
+              },
+              {
+                title:"THE CARD GAMEマガジン",
+                href:"https://note.com/thecardgame"
+              },
+          ];
+            displayList(a_links_list);
+          </script>
+
+        </section>
+        <section class="float-center30 height_max">
+          <script>
+
+          var b_links_list = [
+              {
+                title:"プログラミング",
+                href:"https://note.com/thecardgame/m/m5511291011ae",
+              },
+              {
+                title:"青空プログラミング",
+                href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1220739",
+              },
+              {
+                title:"シェアプログラミング",
+                href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1274188",
+              },
+              {
+                title:"プログラミング道の駅",
+                href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1240438",
+              },
+              {
+                title:"ブログラミング",
+                href:"https://note.com/thecardgame/m/mcc8f5da850af"
+              },
+              {
+                title:"THE メディアマガジン",
+                href:"https://note.com/thecardgame/m/ma9eb41a913e2"
+              },
+          ];
+            displayList(b_links_list);
+
+          </script>
+        </section>
+        <section class="float-right40 height_max">
+          <script>
+          var c_links_list = [
+              {
+                title:"分野別",
+                href:"#分野別",
+              },
+              {
+                title:"政治・外交",
+                href:"#政治・外交",
+              },
+              {
+                title:"経済・ビジネス",
+                href:"#経済・ビジネス",
+              },
+              {
+                title:"国際",
+                href:"#国際",
+              },
+              {
+                title:"社会",
+                href:"#社会"
+              },
+              {
+                title:"文化",
+                href:"#文化"
+              },
+              {
+                title:"技術",
+                href:"#技術"
+              },
+              {
+                title:"暮らし",
+                href:"#暮らし"
+              },
+              {
+                title:"スポーツ",
+                href:"#スポーツ"
+              },
+              {
+                title:"エンタメ",
+                href:"#エンタメ"
+              },
+              {
+                title:"環境",
+                href:"#環境"
+              },
+              {
+                title:"仕事・労働",
+                href:"#仕事・労働"
+              },
+              {
+                title:"家族・家庭",
+                href:"#家族・家庭"
+              },
+              {
+                title:"健康・医療",
+                href:"#健康・医療"
+              },
+              {
+                title:"歴史",
+                href:"#歴史"
+              },
+          ];
+          displayList(c_links_list);
+                    </script>
+        </section>
+        <hr class="clearline">
+        </div>
+
+        <hr class="clearline">
+        <div style="background-color:white;color:rgba(0,0,0,0.8);">
+          <h2 style="text-align:center;">SDGs:持続可能な開発目標</h2>
+      <script>
+        baseDir = "../";
+        imgDir = "../images/";
+        var d_links_list = [
+            {
+              title:"プログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-01.png",
+            },
+            {
+              title:"青空プログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-02.png",
+            },
+            {
+              title:"シェアプログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-03.png",
+            },
+            {
+              title:"プログラミング道の駅",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-04.png",
+            },
+            {
+              title:"ブログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-05.png",
+            },
+            {
+              title:"THE メディアマガジン",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-06.png",
+            },
+            {
+              title:"プログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-07.png",
+            },
+            {
+              title:"青空プログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-08.png",
+            },
+            {
+              title:"シェアプログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-09.png",
+            },
+            {
+              title:"プログラミング道の駅",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-10.png",
+            },
+            {
+              title:"ブログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-11.png",
+            },
+            {
+              title:"THE メディアマガジン",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-12.png",
+            },
+            {
+              title:"シェアプログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-13.png",
+            },
+            {
+              title:"プログラミング道の駅",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-14.png",
+            },
+            {
+              title:"ブログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-15.png",
+            },
+            {
+              title:"THE メディアマガジン",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-16.png",
+            },
+            {
+              title:"THE メディアマガジン",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-17.png",
+            },
+
+        ];
+        displayListWithTag({start:'<span>',end:'</span>'},d_links_list);
+      </script>
+      <img src="../images/sdgs_logo.png" style="width:calc(100%);max-width:calc(210px);margin:0 auto;"/>
+      <h4 style="text-align:center;">私たちは、積極的に活動に参加していきます</h4>
+      <hr class="clearline">
+    </div>
+        <hr class="clearline">
+        <h5 style="text-align: center;">(C) <a rel="author" href="https://qiita.com/sunstripe2011" target="_blank">サンストライプ</a>(<a href="https://note.com/thecardgame/n/nbb2aab3e8ae6" target="_blank">プログラミング道の駅</a>) 2020.02.29<br /></h5>
     </footer>
 
 </body>

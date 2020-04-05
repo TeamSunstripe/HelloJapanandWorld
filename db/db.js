@@ -103,9 +103,8 @@ var sideNavMenus = [
       /// JavaScript
       {
         title : "JavaScript",
-        href : "javascript.html",
+        href : "JavaScript/index.html",
         img : "javascript_icon.png",
-        hidden:true,
       },
       /// jQuery
       {

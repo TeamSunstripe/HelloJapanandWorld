@@ -35,7 +35,6 @@ var programmingList = [
   {
     baseDir:"JavaScript",
     baseURL:"index.html",
-    hidden:true,
 },
   {
     baseDir:"iOS/ObjectiveC",
@@ -166,7 +165,62 @@ function displaySideMenuNavList (baseDir,imgDir,sideMenuNavList) {
   return HTML;
 }
 
+function createList(list) {
+  var HTML = "";
+  for (var i = 0; i < list.length; i++) {
+    HTML += '<a href="';
+    HTML += list[ i ].href;
+    HTML += '" target="';
+    var target = list[ i ].target;
+    if (!target) {
+      target = "_blank";
+    }
+    HTML += target;
+    HTML += '">';
+    HTML += '<h5>';
+    HTML += list[ i ].title;
+    HTML += '</h5>';
+    HTML += '</a>';
+  }
+  return HTML;
+}
 
+function displayList(list) {
+   document.write(createList(list));
+}
+
+function createListWithTag(tag,list) {
+  var HTML = "";
+  for (var i = 0; i < list.length; i++) {
+    HTML += '<a href="';
+    HTML += list[ i ].href;
+    HTML += '" target="';
+    var target = list[ i ].target;
+    if (!target) {
+      target = "_blank";
+    }
+    HTML += target;
+    HTML += '">';
+    HTML += tag.start;
+    HTML += '<img style="width:20%;max-width:200px;" src="';
+    HTML += list[ i ].img;
+    HTML += '" alt="';
+    HTML += list[ i ].title;
+    HTML += '" title="';
+    HTML += list[ i ].title;
+    HTML += '"/>';
+    if (list[ i ].title_hidden != true) {
+      HTML += list[ i ].title;
+    }
+    HTML += tag.end;
+    HTML += '</a>';
+  }
+  return HTML;
+}
+
+function displayListWithTag(tag,list) {
+  document.write(createListWithTag(tag,list));
+}
 
 /// Alert / Popup
 
