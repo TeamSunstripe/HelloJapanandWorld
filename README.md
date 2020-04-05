@@ -60,34 +60,58 @@ https://twitter.com/sunstripe2011/status/1234510417398882306
 各種プログラミングの学習ページを生やしていきます。
 
 ## HTML 
+Mozilla
+https://developer.mozilla.org/ja/docs/Web/HTML
 
 https://github.com/TeamSunstripe/HTMLLab
 
 ## CSS
+Mozilla
+https://developer.mozilla.org/ja/docs/Web/CSS
 
 https://github.com/TeamSunstripe/CSSLab
 
 ## JavaScript
-
+Mozilla
+https://developer.mozilla.org/ja/docs/Web/JavaScript
 https://github.com/TeamSunstripe/JavaScriptLab
 
 ## PHP
+PHP
+https://www.php.net/manual/ja/
 
 https://github.com/TeamSunstripe/PHPLab
 
 ## Objective-C
+Apple社
+https://developer.apple.com/documentation/foundation?language=objc
 
 https://github.com/TeamSunstripe/ObjectiveCLab
 
 ## Swift
+Apple社
+https://developer.apple.com/documentation/swift
 
 https://github.com/TeamSunstripe/SwiftLab
 
+## Ruby
+
+https://www.ruby-lang.org/ja/
+
+https://github.com/TeamSunstripe/Ruby
+
+
 ## Java
+
+## Android Java
+https://codeforfun.jp/java-for-android-1/
+
 
 ## ドットインストール
 
-## GitMaster
+## Git
+Git
+https://git-scm.com/about
 
 https://github.com/TeamSunstripe/GitMaster
 
