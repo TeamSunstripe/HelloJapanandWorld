@@ -3,10 +3,10 @@
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Hello,ObjectiveC World!!|ようこそシェアプログラミング</title>
-        <link rel="stylesheet" type="text/css" href="../css/main.css" />
-        <link rel="stylesheet" type="text/css" href="../css/button.css" />
-        <script type="text/javascript" src="../js/main.js"></script>
-        <script type="text/javascript" src="../db/db.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../css/main.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/button.css" />
+        <script type="text/javascript" src="../../js/main.js"></script>
+        <script type="text/javascript" src="../../db/db.js"></script>
     </head>
     <style>
     .select:hover {
@@ -51,8 +51,8 @@
         <nav id="side-nav">
             <ul>
               <script>
-                var baseDir = "../";
-                var imgDir = "../img/";
+                var baseDir = "../../";
+                var imgDir = "../../img/";
                 document.write(displaySideMenuNavList(baseDir,imgDir,sideNavMenus));
               </script>
 
@@ -70,18 +70,217 @@
 
         <main>
 
-            <nav id="sub-nav" hidden>
+            <nav id="sub-nav">
                 <ul>
                     <li><a href="index.html"><h4>TOP</h4></a></li>
-                    <li><a name="facility" href="facility.html"><h4>施設</h4></a></li>
+                    <li><a name="Framework" href="index.html#Framework.html"><h4>Framework</h4></a></li>
+                    <li><a name="AppKit" href="appkit.html"><h4>AppKit</h4></a></li>
                 </ul>
             </nav>
 
+            <h1 class="title py20x40">AppKit</h1>
             <section>
-              <h1>ObjectiveC</h1>
-              <a alt="Apple Developer Documentation" title="Apple Developer Documentation"><h1>Apple開発者用ドキュメント</h1></a>
-              <a alt="Browse the latest developer documentation including API reference, articles, and sample code." title="Browse the latest developer documentation including API reference, articles, and sample code."><h2>APIリファレンス、記事、サンプルコードなど、最新の開発者向けドキュメントをご覧ください。</h2></a>
+              <a alt="Construct and manage a graphical, event-driven user interface for your macOS app." title="Construct and manage a graphical, event-driven user interface for your macOS app."><h2>macOSアプリ用のグラフィカルなイベント駆動型ユーザーインターフェイスを構築して管理します。</h2></a>
             </section>
+
+            <nav style="text-align:right;padding-right:10px;">
+              <ul style="list-style:none;">
+                <li>SDKs</li>
+                <li>macOS 10.0+</li>
+                <li>Mac Catalyst 13.0+</li>
+                <li>On This Page</li>
+                <li><a href="#Overview">Overview</a></li>
+                <li><a href="#Topics">Topics</a></li>
+              </ul>
+            </nav>
+
+            <section id="Overview">
+              <h2>概要</h2>
+              <a alt="AppKit contains all the objects you need to implement the user interface for a macOS app—windows, panels, buttons, menus, scrollers, and text fields—and it handles all the details for you as it efficiently draws on the screen, communicates with hardware devices and screen buffers, clears areas of the screen before drawing, and clips views. The framework also provides APIs you use to make your app accessible to users with disabilities (see Accessibility); to learn more about localizing your app for different languages, countries, or cultural regions, see Internationalization and Localization Guide." title="AppKit contains all the objects you need to implement the user interface for a macOS app—windows, panels, buttons, menus, scrollers, and text fields—and it handles all the details for you as it efficiently draws on the screen, communicates with hardware devices and screen buffers, clears areas of the screen before drawing, and clips views. The framework also provides APIs you use to make your app accessible to users with disabilities (see Accessibility); to learn more about localizing your app for different languages, countries, or cultural regions, see Internationalization and Localization Guide."><p>AppKitには、macOSアプリのユーザーインターフェイスを実装するために必要なすべてのオブジェクト（ウィンドウ、パネル、ボタン、メニュー、スクローラー、テキストフィールド）が含まれており、画面に効率的に描画し、ハードウェアと通信するため、すべての詳細を処理します デバイスと画面バッファ、描画する前に画面の領域をクリアし、ビューをクリップします。
+
+フレームワークは、障害を持つユーザーがアプリにアクセスできるようにするために使用するAPIも提供します（<a href="./AppKit/accessibility.html" alt="Accessibility" title="Accessibility">Accessibility</a>を参照）。 アプリをさまざまな言語、国、または文化的地域にローカライズする方法の詳細については、「国際化およびローカリゼーションガイド」を参照してください。</p>
+            </section>
+
+            <h1 class="title py20x40">Topics</h1>
+            <section>
+              <h1>Essentials</h1>
+              <article>
+                <details>
+                  <summary>Protecting the User’s Privacy</summary>
+                  Secure personal data, and respect user preferences for how data is used.
+                </details>
+              </article>
+
+              <h1>App Structure</h1>
+              <article>
+
+                <details>
+                  <summary>App and Environment</summary>
+                  Learn about the objects that you use to interact with the system.
+                </details>
+
+                <details>
+                  <summary>Documents, Data, and Pasteboard</summary>
+                  Organize your app's data and preferences, and share that data on the pasteboard or in iCloud.
+                </details>
+
+                <details>
+                  <summary>Cocoa Bindings</summary>
+                  Automatically synchronize your data model with your app's interface using Cocoa Bindings.
+                </details>
+
+                <details>
+                  <summary>Resource Management</summary>
+                  Manage the storyboards and nib files containing your app's user interface, and learn how to load data that is stored in resource files.
+                </details>
+
+                <details>
+                  <summary>App Extensions</summary>
+                  Extend your app's basic functionality to other parts of the system.
+                </details>
+
+                <details>
+                  <summary>User Interface</summary>
+                  Your app's user interface provides visual, audible, and tactile feedback to the user about what your app is doing.
+                </details>
+
+                <details>
+                  <summary>Supporting Continuity Camera in Your Mac App</summary>
+                  Incorporate scanned documents and pictures taken with a user's iPhone, iPad, or iPod touch into your Mac app using Continuity Camera.
+                </details>
+
+                <details>
+                  <summary>Views and Controls</summary>
+                  Present your content onscreen and define the interactions allowed with that content.
+                </details>
+
+                <details>
+                  <summary>View Management</summary>
+                  Manage your user interface, including the size and position of views in a window.
+                </details>
+
+                <details>
+                  <summary>View Layout</summary>
+                  Position and size views using a stack view or Auto Layout constraints.
+                </details>
+
+                <details>
+                  <summary>Appearance Customization</summary>
+                  Add Dark Mode support to your app, and use appearance proxies to modify your UI.
+                </details>
+
+                <details>
+                  <summary>Animation</summary>
+                  Animate your views and other content to create a more engaging experience for users.
+                </details>
+
+                <details>
+                  <summary>Windows, Panels, and Screens</summary>
+                  Organize your view hierarchies and facilitate their display onscreen.
+                </details>
+
+                <details>
+                  <summary>Sound, Speech, and Haptics</summary>
+                  Play sounds and haptic feedback, and incorporate speech recognition and synthesis into your interface.
+                </details>
+              </article>
+
+              <h1>User Interactions</h1>
+              <article>
+
+                <details>
+                  <summary>Mouse, Keyboard, and Trackpad</summary>
+                  Handle events related to mouse, keyboard, and trackpad input.
+                </details>
+
+                <details>
+                  <summary>Menus, Cursors, and the Dock</summary>
+                  Implement menus and cursors to facilitate interactions with your app, and use your app's Dock tile to convey updated information.
+                </details>
+
+                <details>
+                  <summary>Gestures</summary>
+                  Encapsulate your app's event-handling logic in gesture recognizers so that you can reuse that code throughout your app.
+                </details>
+
+                <details>
+                  <summary>Touch Bar</summary>
+                  Display interactive content and controls in the Touch Bar.
+                </details>
+
+                <details>
+                  <summary>Drag and Drop</summary>
+                  Support the direct manipulation of your app's content using drag and drop.
+                </details>
+
+                <details>
+                  <summary>Accessibility</summary>
+                  <a href="./appkit/accessibility.html" alt="Accessibility" title="Accessibility">Accessibility</a>
+                  Make your app more accessible to users with disabilities.
+                </details>
+              </article>
+
+              <h1>Graphics, Drawing, Color, and Printing</h1>
+              <article>
+
+                <details>
+                  <summary>Images and PDF</summary>
+                  Create and manage images, in bitmap, PDF, and other formats.
+                </details>
+
+                <details>
+                  <summary>Drawing</summary>
+                  Draw shapes, images, and other content on the screen.
+                </details>
+
+                <details>
+                  <summary>Color</summary>
+                  Represent colors using built-in or custom formats, and give users options for selecting and applying colors.
+                </details>
+
+                <details>
+                  <summary>Printing</summary>
+                  Display the system print panels and manage the printing process.
+                </details>
+              </article>
+
+              <h1>Text</h1>
+              <article>
+
+                <details>
+                  <summary>Text Display</summary>
+                  Display text and check spelling.
+                </details>
+
+                <details>
+                  <summary>TextKit</summary>
+                  Manage text storage and perform custom layout of text-based content in your app's views.
+                </details>
+
+                <details>
+                  <summary>Fonts</summary>
+                  Manage the fonts used to display text.
+                </details>
+
+                <details>
+                  <summary>Deprecated</summary>
+                  Avoid using deprecated classes and protocols in your apps.
+                </details>
+
+                <details>
+                  <summary>Deprecated Symbols</summary>
+                  Review symbols that are no longer supported, and find the replacements to use instead.
+                </details>
+              </article>
+
+              <h1>Reference</h1>
+              <article>
+                <details>
+                <summary>Enumerations</summary>
+                Enumerations for use with multiple classes.
+              </details>
+            </article>
+          </section>
 
             <script>
             var ObjectiveCDocumentList = [
@@ -93,7 +292,7 @@
                 items:[
                   {
                     title:"AppKit",
-                    href:"appkit.html",
+                    href:"#AppKit",
                     URL:"https://developer.apple.com/documentation/appkit?language=objc",
                     description:"macOSアプリ用のグラフィカルなイベント駆動型ユーザーインターフェイスを構築して管理します。",
                   },
@@ -459,11 +658,11 @@
           <hr id="footer" style="clear:both;"/>
 
           <div id="actcoin" style="background-color:rgba(255,150,150,1.0);text-align:center;padding:20px;">
-            <a href="https://actcoin.jp/" alt="actcoin" title="actcoin" target="_blank"><img src="../img/actcoin_logo.png" style="width:200px;"/></a>
+            <a href="https://actcoin.jp/" alt="actcoin" title="actcoin" target="_blank"><img src="../../img/actcoin_logo.png" style="width:200px;"/></a>
           </div>
 
-          <div id="actcoin_event" style="background:linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url('../images/aozora_programming.png');background-attachment: fixed;background-size:100%;background-position: right center;text-align:center;padding:100px;">
-            <a href="https://actcoin.jp/project/detail.php?id=600" alt="actcoin" title="actcoin" target="_blank"><img src="../images/aozora_programming.png" style="width:100%;max-width:600px;"/></a>
+          <div id="actcoin_event" style="background:linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url('../../images/aozora_programming.png');background-attachment: fixed;background-size:100%;background-position: right center;text-align:center;padding:100px;">
+            <a href="https://actcoin.jp/project/detail.php?id=600" alt="actcoin" title="actcoin" target="_blank"><img src="../../images/aozora_programming.png" style="width:100%;max-width:600px;"/></a>
           </div>
 
           <div style="background-color:rgba(5,5,150,1.0);">
@@ -835,8 +1034,8 @@
                   <div style="background-color:white;color:rgba(0,0,0,0.8);">
                     <h2 style="text-align:center;">SDGs:持続可能な開発目標</h2>
                 <script>
-                  baseDir = "../";
-                  imgDir = "../images/";
+                  baseDir = "../../";
+                  imgDir = "../../images/";
                   var d_links_list = [
                       {
                         title:"プログラミング",
@@ -944,7 +1143,7 @@
                   ];
                   displayListWithTag({start:'<span>',end:'</span>'},d_links_list);
                 </script>
-                <img src="../images/sdgs_logo.png" style="width:calc(100%);max-width:calc(210px);margin:0 auto;"/>
+                <img src="../../images/sdgs_logo.png" style="width:calc(100%);max-width:calc(210px);margin:0 auto;"/>
                 <h4 style="text-align:center;">私たちは、積極的に活動に参加していきます</h4>
                 <hr class="clearline">
               </div>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hello,Japan and World!!|ようこそシェアプログラミング</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/button.css" />
+    <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./db/db.js"></script>
+    <script type="text/javascript" src="./db/db.js"></script>
+  </head>
+<body>
+  <header>
+      <h2>Hello,Japan and World!!</h2>
+      <h1>ようこそシェアプログラミング</h1>
+      <nav id="header-nav">
+          <ul>
+              <li><a rel="canonical" href="https://note.com/thecardgame/n/nc0eead00f5d0" target="_blank"><h5>このサイトについて</h2></a></li>
+              <li><a rel="contact" href="https://twitter.com/sunstripe2011" target="_blank"><h5>お問い合わせ</h5></a></li>
+              <li><a rel="author" href="https://qiita.com/sunstripe2011" target="_blank"><h5>サンストライプ</h5></a></li>
+          </ul>
+      </nav>
+  </header>
+  <section style="margin:30px auto;text-align:center;">
+      <h1>Hello World!!</h1>
+      <p>
+          Hello World!! 自分たちのプログラミングをみんなにチェックしてもらおう！
+          <br />
+          みんなで Hellow World!!! 使い方、ここのコードは全てみんなのもの。
+          <br />
+          まずは、GitHub から GitHubの使い方を学びます
+      </p>
+      <p>
+        あなたの可能性を<br />
+        活かしませんか？<br />
+        <br />
+        かんたん1分<br />
+      </p>
+      <button style="width:300px;height:100px;" class="button" onclick=openURL('https://twitter.com/sunstripe2011','こちらにDMにておしらせください');>ご登録はこちら</button>
+      <button  style="width:300px;height:100px;" class="button" onclick=facebookShare(location.href);>シェア<button>
+  </section>
+
+  <main style="margin:0;width:100%;text-align:center;">
+        <style>
+        .HTMLColor {
+          background-color: white;
+          color:black;
+        }
+        .CSSColor {
+          background-color: pink;
+          color:white;
+        }
+        .DesignColor {
+          background-color: orange;
+          color:white;
+        }
+        .IllustratorColor {
+          background-color: green;
+          color:white;
+        }
+        .PHPColor {
+          background-color: rgba(200,100,255,1.0);
+          color:white;
+        }
+        .JavaScriptColor {
+          background-color: rgba(100,100,255,1.0);
+          color:white;
+        }
+        .AndroidColor {
+          background-color: rgba(0,255,0,1.0);
+          color:white;
+        }
+        .AndroidColor:hover {
+          background-color: rgba(0,255,0,0.5);
+          color:white;
+        }
+        .iOSColor {
+          background-color: rgba(100,100,100,1.0);
+          color:white;
+        }
+        .iOSColor:hover {
+          background-color: rgba(100,100,100,0.5);
+          color:white;
+        }
+        .GitColor {
+          background-color: rgba(255,0,0,1.0);
+          color:white;
+        }
+        .GitColor:hover {
+          background-color: rgba(255,0,0,0.5);
+          color:white;
+        }
+        .SchoolColor {
+          background-color: rgba(0,255,255,1.0);
+          color:white;
+        }
+        .SchoolColor:hover {
+          background-color: rgba(0,255,255,0.5);
+          color:white;
+        }
+        .SandBoxColor {
+          background-color: rgba(100,75,50,1.0);
+          color:white;
+        }
+        .SandBoxColor:hover {
+          background-color: rgba(100,75,50,0.5);
+          color:white;
+        }
+        .DBColor {
+          background-color: pink;
+          color:white;
+        }
+        .SQLColor {
+          background-color: pink;
+          color:white;
+        }
+        .RubyColor {
+          background-color: rgba(255,0,0,1.0);
+          color:white;
+        }
+        .PythonColor {
+          background-color: white;
+          color:black;
+        }
+        .ShellScriptColor {
+          background-color: pink;
+          color:white;
+        }
+        .MagazineColor {
+          background-color: rgba(0,255,0,1.0);
+          color:white;
+        }
+        .ProgrammingColor {
+          background-color: pink;
+          color:white;
+        }
+        .ManagementColor {
+          background-color: white;
+          color:black;
+        }
+        .ProjectColor {
+          background-color: rgba(0,255,0,1.0);
+          color:white;
+        }
+        .CoachingColor {
+          background-color: rgba(0,255,255,1.0);
+          color:white;
+        }
+        .TeachingColor {
+          background-color: rgba(255,0,255,1.0);
+          color:white;
+        }
+        .MemberColor {
+          background-color: rgba(200,255,255,1.0);
+          color:white;
+        }
+        .MyPageColor {
+          background-color: rgba(0,200,255,1.0);
+          color:white;
+        }
+        .CityColor {
+          background-color: rgba(200,200,200,1.0);
+          color:white;
+        }
+        .ParkColor {
+          background-color: rgba(0,200,0,1.0);
+          color:white;
+        }
+        .PlaySchoolColor {
+          background-color: rgba(0,150,0,1.0);
+          color:white;
+        }
+        .NewsColor {
+          background-color: rgba(255,0,0,1.0);
+          color:white;
+        }
+        .WordsColor {
+          background-color: rgba(255,255,255,1.0);
+          color:black;
+        }
+
+        .whitebase p {
+          color:gray;
+          background-color: white;
+        }
+        </style>
+
+        <section class="whitebase">
+          <h1>制作</h1>
+          <h1>〜 Create 〜</h1>
+          <p>
+            コンテンツ制作において最大の目的は、高いクオリティと期限までに達成することがテーマになっている。<br />
+            まず何が作りたいのかと言うのを明確にしておくことが大切です。<br />
+            そして、そのコストが掛かってきます。<br />
+            制作行程の中で重要なのが要件定義だと思っております。<br />
+            このコンテンツ作りの要件定義を柱とする制作スタイルで、弊社でお悩みのコンテンツ作りをサポートさせて頂きます。<br />
+            優れたコンテンツの定義は、「お客様がお客様の抱える問題を解決し、一つ一つの作業に落とし込むこと」だと思っております。<br />
+            そのためには、目標への方向性を決め、目的を達成するためゴール構築が肝となります。<br />見栄えのする写真や耳に心地良い文章を並べるだけでは、ユーザーの心を掴むホームページを作ることはできません。誰に見て欲しいのか、何を訴えたいのかを明確な指標とした、「問題を解決できるためのウェブサイト」をご提供します。
+          </p>
+          <h1>HP制作のお悩み</h1>
+          <h1>ご相談下さい!</h1>
+        </section>
+
+        <section>
+          <h1>時代の変化に流されない</h1>
+          <h1>本質的な解決策を。</h1>
+          <h1>「創り」、「届ける」、「進む」ことで精度の高い集客を実現。</h1>
+        </section>
+
+        <section>
+          <button class="button HTMLColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("創る");'>創る</button>
+          <button class="button CSSColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("届ける");'>届ける</button>
+        </section>
+
+        <section>
+          <button class="button HTMLColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("伝える");'>伝える</button>
+          <button class="button CSSColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("配る");'>配る</button>
+        </section>
+
+        <section>
+          <button class="button HTMLColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("抑える");'>抑える</button>
+          <button class="button CSSColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("進める");'>進める</button>
+        </section>
+
+        <section class="whitebase">
+          <h1>診断 -diagnosis-</h1>
+          <p>
+            「ウェブ活用に困っていない企業は無い」。そんな言葉が大袈裟に聞こえないほどに、「ホームページをどうすればいいのか分からない」という声を多く耳にします。収益につながらない、問い合わせが来ない、検索順位が上がらないなどの悩みは、決して珍しいことではありません。サイトの価値を高めるには、利用者の目線に立つことと、サイト解析の専門知識が必須です。まずは第3者の立場からホームページを拝見し、次にウェブのプロフェッショナルとしてサイトを診断。双方の視点から最適な解決策を導き出します。
+          </p>
+
+          <h1>HP制作のお悩み</h1>
+          <h1>ご相談下さい!</h1>
+          <button class="button HTMLColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("HTML");'>HTML</button>
+          <button class="button CSSColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("CSS");'>CSS</button>
+          <h2>ウェブ制作</h2>
+          <p>
+          ウェブ制作
+          ユーザビリティー／ブランディング／デザイン／CMS・更新機能／SEO対策／SNS拡散／スマホ・タブレット対応
+          届ける
+          求める相手に響かせる
+          </p>
+        </section>
+
+        <section class="whitebase">
+          <h1>ECサイトコンサルティング</h1>
+          <h3>ウェブ解析</h3>
+          <p>
+            ショッピングモール選定／出店代行／コンテンツ設計／ネットショップ構築／ランディングページ作成／アクセス解析
+            ウェブの悩みを解決する術を提供し続けることで
+            企業にとって有益な好循環を生み出します。
+          </p>
+        </section>
+
+        <section>
+          <button class="button DesignColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Design");'>Design</button>
+          <button class="button IllustratorColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Illustrator");'>Illustrator</button>
+        </section>
+
+        <section>
+          <button class="button PHPColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("PHP");'>PHP</button>
+          <button class="button JavaScriptColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("JavaScript");'>JavaScript</button>
+        </section>
+
+        <section>
+            <h1>スマホアプリ制作のお悩み</h1>
+            <h1>ご相談下さい!</h1>
+          <button class="button AndroidColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Android");'>Android</button>
+          <button class="button iOSColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("iOS");'>iOS</button>
+
+          <h1>創る</h1>
+          <h1>伝えたい価値をその目に</h1>
+          <p>
+            リスティング広告運用
+            ウェブ広告運用
+            キーワード選定／エリアターゲッティング／検索広告／ディスプレイ広告／コンバージョン先導／費用対効果測定
+            進む
+            進むべき方向に動かす
+          </p>
+        </section>
+
+        <section>
+          <button class="button GitColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Git");'>Git</button>
+          <button class="button SchoolColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("School");'>School</button>
+        </section>
+
+        <section>
+          <button class="button GitColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Git");'>Git</button>
+          <button class="button SandBoxColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("CSS");'>SandBox</button>
+        </section>
+
+        <section>
+          <button class="button DBColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("DB");'>DB</button>
+          <button class="button SQLColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("SQL");'>SQL</button>
+        </section>
+
+        <section>
+          <button class="button RubyColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Ruby");'>Ruby</button>
+          <button class="button PythonColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Python");'>Python</button>
+        </section>
+
+        <section>
+          <button class="button ShellScriptColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("ShellScript");'>ShellScript</button>
+          <button class="button PythonColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Python");'>Python</button>
+        </section>
+
+        <section>
+          <h1>開発チームのお悩み</h1>
+          <h1>ご相談下さい!</h1>
+          <button class="button MagazineColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Magazine");'>Magazine</button>
+          <button class="button ProgrammingColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Programming");'>Programming</button>
+        </section>
+
+        <section>
+          <button class="button ManagementColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Management");'>Management</button>
+          <button class="button ProjectColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Project");'>Project</button>
+        </section>
+
+        <section>
+          <button class="button CoachingColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Coaching");'>Coaching</button>
+          <button class="button TeachingColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Teaching");'>Teaching</button>
+        </section>
+
+        <section class="whitebase">
+         <h1>支援 -Support-</h1>
+         <p>
+           ホームページは作って終わりではありません。ページの更新、商品の登録、コンテンツの追加など、サイトを運用する上での業務が生まれます。普段ウェブ関連の業務に携わらない企業さまにとっては、ハードルの高い仕事と言えるでしょう。弊社では、サイトの運用や管理の面でも企業さまをバックアップしています。将来的にサイトの更新をお客さま自身で行えるよう、ご指導させていただくことも可能です。お客さまと信頼関係が築けるように、心のこもったサポートをお約束します。
+         </p>
+        </section>
+
+        <section>
+          <h1>学習のお悩み</h1>
+          <h1>ご相談下さい!</h1>
+          <button class="button MemberColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Member");'>Member</button>
+          <button class="button MyPageColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("MyPage");'>MyPage</button>
+        </section>
+
+        <section class="whitebase">
+          <p>
+            画面共有して、書く人の口頭ベースで、コードをナビゲートして、コードを書いてもらったりしてます。
+            １時間〜２時間の学習が１：１でできる学習サービスになります。
+          </p>
+          <button class="button MemberColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("お試し");'>お試し</button>
+          <button class="button MyPageColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("定期");'>定期</button>
+        </section>
+
+
+        <section class="whitebase">
+          <h1>提案 -Proposal-</h1>
+          <p>
+            お客さまからの要望に応えるだけでなく、弊社からも定期的なご提案をさせていただきます。継続的なご提案こそが、制作のみを行うウェブ会社とは一線を画する弊社の強み。ユーザーの動向や流入経路などをリサーチし、何をすれば閲覧者が増えるのか、どんな施策を打てば利益につながるのかを検証し、テストと改善を繰り返すことでホームページの質を高めていきます。市場の流れや経済の浮き沈みは、商品の売れ筋や発信するべき情報の性質にも影響してきます。それらを明確に捉え、企業さまにとって有益なご提案をさせていただきます。
+          </p>
+        </section>
+
+        <section>
+          <h1>街づくり・地域のお悩み</h1>
+          <h1>ご相談下さい!</h1>
+          <button class="button CityColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("City");'>City</button>
+          <button class="button ParkColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Park");'>Park</button>
+        </section>
+
+        <section>
+          <button class="button PlaySchoolColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("PlaySchool");'>PlaySchool</button>
+          <button class="button SandBoxColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("SandBox");'>SandBox</button>
+        </section>
+
+        <section>
+          <button class="button NewsColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("News");'>News</button>
+          <button class="button WordsColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Words");'>Words</button>
+        </section>
+
+        <section class="whitebase">
+          <h1>WORKS ー実績ー</h1>
+          <p>
+            制作した実績の一部をご紹介します。
+          </p>
+        </section>
+
+        <section>
+          <button class="button NewsColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("News");'>News</button>
+          <button class="button WordsColor" style="width:calc(50% - 10px);height:100px;" onclick='alert("Words");'>Words</button>
+        </section>
+
+  </main>
+
+  <footer>
+
+  </footer>
+</body>

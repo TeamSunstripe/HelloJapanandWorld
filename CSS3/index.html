@@ -9,7 +9,9 @@
   <meta name="description" content="最強で最高のチーム作りサンストライプ-オフィシャルサイト。" />
   <title>Hello,Japan and World!!|ようこそシェアプログラミング - CSS スタイルシートリファレンス</title>
   <link rel="stylesheet" type="text/css" href="../css/main.css" />
+  <link rel="stylesheet" type="text/css" href="../css/button.css" />
   <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+  <script type="text/javascript" src="../js/main.js"></script>
   <script type="text/javascript" src="../db/db.js"></script>
   <script type="text/javascript" src="./js/cssdata.js"></script>
 </head>
@@ -284,133 +286,505 @@ data-ad-slot="2120848581"></ins>
 </script>
 </section>
 
-
-<section name="github">
-<h1>Github</h1>
-<p>
-<a href="https://techacademy.jp/magazine/6235">https://techacademy.jp/magazine/6235</a>
-</p>
-</section>
-<section>
-<p>各種プログラミングの学習ページを生やしていきます。</p>
-</section>
-
-<section>
-<h1 class="title">HTML / CSS / JavaScript</h1>
-./html/
-</section>
-
-<section>
-<h1 class="title">PHP</h1>
-./php/
-</section>
-
-<section>
-<h1 class="title">PHP</h1>
-./php/
-</section>
-
-<section>
-<h1 class="title">Objective-C</h1>
-./iOS/ObjectiveC/
-</section>
-
-<section>
-<h1 class="title">Swift</h1>
-./iOS/ObjectiveC/
-</section>
-
-<section>
-<h1 class="title">Java</h1>
-./Android/Java/
-</section>
-
-<section>
-<h1 class="title">その他</h1>
-./other/
-</section>
-
 </main>
+<hr id="footer" style="clear:both;"/>
 
-<aside id="news">
+<div id="actcoin" style="background-color:rgba(255,150,150,1.0);text-align:center;padding:20px;">
+  <a href="https://actcoin.jp/" alt="actcoin" title="actcoin" target="_blank"><img src="../img/actcoin_logo.png" style="width:200px;"/></a>
+</div>
 
-<section>
-<h1>公開行事や同窓会などのお知らせ</h1>
-</section>
+<div id="actcoin_event" style="background:linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url('../images/aozora_programming.png');background-attachment: fixed;background-size:100%;background-position: right center;text-align:center;padding:100px;">
+  <a href="https://actcoin.jp/project/detail.php?id=600" alt="actcoin" title="actcoin" target="_blank"><img src="../images/aozora_programming.png" style="width:100%;max-width:600px;"/></a>
+</div>
 
-</aside>
+<div style="background-color:rgba(5,5,150,1.0);text-align:left;">
 
-<footer>
-<section>
-<h1>公開行事や同窓会などのお知らせ</h1>
-<p>
-IT／WEBエンジニアに特化した学習サイト「Hello World!!」。 プログラミングスキルチェックであなたのプログラミング力をみんなでチェックすることを目的にしていきます。<br />
-自分の学習のチェックをアウトプット可視化し、スキルも含めみんなでチェックしていけばいくほど、現場とほぼ同じスキルをマスターしていけるという無料コンテンツです。<br />
-これからIT／WEBエンジニアとして就職や転職をしたいと思っている方には、かなり有利になる画期的なサービスです。<br />
-さらに、プログラミング初心者向けの学習方法として、それぞれのプロフィール（紹介ページ）を作成して、自分自身のポートフォリオを作成していくことも目的にしていくので<br />
-みんなのスキルやみんなの成長がみんなで確認できるのである種成長ゲームのようにコンテンツを活用してほしいと思います。<br />
-</p>
-</section>
-<nav id="footer-nav">
-<ul>
-<li><a href="outline.html"><h4>幼稚園の概要</h4></a></li>
-<li><a href="schedule.html"><h4>スケジュール</h4></a></li>
-<li><a href="facility.html"><h4>施設</h4></a></li>
-<li><a href="map.html"><h4>アクセス</h4></a></li>
-<li><a href="help.html"><h4>子育ての支援</h4></a></li>
-<li><a href="voice.html"><h4>保護者の声</h4></a></li>
-<li><a href="assessment.html"><h4>幼稚園の学校評価</h4></a></li>
-<li><a href="subsidy.html"><h4>補助制度</h4></a></li>
-<li><a href="recruitment.html"><h4>園児募集</h4></a></li>
-</ul>
-</nav>
+    <h1 class="title py20x40">コンテンツ</h1>
 
-<hr class="clearline">
+    <section style="background-color:rgba(5,5,5,0.4);">
 
-<section class="float-left30">
-<h2>Hello World!!のサービス</h2>
+            <script>
+            var baseDir = "../";
+            var imgDir = "../img/";
+            for (var snh = 0;snh < sideNavMenus.length;snh++) {
+              var headerInfo = sideNavMenus[snh].header;
+              document.write('<section>');
+              document.write('<h1 class="title">');
+              document.write('<span class="side_title">');
+              document.write(headerInfo.title);
+              document.write('</span>');
+              document.write('</h1>');
+              var menuItems = sideNavMenus[snh].items;
+              for (var snm = 0;snm < menuItems.length;snm++) {
+                var menuItem = menuItems[snm];
+                document.write('<article class="');
+                if (menuItem.hidden == true) {
+document.write(' display_none');
+                }
+                document.write('">');
+                var itemHrefURL = baseDir + menuItem.href;
+                if (!itemHrefURL) {
+itemHrefURL = "#";
+                }
+                document.write('<a href="');
+                document.write(itemHrefURL);
+                document.write('">');
+                document.write('<h3 class="">');
+                document.write('<span class="side_title">');
+                document.write(menuItem.title);
+                document.write('</span>');
+                document.write('</h3>');
+                document.write('</a>');
+                document.write('</article>');
+              }
+              document.write('</section>');
+              document.write('<br />');
+            }
+          </script>
 
-<!--Hello World!!新卒 就職先<br /-->
-<!--コードで採用！プログラミング就活<br /-->
-<!--Hello World!!転職<br /-->
-<!--コードを書いてシゴト選び<br /-->
-<!--スキルを磨くシゴト選び<br /-->
-<h4>Hello World!!ラーニング</h4>
-課題は、希望者と話して決めていきます。みんなで学ぶ<br />
-<h4>Hello World!!</h4>
-プログラミング実行 環境<br />
-<a href="https://github.com/TeamSunstripe/HelloWorld" target="_blank">Hello World!! Github</a><br />
-</section>
-<section class="float-center40">
-<h2>みんなが作ったコンテンツ</h2>
+          <section name="github">
+            <h1>Github</h1>
+            <p>
+                <a href="https://techacademy.jp/magazine/6235">https://techacademy.jp/magazine/6235</a>
+            </p>
+          </section>
+          <section>
+              <p>各種プログラミングの学習ページを生やしていきます。</p>
+          </section>
 
-<h2>みんなが作ったコンテンツ</h2>
-Hello World!!とは<br />
-Hello World!! 運営サークル<br />
-<!--サイトマップ<br /-->
-<br />
-<a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
-<br />
-<!--中途求人掲載はこちら<br /-->
-<!--新卒求人掲載はこちら<br /-->
-<br />
-<h4>ブログ・SNS</h4>
-<br />
-<a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
-THE メディア
-<a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
-<br />
-</section>
-<section class="float-right30">
-a
-</section>
-<hr class="clearline">
-<h5 style="text-align: center;">(C) <a rel="author" href="https://qiita.com/sunstripe2011" target="_blank">サンストライプ</a>(<a href="https://note.com/thecardgame/n/nbb2aab3e8ae6" target="_blank">プログラミング道の駅</a>) 2020.02.29<br />○○○○幼稚園 〒000-0000 住所名</h5>
-</footer>
+
+        <section>
+            <p>様々なジャンルでみんなでチェックして、コードを見てもらう習慣を Githubの良さはいつでもどこでもネットで見れます。</p>
+        </section>
+
+  <aside>
+        <section>
+            <h1 class="title">Issues で みんなからアドバイス!!</h1>
+            <p>あなたのIssues を作って、週の目的を明確に決めていきます。</p>
+        </section>
+
+        <section>
+            <h1 class="title">PullRequests でみんなからコードチェック!!</h1>
+            <p>あなたのコードをみんなでコードレビュー、問題解決やコードの見方</p>
+        </section>
+
+        <section>
+            <h1 class="title">まずはじめに</h1>
+            <p>自分のブランチを切って、自分のフォルダーで作業してください。 それぞれのフォルダーはこちらで管理していくので、他人のフォルダーを消すのはNGです。 まずは、プロフィールページを作成していきましょう！！</p>
+        </section>
+
+
+        <section>
+            <h1 class="title">プログラミング学習のルーティン</h1>
+            <ul>
+            <li>（1）プログラミング 定義・用語・規則 を学びます</li>
+            <li>（2）プログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
+            <li>（3）プログラミング Githubの使い方を駆使し、コードの書き方に注意しつつ、自分のコードを、みんなでチェック、コードレビューを学ぼう</li>
+            <li>（4）プログラミング 発展：支援活動リフレッシュなども学びます。求職活動、サービス展開へのステップアップ、ビジネス展開へのステップアップ</li>
+            <li>（5）プログラミング プログラミング の　まとめ</li>
+            </ul>
+            <p>これの繰り返し(2)へ</p>
+        </section>
+
+        <section>
+            <h1 class="title">ブログラミング学習のルーティン</h1>
+            <ul>
+            <li>（1）ブログラミング 定義・用語・規則 を学びます</li>
+            <li>（2）ブログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
+            <li>（3）ブログラミング 苦労したことなど note、Qiita にまとめてここで学んだことを自分なりにまとめます</li>
+            <li>（4）ブログラミング 学んだことを、まとめて発信して動画配信などをアップしていきましょう</li>
+            <li>（5）ブログラミング ブログラミング の　まとめ</li>
+            </ul>
+            <p>これの繰り返し(2)へ</p>
+        </section>
+    </aside>
+
+    <aside>
+
+        <section>
+            困ったらここにつぶやこう！ プログラミングSOS
+            <br />
+            <br />
+            基本的なルールは、全世代問わず トラブルのないように！！ 心配りをご協力お願いいたします。
+            <br />
+            <br />
+            完全公開にしているのでシェアしたものに関しては、みんなのものになるので、個人情報やコンプライアンスを注意をお願いいたします。
+        </section>
+
+    </aside>
+
+  </section>
+    <hr style="clear:both;"/>
+  </div>
+
+  <section style="background-color:orange;">
+    <aside class="aside-list">
+        <h1 class="title">記事一覧</h1>
+        <article style="background-color:white;padding:20px;">
+        <p>みんながおすすめするブログ・ツール</p>
+        </article>
+
+        <h3 class="title">ツール一覧</h3>
+
+        <article style="background-color:white;padding:20px;">
+        <h2>#Progate　プログラミングの基礎を勉強したい方へ</h2>
+        <span>2020.02.29</span>
+        <a href="https://prog-8.com/" target="_blank">#Progate</a>
+        </article>
+
+        <article style="background-color:white;padding:20px;">
+            <h2>note.com　ブログを発信したい方へ</h2>
+            <span>2020.02.29</span>
+            <a href="https://note.com/" target="_blank">note.com</a>
+        </article>
+
+        <article style="background-color:white;padding:20px;">
+            <h2>qiita.com　IT技術などの知識を発信したい方へ</h2>
+            <span>2020.02.29</span>
+            <a href="https://qiita.com/" target="_blank">qiita.com</a>
+        </article>
+
+        <h1 class="title">参加者メンバー 一覧</h1>
+
+        <article style="background-color:white;padding:20px;">
+        <h2>THE メディア（代表：大熊 月）</h2>
+        <span>2020.02.29 - </span>
+        <a href="https://twitter.com/sunstripe2011" target="_blank"><p>頑張るプログラマーを応援したい</p></a>
+        </article>
+
+    </aside>
+
+    <aside id="news" class="aside-list">
+      <h2 class="title">公開行事や同窓会などのお知らせ</h2>
+      <article style="background-color:white;padding:20px;">
+        <a href="https://note.com/thecardgame/n/n2f8ef482ed9a" target="_blank"><p>第７回青空プログラミング</p></a>
+      </article>
+
+      <article style="background-color:white;padding:20px;">
+        <a href="https://actcoin.jp/project/detail.php?id=600" target="_blank"><p>青空プログラミング</p></a>
+      </article>
+    </aside>
+
+  </section>
+    <footer>
+      <section style="background-color:black;color:white;">
+        <h1 class="title">サンストライプのお知らせ</h1>
+        <p>
+          IT／WEBエンジニアに特化した学習サイト「Hello World!!」。 プログラミングスキルチェックであなたのプログラミング力をみんなでチェックすることを目的にしていきます。<br />
+          自分の学習のチェックをアウトプット可視化し、スキルも含めみんなでチェックしていけばいくほど、現場とほぼ同じスキルをマスターしていけるという無料コンテンツです。<br />
+          これからIT／WEBエンジニアとして就職や転職をしたいと思っている方には、かなり有利になる画期的なサービスです。<br />
+          さらに、プログラミング初心者向けの学習方法として、それぞれのプロフィール（紹介ページ）を作成して、自分自身のポートフォリオを作成していくことも目的にしていくので<br />
+          みんなのスキルやみんなの成長がみんなで確認できるのである種成長ゲームのようにコンテンツを活用してほしいと思います。<br />
+        </p>
+      </section>
+
+        <hr class="clearline">
+        <div id="site-map">
+        <section class="float-left30 height_max">
+            <h2 class="title">サービス</h2>
+
+            <h4>Hello World!!ラーニング</h4>
+            課題は、希望者と話して決めていきます。みんなで学ぶ<br />
+            <h4>Hello World!!</h4>
+            プログラミング実行 環境<br />
+            <a href="https://github.com/TeamSunstripe/HelloWorld" target="_blank">Hello World!! Github</a><br />
+        </section>
+        <section class="float-center40 height_max">
+            <h2 class="title">みんなが作ったコンテンツ</h2>
+
+            <h2>みんなが作ったコンテンツ</h2>
+                Hello World!!とは<br />
+                Hello World!! 運営サークル<br />
+            <br />
+                <a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
+                <br />
+            <br />
+            <h4>ブログ・SNS</h4>
+            <br />
+            <a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
+            THE メディア
+            <a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
+
+        </section>
+        <section class="float-right30 height_max">
+          <h1 class="title">カスタマーサポート</h1>
+          <p>返信が必要な場合はこちら</p>
+          <button style="width:100%" onclick="alert('ただいま工事中');">お問い合わせ</button>
+          <p>サンストライプへのご意見・ご要望をお聞かせください</p>
+          <textarea style="width:100%;height:400px;" >サービスへのご意見、ご要望をお聞かせください。ご意見・ご要望に返信できないことをあらかじめご了承ください。</textarea>
+          <button style="width:100%;height:50px;" class="button" onclick="alert('ただいま工事中');">送信する</button>
+        </section>
+        </div>
+
+        <hr class="clearline">
+
+              <style>
+              #links-list {
+                background-color: black;
+                height: 100%;
+              }
+              #links-list a{
+                color: white;
+              }
+              .float-center30 {
+                float:left;
+                width:20%;
+                background-color: black;
+              }
+              .float-right40 {
+                float:right;
+                width:30%;
+                background-color: black;
+              }
+              </style>
+        <div id="links-list">
+          <script>
+
+          </script>
+        <section class="float-left30 height_max">
+
+          <script>
+
+          var a_links_list = [
+              {
+                title:"Qiita@sunstripe2011",
+                href:"https://qiita.com/sunstripe2011",
+              },
+              {
+                title:"THE CARD GAMEマガジン",
+                href:"https://note.com/thecardgame"
+              },
+          ];
+            displayList(a_links_list);
+          </script>
+
+        </section>
+        <section class="float-center30 height_max">
+          <script>
+
+          var b_links_list = [
+              {
+                title:"プログラミング",
+                href:"https://note.com/thecardgame/m/m5511291011ae",
+              },
+              {
+                title:"青空プログラミング",
+                href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1220739",
+              },
+              {
+                title:"シェアプログラミング",
+                href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1274188",
+              },
+              {
+                title:"プログラミング道の駅",
+                href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1240438",
+              },
+              {
+                title:"ブログラミング",
+                href:"https://note.com/thecardgame/m/mcc8f5da850af"
+              },
+              {
+                title:"THE メディアマガジン",
+                href:"https://note.com/thecardgame/m/ma9eb41a913e2"
+              },
+          ];
+            displayList(b_links_list);
+
+          </script>
+        </section>
+        <section class="float-right40 height_max">
+          <script>
+          var c_links_list = [
+              {
+                title:"分野別",
+                href:"#分野別",
+              },
+              {
+                title:"政治・外交",
+                href:"#政治・外交",
+              },
+              {
+                title:"経済・ビジネス",
+                href:"#経済・ビジネス",
+              },
+              {
+                title:"国際",
+                href:"#国際",
+              },
+              {
+                title:"社会",
+                href:"#社会"
+              },
+              {
+                title:"文化",
+                href:"#文化"
+              },
+              {
+                title:"技術",
+                href:"#技術"
+              },
+              {
+                title:"暮らし",
+                href:"#暮らし"
+              },
+              {
+                title:"スポーツ",
+                href:"#スポーツ"
+              },
+              {
+                title:"エンタメ",
+                href:"#エンタメ"
+              },
+              {
+                title:"環境",
+                href:"#環境"
+              },
+              {
+                title:"仕事・労働",
+                href:"#仕事・労働"
+              },
+              {
+                title:"家族・家庭",
+                href:"#家族・家庭"
+              },
+              {
+                title:"健康・医療",
+                href:"#健康・医療"
+              },
+              {
+                title:"歴史",
+                href:"#歴史"
+              },
+          ];
+          displayList(c_links_list);
+                    </script>
+        </section>
+        <hr class="clearline">
+        </div>
+
+        <hr class="clearline">
+        <div style="background-color:white;color:rgba(0,0,0,0.8);">
+          <h2 style="text-align:center;">SDGs:持続可能な開発目標</h2>
+      <script>
+        baseDir = "../";
+        imgDir = "../images/";
+        var d_links_list = [
+            {
+              title:"プログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-01.png",
+            },
+            {
+              title:"青空プログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-02.png",
+            },
+            {
+              title:"シェアプログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-03.png",
+            },
+            {
+              title:"プログラミング道の駅",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-04.png",
+            },
+            {
+              title:"ブログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-05.png",
+            },
+            {
+              title:"THE メディアマガジン",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-06.png",
+            },
+            {
+              title:"プログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-07.png",
+            },
+            {
+              title:"青空プログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-08.png",
+            },
+            {
+              title:"シェアプログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-09.png",
+            },
+            {
+              title:"プログラミング道の駅",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-10.png",
+            },
+            {
+              title:"ブログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-11.png",
+            },
+            {
+              title:"THE メディアマガジン",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-12.png",
+            },
+            {
+              title:"シェアプログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-13.png",
+            },
+            {
+              title:"プログラミング道の駅",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-14.png",
+            },
+            {
+              title:"ブログラミング",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-15.png",
+            },
+            {
+              title:"THE メディアマガジン",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-16.png",
+            },
+            {
+              title:"THE メディアマガジン",
+              title_hidden:true,
+              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              img: imgDir + "sdg-ja-17.png",
+            },
+
+        ];
+        displayListWithTag({start:'<span>',end:'</span>'},d_links_list);
+      </script>
+      <img src="../images/sdgs_logo.png" style="width:calc(100%);max-width:calc(210px);margin:0 auto;"/>
+      <h4 style="text-align:center;">私たちは、積極的に活動に参加していきます</h4>
+      <hr class="clearline">
+    </div>
+        <hr class="clearline">
+        <h5 style="text-align: center;">&copy; <a rel="author" href="https://qiita.com/sunstripe2011" target="_blank">サンストライプ</a>(<a href="https://note.com/thecardgame/n/nbb2aab3e8ae6" target="_blank">プログラミング道の駅</a>) 2020.02.29<br /></h5>
+    </footer>
 
 </body>
 </html>
-
 
 <!DOCTYPE html>
 <html lang="ja">

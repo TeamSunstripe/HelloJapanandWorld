@@ -2,25 +2,224 @@
 <html lang="ja">
 <head>
 <title>JavaScript - Hello World!!</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css" />
-<link rel="stylesheet" type="text/css" href="../css/button.css" />
-<script type="text/javascript" src="../js/main.js"></script>
-<script type="text/javascript" src="../js/share.js"></script>
-<script type="text/javascript" src="../db/db.js"></script>
+<link rel="stylesheet" type="text/css" href="../../css/main.css" />
+<link rel="stylesheet" type="text/css" href="../../css/button.css" />
+<script type="text/javascript" src="../../js/main.js"></script>
+<script type="text/javascript" src="../../js/share.js"></script>
+<script type="text/javascript" src="../../db/db.js"></script>
 </head>
 <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+navigationController {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: gray;
+}
+navigationBar {
+  width: 100%;
+  height: 55px;
+  display: block;
+  background-color: red;
+  top:20px;
+  box-shadow: 2px 2px 4px inset;
+}
+navigationItem {
+  height: 100%;
+}
+leftBarButtonItem {
+  display: table-cell;
+  width: 100px;
+  height: 100%;
+  display: block;
+  background-color: black;
+  color:white;
+  text-align: center;
+  vertical-align: baseline;
+  box-shadow: 1px 1px 2px inset;
+}
+leftBarButtonItem:hover {
+background-color: rgba(5,5,5,0.2);
+}
+rightBarButtonItem {
+  display: table-cell;
+  width: 100px;
+  height: 100%;
+  display: block;
+  background-color: black;
+  color:white;
+  text-align: center;
+  vertical-align: baseline;
+  box-shadow: 1px 2px 1px inset;
+}
+rightBarButtonItem:hover {
+  background-color: rgba(5,5,5,0.2);
+}
+
+viewController {
+  width: 100%;
+  height:100%;
+  display:block;
+  background-color: rgba(5,100,5,0.2);
+}
+
+toolBar {
+  width: 100%;
+  display: block;
+  background-color: red;
+}
+#titleView {
+  width: calc(100% - 200px);
+  height:100%;
+  display:inline-flex;
+  background-color: white;
+}
+label {
+  width: 100%;
+  text-align: center;
+}
+#title {
+  width: 100%;
+  text-align: center;
+}
+#mainView {
+  width: 100%;
+  height:480px;
+  display:inline-block;
+}
+tableView {
+  width: 100%;
+  height:480px;
+  background-color: rgba(110,110,110,1.0);
+  overflow: scroll;
+}
+tableViewCell {
+  width: 100px;
+  height:55px;
+  background-color: rgba(0,0,0,0.3);
+  display: block;
+}
+#mainViewContrller {
+
+}
+#settingViewContrller {
+  display: none;
+}
+.navigationAnimation {
+  /*animation: 3s ease-in 1s infinite reverse both running slidein;*/
+  animation: slidein 5s ease -2s infinite alternate;
+}
+@keyframes slidein {
+  from { background-color: rgba(0,0,0,1.0); }
+  to   { background-color: rgba(0,0,0,0.0); }
+}
     </style>
 <body>
+
+<navigationController>
+  <navigationBar>
+    <navigationItem style="float:left;">
+      <leftBarButtonItem onclick='alert("左")'>左</leftBarButtonItem>
+    </navigationItem>
+    <view id="titleView">
+      <label id="title">タイトル</label>
+    </view>
+    <navigationItem style="float:right;">
+      <rightBarButtonItem onclick='alert("右")'>右</rightBarButtonItem>
+    </navigationItem>
+  </navigationBar>
+  <viewControllers>
+  <viewController id="mainViewContrller">
+  <view id="mainView">
+    <!--label>mainViewContrller</label-->
+  </view>
+  <toolBar>
+    <toolBarItem style="float:left;">
+      <leftBarButtonItem onclick='alert("左")'>左</leftBarButtonItem>
+    </toolBarItem>
+    <toolBarItem style="float:right;">
+      <rightBarButtonItem onclick='alert("右")'>右</rightBarButtonItem>
+    </toolBarItem>
+  </toolBar>
+  </viewController>
+  <viewController id="settingViewContrller">
+  <tableView id="mainView">
+    <!--label>settingViewContrller</label-->
+    <tableViewCell>
+      セル 1
+    </tableViewCell>
+    <tableViewCell>
+      セル 2
+    </tableViewCell>
+    <tableViewCell>
+      セル 3
+    </tableViewCell>
+    <tableViewCell>
+      セル 4
+    </tableViewCell>
+    <tableViewCell>
+      セル 5
+    </tableViewCell>
+    <tableViewCell>
+      セル 6
+    </tableViewCell>
+    <tableViewCell>
+      セル 7
+    </tableViewCell>
+    <tableViewCell>
+      セル 8
+    </tableViewCell>
+  </tableView>
+  <toolBar>
+    <toolBarItem style="float:left;">
+      <leftBarButtonItem onclick='alert("左")'>左</leftBarButtonItem>
+    </toolBarItem>
+    <toolBarItem style="float:right;">
+      <rightBarButtonItem onclick='alert("右")'>右</rightBarButtonItem>
+    </toolBarItem>
+  </toolBar>
+  </viewController>
+  </viewControllers>
+  <hr style="clear:both;"/>
+</navigationController>
+
+<script>
+var title = document.getElementById("title");
+var mainViewContrller = document.getElementById("mainViewContrller");
+var settingViewContrller = document.getElementById("settingViewContrller");
+mainViewContrller.onclick = function () {
+  mainViewContrller.classList.add("navigationAnimation");
+  settingViewContrller.style.display = "block";
+  mainViewContrller.style.display = "none";
+  title.innerHTML = "Setting View Contrller";
+}
+settingViewContrller.onclick = function () {
+  mainViewContrller.classList.remove("navigationAnimation");
+  settingViewContrller.style.display = "none";
+  mainViewContrller.style.display = "block";
+  title.innerHTML = "Main View Contrller";
+}
+</script>
+
+
+
+
+
+
+
 
   <div id="noticePopupSection" class="fadeout">
     <div id="noticePopupMessage" onclick="closeNoticePopup();"></div>
   </div>
 
   <div id="alertPopupSection" class="fadeout" style="background-color:#FFFFFF; visibility:hidden; position:absolute; border-width:thick; border-style:ridge; width:50%; box-shadow:10px 10px 10px rgba(0,0,0,0.5); border-radius:10px;">
-  <div style="float:right"><div onclick="alertMessageClose()"><img src="../img/close.png" style="width:33px;"></div></div>
+  <div style="float:right"><div onclick="alertMessageClose()"><img src="../../img/close.png" style="width:33px;"></div></div>
   <div id="alertTitle"></div>
   <div style="margin:20px 20px 0px 0px;">
-  <div style="display:table; float:left; width:100px; height:100px;"><p style="display:table-cell;vertical-align:middle;text-align:center;"><img src="../img/alert.png" style="width:100px;"></p></div>
+  <div style="display:table; float:left; width:100px; height:100px;"><p style="display:table-cell;vertical-align:middle;text-align:center;"><img src="../../img/alert.png" style="width:100px;"></p></div>
   <div style="display:table; height:100px;"><div id="alertMessage" style="display:table-cell;vertical-align:middle;"></div></div>
   <div style="padding:10px 0px; text-align:center;">
   <input style="border-radius:5px; font-size:large; width:100px;" type="button" value="O K" onclick="alertMessageClose()"></div>
@@ -41,7 +240,7 @@
 
     <nav id="sub-nav">
         <ul>
-            <li><a href="../index.html"><h4>TOP</h4></a></li>
+            <li><a href="../../index.html"><h4>TOP</h4></a></li>
             <li><a name="./index.html"><h4>JavaScript</h4></a></li>
         </ul>
     </nav>
@@ -66,8 +265,8 @@
     <nav id="side-nav">
         <ul>
           <script>
-            var baseDir = "../";
-            var imgDir = "../img/";
+            var baseDir = "../../";
+            var imgDir = "../../img/";
             document.write(displaySideMenuNavList(baseDir,imgDir,sideNavMenus));
           </script>
 
@@ -96,7 +295,7 @@
           </ul>
         </nav>
         <a href="#index"><aside class="cleaner cleanerColor">
-          <img style="width:100px;" src="../img/cleaner.png"/>
+          <img style="width:100px;" src="../../img/cleaner.png"/>
         </aside></a>
       </section></a>
 
@@ -111,7 +310,7 @@
   </article>
   </a>
   <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../img/cleaner.png"/>
+    <img style="width:100px;" src="../../img/cleaner.png"/>
   </aside></a>
 </section>
 
@@ -124,7 +323,7 @@
     </p>
   </article>
   <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../img/cleaner.png"/>
+    <img style="width:100px;" src="../../img/cleaner.png"/>
   </aside></a>
 </a>
 <h5><a class="file" href="test.js" alt="test.js" title="test.js" target="_blank">test.js</a></h5>
@@ -148,7 +347,7 @@ displayConsole("Hello,JavaScript World!\n");
     </p>
   </article>
   <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../img/cleaner.png"/>
+    <img style="width:100px;" src="../../img/cleaner.png"/>
   </aside></a>
 </a-->
 
@@ -181,7 +380,7 @@ $ Hello,JavaScript World!
 </pre>
 <h5>コンソール</h5>
 <pre class="codeColor"><code id="consoleCode"></code></pre>
-<script type="text/javascript" src="../js/debug.js"></script>
+<script type="text/javascript" src="../../js/debug.js"></script>
 </article>
 <br />
 </section>
@@ -248,7 +447,7 @@ displayJavaScriptCode.innerHTML = JavaScriptCode.innerText;
     </script>
   </article>
   <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../img/cleaner.png"/>
+    <img style="width:100px;" src="../../img/cleaner.png"/>
     </aside>
   </a>
   <br />
@@ -265,7 +464,7 @@ displayJavaScriptCode.innerHTML = JavaScriptCode.innerText;
         </div>
       </article>
       <a href="#index"><aside class="cleaner cleanerColor">
-        <img style="width:100px;" src="../img/cleaner.png"/>
+        <img style="width:100px;" src="../../img/cleaner.png"/>
       </aside></a>
     </a>
 </section>
@@ -290,12 +489,12 @@ displayJavaScriptCode.innerHTML = JavaScriptCode.innerText;
     </p>
   </article>
   <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../img/cleaner.png"/>
+    <img style="width:100px;" src="../../img/cleaner.png"/>
   </aside></a>
 </a>
 <a name="howtocall"><h3>JavaScript の呼び出し方</h3></a>
 
-      <h5><a class="file" href="test_comment.sh" alt="test_comment.sh" title="test.sh" target="_blank">ターミナル</a></h5>
+      <h5><a class="file" href="test_comment.js" alt="test_comment.js" title="test_comment.js" target="_blank">ターミナル</a></h5>
       <article class="browser">
 <pre class="codeColor"><code>
   // 更新日 2011.11.11
@@ -311,17 +510,18 @@ displayJavaScriptCode.innerHTML = JavaScriptCode.innerText;
     </p>
   </article>
   <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../img/cleaner.png"/>
+    <img style="width:100px;" src="../../img/cleaner.png"/>
   </aside></a>
 </a-->
-      <h5><a class="file" href="test_comment.js" alt="test_comment.js" title="test.js" target="_blank">ターミナル</a></h5>
+      <h5><a class="file" href="test_comment.js" alt="test_comment.js" title="test_comment.js" target="_blank">ターミナル</a></h5>
       <article class="browser">
 <pre class="codeColor"><script>
 // 更新日 2011.11.11
 
 document.write("Hello,JavaScript World!\n"); // コメント
 </script></pre>
-# で書かれた行のコメントは実行されません
+<p>// で書かれた１行コメントは実行されません</p>
+<p>/*  */ で挟まれた行のコメントは実行されません</p>
 </article>
 
 </section>
@@ -335,7 +535,7 @@ document.write("Hello,JavaScript World!\n"); // コメント
     </script>
   </article>
   <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../img/cleaner.png"/>
+    <img style="width:100px;" src="../../img/cleaner.png"/>
     </aside>
   </a>
   <br />
@@ -382,14 +582,6 @@ document.write("Hello,JavaScript World!\n"); // コメント
 
 <hr id="footer" style="clear:both;"/>
 
-<div id="actcoin" style="background-color:rgba(255,150,150,1.0);text-align:center;padding:20px;">
-  <a href="https://actcoin.jp/" alt="actcoin" title="actcoin" target="_blank"><img src="../img/actcoin_logo.png" style="width:200px;"/></a>
-</div>
-
-<div id="actcoin_event" style="background:linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url('../images/aozora_programming.png');background-attachment: fixed;background-size:100%;background-position: right center;text-align:center;padding:100px;">
-  <a href="https://actcoin.jp/project/detail.php?id=600" alt="actcoin" title="actcoin" target="_blank"><img src="../images/aozora_programming.png" style="width:100%;max-width:600px;"/></a>
-</div>
-
 <div style="background-color:rgba(5,5,150,1.0);">
 
     <h1 class="title py20x40">コンテンツ</h1>
@@ -397,8 +589,8 @@ document.write("Hello,JavaScript World!\n"); // コメント
     <section style="background-color:rgba(5,5,5,0.4);">
 
             <script>
-            var baseDir = "../";
-            var imgDir = "../img/";
+            var baseDir = "../../";
+            var imgDir = "../../img/";
             for (var snh = 0;snh < sideNavMenus.length;snh++) {
               var headerInfo = sideNavMenus[snh].header;
               document.write('<section>');
@@ -759,8 +951,8 @@ itemHrefURL = "#";
         <div style="background-color:white;color:rgba(0,0,0,0.8);">
           <h2 style="text-align:center;">SDGs:持続可能な開発目標</h2>
       <script>
-        baseDir = "../";
-        imgDir = "../images/";
+        baseDir = "../../";
+        imgDir = "../../images/";
         var d_links_list = [
             {
               title:"プログラミング",
@@ -868,7 +1060,7 @@ itemHrefURL = "#";
         ];
         displayListWithTag({start:'<span>',end:'</span>'},d_links_list);
       </script>
-      <img src="../images/sdgs_logo.png" style="width:calc(100%);max-width:calc(210px);margin:0 auto;"/>
+      <img src="../../images/sdgs_logo.png" style="width:calc(100%);max-width:calc(210px);margin:0 auto;"/>
       <h4 style="text-align:center;">私たちは、積極的に活動に参加していきます</h4>
       <hr class="clearline">
     </div>

@@ -2,11 +2,11 @@
 <html lang="ja">
 <head>
 <title>JavaScript - Hello World!!</title>
-<link rel="stylesheet" type="text/css" href="../css/main.css" />
-<link rel="stylesheet" type="text/css" href="../css/button.css" />
-<script type="text/javascript" src="../js/main.js"></script>
-<script type="text/javascript" src="../js/share.js"></script>
-<script type="text/javascript" src="../db/db.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../css/main.css" />
+<link rel="stylesheet" type="text/css" href="../../../css/button.css" />
+<script type="text/javascript" src="../../../js/main.js"></script>
+<script type="text/javascript" src="../../../js/share.js"></script>
+<script type="text/javascript" src="../../../db/db.js"></script>
 </head>
 <style>
     </style>
@@ -17,15 +17,128 @@
   </div>
 
   <div id="alertPopupSection" class="fadeout" style="background-color:#FFFFFF; visibility:hidden; position:absolute; border-width:thick; border-style:ridge; width:50%; box-shadow:10px 10px 10px rgba(0,0,0,0.5); border-radius:10px;">
-  <div style="float:right"><div onclick="alertMessageClose()"><img src="../img/close.png" style="width:33px;"></div></div>
+  <div style="float:right"><div onclick="alertMessageClose()"><img src="../../../img/close.png" style="width:33px;"></div></div>
   <div id="alertTitle"></div>
   <div style="margin:20px 20px 0px 0px;">
-  <div style="display:table; float:left; width:100px; height:100px;"><p style="display:table-cell;vertical-align:middle;text-align:center;"><img src="../img/alert.png" style="width:100px;"></p></div>
+  <div style="display:table; float:left; width:100px; height:100px;"><p style="display:table-cell;vertical-align:middle;text-align:center;"><img src="../../../img/alert.png" style="width:100px;"></p></div>
   <div style="display:table; height:100px;"><div id="alertMessage" style="display:table-cell;vertical-align:middle;"></div></div>
   <div style="padding:10px 0px; text-align:center;">
   <input style="border-radius:5px; font-size:large; width:100px;" type="button" value="O K" onclick="alertMessageClose()"></div>
   </div>
   </div>
+
+  <style>
+  contents {
+    height: 400px;
+  }
+  parts nav {
+    background-color: white;
+    overflow: scroll;
+    float: left;
+    height: 100%;
+  }
+  parts {
+    background-color: lightgray;
+    overflow: scroll;
+    float: left;
+    height: 100%;
+  }
+  part {
+    display:block;
+  }
+      </style>
+
+  <script>
+  var objectInfo = {
+    x:0,
+    rotate:0,
+  };
+  function moveTo() {
+    var movePo = document.getElementById("movePo");
+    objectInfo.x += parseInt(movePo.innerText);
+    var object = document.getElementById("object");
+    // object.style.position = "absolute";
+    object.style.position = "relative";
+    object.style.left = objectInfo.x + "px";
+  }
+
+  function rotateTurnTo() {
+    var rotateTurn = document.getElementById("rotateTurn");
+    objectInfo.rotate += parseInt(rotateTurn.innerText);
+    var object = document.getElementById("object");
+    // object.style.position = "absolute";
+    object.style.position = "relative";
+    object.style.transform = "rotate(" + objectInfo.rotate + "deg)";
+  }
+
+  function rotateTurnTo() {
+    var rotateReturn = document.getElementById("rotateReturn");
+    objectInfo.rotate -= parseInt(rotateReturn.innerText);
+    var object = document.getElementById("object");
+    // object.style.position = "absolute";
+    object.style.position = "relative";
+    object.style.transform = "rotate(" + objectInfo.rotate + "deg)";
+  }
+  function rotateReturnTo() {
+    var rotateTurn = document.getElementById("rotateTurn");
+    objectInfo.rotate += parseInt(rotateTurn.innerText);
+    var object = document.getElementById("object");
+    // object.style.position = "absolute";
+    object.style.position = "relative";
+    object.style.transform = "rotate(" + objectInfo.rotate + "deg)";
+  }
+
+  </script>
+
+  <contents>
+    <h1>オブジェクト思考の考え方</h1>
+
+    <parts style="width:120px;">
+    <nav>
+      <ul>
+        <li><a href="#move"><h1>動き</h1></a></li>
+        <li><a href="#look"><h1>見え方</h1></a></li>
+        <li><a href="#sound"><h1>音</h1></a></li>
+        <li><a href="#event"><h1>イベント</h1></a></li>
+        <li><a href="#control"><h1>コントロール</h1></a></li>
+        <li><a href="#findout"><h1>調べる</h1></a></li>
+        <li><a href="#calculation"><h1>演算</h1></a></li>
+        <li><a href="#variable"><h1>変数</h1></a></li>
+        <li><a href="#definition"><h1>定義</h1></a></li>
+      </ul>
+    </nav>
+    </parts>
+
+    <parts style="width:300px;">
+      <a name="move"><h1>動き</h1>
+        <part><button onclick="moveTo();"><span id="movePo">10</span>歩 動かす</button></part>
+        <part><button onclick="rotateTurnTo()"><span id="rotateTurn">10</span>度 回す（時計回り）</button></part>
+        <part><button onclick="rotateReturnTo()"><span id="rotateReturn">10</span>歩 回す（反時計回り）</button></part>
+        <part><select><option>どこかの場所</options></select>へ 移動する</part>
+        <part>x座標を <span>10</span>、y座標を<span>10</span> に移動する</part>
+        <part><span>1</span>秒で <select><option>どこかの場所</options></select>へ 移動する</part>
+        <part><span>1</span>秒で x座標を<span>10</span>、y座標を<span>10</span> に移動する</part>
+        <part><span>90</span>度 に向ける</part>
+        <part><select><option>マウスの位置</options></select>へ 向ける</part>
+        <part>x座標を <span>10</span>ずつ 変える</part>
+        <part>x座標を <span>10</span>にする</part>
+        <part>y座標を <span>10</span>ずつ 変える</part>
+        <part>y座標を <span>10</span>にする</part>
+      <a name="look"><h1>見え方</h1></a>
+      <a name="sound"><h1>音</h1></a>
+      <a name="event"><h1>イベント</h1></a>
+      <a name="control"><h1>コントロール</h1></a>
+      <a name="findout"><h1>調べる</h1></a>
+      <a name="calculation"><h1>演算</h1></a>
+      <a name="variable"><h1>変数</h1></a>
+      <a name="definition"><h1>定義</h1></a>
+    </parts>
+    <parts style="width:calc(100% - 420px);">
+      <img id="object" src="../../../images/earth.png"/>
+    </parts>
+  </contents>
+
+  <hr class="clearline">
 
     <header>
         <h2>Hello,Japan and World!!</h2>
@@ -41,7 +154,7 @@
 
     <nav id="sub-nav">
         <ul>
-            <li><a href="../index.html"><h4>TOP</h4></a></li>
+            <li><a href="../../../index.html"><h4>TOP</h4></a></li>
             <li><a name="./index.html"><h4>JavaScript</h4></a></li>
         </ul>
     </nav>
@@ -66,8 +179,8 @@
     <nav id="side-nav">
         <ul>
           <script>
-            var baseDir = "../";
-            var imgDir = "../img/";
+            var baseDir = "../../../";
+            var imgDir = "../../../img/";
             document.write(displaySideMenuNavList(baseDir,imgDir,sideNavMenus));
           </script>
 
@@ -96,7 +209,7 @@
           </ul>
         </nav>
         <a href="#index"><aside class="cleaner cleanerColor">
-          <img style="width:100px;" src="../img/cleaner.png"/>
+          <img style="width:100px;" src="../../../img/cleaner.png"/>
         </aside></a>
       </section></a>
 
@@ -111,7 +224,7 @@
   </article>
   </a>
   <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../img/cleaner.png"/>
+    <img style="width:100px;" src="../../../img/cleaner.png"/>
   </aside></a>
 </section>
 
@@ -124,7 +237,7 @@
     </p>
   </article>
   <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../img/cleaner.png"/>
+    <img style="width:100px;" src="../../../img/cleaner.png"/>
   </aside></a>
 </a>
 <h5><a class="file" href="test.js" alt="test.js" title="test.js" target="_blank">test.js</a></h5>
@@ -148,7 +261,7 @@ displayConsole("Hello,JavaScript World!\n");
     </p>
   </article>
   <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../img/cleaner.png"/>
+    <img style="width:100px;" src="../../../img/cleaner.png"/>
   </aside></a>
 </a-->
 
@@ -181,7 +294,7 @@ $ Hello,JavaScript World!
 </pre>
 <h5>コンソール</h5>
 <pre class="codeColor"><code id="consoleCode"></code></pre>
-<script type="text/javascript" src="../js/debug.js"></script>
+<script type="text/javascript" src="../../../js/debug.js"></script>
 </article>
 <br />
 </section>
@@ -248,7 +361,7 @@ displayJavaScriptCode.innerHTML = JavaScriptCode.innerText;
     </script>
   </article>
   <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../img/cleaner.png"/>
+    <img style="width:100px;" src="../../../img/cleaner.png"/>
     </aside>
   </a>
   <br />
@@ -265,7 +378,7 @@ displayJavaScriptCode.innerHTML = JavaScriptCode.innerText;
         </div>
       </article>
       <a href="#index"><aside class="cleaner cleanerColor">
-        <img style="width:100px;" src="../img/cleaner.png"/>
+        <img style="width:100px;" src="../../../img/cleaner.png"/>
       </aside></a>
     </a>
 </section>
@@ -290,7 +403,7 @@ displayJavaScriptCode.innerHTML = JavaScriptCode.innerText;
     </p>
   </article>
   <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../img/cleaner.png"/>
+    <img style="width:100px;" src="../../../img/cleaner.png"/>
   </aside></a>
 </a>
 <a name="howtocall"><h3>JavaScript の呼び出し方</h3></a>
@@ -311,7 +424,7 @@ displayJavaScriptCode.innerHTML = JavaScriptCode.innerText;
     </p>
   </article>
   <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../img/cleaner.png"/>
+    <img style="width:100px;" src="../../../img/cleaner.png"/>
   </aside></a>
 </a-->
       <h5><a class="file" href="test_comment.js" alt="test_comment.js" title="test.js" target="_blank">ターミナル</a></h5>
@@ -335,70 +448,57 @@ document.write("Hello,JavaScript World!\n"); // コメント
     </script>
   </article>
   <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../img/cleaner.png"/>
+    <img style="width:100px;" src="../../../img/cleaner.png"/>
     </aside>
   </a>
   <br />
 </section>
 
-<h4 class="title py20x40">Element (要素) 特定の要素の幅と高さを取得</h4>
-<section>
-<nav class="list">
-<ul>
-<li><a href="width.html"><p>width</p></a></li>
-<li><a href="height.html"><p>height</p></a></li>
-<li><a href="clientWidth.html"><p>clientWidth</p></a></li>
-<li><a href="clientHeight.html"><p>clientHeight</p></a></li>
-</ul>
-</nav>
-</section>
+        <h4 class="title py20x40">Element (要素) 特定の要素の幅と高さを取得</h4>
+        <section>
+        <nav class="list">
+        <ul>
+        <li><a href="width.html"><p>width</p></a></li>
+        <li><a href="height.html"><p>height</p></a></li>
+        <li><a href="clientWidth.html"><p>clientWidth</p></a></li>
+        <li><a href="clientHeight.html"><p>clientHeight</p></a></li>
+        </ul>
+        </nav>
+        </section>
 
-<h4 class="title py20x40">JavaScript で作った</h4>
-<section>
-<nav class="list">
-<ul>
-<li><a href="nyamedia.html"><p>にゃめでぃあ</p></a></li>
-<li><a href="./canvas/index.html"><p>Canvas</p></a></li>
-<li><a name="./Game/index.html"><p>Game</p></a></li>
-<li><a href="./Game/homerun.html"><p>homerun</p></a></li>
-<li><a href="./Lesson/Basic/index.html"><p>Lesson/Basic</p></a></li>
-<li><a href="./Questions/index.html"><p>Questions</p></a></li>
-<li><a href="./Questions/anime.html"><p>アニメクイズ</p></a></li>
-<li><a href="./Questions/IdealHeight.html"><p>理想の身長</p></a></li>
-<li><a name="./Search/index.html"><p>Search</p></a></li>
-<li><a href="search.html"><p>検索サイトまとめ</p></a></li>
-<li><a href="function.html"><p>function</p></a></li>
-</ul>
-</nav>
-</section>
+        <h4 class="title py20x40">JavaScript で作った</h4>
+        <section>
+        <nav class="list">
+        <ul>
+        <li><a href="nyamedia.html"><p>にゃめでぃあ</p></a></li>
+        <li><a href="./canvas/index.html"><p>Canvas</p></a></li>
+        <li><a name="./Game/index.html"><p>Game</p></a></li>
+        <li><a href="./Game/homerun.html"><p>homerun</p></a></li>
+        <li><a href="./Lesson/Basic/index.html"><p>Lesson/Basic</p></a></li>
+        <li><a href="./Questions/index.html"><p>Questions</p></a></li>
+        <li><a href="./Questions/anime.html"><p>アニメクイズ</p></a></li>
+        <li><a href="./Questions/IdealHeight.html"><p>理想の身長</p></a></li>
+        <li><a name="./Search/index.html"><p>Search</p></a></li>
+        <li><a href="search.html"><p>検索サイトまとめ</p></a></li>
+        <li><a href="function.html"><p>function</p></a></li>
+        </ul>
+        </nav>
+        </section>
 
-<h4 class="title py20x40">オリジナルアラート：JavaScript</h4>
-<section>
-  <button style="width:300px;height:100px;" class="button" onclick='alertMessage("myTitle", "myMessage");'>alertMessage</button>
-  <button style="width:300px;height:100px;" class="button" onclick='showNoticePopup("myMessage");'>noticePopup</button>
-</section>
+        <h4 class="title py20x40">オリジナルアラート：JavaScript</h4>
+        <section>
+          <button style="width:300px;height:100px;" class="button" onclick='alertMessage("myTitle", "myMessage");'>alertMessage</button>
+          <button style="width:300px;height:100px;" class="button" onclick='showNoticePopup("myMessage");'>noticePopup</button>
+        </section>
 
-</main>
 
-<hr id="footer" style="clear:both;"/>
+        </main>
+            <hr  id="footer" style="clear:both;"/>
+        <section style="background-color:rgba(5,5,5,0.4);">
 
-<div id="actcoin" style="background-color:rgba(255,150,150,1.0);text-align:center;padding:20px;">
-  <a href="https://actcoin.jp/" alt="actcoin" title="actcoin" target="_blank"><img src="../img/actcoin_logo.png" style="width:200px;"/></a>
-</div>
-
-<div id="actcoin_event" style="background:linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url('../images/aozora_programming.png');background-attachment: fixed;background-size:100%;background-position: right center;text-align:center;padding:100px;">
-  <a href="https://actcoin.jp/project/detail.php?id=600" alt="actcoin" title="actcoin" target="_blank"><img src="../images/aozora_programming.png" style="width:100%;max-width:600px;"/></a>
-</div>
-
-<div style="background-color:rgba(5,5,150,1.0);">
-
-    <h1 class="title py20x40">コンテンツ</h1>
-
-    <section style="background-color:rgba(5,5,5,0.4);">
-
-            <script>
-            var baseDir = "../";
-            var imgDir = "../img/";
+          <script>
+            var baseDir = "../../../";
+            var imgDir = "../../../img/";
             for (var snh = 0;snh < sideNavMenus.length;snh++) {
               var headerInfo = sideNavMenus[snh].header;
               document.write('<section>');
@@ -506,9 +606,7 @@ itemHrefURL = "#";
 
     </aside>
 
-  </section>
     <hr style="clear:both;"/>
-  </div>
 
   <section style="background-color:orange;">
     <aside class="aside-list">
@@ -759,8 +857,8 @@ itemHrefURL = "#";
         <div style="background-color:white;color:rgba(0,0,0,0.8);">
           <h2 style="text-align:center;">SDGs:持続可能な開発目標</h2>
       <script>
-        baseDir = "../";
-        imgDir = "../images/";
+        baseDir = "../../../";
+        imgDir = "../../../images/";
         var d_links_list = [
             {
               title:"プログラミング",
@@ -868,7 +966,7 @@ itemHrefURL = "#";
         ];
         displayListWithTag({start:'<span>',end:'</span>'},d_links_list);
       </script>
-      <img src="../images/sdgs_logo.png" style="width:calc(100%);max-width:calc(210px);margin:0 auto;"/>
+      <img src="../../../images/sdgs_logo.png" style="width:calc(100%);max-width:calc(210px);margin:0 auto;"/>
       <h4 style="text-align:center;">私たちは、積極的に活動に参加していきます</h4>
       <hr class="clearline">
     </div>

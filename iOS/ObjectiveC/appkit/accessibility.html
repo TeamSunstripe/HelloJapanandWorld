@@ -3,10 +3,10 @@
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Hello,ObjectiveC World!!|ようこそシェアプログラミング</title>
-        <link rel="stylesheet" type="text/css" href="../css/main.css" />
-        <link rel="stylesheet" type="text/css" href="../css/button.css" />
-        <script type="text/javascript" src="../js/main.js"></script>
-        <script type="text/javascript" src="../db/db.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../../css/main.css" />
+        <link rel="stylesheet" type="text/css" href="../../../css/button.css" />
+        <script type="text/javascript" src="../../../js/main.js"></script>
+        <script type="text/javascript" src="../../../db/db.js"></script>
     </head>
     <style>
     .select:hover {
@@ -51,8 +51,8 @@
         <nav id="side-nav">
             <ul>
               <script>
-                var baseDir = "../";
-                var imgDir = "../img/";
+                var baseDir = "../../../";
+                var imgDir = "../../../img/";
                 document.write(displaySideMenuNavList(baseDir,imgDir,sideNavMenus));
               </script>
 
@@ -70,18 +70,336 @@
 
         <main>
 
-            <nav id="sub-nav" hidden>
+            <nav id="sub-nav">
                 <ul>
-                    <li><a href="index.html"><h4>TOP</h4></a></li>
-                    <li><a name="facility" href="facility.html"><h4>施設</h4></a></li>
+                    <li><a href="../index.html"><h4>TOP</h4></a></li>
+                    <li><a name="Framework" href="../index.html#Framework.html"><h4>Framework</h4></a></li>
+                    <li><a name="AppKit" href="../appkit.html"><h4>AppKit</h4></a></li>
+                    <li><a name="Accessibility" href="accessibility.html"><h4>Accessibility</h4></a></li>
                 </ul>
             </nav>
 
+            <h1 class="title py20x40">Accessibility</h1>
             <section>
-              <h1>ObjectiveC</h1>
-              <a alt="Apple Developer Documentation" title="Apple Developer Documentation"><h1>Apple開発者用ドキュメント</h1></a>
-              <a alt="Browse the latest developer documentation including API reference, articles, and sample code." title="Browse the latest developer documentation including API reference, articles, and sample code."><h2>APIリファレンス、記事、サンプルコードなど、最新の開発者向けドキュメントをご覧ください。</h2></a>
+              <a alt="Make your app more accessible to users with disabilities." title="Make your app more accessible to users with disabilities."><h2>障害を持つユーザーがアプリにアクセスしやすくします。</h2></a>
             </section>
+
+            <section id="Overview" hidden>
+              <h2>概要</h2>
+              <a alt="AppKit contains all the objects you need to implement the user interface for a macOS app—windows, panels, buttons, menus, scrollers, and text fields—and it handles all the details for you as it efficiently draws on the screen, communicates with hardware devices and screen buffers, clears areas of the screen before drawing, and clips views. The framework also provides APIs you use to make your app accessible to users with disabilities (see Accessibility); to learn more about localizing your app for different languages, countries, or cultural regions, see Internationalization and Localization Guide." title="AppKit contains all the objects you need to implement the user interface for a macOS app—windows, panels, buttons, menus, scrollers, and text fields—and it handles all the details for you as it efficiently draws on the screen, communicates with hardware devices and screen buffers, clears areas of the screen before drawing, and clips views. The framework also provides APIs you use to make your app accessible to users with disabilities (see Accessibility); to learn more about localizing your app for different languages, countries, or cultural regions, see Internationalization and Localization Guide."><p>AppKitには、macOSアプリのユーザーインターフェイスを実装するために必要なすべてのオブジェクト（ウィンドウ、パネル、ボタン、メニュー、スクローラー、テキストフィールド）が含まれており、画面に効率的に描画し、ハードウェアと通信するため、すべての詳細を処理します デバイスと画面バッファ、描画する前に画面の領域をクリアし、ビューをクリップします。
+
+フレームワークは、障害を持つユーザーがアプリにアクセスできるようにするために使用するAPIも提供します（<a href="./AppKit/accessibility.html" alt="Accessibility" title="Accessibility">Accessibility</a>を参照）。 アプリをさまざまな言語、国、または文化的地域にローカライズする方法の詳細については、「国際化およびローカリゼーションガイド」を参照してください。</p>
+            </section>
+
+            <h1 class="title py20x40">Topics</h1>
+            <section>
+              <h1>Essentials</h1>
+              <article>
+                <details>
+                  <summary>NSAccessibility</summary>
+                  The complete list of properties and methods implemented by accessible elements.
+                </details>
+                <details>
+                  <summary>NSAccessibilityContainsTransientUI</summary>
+                  A set of methods that support accessibility in a UI that changes dynamically—usually in response to mouse-hover events.
+                </details>
+                <details>
+                  <summary>Integrating Accessibility into Your App</summary>
+                  Make your app more accessible to users with disabilities by adding accessibility features.
+                </details>
+              </article>
+
+              <h1>AppKit Elements</h1>
+              <article>
+                <details>
+                  <summary>NSAccessibilityElementLoading</summary>
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityElement</summary>
+                  A role-based protocol that declares the minimum interface required to interact with an accessibility client.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityButton</summary>
+                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a button.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityCheckBox</summary>
+                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a checkbox.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityImage</summary>
+                  A role-based protocol that declares the minimum interface required for an accessibility element to act as an image.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityList</summary>
+                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a list view.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityNavigableStaticText</summary>
+                  A role-based protocol that declares the minimum interface required for an accessibility element to act as navigable static text.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityOutline</summary>
+                  A role-based protocol that declares the minimum interface required for an accessibility element to act as an outline view.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityProgressIndicator</summary>
+                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a progress indicator.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityRadioButton</summary>
+                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a radio button.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityRow</summary>
+                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a row for a table, list, or outline view.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilitySlider</summary>
+                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a slider.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityStaticText</summary>
+                  A role-based protocol that declares the minimum interface required for an accessibility element to act as static text.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityStepper</summary>
+                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a stepper.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilitySwitch</summary>
+                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a switch.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityTable</summary>
+                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a table view.
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityAnnotationAttributeKey</summary>
+                </details>
+
+                <details>
+                  <summary>NSAccessibilityAnnotationPosition</summary>
+                </details>
+
+            </article>
+
+            <h1>Custom Elements</h1>
+            <article>
+
+              <details>
+                <summary>NSAccessibilityElement</summary>
+                The basic infrastructure required to interact with an accessibility client.
+              </details>
+
+              <details>
+                <summary>NSAccessibilityElement</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityGroup</summary>
+                A role-based protocol that declares the minimum interface required to act as a container for other user interface elements.
+              </details>
+
+              <details>
+                <summary>NSAccessibilityCustomAction</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityCustomRotorItemResult</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityCustomRotorSearchParameters</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityCustomRotorType</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityCustomRotorSearchDirection</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityCustomRotorItemSearchDelegate</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityLayoutArea</summary>
+                A role-based protocol that declares the minimum interface required for an accessibility element to act as a layout area.
+              </details>
+
+              <details>
+                <summary>NSAccessibilityLayoutItem</summary>
+                A role-based protocol that declares the minimum interface required for an accessibility element to act as a layout item.
+              </details>
+            </article>
+
+            <h1>Accessibility Types</h1>
+            <article>
+
+              <details>
+                <summary>NSAccessibilityAttributeName</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityFontAttributeKey</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityLoadingToken</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityOrientationValue</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityParameterizedAttributeName</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityRole</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilitySubrole</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityRulerMarkerTypeValue</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityRulerUnitValue</summary>
+              </details>
+
+              <details>
+                <summary>NSAccessibilitySortDirectionValue</summary>
+              </details>
+            </article>
+
+            <h1>Convenience Functions</h1>
+            <article>
+
+              <details>
+                <summary>NSAccessibilityActionDescription</summary>
+                Returns a standard description for an action.
+              </details>
+
+              <details>
+                <summary>NSAccessibilityPostNotification</summary>
+                Sends a notification to any observing assistive applications.
+              </details>
+
+              <details>
+                <summary>NSAccessibilityPostNotificationWithUserInfo</summary>
+                Sends a notification and an optional userInfo dictionary to any observing assistive applications.
+              </details>
+
+              <details>
+                <summary><strike>NSAccessibilityRaiseBadArgumentException</strike></summary>
+                Raises an error if the parameter is the wrong type or has an illegal value
+                <h5>Deprecated</h5>
+              </details>
+
+              <details>
+                <summary>NSAccessibilityRoleDescription</summary>
+                Returns a standard description for a role and subrole.
+              </details>
+
+              <details>
+                <summary>NSAccessibilityRoleDescriptionForUIElement</summary>
+                Returns a standard role description for a user interface element.
+              </details>
+
+              <details>
+                <summary>NSAccessibilitySetMayContainProtectedContent</summary>
+                Sets whether the app may have protected content.
+              </details>
+
+              <details>
+                <summary>NSAccessibilityUnignoredChildren</summary>
+                Returns a list of unignored accessibility objects, descending the hierarchy if necessary.
+              </details>
+
+              <details>
+                <summary>NSAccessibilityUnignoredChildrenForOnlyChild</summary>
+                Returns a list of unignored accessibility objects, descending the hierarchy if necessary.
+              </details>
+
+              <details>
+                <summary>NSAccessibilityUnignoredDescendant</summary>
+                Returns an unignored accessibility object, descending the hierarchy if necessary.
+              </details>
+
+              <details>
+                <summary>NSAccessibilityUnignoredAncestor</summary>
+                Returns an unignored accessibility object, ascending the hierarchy if necessary.
+              </details>
+
+              <details>
+                <summary>NSAccessibilityFrameInView</summary>
+                Returns the frame in screen coordinates.
+              </details>
+
+              <details>
+                <summary>NSAccessibilityPointInView</summary>
+                Returns the point in screen coordinates.
+              </details>
+            </article>
+
+        </section>
+
+        <h1 class="title py20x40">See Also</h1>
+        <section>
+          <h1>User Interactions</h1>
+          <article>
+
+            <details>
+              <summary>Mouse, Keyboard, and Trackpad</summary>
+              Handle events related to mouse, keyboard, and trackpad input.
+            </details>
+
+            <details>
+              <summary>Menus, Cursors, and the Dock</summary>
+              Implement menus and cursors to facilitate interactions with your app, and use your app's Dock tile to convey updated information.
+            </details>
+
+            <details>
+              <summary>Gestures</summary>
+              Encapsulate your app's event-handling logic in gesture recognizers so that you can reuse that code throughout your app.
+            </details>
+
+            <details>
+              <summary>Touch Bar</summary>
+              Display interactive content and controls in the Touch Bar.
+            </details>
+
+            <details>
+              <summary>Drag and Drop</summary>
+              Support the direct manipulation of your app's content using drag and drop.
+            </details>
+          </article>
+
+        </section>
 
             <script>
             var ObjectiveCDocumentList = [
@@ -93,7 +411,7 @@
                 items:[
                   {
                     title:"AppKit",
-                    href:"appkit.html",
+                    href:"#AppKit",
                     URL:"https://developer.apple.com/documentation/appkit?language=objc",
                     description:"macOSアプリ用のグラフィカルなイベント駆動型ユーザーインターフェイスを構築して管理します。",
                   },
@@ -459,11 +777,11 @@
           <hr id="footer" style="clear:both;"/>
 
           <div id="actcoin" style="background-color:rgba(255,150,150,1.0);text-align:center;padding:20px;">
-            <a href="https://actcoin.jp/" alt="actcoin" title="actcoin" target="_blank"><img src="../img/actcoin_logo.png" style="width:200px;"/></a>
+            <a href="https://actcoin.jp/" alt="actcoin" title="actcoin" target="_blank"><img src="../../../img/actcoin_logo.png" style="width:200px;"/></a>
           </div>
 
-          <div id="actcoin_event" style="background:linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url('../images/aozora_programming.png');background-attachment: fixed;background-size:100%;background-position: right center;text-align:center;padding:100px;">
-            <a href="https://actcoin.jp/project/detail.php?id=600" alt="actcoin" title="actcoin" target="_blank"><img src="../images/aozora_programming.png" style="width:100%;max-width:600px;"/></a>
+          <div id="actcoin_event" style="background:linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url('../../../images/aozora_programming.png');background-attachment: fixed;background-size:100%;background-position: right center;text-align:center;padding:100px;">
+            <a href="https://actcoin.jp/project/detail.php?id=600" alt="actcoin" title="actcoin" target="_blank"><img src="../../../images/aozora_programming.png" style="width:100%;max-width:600px;"/></a>
           </div>
 
           <div style="background-color:rgba(5,5,150,1.0);">
@@ -473,8 +791,8 @@
               <section style="background-color:rgba(5,5,5,0.4);">
 
                       <script>
-                      var baseDir = "../";
-                      var imgDir = "../img/";
+                      var baseDir = "../../";
+                      var imgDir = "../../img/";
                       for (var snh = 0;snh < sideNavMenus.length;snh++) {
                         var headerInfo = sideNavMenus[snh].header;
                         document.write('<section>');
@@ -835,8 +1153,8 @@
                   <div style="background-color:white;color:rgba(0,0,0,0.8);">
                     <h2 style="text-align:center;">SDGs:持続可能な開発目標</h2>
                 <script>
-                  baseDir = "../";
-                  imgDir = "../images/";
+                  baseDir = "../../../";
+                  imgDir = "../../../images/";
                   var d_links_list = [
                       {
                         title:"プログラミング",
@@ -944,7 +1262,7 @@
                   ];
                   displayListWithTag({start:'<span>',end:'</span>'},d_links_list);
                 </script>
-                <img src="../images/sdgs_logo.png" style="width:calc(100%);max-width:calc(210px);margin:0 auto;"/>
+                <img src="../../../images/sdgs_logo.png" style="width:calc(100%);max-width:calc(210px);margin:0 auto;"/>
                 <h4 style="text-align:center;">私たちは、積極的に活動に参加していきます</h4>
                 <hr class="clearline">
               </div>

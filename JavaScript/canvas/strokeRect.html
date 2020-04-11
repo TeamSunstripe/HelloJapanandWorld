@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<title>JavaScript - Hello World!!</title>
+<title>Hello,Canvas World!!</title>
 <link rel="stylesheet" type="text/css" href="../../css/main.css" />
 <link rel="stylesheet" type="text/css" href="../../css/button.css" />
 <script type="text/javascript" src="../../js/main.js"></script>
@@ -27,14 +27,8 @@
   </div>
   </div>
 
-  <section>
-    <h1>LESSON</h1>
-  </section>
-
-
-
     <header>
-        <h2>Hello,Japan and World!!</h2>
+        <h2>Hello,JavaScript World!!</h2>
         <h1>ようこそシェアプログラミング</h1>
         <nav id="header-nav">
             <ul>
@@ -48,16 +42,18 @@
     <nav id="sub-nav">
         <ul>
             <li><a href="../../index.html"><h4>TOP</h4></a></li>
-            <li><a name="./index.html"><h4>JavaScript</h4></a></li>
+            <li><a href="../index.html"><h4>JavaScript</h4></a></li>
+            <li><a href="../Canvas/index.html"><h4>Canvas</h4></a></li>
+            <li><a name="../Canvas/canvas2d.html"><h4>canvas2d</h4></a></li>
         </ul>
     </nav>
 
     <section style="margin:30px auto;text-align:center;">
-        <h1>Hello,JavaScript World!!</h1>
+        <h1>Hello,Canvas World!!</h1>
         <p>
-            Hello,JavaScript World!! 自分たちのプログラミングをみんなにチェックしてもらおう！
+            Hello,Canvas World!! 自分たちのプログラミングをみんなにチェックしてもらおう！
             <br />
-            みんなで Hello,JavaScript World!!! 使い方、ここのコードは全てみんなのもの。
+            みんなで Hellow,Canvas World!!! 使い方、ここのコードは全てみんなのもの。
         </p>
         <p>
           あなたの可能性を<br />
@@ -76,106 +72,27 @@
             var imgDir = "../../img/";
             document.write(displaySideMenuNavList(baseDir,imgDir,sideNavMenus));
           </script>
-
-          <!--li><a href="outline.html"><h4 class="side_text"><img src="./img/school.png" class="side_image"/><span class="side_title">幼稚園の概要</span></h4></a></li>
-            <li><a href="schedule.html"><h4 class="side_text"><img src="./img/schedule.png" class="side_image"/><span class="side_title">スケジュール</span></h4></a></li>
-            <li><a href="facility.html"><h4 class="side_text"><img src="./img/building.png" class="side_image"/><span class="side_title">施設</span></h4></a></li>
-            <li><a href="map.html"><h4 class="side_text"><img src="./img/access.png" class="side_image"/><span class="side_title">アクセス</span></h4></a></li>
-            <li><a href="help.html"><h4 class="side_text"><img src="./img/learning.png" class="side_image"/><span class="side_title">子育ての支援</span></h4></a></li>
-            <li><a href="voice.html"><h4 class="side_text"><img src="./img/message.png" class="side_image"/><span class="side_title">保護者の声</span></h4></a></li>
-            <li><a href="assessment.html"><h4 class="side_text"><img src="./img/star.png" class="side_image"/><span class="side_title">幼稚園の学校評価</h4></a></li>
-            <li><a href="subsidy.html"><h4 class="side_text"><img src="./img/bookmark.png" class="side_image"/><span class="side_title">補助制度</span></h4></a></li>
-            <li><a href="recruitment.html"><h4 class="side_text"><img src="./img/peaple.png" class="side_image"/><span class="side_title">園児募集</span></h4></a></li-->
         </ul>
     </nav>
 
     <main>
-      <a name="index">
-        <h1 class="title py20x40">JavaScript（ジャバスクリプト）の基本</h1>
-      <section class="main" name="basic">
-        <nav id="index_contents_nav" class="blackboard-top cleanerColor">
-          <ul id="index_contents">
-            <li class="index_content"><a href="#what"><h3>JavaScriptとは？</h3></a></li>
-            <li class="index_content"><a href="#howto"><h3>JavaScriptの書き方</h3></a></li>
-            <li class="index_content"><a href="#howtocall"><h3>JavaScriptの呼び出し方</h3></a></li>
-            <li class="index_content"><a href="#coment1"><h3>JavaScriptの特徴</h3></a></li>
-          </ul>
-        </nav>
-        <a href="#index"><aside class="cleaner cleanerColor">
-          <img style="width:100px;" src="../../img/cleaner.png"/>
-        </aside></a>
-      </section></a>
 
-
-<section class="main" name="what">
-  <a name="what"><article class="p20px blackboard-top cleanerColor">
-    <h1>JavaScriptとは？</h1>
-    <p>
-      JavaScriptは、米Netscape Communications社（当時）とSun Microsystems社が共同で開発したWebページを操作するためのプログラミング言語です。
-      活用することによって、これまでのHTML（Hyper Text Markup Language）だけでは不可能だったインタラクティブなWEBページが作成できるようになりました。<br />
-    </p>
-  </article>
-  </a>
-  <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../../img/cleaner.png"/>
-  </aside></a>
+        <h1 class="title py20x40">JavaScript：２０２０年４月中公開</h1>
+        <section name="JavaScriptCodeArea">
+          <p>
+          </p>
+        </section>
+        <h3 class="title py20x40">Canvas 2D/Rect系</h3>
+<section>
+          <h1>JavaScriptで特定のコンテキスト画像をプログラミングする方法</h1>
+          <article>
+            <p>Rect系は strokeRect(x,y,w,h),fillRect(x,y,w,h)を用いて、contextに指定する矩形（くけい）をすることができます。</p>
+            <p>clearRect(x,y,w,h)は、contextに指定する矩形（くけい）を消すことができます。</p>
+          </article>
 </section>
-
-<section class="main" name="howto">
-<a name="howto">
-  <article class="p20px blackboard-top cleanerColor">
-    <h1>JavaScriptの書き方</h1>
-    <p>
-      JavaScriptファイルは基本的に.jsの拡張子で作成します。
-    </p>
-  </article>
-  <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../../img/cleaner.png"/>
-  </aside></a>
-</a>
-<h5><a class="file" href="test.js" alt="test.js" title="test.js" target="_blank">test.js</a></h5>
-
-<article class="browser">
-<pre class="codeColor"><code>
-// JavaScript HTML 側に表示する場合
-document.write("Hello,JavaScript World!\n");
-// コンソール に表示する場合
-console.log("Hello,JavaScript World!\n");
-// オリジナルコンソール に表示する場合
-displayConsole("Hello,JavaScript World!\n");
-
-</code></pre>
-</article>
-<!--a name="howto">
-  <article class="p20px blackboard-top cleanerColor">
-    <h1>ShellScriptの書き方</h1>
-    <p>
-      シェルスクリプトファイルは基本的に.shの拡張子で作成します。
-    </p>
-  </article>
-  <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../../img/cleaner.png"/>
-  </aside></a>
-</a-->
-
-      <a name="howtocall"><h3>JavaScriptの呼び出し方</h3></a>
-
-<h5><a class="file" href="test.js" alt="test.js" title="test.js" target="_blank">コンソール</a></h5>
-<article class="browser">
-
-<pre class="codeColor"><code>
-  <script type="text/javascript" src="test.js"></script>
-displayConsole("Hello,JavaScript World!\n");
-$ Hello,JavaScript World!
-
-</code></pre>
-</article>
-
-</section>
-
 <h5>コード部</h5>
 <section>
-<article>
+  <article>
 <h5>HTML</h5>
 <pre class="codeColor"><code id="displayHTMLCode"></code>
 </pre>
@@ -186,28 +103,47 @@ $ Hello,JavaScript World!
 <pre class="codeColor"><code id="displayJavaScriptCode"></code>
 </pre>
 <h5>コンソール</h5>
-<pre class="codeColor"><code id="consoleCode"></code></pre>
+<pre class="codeColor"><code id="consoleCode"></code>
+</pre>
 <script type="text/javascript" src="../../js/debug.js"></script>
 </article>
-<br />
 </section>
 <h5>表示部</h5>
 <section>
   <article>
 <div id="HTMLCode">
-  // 外部呼び出し<br />
-&lt;script type="text/javascript" src="test.js"&gt;&lt;/script&gt;
+<canvas id="sampleCanvas"></canvas>
 </div>
 <style id="CSSCode">
-/* 特に指定なし*/
+#sampleCanvas{
+  width: 300px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
 </style>
 <script id="JavaScriptCode">
-// JavaScript HTML 側に表示する場合
-document.write("Hello,JavaScript World!\n");
-// コンソール に表示する場合
-console.log("Hello,JavaScript World!\n");
-// オリジナルコンソール に表示する場合
-displayConsole("Hello,JavaScript World!\n");
+
+/* Canvas 要素のノードオブジェクトを呼び出し */
+var sampleCanvas = document.getElementById('sampleCanvas');
+let client_w = sampleCanvas.clientWidth;
+let client_h = sampleCanvas.clientHeight;
+//「300px 250px」とコンソールに表示されます
+displayConsole(client_w + 'px ' + client_h + 'px');
+/* 2Dコンテキストの作成 */
+var context = sampleCanvas.getContext('2d');
+
+// ここから - 開始
+// 例
+context.beginPath();
+context.strokeStyle = "#FFFF00";
+// NEW 矩形を指定します
+context.strokeRect(10,10,100,100);
+
+/**
+ * まとめて書くことは、慣れるまでは、上記のスタイルで書いていきましょう。
+ * var context = document.getElementById('sampleCanvas').getContext('2d');
+ **/
+displayConsole(context);
 </script>
 
 <script>
@@ -229,265 +165,156 @@ displayJavaScriptCode.innerHTML = JavaScriptCode.innerText;
 </article>
 </section>
 
-<h1 class="title py20x40">JavaScript</h1>
-<!--ection>
-  <p>
-  </p>
-  <nav class="list">
-  <ul>
-  <li><a href="#JavaScriptとはどんな言語"><p>JavaScriptとはどんな言語</p></a></li>
-  <li><a href="#JavaScriptの概要"><p>JavaScriptの概要</p></a></li>
-  <li><a href="#基本的な組み込みオブジェクト"><p>基本的な組み込みオブジェクト</p></a></li>
-  <li><a href="#Webブラウザのオブジェクト"><p>Webブラウザのオブジェクト</p></a></li>
-  <li><a href="#フォームとJavaScript"><p>フォームとJavaScript</p></a></li>
-  <li><a href="#Imageオブジェクト"><p>Imageオブジェクト</p></a></li>
-  <li><a href="#JavaScriptの活用"><p>JavaScriptの活用</p></a></li>
-  </ul>
-  </nav>
-</section-->
+<h1 class="title py20x40">カスタマイズ</h1>
 
 <section>
-  <article class="p20px blackboard-top cleanerColor">
-    <h1>他のプログラミング言語と比較してみる</h1>
-    <script>
-      document.write(displayProgrammingList("index.html#index"));
-    </script>
-  </article>
-  <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../../img/cleaner.png"/>
-    </aside>
-  </a>
+  <canvas id="customCanvas"></canvas>
+</section>
+
+<section>
+  x : <input id="custom.x" name="custom.x" type="number" value="150" onchange="setArc()"/><br />
+  y : <input id="custom.y" name="custom.y" type="number" value="75" onchange="setArc()"/><br />
+  radius : <input id="custom.radius" name="custom.radius" type="number" value="20" onchange="setArc()"/><br />
+  startAngle : <input id="custom.startAngle" name="custom.startAngle" type="number" value="0" onchange="setArc()"/><br />
+  endAngle : <input id="custom.endAngle" name="custom.endAngle" type="number" value="2" onchange="setArc()"/><br />
+  anticlockwise : <input id="custom.anticlockwise" name="custom.anticlockwise" type="checkbox" value="true" onchange="setArc()"/><br />
   <br />
-</section>
-
-<section>
-    <a name="coment1">
-      <article class="p20px blackboard-top cleanerColor">
-        <h1>JavaとJavaScriptの歴史</h1>
-        <p>
-        </p>
-        <div>
-
-        </div>
-      </article>
-      <a href="#index"><aside class="cleaner cleanerColor">
-        <img style="width:100px;" src="../../img/cleaner.png"/>
-      </aside></a>
-    </a>
-</section>
-
-<section>
-    <h1 class="title">基本コマンド</h1>
-</section>
-
-<!-- start -->
-<section class="main" name="comment">
-<a name="comment">
-  <article class="p20px blackboard-top cleanerColor">
-    <h1>JavaScript のコメント（comment）</h1>
-    <p>
-      // を書いて一行コメントを書くことができます。
-    </p>
-    <p>
-      /*
-       ここにコメント
-       */
-      を書いて複数行コメントを書くことができます。
-    </p>
-  </article>
-  <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../../img/cleaner.png"/>
-  </aside></a>
-</a>
-<a name="howtocall"><h3>JavaScript の呼び出し方</h3></a>
-
-      <h5><a class="file" href="test_comment.sh" alt="test_comment.sh" title="test.sh" target="_blank">ターミナル</a></h5>
-      <article class="browser">
-<pre class="codeColor"><code>
-  // 更新日 2011.11.11
-
-  document.write("Hello,JavaScript World!\n"); // コメント
-</code></pre>
-</article>
-<!--a name="howto">
-  <article class="p20px blackboard-top cleanerColor">
-    <h1>ShellScriptの書き方</h1>
-    <p>
-      シェルスクリプトファイルは基本的に.shの拡張子で作成します。
-    </p>
-  </article>
-  <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../../img/cleaner.png"/>
-  </aside></a>
-</a-->
-      <h5><a class="file" href="test_comment.js" alt="test_comment.js" title="test.js" target="_blank">ターミナル</a></h5>
-      <article class="browser">
-<pre class="codeColor"><script>
-// 更新日 2011.11.11
-
-document.write("Hello,JavaScript World!\n"); // コメント
-</script></pre>
-# で書かれた行のコメントは実行されません
-</article>
-
-</section>
-<!-- end -->
-
-<section>
-  <article class="p20px blackboard-top cleanerColor">
-    <h1>他のプログラミング言語と比較してみる</h1>
-    <script>
-      document.write(displayProgrammingList("index.html#comment"));
-    </script>
-  </article>
-  <a href="#index"><aside class="cleaner cleanerColor">
-    <img style="width:100px;" src="../../img/cleaner.png"/>
-    </aside>
-  </a>
+  color : <input id="custom.color" name="custom.color" type="color" value="#FF0000" onchange="setRGBColor()"/>
+  <br/>
+  color.red : <input id="custom.color.red" name="custom.color.red" type="number" value="255" onchange="setRGBAColor()"/><br/>
+  color.green : <input id="custom.color.green" name="custom.color.green" type="number" value="0" onchange="setRGBAColor()"/><br/>
+  color.blue : <input id="custom.color.blue" name="custom.color.blue" type="number" value="0" onchange="setRGBAColor()"/><br/>
+  color.alpha : <input id="custom.color.alpha" name="custom.color.alpha" type="number" value="0.5" onchange="setRGBAColor()"/><br/>
   <br />
+  stroke : <input id="custom.stroke" name="custom.stroke" type="radio" value="true" checked onchange="setArc()"/>
+  fill : <input id="custom.fill" name="custom.stroke" type="radio" value="false" onchange="setArc()"/><br />
+  <button class="button" onclick="drawArc()">描く</button>
+</section>
+<style id="CSSCode">
+#customCanvas{
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+</style>
+
+<script>
+  var customCanvasItem;
+  var customColor;
+
+  function setArc() {
+    customCanvasItem = {
+      x:document.getElementById('custom.x').value,
+      y:document.getElementById('custom.y').value,
+      radius:document.getElementById('custom.radius').value,
+      startAngle:Math.PI * document.getElementById('custom.startAngle').value,
+      endAngle:Math.PI * document.getElementById('custom.endAngle').value,
+      anticlockwise:document.getElementById('custom.anticlockwise').checked,
+      color:customColor,
+      ///　
+      stroke:document.getElementById('custom.stroke').checked,
+      fill:document.getElementById('custom.fill').checked,
+    }
+  }
+
+  function setRGBColor() {
+    customColor = document.getElementById('custom.color').value;
+    setArc();
+  }
+
+  function setRGBAColor() {
+    var red = document.getElementById('custom.color.red').value;
+    var green = document.getElementById('custom.color.green').value;
+    var blue = document.getElementById('custom.color.blue').value;
+    var alpha = document.getElementById('custom.color.alpha').value;
+    customColor = "rgba(" + red + "," + green + "," + blue + "," + alpha + ")";
+    setArc();
+  }
+
+  function drawArc() {
+    setArc();
+    var item = customCanvasItem;
+    var customCanvas = document.getElementById('customCanvas');
+    let client_w = customCanvas.clientWidth;
+    let client_h = customCanvas.clientHeight;
+    var context = customCanvas.getContext('2d');
+
+    context.beginPath();
+    // x , y ,radius ,startAngle, endAngle, anticlockwise
+    context.arc(item.x,item.y,item.radius,item.startAngle,item.endAngle,item.anticlockwise);
+    context.closePath();
+    // ここまで - 終了
+    // 定義したパスを描画する
+    if (item.stroke) {
+      context.strokeStyle = item.color;
+      context.stroke();
+    } else {
+      context.fillStyle = item.color;
+      context.fill();
+    }
+  }
+
+</script>
+<script>
+var programmingSiteList = [
+  {
+    title:"mozilla",
+    searchHref:"https://developer.mozilla.org/ja/docs/Web/API/",
+    target:"_blank",
+  },
+];
+</script>
+
+<h1 class="title py20x40">CanvasRenderingContext2D</h1>
+<section>
+  <script>
+  var list = programmingSiteList;
+  for (var i = 0; i < list.length; i++) {
+    document.write('<a href="');
+    document.write(list[i].searchHref);
+    document.write("CanvasRenderingContext2D");
+    document.write('" target="');
+    document.write(list[i].target);
+    document.write('">');
+    document.write('<button class="button">');
+    document.write(list[i].title);
+    document.write('</button>');
+    document.write('</a>');
+  }
+  </script>
 </section>
 
-        <h4 class="title py20x40">Element (要素) 特定の要素の幅と高さを取得</h4>
-        <section>
-        <nav class="list">
-        <ul>
-        <li><a href="width.html"><p>width</p></a></li>
-        <li><a href="height.html"><p>height</p></a></li>
-        <li><a href="clientWidth.html"><p>clientWidth</p></a></li>
-        <li><a href="clientHeight.html"><p>clientHeight</p></a></li>
-        </ul>
-        </nav>
-        </section>
+<h1 class="title py20x40">Path系で用いられるメソッド</h1>
+<section>
+<nav class="list">
+<ul>
+<li><a href="path.html"><p>path系</p></a></li>
+<li><a href="beginPath.html"><p>beginPath();</p></a></li>
+<li><a href="closePath.html"><p>closePath();</p></a></li>
+<li><a href="moveTo.html"><p>moveTo(X,Y);</p></a></li>
+<li><a href="lineTo.html"><p>lineTo(X,Y);</p></a></li>
+<li><a href="strokeRect.html"><p>strokeRect(X,Y,W,H);</p></a></li>
+<li><a href="fillRect.html"><p>fillRect(X,Y,W,H);</p></a></li>
+<li><a href="clearRect.html"><p>clearRect(X,Y,W,H);</p></a></li>
+<li><a href="stroke.html"><p>stroke();</p></a></li>
+<li><a href="strokeStyle.html"><p>strokeStyle</p></a></li>
+<li><a href="fill.html"><p>fill();</p></a></li>
+<li><a href="fillStyle.html"><p>fillStyle</p></a></li>
+</ul>
+</nav>
+</section>
 
-        <h4 class="title py20x40">JavaScript で作った</h4>
-        <section>
-        <nav class="list">
-        <ul>
-        <li><a href="nyamedia.html"><p>にゃめでぃあ</p></a></li>
-        <li><a href="./canvas/index.html"><p>Canvas</p></a></li>
-        <li><a name="./Game/index.html"><p>Game</p></a></li>
-        <li><a href="./Game/homerun.html"><p>homerun</p></a></li>
-        <li><a href="./Lesson/Basic/index.html"><p>Lesson/Basic</p></a></li>
-        <li><a href="./Questions/index.html"><p>Questions</p></a></li>
-        <li><a href="./Questions/anime.html"><p>アニメクイズ</p></a></li>
-        <li><a href="./Questions/IdealHeight.html"><p>理想の身長</p></a></li>
-        <li><a name="./Search/index.html"><p>Search</p></a></li>
-        <li><a href="search.html"><p>検索サイトまとめ</p></a></li>
-        <li><a href="function.html"><p>function</p></a></li>
-        </ul>
-        </nav>
-        </section>
-
-        <h4 class="title py20x40">オリジナルアラート：JavaScript</h4>
-        <section>
-          <button style="width:300px;height:100px;" class="button" onclick='alertMessage("myTitle", "myMessage");'>alertMessage</button>
-          <button style="width:300px;height:100px;" class="button" onclick='showNoticePopup("myMessage");'>noticePopup</button>
-        </section>
-
-
-        </main>
-            <hr  id="footer" style="clear:both;"/>
-        <section style="background-color:rgba(5,5,5,0.4);">
-
-          <script>
-            var baseDir = "../../";
-            var imgDir = "../../img/";
-            for (var snh = 0;snh < sideNavMenus.length;snh++) {
-              var headerInfo = sideNavMenus[snh].header;
-              document.write('<section>');
-              document.write('<h1 class="title">');
-              document.write('<span class="side_title">');
-              document.write(headerInfo.title);
-              document.write('</span>');
-              document.write('</h1>');
-              var menuItems = sideNavMenus[snh].items;
-              for (var snm = 0;snm < menuItems.length;snm++) {
-                var menuItem = menuItems[snm];
-                document.write('<article class="');
-                if (menuItem.hidden == true) {
-document.write(' display_none');
-                }
-                document.write('">');
-                var itemHrefURL = baseDir + menuItem.href;
-                if (!itemHrefURL) {
-itemHrefURL = "#";
-                }
-                document.write('<a href="');
-                document.write(itemHrefURL);
-                document.write('">');
-                document.write('<h3 class="">');
-                document.write('<span class="side_title">');
-                document.write(menuItem.title);
-                document.write('</span>');
-                document.write('</h3>');
-                document.write('</a>');
-                document.write('</article>');
-              }
-              document.write('</section>');
-              document.write('<br />');
-            }
-          </script>
-
-          <section name="github">
-            <h1>Github</h1>
-            <p>
-                <a href="https://techacademy.jp/magazine/6235">https://techacademy.jp/magazine/6235</a>
-            </p>
-          </section>
+    <aside>
+    <h1 class="title py20x40">シェアプログラミング</h1>
           <section>
-              <p>各種プログラミングの学習ページを生やしていきます。</p>
+              <p>各種プログラミングの学習ページを増やしていきます。</p>
           </section>
-
-
-        <section>
-            <p>様々なジャンルでみんなでチェックして、コードを見てもらう習慣を Githubの良さはいつでもどこでもネットで見れます。</p>
-        </section>
-
-  <aside>
-        <section>
-            <h1 class="title">Issues で みんなからアドバイス!!</h1>
-            <p>あなたのIssues を作って、週の目的を明確に決めていきます。</p>
-        </section>
-
-        <section>
-            <h1 class="title">PullRequests でみんなからコードチェック!!</h1>
-            <p>あなたのコードをみんなでコードレビュー、問題解決やコードの見方</p>
-        </section>
-
-        <section>
-            <h1 class="title">まずはじめに</h1>
-            <p>自分のブランチを切って、自分のフォルダーで作業してください。 それぞれのフォルダーはこちらで管理していくので、他人のフォルダーを消すのはNGです。 まずは、プロフィールページを作成していきましょう！！</p>
-        </section>
-
-
-        <section>
-            <h1 class="title">プログラミング学習のルーティン</h1>
-            <ul>
-            <li>（1）プログラミング 定義・用語・規則 を学びます</li>
-            <li>（2）プログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
-            <li>（3）プログラミング Githubの使い方を駆使し、コードの書き方に注意しつつ、自分のコードを、みんなでチェック、コードレビューを学ぼう</li>
-            <li>（4）プログラミング 発展：支援活動リフレッシュなども学びます。求職活動、サービス展開へのステップアップ、ビジネス展開へのステップアップ</li>
-            <li>（5）プログラミング プログラミング の　まとめ</li>
-            </ul>
-            <p>これの繰り返し(2)へ</p>
-        </section>
-
-        <section>
-            <h1 class="title">ブログラミング学習のルーティン</h1>
-            <ul>
-            <li>（1）ブログラミング 定義・用語・規則 を学びます</li>
-            <li>（2）ブログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
-            <li>（3）ブログラミング 苦労したことなど note、Qiita にまとめてここで学んだことを自分なりにまとめます</li>
-            <li>（4）ブログラミング 学んだことを、まとめて発信して動画配信などをアップしていきましょう</li>
-            <li>（5）ブログラミング ブログラミング の　まとめ</li>
-            </ul>
-            <p>これの繰り返し(2)へ</p>
-        </section>
     </aside>
 
     <aside>
-
+      <h3 class="title py20x40">プログラミングSOS</h3>
         <section>
+          <p>
             困ったらここにつぶやこう！ プログラミングSOS
             <br />
             <br />
@@ -495,9 +322,12 @@ itemHrefURL = "#";
             <br />
             <br />
             完全公開にしているのでシェアしたものに関しては、みんなのものになるので、個人情報やコンプライアンスを注意をお願いいたします。
+          </p>
         </section>
 
     </aside>
+
+    </main>
 
     <hr style="clear:both;"/>
 
@@ -550,7 +380,7 @@ itemHrefURL = "#";
     </aside>
 
   </section>
-    <footer>
+    <footer id="footer">
       <section style="background-color:black;color:white;">
         <h1 class="title">サンストライプのお知らせ</h1>
         <p>
@@ -596,7 +426,7 @@ itemHrefURL = "#";
           <button style="width:100%" onclick="alert('ただいま工事中');">お問い合わせ</button>
           <p>サンストライプへのご意見・ご要望をお聞かせください</p>
           <textarea style="width:100%;height:400px;" >サービスへのご意見、ご要望をお聞かせください。ご意見・ご要望に返信できないことをあらかじめご了承ください。</textarea>
-          <button style="width:100%;height:50px;" class="button" onclick="alert('ただいま工事中');">送信する</button>
+          <button style="width:100%;" onclick="alert('ただいま工事中');">送信する</button>
         </section>
         </div>
 
@@ -622,9 +452,7 @@ itemHrefURL = "#";
               }
               </style>
         <div id="links-list">
-          <script>
 
-          </script>
         <section class="float-left30 height_max">
 
           <script>
@@ -756,103 +584,103 @@ itemHrefURL = "#";
             {
               title:"プログラミング",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/m5511291011ae",
               img: imgDir + "sdg-ja-01.png",
             },
             {
               title:"青空プログラミング",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1220739",
               img: imgDir + "sdg-ja-02.png",
             },
             {
               title:"シェアプログラミング",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1274188",
               img: imgDir + "sdg-ja-03.png",
             },
             {
               title:"プログラミング道の駅",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1240438",
               img: imgDir + "sdg-ja-04.png",
             },
             {
               title:"ブログラミング",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/mcc8f5da850af",
               img: imgDir + "sdg-ja-05.png",
             },
             {
               title:"THE メディアマガジン",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/ma9eb41a913e2",
               img: imgDir + "sdg-ja-06.png",
             },
             {
               title:"プログラミング",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/m5511291011ae",
               img: imgDir + "sdg-ja-07.png",
             },
             {
               title:"青空プログラミング",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1220739",
               img: imgDir + "sdg-ja-08.png",
             },
             {
               title:"シェアプログラミング",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1274188",
               img: imgDir + "sdg-ja-09.png",
             },
             {
               title:"プログラミング道の駅",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1240438",
               img: imgDir + "sdg-ja-10.png",
             },
             {
               title:"ブログラミング",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/mcc8f5da850af",
               img: imgDir + "sdg-ja-11.png",
             },
             {
               title:"THE メディアマガジン",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/ma9eb41a913e2",
               img: imgDir + "sdg-ja-12.png",
             },
             {
               title:"シェアプログラミング",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1274188",
               img: imgDir + "sdg-ja-13.png",
             },
             {
               title:"プログラミング道の駅",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1240438",
               img: imgDir + "sdg-ja-14.png",
             },
             {
               title:"ブログラミング",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/mcc8f5da850af",
               img: imgDir + "sdg-ja-15.png",
             },
             {
               title:"THE メディアマガジン",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/ma9eb41a913e2",
               img: imgDir + "sdg-ja-16.png",
             },
             {
               title:"THE メディアマガジン",
               title_hidden:true,
-              href:"https://note.com/thecardgame/n/n1a90519ef19e",
+              href:"https://note.com/thecardgame/m/ma9eb41a913e2",
               img: imgDir + "sdg-ja-17.png",
             },
 

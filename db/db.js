@@ -53,7 +53,12 @@ var sideNavMenus = [
         title : "CSS",
         href : "css.html",
         img : "css_icon.png",
-        hidden:true,
+      },
+      /// CSS3
+      {
+        title : "CSS3",
+        href : "/CSS3/index.html",
+        img : "css_icon.png",
       },
       /// Bootstrap
       {
@@ -169,9 +174,8 @@ var sideNavMenus = [
       // Objective-C（iOS）
       {
         title : "Objective-C（iOS）",
-        href : "iOS/objectivec.html",
+        href : "iOS/ObjectiveC/index.html",
         img : "ios_objectivec_icon.png",
-        hidden:true,
       },
       // Swift（iOS）
       {
