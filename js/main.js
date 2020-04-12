@@ -189,6 +189,91 @@ function displayList(list) {
    document.write(createList(list));
 }
 
+function createSectionList(list) {
+  var HTML = "";
+  for (var s = 0; s < list.length; s++) {
+    if (list[s].header.title) {
+      if (list[s].identifier) {
+        HTML += '<h1 id="';
+        HTML += list[s].identifier;
+        HTML += '" class="title py20x40">';
+      } else {
+        HTML += '<h1 class="title py20x40">';
+      }
+      HTML += list[s].header.title;
+      HTML += '</h1>';
+    }
+    var items = list[s].items;
+    for (var i = 0; i < items.length; i++) {
+      HTML += '<section>';
+
+      HTML += '<h1 class="title" style="padding:10px;background-color:rgba(0,0,0,0.3);">';
+      HTML += items[i].title;
+      HTML += '</h1>';
+      var article = items[i].article;
+      for (var a = 0; a < article.length; a++) {
+        HTML += '<article>';
+        HTML += '<details>';
+        HTML += '<summary>';
+        HTML += article[a].title;
+        HTML += '</summary>';
+        if (article[a].href) {
+          HTML += '<a href="';
+          HTML += article[a].href;
+          HTML += '" alt="';
+          HTML += article[a].title;
+          HTML += '" title="';
+          HTML += article[a].title;
+          HTML += '">';
+          HTML += '<h3 style="display:inline;" class="subtitle py20x40">';
+          HTML += article[a].title;
+          HTML += '</h3>';
+          HTML += '</a>';
+        }
+        if (article[a].appleURL) {
+          HTML += '<a href="';
+          HTML += article[a].appleURL;
+          HTML += '" alt="';
+          HTML += article[a].title;
+          HTML += '" title="';
+          HTML += article[a].title;
+          if (article[a].appleURL) {
+            HTML += '" target="';
+            HTML += "_blank";
+          }
+          HTML += '">';
+          HTML += '<h3 style="display:inline;" class="subtitle py20x40">';
+          HTML += "appleURL";
+          HTML += '</h3>';
+          HTML += '</a>';
+        }
+
+        if (article[a].description) {
+          HTML += '<h4 class="subtitle py20x40">';
+          HTML += article[a].description;
+          HTML += '</h4>';
+        }
+
+        if (article[a].details) {
+          HTML += '<p class="backgroundWhiteColor">';
+          HTML += article[a].details;
+          HTML += '</p>';
+        }
+        HTML += '</details>';
+        HTML += '</article>';
+      }
+
+      HTML += '</section>';
+    }
+  }
+  return HTML;
+}
+
+function displaySectionList(elementID,list) {
+  var element = document.getElementById(elementID);
+  element.innerHTML = createSectionList(list);
+}
+
 function createListWithTag(tag,list) {
   var HTML = "";
   for (var i = 0; i < list.length; i++) {

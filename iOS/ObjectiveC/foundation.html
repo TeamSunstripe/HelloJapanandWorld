@@ -3,19 +3,12 @@
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Hello,ObjectiveC World!!|ようこそシェアプログラミング</title>
-        <link rel="stylesheet" type="text/css" href="../../../css/main.css" />
-        <link rel="stylesheet" type="text/css" href="../../../css/button.css" />
-        <script type="text/javascript" src="../../../js/main.js"></script>
-        <script type="text/javascript" src="../../../db/db.js"></script>
+        <link rel="stylesheet" type="text/css" href="../../css/main.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/button.css" />
+        <script type="text/javascript" src="../../js/main.js"></script>
+        <script type="text/javascript" src="../../db/db.js"></script>
     </head>
     <style>
-    .select:hover {
-      background-color: rgba(0, 0, 0, 0.2);
-    }
-    .backgroundWhiteColor {
-      color:darkgray;
-      background-color: white;
-    }
         </style>
     <body>
         <header>
@@ -51,8 +44,8 @@
         <nav id="side-nav">
             <ul>
               <script>
-                var baseDir = "../../../";
-                var imgDir = "../../../img/";
+                var baseDir = "../../";
+                var imgDir = "../../img/";
                 document.write(displaySideMenuNavList(baseDir,imgDir,sideNavMenus));
               </script>
 
@@ -72,353 +65,314 @@
 
             <nav id="sub-nav">
                 <ul>
-                    <li><a href="../index.html"><h4>TOP</h4></a></li>
-                    <li><a name="Framework" href="../index.html#Framework.html"><h4>Framework</h4></a></li>
-                    <li><a name="AppKit" href="../appkit.html"><h4>AppKit</h4></a></li>
-                    <li><a name="Accessibility" href="accessibility.html"><h4>Accessibility</h4></a></li>
+                    <li><a href="index.html"><h4>TOP</h4></a></li>
+                    <li><a name="Framework" href="index.html#Framework.html"><h4>Framework</h4></a></li>
+                    <li><a name="Foundation" href="foundation.html"><h4>Foundation</h4></a></li>
                 </ul>
             </nav>
 
-            <h1 class="title py20x40">Accessibility</h1>
+            <h1 class="title py20x40">Foundation</h1>
             <section>
-              <a alt="Make your app more accessible to users with disabilities." title="Make your app more accessible to users with disabilities."><h2>障害を持つユーザーがアプリにアクセスしやすくします。</h2></a>
+              <a alt="Access essential data types, collections, and operating-system services to define the base layer of functionality for your app." title="Access essential data types, collections, and operating-system services to define the base layer of functionality for your app."><h2>重要なデータ型、コレクション、オペレーティングシステムサービスにアクセスして、アプリの機能の基本レイヤーを定義します。</h2></a>
             </section>
 
-            <section id="Overview" hidden>
+            <nav style="text-align:right;padding-right:10px;">
+              <ul style="list-style:none;">
+                <li>SDKs</li>
+                <li>macOS 10.0+</li>
+                <li>Mac Catalyst 13.0+</li>
+                <li>On This Page</li>
+                <li><a href="#Overview">Overview</a></li>
+                <li><a href="#Topics">Topics</a></li>
+              </ul>
+            </nav>
+
+            <section id="Overview">
               <h2>概要</h2>
-              <a alt="AppKit contains all the objects you need to implement the user interface for a macOS app—windows, panels, buttons, menus, scrollers, and text fields—and it handles all the details for you as it efficiently draws on the screen, communicates with hardware devices and screen buffers, clears areas of the screen before drawing, and clips views. The framework also provides APIs you use to make your app accessible to users with disabilities (see Accessibility); to learn more about localizing your app for different languages, countries, or cultural regions, see Internationalization and Localization Guide." title="AppKit contains all the objects you need to implement the user interface for a macOS app—windows, panels, buttons, menus, scrollers, and text fields—and it handles all the details for you as it efficiently draws on the screen, communicates with hardware devices and screen buffers, clears areas of the screen before drawing, and clips views. The framework also provides APIs you use to make your app accessible to users with disabilities (see Accessibility); to learn more about localizing your app for different languages, countries, or cultural regions, see Internationalization and Localization Guide."><p>AppKitには、macOSアプリのユーザーインターフェイスを実装するために必要なすべてのオブジェクト（ウィンドウ、パネル、ボタン、メニュー、スクローラー、テキストフィールド）が含まれており、画面に効率的に描画し、ハードウェアと通信するため、すべての詳細を処理します デバイスと画面バッファ、描画する前に画面の領域をクリアし、ビューをクリップします。
-
-フレームワークは、障害を持つユーザーがアプリにアクセスできるようにするために使用するAPIも提供します（<a href="./AppKit/accessibility.html" alt="Accessibility" title="Accessibility">Accessibility</a>を参照）。 アプリをさまざまな言語、国、または文化的地域にローカライズする方法の詳細については、「国際化およびローカリゼーションガイド」を参照してください。</p>
+              <a alt="The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking. The classes, protocols, and data types defined by Foundation are used throughout the macOS, iOS, watchOS, and tvOS SDKs." title="The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking. The classes, protocols, and data types defined by Foundation are used throughout the macOS, iOS, watchOS, and tvOS SDKs."><p>Foundationフレームワークは、データストレージと永続性、テキスト処理、日付と時刻の計算、並べ替えとフィルタリング、ネットワークなど、アプリとフレームワークに機能の基本レイヤーを提供します。 Foundationによって定義されたクラス、プロトコル、およびデータ型は、macOS、iOS、watchOS、およびtvOS SDK全体で使用されます。</p>
             </section>
 
-            <h1 class="title py20x40">Topics</h1>
-            <section>
-              <h1>Essentials</h1>
-              <article>
-                <details>
-                  <summary>NSAccessibility</summary>
-                  The complete list of properties and methods implemented by accessible elements.
-                </details>
-                <details>
-                  <summary>NSAccessibilityContainsTransientUI</summary>
-                  A set of methods that support accessibility in a UI that changes dynamically—usually in response to mouse-hover events.
-                </details>
-                <details>
-                  <summary>Integrating Accessibility into Your App</summary>
-                  Make your app more accessible to users with disabilities by adding accessibility features.
-                </details>
-              </article>
-
-              <h1>AppKit Elements</h1>
-              <article>
-                <details>
-                  <summary>NSAccessibilityElementLoading</summary>
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityElement</summary>
-                  A role-based protocol that declares the minimum interface required to interact with an accessibility client.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityButton</summary>
-                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a button.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityCheckBox</summary>
-                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a checkbox.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityImage</summary>
-                  A role-based protocol that declares the minimum interface required for an accessibility element to act as an image.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityList</summary>
-                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a list view.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityNavigableStaticText</summary>
-                  A role-based protocol that declares the minimum interface required for an accessibility element to act as navigable static text.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityOutline</summary>
-                  A role-based protocol that declares the minimum interface required for an accessibility element to act as an outline view.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityProgressIndicator</summary>
-                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a progress indicator.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityRadioButton</summary>
-                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a radio button.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityRow</summary>
-                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a row for a table, list, or outline view.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilitySlider</summary>
-                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a slider.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityStaticText</summary>
-                  A role-based protocol that declares the minimum interface required for an accessibility element to act as static text.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityStepper</summary>
-                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a stepper.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilitySwitch</summary>
-                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a switch.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityTable</summary>
-                  A role-based protocol that declares the minimum interface required for an accessibility element to act as a table view.
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityAnnotationAttributeKey</summary>
-                </details>
-
-                <details>
-                  <summary>NSAccessibilityAnnotationPosition</summary>
-                </details>
-
-            </article>
-
-            <h1>Custom Elements</h1>
-            <article>
-
-              <details>
-                <summary>NSAccessibilityElement</summary>
-                The basic infrastructure required to interact with an accessibility client.
-              </details>
-
-              <details>
-                <summary>NSAccessibilityElement</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityGroup</summary>
-                A role-based protocol that declares the minimum interface required to act as a container for other user interface elements.
-              </details>
-
-              <details>
-                <summary>NSAccessibilityCustomAction</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityCustomRotorItemResult</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityCustomRotorSearchParameters</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityCustomRotorType</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityCustomRotorSearchDirection</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityCustomRotorItemSearchDelegate</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityLayoutArea</summary>
-                A role-based protocol that declares the minimum interface required for an accessibility element to act as a layout area.
-              </details>
-
-              <details>
-                <summary>NSAccessibilityLayoutItem</summary>
-                A role-based protocol that declares the minimum interface required for an accessibility element to act as a layout item.
-              </details>
-            </article>
-
-            <h1>Accessibility Types</h1>
-            <article>
-
-              <details>
-                <summary>NSAccessibilityAttributeName</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityFontAttributeKey</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityLoadingToken</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityOrientationValue</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityParameterizedAttributeName</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityRole</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilitySubrole</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityRulerMarkerTypeValue</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityRulerUnitValue</summary>
-              </details>
-
-              <details>
-                <summary>NSAccessibilitySortDirectionValue</summary>
-              </details>
-            </article>
-
-            <h1>Convenience Functions</h1>
-            <article>
-
-              <details>
-                <summary>NSAccessibilityActionDescription</summary>
-                Returns a standard description for an action.
-              </details>
-
-              <details>
-                <summary>NSAccessibilityPostNotification</summary>
-                Sends a notification to any observing assistive applications.
-              </details>
-
-              <details>
-                <summary>NSAccessibilityPostNotificationWithUserInfo</summary>
-                Sends a notification and an optional userInfo dictionary to any observing assistive applications.
-              </details>
-
-              <details>
-                <summary><strike>NSAccessibilityRaiseBadArgumentException</strike></summary>
-                Raises an error if the parameter is the wrong type or has an illegal value
-                <h5>Deprecated</h5>
-              </details>
-
-              <details>
-                <summary>NSAccessibilityRoleDescription</summary>
-                Returns a standard description for a role and subrole.
-              </details>
-
-              <details>
-                <summary>NSAccessibilityRoleDescriptionForUIElement</summary>
-                Returns a standard role description for a user interface element.
-              </details>
-
-              <details>
-                <summary>NSAccessibilitySetMayContainProtectedContent</summary>
-                Sets whether the app may have protected content.
-              </details>
-
-              <details>
-                <summary>NSAccessibilityUnignoredChildren</summary>
-                Returns a list of unignored accessibility objects, descending the hierarchy if necessary.
-              </details>
-
-              <details>
-                <summary>NSAccessibilityUnignoredChildrenForOnlyChild</summary>
-                Returns a list of unignored accessibility objects, descending the hierarchy if necessary.
-              </details>
-
-              <details>
-                <summary>NSAccessibilityUnignoredDescendant</summary>
-                Returns an unignored accessibility object, descending the hierarchy if necessary.
-              </details>
-
-              <details>
-                <summary>NSAccessibilityUnignoredAncestor</summary>
-                Returns an unignored accessibility object, ascending the hierarchy if necessary.
-              </details>
-
-              <details>
-                <summary>NSAccessibilityFrameInView</summary>
-                Returns the frame in screen coordinates.
-              </details>
-
-              <details>
-                <summary>NSAccessibilityPointInView</summary>
-                Returns the point in screen coordinates.
-              </details>
-            </article>
-
-        </section>
-
-        <h1 class="title py20x40">See Also</h1>
-        <section>
-          <h1>User Interactions</h1>
-          <article>
-
-            <details>
-              <summary>Mouse, Keyboard, and Trackpad</summary>
-              Handle events related to mouse, keyboard, and trackpad input.
-            </details>
-
-            <details>
-              <summary>Menus, Cursors, and the Dock</summary>
-              Implement menus and cursors to facilitate interactions with your app, and use your app's Dock tile to convey updated information.
-            </details>
-
-            <details>
-              <summary>Gestures</summary>
-              Encapsulate your app's event-handling logic in gesture recognizers so that you can reuse that code throughout your app.
-            </details>
-
-            <details>
-              <summary>Touch Bar</summary>
-              Display interactive content and controls in the Touch Bar.
-            </details>
-
-            <details>
-              <summary>Drag and Drop</summary>
-              Support the direct manipulation of your app's content using drag and drop.
-            </details>
-          </article>
-
-        </section>
-
-        <div id="objectiveC_document_list"></div>
-
-        <script>
-        var baseDir = "../";
-        var imgDir = "../";
-        createObjectiveCDocumentList(baseDir,imgDir);
-          displaySectionList("objectiveC_document_list",ObjectiveCDocumentList);
-        </script>
+            <script>
+            var sectionList = [
+              {
+                header:{
+                  title:"Topics",
+                },
+                items:[
+                  ///Fundamentals
+                  {
+                    title:"Fundamentals",
+                    article:[
+                      {
+                        title:"Protecting the User’s Privacy",
+                        href:"#ProtectingtheUser’sPrivacy",
+                        description:"個人データを保護し、データの使用方法に関するユーザーの好みを尊重します。",
+                        details:"Secure personal data, and respect user preferences for how data is used.",
+                      },
+                      {
+                        title:"Numbers, Data, and Basic Values",
+                        href:"#Numbers,Data,andBasicValues",
+                        description:"Cocoa全体で使用されているプリミティブ値やその他の基本的な型を操作します。",
+                        details:"Work with primitive values and other fundamental types used throughout Cocoa.",
+                      },
+                      {
+                        title:"Strings and Text",
+                        href:"#StringsandText",
+                        description:"Unicode文字列の作成と処理、正規表現を使用したパターンの検索、テキストの自然言語分析の実行。",
+                        details:"Create and process strings of Unicode characters, use regular expressions to find patterns, and perform natural language analysis of text.",
+                      },
+                      {
+                        title:"Collections",
+                        href:"#Collections",
+                        description:"配列、辞書、セット、および特殊なコレクションを使用して、オブジェクトまたは値のグループを格納および反復します。",
+                        details:"Use arrays, dictionaries, sets, and specialized collections to store and iterate groups of objects or values.",
+                      },
+                      {
+                        title:"Dates and Times",
+                        href:"#DatesandTimes",
+                        description:"日付と時刻を比較し、カレンダーとタイムゾーンの計算を実行します。",
+                        details:"Compare dates and times, and perform calendar and time zone calculations.",
+                      },
+                      {
+                        title:"Units and Measurement",
+                        href:"#UnitsandMeasurement",
+                        description:"数値を物理的な次元でラベル付けし、ロケールに対応したフォーマットと関連単位間の変換を可能にします。",
+                        details:"Label numeric quantities with physical dimensions to allow locale-aware formatting and conversion between related units.",
+                      },
+                      {
+                        title:"Data Formatting",
+                        href:"#DataFormatting",
+                        description:"数値、日付、測定値、およびその他の値をロケール対応の文字列表現との間で変換します。",
+                        details:"Convert numbers, dates, measurements, and other values to and from locale-aware string representations.",
+                      },
+                      {
+                        title:"Filters and Sorting",
+                        href:"#FiltersandSorting",
+                        description:"述語、式、およびソート記述子を使用して、コレクションおよびその他のサービスの要素を調べます。",
+                        details:"Use predicates, expressions, and sort descriptors to examine elements in collections and other services.",
+                      },
+                    ],
+                  },
+                  ///App Support
+                  {
+                    title:"App Support",
+                    article:[
+                      {
+                        title:"Task Management",
+                        href:"#TaskManagement",
+                        description:"アプリの作業と、ハンドオフやショートカットなどのシステムサービスとの相互作用を管理します。",
+                        details:"Manage your app’s work and how it interacts with system services like Handoff and Shortcuts.",
+                      },
+                      {
+                        title:"Resources",
+                        href:"#Resources",
+                        description:"アプリにバンドルされているアセットやその他のデータにアクセスします。",
+                        details:"Access assets and other data bundled with your app.",
+                      },
+                      {
+                        title:"Notifications",
+                        href:"#Notifications",
+                        description:"情報をブロードキャストし、ブロードキャストをサブスクライブするためのデザインパターン。",
+                        details:"Design patterns for broadcasting information and for subscribing to broadcasts.",
+                      },
+                      {
+                        title:"App Extension Support",
+                        href:"#AppExtensionSupport",
+                        description:"アプリ拡張機能とそのホスティングアプリの間の相互作用を管理します。",
+                        details:"Manage the interaction between an app extension and its hosting app.",
+                      },
+                      {
+                        title:"Errors and Exceptions",
+                        href:"#ErrorsandExceptions",
+                        description:"APIとのやり取りにおける問題の状況に対応し、デバッグを改善するためにアプリを微調整します。",
+                        details:"Respond to problem situations in your interactions with APIs, and fine-tune your app for better debugging.",
+                      },
+                      {
+                        title:"Scripting Support",
+                        href:"#ScriptingSupport",
+                        description:"ユーザーがAppleScriptやその他の自動化テクノロジーを使用してアプリを制御したり、アプリ内からスクリプトを実行したりできるようにします。",
+                        details:"Allow users to control your app with AppleScript and other automation technologies, or run scripts from within your app.",
+                      },
+                    ],
+                  },
+                  ///Files and Data Persistence
+                  {
+                    title:"Files and Data Persistence",
+                    article:[
+                      {
+                        title:"File System",
+                        href:"#FileSystem",
+                        description:"ファイルシステム内のファイルとフォルダーを作成、読み取り、書き込み、および検査します。",
+                        details:"Create, read, write, and examine files and folders in the file system.",
+                      },
+                      {
+                        title:"Archives and Serialization",
+                        href:"#ArchivesandSerialization",
+                        description:"オブジェクトと値をプロパティリスト、JSON、およびその他のフラットバイナリ表現との間で変換します。",
+                        details:"Convert objects and values to and from property list, JSON, and other flat binary representations.",
+                      },
+                      {
+                        title:"Preferences",
+                        href:"#Preferences",
+                        description:"アプリの構成に使用されるドメインスコープの情報を永続的に保存します。",
+                        details:"Persistently store domain-scoped pieces of information used to configure your app.",
+                      },
+                      {
+                        title:"Spotlight",
+                        href:"#Spotlight",
+                        description:"ローカルデバイスでファイルやその他のアイテムを検索し、アプリのコンテンツにインデックスを付けて検索します。",
+                        details:"Search for files and other items on the local device, and index your app's content for searching.",
+                      },
+                      {
+                        title:"iCloud",
+                        href:"#iCloud",
+                        description:"ユーザーのiCloudデバイス間で自動的に同期されるファイルとKey-Valueデータを管理します。",
+                        details:"Manage files and key-value data that are automatically synchronized among a user's iCloud devices.",
+                      },
+                    ],
+                  },
+                  ///Networking
+                  {
+                    title:"Networking",
+                    article:[
+                      {
+                        title:"URL Loading System",
+                        href:"#URLLoadingSystem",
+                        description:"URLと対話し、標準のインターネットプロトコルを使用してサーバーと通信します。",
+                        details:"Interact with URLs and communicate with servers using standard Internet protocols.",
+                      },
+                      {
+                        title:"Bonjour",
+                        href:"#Bonjour",
+                        description:"ローカルネットワークで簡単に検出できるようにサービスをアドバタイズしたり、他の人がアドバタイズしたサービスを検出したりします。",
+                        details:"Advertise services for easy discovery on local networks, or discover services advertised by others.",
+                      },
+                    ],
+                  },
+                  ///Low-Level Utilities
+                  {
+                    title:"Low-Level Utilities",
+                    article:[
+                      {
+                        title:"XPC",
+                        href:"#XPC",
+                        description:"安全なプロセス間通信を管理します。",
+                        details:"Manage secure interprocess communication.",
+                      },
+                      {
+                        title:"Object Runtime",
+                        href:"#ObjectRuntime",
+                        description:"基本的なObjective-C機能、Cocoa設計パターン、およびSwift統合の低レベルサポートを取得します。",
+                        details:"Get low-level support for basic Objective-C features, Cocoa design patterns, and Swift integration.",
+                      },
+                      {
+                        title:"Processes and Threads",
+                        href:"#ProcessesandThreads",
+                        description:"アプリとホストオペレーティングシステムや他のプロセスとの相互作用を管理し、低レベルの同時実行機能を実装します。",
+                        details:"Manage your app's interaction with the host operating system and other processes, and implement low-level concurrency features.",
+                      },
+                      {
+                        title:"Streams, Sockets, and Ports",
+                        href:"#Streams,Sockets,andPorts",
+                        description:"低レベルのUnix機能を使用して、ファイル、プロセス、およびネットワーク間の入出力を管理します。",
+                        details:"Use low-level Unix features to manage input and output among files, processes, and the network.",
+                      },
+                    ],
+                  },
+                  ///Classes
+                  {
+                    title:"Classes",
+                    article:[
+                      {
+                        title:"NSListFormatter",
+                        href:"#NSListFormatter",
+                        details:"",
+                      },
+                      {
+                        title:"NSOrderedCollectionChange",
+                        href:"#NSOrderedCollectionChange",
+                        details:"",
+                      },
+                      {
+                        title:"NSOrderedCollectionDifference",
+                        href:"#NSOrderedCollectionDifference",
+                        details:"",
+                      },
+                      {
+                        title:"NSRelativeDateTimeFormatter",
+                        href:"#NSRelativeDateTimeFormatter",
+                        details:"",
+                      },
+                      {
+                        title:"NSSecureUnarchiveFromDataTransformer",
+                        href:"#NSSecureUnarchiveFromDataTransformer",
+                        details:"",
+                      },
+                      {
+                        title:"NSURLSessionWebSocketMessage",
+                        href:"#NSURLSessionWebSocketMessage",
+                        details:"",
+                      },
+                      {
+                        title:"NSXPCCoder",
+                        href:"#NSXPCCoder",
+                        details:"",
+                      },
+                      {
+                        title:"NSUnitInformationStorage",
+                        href:"#NSUnitInformationStorage",
+                        details:"",
+                      },
+                    ],
+                  },
+                  ///Reference
+                  {
+                    title:"Reference",
+                    article:[
+                      {
+                        title:"Foundation Enumerations",
+                        href:"#FoundationEnumerations",
+                        details:"",
+                      },
+                      {
+                        title:"Foundation Data Types",
+                        href:"./foundation/foundation_data_types.html",
+                        appleURL:"https://developer.apple.com/documentation/foundation/foundation_data_types?language=objc",
+                        description:"このドキュメントでは、Foundationフレームワークにあるデータ型と定数について説明します。",
+                        details:"This document describes the data types and constants found in the Foundation framework.",
+                      },
+                    ],
+                  },
+                ]
+              },
+            ];
+
+            </script>
+
+            <div id="section_list"></div>
+
+            <script>
+              displaySectionList("section_list",sectionList);
+            </script>
+
+            <div id="objectiveC_document_list"></div>
+
+            <script>
+            var baseDir = "";
+            var imgDir = "";
+            createObjectiveCDocumentList(baseDir,imgDir);
+              displaySectionList("objectiveC_document_list",ObjectiveCDocumentList);
+            </script>
 
           </main>
           <hr id="footer" style="clear:both;"/>
 
           <div id="actcoin" style="background-color:rgba(255,150,150,1.0);text-align:center;padding:20px;">
-            <a href="https://actcoin.jp/" alt="actcoin" title="actcoin" target="_blank"><img src="../../../img/actcoin_logo.png" style="width:200px;"/></a>
+            <a href="https://actcoin.jp/" alt="actcoin" title="actcoin" target="_blank"><img src="../../img/actcoin_logo.png" style="width:200px;"/></a>
           </div>
 
-          <div id="actcoin_event" style="background:linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url('../../../images/aozora_programming.png');background-attachment: fixed;background-size:100%;background-position: right center;text-align:center;padding:100px;">
-            <a href="https://actcoin.jp/project/detail.php?id=600" alt="actcoin" title="actcoin" target="_blank"><img src="../../../images/aozora_programming.png" style="width:100%;max-width:600px;"/></a>
+          <div id="actcoin_event" style="background:linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url('../../images/aozora_programming.png');background-attachment: fixed;background-size:100%;background-position: right center;text-align:center;padding:100px;">
+            <a href="https://actcoin.jp/project/detail.php?id=600" alt="actcoin" title="actcoin" target="_blank"><img src="../../images/aozora_programming.png" style="width:100%;max-width:600px;"/></a>
           </div>
 
           <div style="background-color:rgba(5,5,150,1.0);">
@@ -428,8 +382,8 @@
               <section style="background-color:rgba(5,5,5,0.4);">
 
                       <script>
-                      var baseDir = "../../";
-                      var imgDir = "../../img/";
+                      var baseDir = "../";
+                      var imgDir = "../img/";
                       for (var snh = 0;snh < sideNavMenus.length;snh++) {
                         var headerInfo = sideNavMenus[snh].header;
                         document.write('<section>');
@@ -790,8 +744,8 @@
                   <div style="background-color:white;color:rgba(0,0,0,0.8);">
                     <h2 style="text-align:center;">SDGs:持続可能な開発目標</h2>
                 <script>
-                  baseDir = "../../../";
-                  imgDir = "../../../images/";
+                  baseDir = "../../";
+                  imgDir = "../../images/";
                   var d_links_list = [
                       {
                         title:"プログラミング",
@@ -899,7 +853,7 @@
                   ];
                   displayListWithTag({start:'<span>',end:'</span>'},d_links_list);
                 </script>
-                <img src="../../../images/sdgs_logo.png" style="width:calc(100%);max-width:calc(210px);margin:0 auto;"/>
+                <img src="../../images/sdgs_logo.png" style="width:calc(100%);max-width:calc(210px);margin:0 auto;"/>
                 <h4 style="text-align:center;">私たちは、積極的に活動に参加していきます</h4>
                 <hr class="clearline">
               </div>

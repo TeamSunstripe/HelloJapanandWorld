@@ -1,0 +1,15 @@
+/*
+ ObjectiveCColors
+ */
+.objectivecCode {
+  padding: 10px;
+}
+.typedefColor {
+  color:rgba(255,0,200,0.8);
+}
+.objectivecClassColor {
+  color:rgba(200,0,255,0.8);
+}
+.classColor {
+  color:rgba(0,200,0,0.8);
+}

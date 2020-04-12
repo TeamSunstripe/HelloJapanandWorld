@@ -40,6 +40,10 @@ p {
   padding:20px 40px;
 }
 
+.subtitle  {
+    color: #FFFFFF;/*文字色*/
+}
+
 header {
     padding-left : 5%;
 }
@@ -369,6 +373,26 @@ img.imgflex{
 p {
     background-color: rgba(0,0,0,0.0);
 }
+.select:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.backgroundBaseColor {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+summary {
+  background: rgba(0, 0, 0, 0.2);
+  list-style-image: url('../images/arrow.png');
+  cursor: pointer;
+  transition: 3.0s;
+  padding: 10px;
+}
+summary::-webkit-details-marker {
+  display: none;
+ }
+details[open] {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 @media screen and (max-width:480px) {
     /*　画面サイズが480pxからはここを読み込む　*/
 

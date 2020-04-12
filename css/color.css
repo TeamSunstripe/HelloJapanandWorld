@@ -125,6 +125,11 @@ a:active.chalkColor {
   color: rgba(255,255,255,0.8);
 }
 
+.backgroundWhiteColor {
+  color:darkgray;
+  background-color: white;
+}
+
 #alertPopup {
   width:calc(100% - 160px);
   margin :100px 0;
