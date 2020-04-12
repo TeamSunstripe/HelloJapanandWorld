@@ -353,7 +353,10 @@ function createObjectiveCDocumentList(baseDir,imgDir) {
           appleURL:"https://developer.apple.com/documentation/appkit?language=objc",
           details:"macOSアプリ用のグラフィカルなイベント駆動型ユーザーインターフェイスを構築して管理します。",
         },
-        {title:"Bundle Resources",href:baseDir + "index.html#BundleResources"},
+        {
+          title:"Bundle Resources",
+          href:baseDir + "index.html#BundleResources"
+        },
         {
           title:"Foundation",
           href:baseDir + "foundation.html",
@@ -697,11 +700,13 @@ var ObjectiveCFoundationList = [];
 
 function createObjectiveCFoundationList(baseDir,imgDir) {
   ObjectiveCFoundationList = [
+    /// appkit
     {
       identifier:"Topics",
       header:{
         title:"Topics",
-        appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingzipkey?language=objc",
+        base:"appkit",
+        appleURL:"https://developer.apple.com/documentation/appkit/accessibility?language=objc",
       },
       items:[
         ///Type Properties
@@ -710,84 +715,147 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
           article:[
             {
               title:"NSTextCheckingAirlineKey",
-              href:baseDir + "nstextcheckingairlinekey.html",
+              href:baseDir + "nstextcheckingairlinekey.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              description:"トランジット結果の航空会社に対応するキー。",
+              details:"A key that corresponds to the airline of a transit result.",
+            },
+          ],
+        },
+      ],// items
+    },
+    /// appkit
+    /// foundation_data_types
+    {
+      title:"Foundation Data Types",
+      identifier:"Topics",
+      header:{
+        title:"Topics",
+        base:"foundation_data_types",
+        appleURL:"https://developer.apple.com/documentation/foundation/foundation_data_types?language=objc",
+        description:"このドキュメントでは、Foundationフレームワークにあるデータ型と定数について説明します。",
+        details:"This document describes the data types and constants found in the Foundation framework.",
+      },
+      items:[
+        ///Data Types
+        {
+          title:"Data Types",
+          article:[
+            {
+              title:"NSTextCheckingKey",
+              type:"Type Alias",
+              href:baseDir + "nstextcheckingkey.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingkey?language=objc",
+              description:"概要はありません。",
+              details:"No overview available.",
+            },
+            {
+              title:"NSUserActivityPersistentIdentifier",
+              type:"Type Alias",
+              href:baseDir + "nsuseractivitypersistentidentifier.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsuseractivitypersistentidentifier?language=objc",
+              description:"ユーザーアクティビティの永続的な識別子の値を定義するタイプ。",
+              details:"The type that defines a persistent identifier value for a user activity.",
+            },
+          ],
+        },
+      ],// items
+    },
+    /// foundation_data_types
+    /// nstextcheckingkey
+    {
+      identifier:"Topics",
+      header:{
+        title:"Topics",
+        base:"nstextcheckingkey",
+        appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingkey?language=objc",
+      },
+      items:[
+        ///Type Properties
+        {
+          title:"Data Types",
+          article:[
+            {
+              title:"NSTextCheckingAirlineKey",
+              href:baseDir + "nstextcheckingairlinekey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
               description:"トランジット結果の航空会社に対応するキー。",
               details:"A key that corresponds to the airline of a transit result.",
             },
             {
               title:"NSTextCheckingCityKey",
-              href:baseDir + "nstextcheckingcitykey.html",
+              href:baseDir + "nstextcheckingcitykey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingcitykey?language=objc",
               description:"住所の都市コンポーネントに対応するキー。",
               details:"A key that corresponds to the city component of the address.",
             },
             {
               title:"NSTextCheckingCountryKey",
-              href:baseDir + "nstextcheckingcountrykey.html",
+              href:baseDir + "nstextcheckingcountrykey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingcountrykey?language=objc",
               description:"住所の国コンポーネントに対応するキー。",
               details:"A key that corresponds to the country component of the address.",
             },
             {
               title:"NSTextCheckingFlightKey",
-              href:baseDir + "nstextcheckingflightkey.html",
+              href:baseDir + "nstextcheckingflightkey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingflightkey?language=objc",
               description:"トランジット結果のフライトコンポーネントに対応するキー。",
               details:"A key that corresponds to the flight component of a transit result.",
             },
             {
               title:"NSTextCheckingJobTitleKey",
-              href:baseDir + "nstextcheckingjobtitlekey.html",
+              href:baseDir + "nstextcheckingjobtitlekey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingjobtitlekey?language=objc",
               description:"アドレスのジョブコンポーネントに対応するキー。",
               details:"A key that corresponds to the job component of the address.",
             },
             {
               title:"NSTextCheckingNameKey",
-              href:baseDir + "nstextcheckingnamekey.html",
+              href:baseDir + "nstextcheckingnamekey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingnamekey?language=objc",
               description:"住所の名前コンポーネントに対応するキー。",
               details:"A key that corresponds to the name component of the address.",
             },
             {
               title:"NSTextCheckingOrganizationKey",
-              href:baseDir + "nstextcheckingorganizationkey.html",
+              href:baseDir + "nstextcheckingorganizationkey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingorganizationkey?language=objc",
               description:"アドレスの組織コンポーネントに対応するキー。",
               details:"A key that corresponds to the organization component of the address.",
             },
             {
               title:"NSTextCheckingPhoneKey",
-              href:baseDir + "nstextcheckingphonekey.html",
+              href:baseDir + "nstextcheckingphonekey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingphonekey?language=objc",
               description:"住所の電話番号コンポーネントに対応するキー。",
               details:"A key that corresponds to the phone number component of the address.",
             },
             {
               title:"NSTextCheckingStateKey",
-              href:baseDir + "nstextcheckingstatekey.html",
+              href:baseDir + "nstextcheckingstatekey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingstatekey?language=objc",
               description:"住所の都道府県コンポーネントに対応するキー。",
               details:"A key that corresponds to the state or province component of the address.",
             },
             {
               title:"NSTextCheckingStreetKey",
-              href:baseDir + "nstextcheckingstreetkey.html",
+              href:baseDir + "nstextcheckingstreetkey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingstreetkey?language=objc",
               description:"住所の住所コンポーネントに対応するキー。",
               details:"A key that corresponds to the street address component of the address.",
             },
             {
               title:"NSTextCheckingZIPKey",
-              href:baseDir + "nstextcheckingzipkey.html",
+              href:baseDir + "nstextcheckingzipkey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingzipkey?language=objc",
               description:"住所の郵便番号コンポーネントに対応するキー。",
               details:"A key that corresponds to the zip code or postal code component of the address.",
             },
           ],
         },
-      ],
+      ],// items
     },
+    /// nstextcheckingkey
   ];
 }

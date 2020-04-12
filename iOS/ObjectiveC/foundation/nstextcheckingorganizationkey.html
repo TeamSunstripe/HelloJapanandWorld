@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="../../../css/button.css" />
         <link rel="stylesheet" type="text/css" href="../../../css/objectivecColor.css" />
         <script type="text/javascript" src="../../../js/main.js"></script>
+        <script type="text/javascript" src="../../../js/mainTitle.js"></script>
         <script type="text/javascript" src="../../../db/db.js"></script>
     </head>
     <style>
@@ -75,19 +76,14 @@
                 <ul>
                     <li><a href="../index.html"><h4>TOP</h4></a></li>
                     <li><a name="Framework" href="../index.html#Framework.html"><h4>Framework</h4></a></li>
-                    <li><a name="Foundation" href="../foundation.html"><h4>Foundation</h4></a></li>
-                    <li><a name="NSTextCheckingKey" href="nstextcheckingkey.html"><h4>NSTextCheckingKey</h4></a></li>
-                    <li><a name="NSTextCheckingZIPKey" href="nstextcheckingzipkey.html"><h4>NSTextCheckingZIPKey</h4></a></li>
+                    <li><a name="Foundation" href="../foundation.html#main_title"><h4>Foundation</h4></a></li>
+                    <li><a name="NSTextCheckingKey" href="nstextcheckingkey.html#main_title"><h4>NSTextCheckingKey</h4></a></li>
+                    <li><a name="NSTextCheckingOrganizationKey" href="nstextcheckingorganizationkey.html#main_title"><h4>NSTextCheckingOrganizationKey</h4></a></li>
                 </ul>
             </nav>
-            <h1 class="title py20x40">NSTextCheckingZIPKey</h1>
-            <section class="backgroundBaseColor">
-              <h3>Global Variable</h3>
-              <a alt="A key that corresponds to the zip code or postal code component of the address." title="A key that corresponds to the zip code or postal code component of the address."><h2>住所の郵便番号コンポーネントに対応するキー。</h2></a>
-              <p>
-                A key that corresponds to the zip code or postal code component of the address.
-              </p>
-            </section>
+
+            <main-title id="main_title">
+            </main-title>
 
             <section id="Overview" hidden>
               <h2>概要</h2>
@@ -115,7 +111,7 @@
 
             <h2 id="Declaration" class="title py20x40">Declaration<span>宣言</span></h2>
 <pre class="codeColor objectivecCode"><code>
-<span class="typedefColor">const</span> <span class="objectivecClassColor">NSTextCheckingKey</span> <span class="classColor">NSTextCheckingZIPKey</span>;
+<span class="typedefColor">const</span> <a href="nstextcheckingkey.html#main_title" class="objectivecClassColor">NSTextCheckingKey</a> <a href="nstextcheckingorganizationkey.html#main_title" class="classColor">NSTextCheckingOrganizationKey</a>;
 
 </code></pre>
 
@@ -125,7 +121,9 @@
 var baseDir = "../foundation/";
 var imgDir = "../";
 createObjectiveCFoundationList(baseDir,imgDir);
-  displaySectionList("section_list",ObjectiveCFoundationList);
+displaySectionList("section_list",[selectObjectiveCFoundation("nstextcheckingkey")]);
+var main_title = document.getElementById("main_title");
+main_title.innerHTML = displayObjectiveCFoundationTitle("nstextcheckingkey","NSTextCheckingOrganizationKey");
 </script>
 
 <div id="objectiveC_document_list"></div>
@@ -137,17 +135,29 @@ createObjectiveCFoundationList(baseDir,imgDir);
   displaySectionList("objectiveC_document_list",ObjectiveCDocumentList);
 </script>
 
-  </main>
+</main>
 
-          <hr id="footer" style="clear:both;"/>
+        <hr id="footer" style="clear:both;"/>
 
-          <div id="actcoin" style="background-color:rgba(255,150,150,1.0);text-align:center;padding:20px;">
-            <a href="https://actcoin.jp/" alt="actcoin" title="actcoin" target="_blank"><img src="../../../img/actcoin_logo.png" style="width:200px;"/></a>
-          </div>
+        <div id="actcoin" style="background-color:rgba(255,150,150,1.0);text-align:center;padding:20px;">
+          <a href="https://actcoin.jp/" alt="actcoin" title="actcoin" target="_blank"><img src="../../../img/actcoin_logo.png" style="width:200px;"/></a>
+        </div>
 
-          <div id="actcoin_event" style="background:linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url('../../../images/aozora_programming.png');background-attachment: fixed;background-size:100%;background-position: right center;text-align:center;padding:100px;">
-            <a href="https://actcoin.jp/project/detail.php?id=600" alt="actcoin" title="actcoin" target="_blank"><img src="../../../images/aozora_programming.png" style="width:100%;max-width:600px;"/></a>
-          </div>
+        <div id="actcoin_event" style="background:linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url('../../../images/aozora_programming.png');background-attachment: fixed;background-size:100%;background-position: right center;text-align:center;padding:100px;">
+          <a href="https://actcoin.jp/project/detail.php?id=600" alt="actcoin" title="actcoin" target="_blank"><img src="../../../images/aozora_programming.png" style="width:100%;max-width:600px;"/></a>
+        </div>
+
+        <section class="ad">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- リンクユニット縦長(特大) -->
+        <ins class="adsbygoogle"
+        style="display:inline-block;width:200px;height:90px"
+        data-ad-client="ca-pub-1616619771436459"
+        data-ad-slot="2120848581"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        </section>
 
           <div style="background-color:rgba(5,5,150,1.0);">
 

@@ -3,6 +3,7 @@
  */
 .objectivecCode {
   padding: 10px;
+  padding-left: 60px;
 }
 .typedefColor {
   color:rgba(255,0,200,0.8);
@@ -12,4 +13,17 @@
 }
 .classColor {
   color:rgba(0,200,0,0.8);
+}
+code a {
+  text-decoration: none;
+}
+code a:hover {
+  background-color:rgba(255,255,255,0.3);
+}
+code a:active {
+  background-color:rgba(255,255,255,0.5);
+}
+
+section a {
+  text-decoration: none;
 }

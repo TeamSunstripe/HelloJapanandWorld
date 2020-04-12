@@ -129,7 +129,21 @@ a:active.chalkColor {
   color:darkgray;
   background-color: white;
 }
-
+.backgroundWhiteColor a:hover{
+  background-color: rgba(0,0,0,0.2);
+}
+.backgroundWhiteColor a:active{
+  text-decoration: underline;
+}
+.backgroundBlackColor {
+  background-color: rgba(0,0,0,0.8);
+}
+.backgroundBlackColor a:hover{
+  background-color: rgba(255,255,255,0.2);
+}
+.backgroundBlackColor a:active{
+  text-decoration: underline;
+}
 #alertPopup {
   width:calc(100% - 160px);
   margin :100px 0;

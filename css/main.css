@@ -379,6 +379,9 @@ p {
 .backgroundBaseColor {
   background-color: rgba(0, 0, 0, 0.8);
 }
+.backgroundBasicColor {
+  background-color: rgba(0, 0, 0, 0.2);
+}
 summary {
   background: rgba(0, 0, 0, 0.2);
   list-style-image: url('../images/arrow.png');
@@ -583,16 +586,28 @@ details[open] {
     .float-left30 {
       float: left;
       width: calc(30% - 5% * 2);
-      background-color: rgba(255,0,255,0.5);
+      background-color: rgba(200,200,255,0.5);
+      background-image:url('../img/footer_blue.png');
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-position: left center;
     }
     .float-center40 {
       float: left;
       width: calc(40% - 5% * 2);
-      background-color: rgba(0,255,0,0.5);
+      background-color: rgba(200,255,200,0.5);
+      background-image:url('../img/footer_orange.png');
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-position: right center;
     }
     .float-right30 {
       float: right;
       width: calc(30% - 5% * 2);
       background-color: rgba(255,0,0,0.5);
+      background-image:url('../img/footer_red.png');
+      background-repeat: repeat;
+      background-attachment: fixed;
+      background-position: right center;
     }
 }

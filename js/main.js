@@ -213,7 +213,7 @@ function createSectionList(list) {
       var article = items[i].article;
       for (var a = 0; a < article.length; a++) {
         HTML += '<article>';
-        HTML += '<details>';
+        HTML += '<details open>';
         HTML += '<summary>';
         HTML += article[a].title;
         HTML += '</summary>';
