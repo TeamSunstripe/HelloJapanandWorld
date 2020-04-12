@@ -119,120 +119,25 @@
 
 </code></pre>
 
-            <script>
-            var sectionList = [
-              {
-                identifier:"Topics",
-                header:{
-                  title:"Topics",
-                  appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingphonekey?language=objc",
-                },
-                items:[
-                  ///Type Properties
-                  {
-                    title:"Data Types",
-                    article:[
-                      {
-                        title:"NSTextCheckingAirlineKey",
-                        href:"nstextcheckingairlinekey.html",
-                        appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
-                        description:"トランジット結果の航空会社に対応するキー。",
-                        details:"A key that corresponds to the airline of a transit result.",
-                      },
-                      {
-                        title:"NSTextCheckingCityKey",
-                        href:"nstextcheckingcitykey.html",
-                        appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingcitykey?language=objc",
-                        description:"住所の都市コンポーネントに対応するキー。",
-                        details:"A key that corresponds to the city component of the address.",
-                      },
-                      {
-                        title:"NSTextCheckingCountryKey",
-                        href:"nstextcheckingcountrykey.html",
-                        appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingcountrykey?language=objc",
-                        description:"住所の国コンポーネントに対応するキー。",
-                        details:"A key that corresponds to the country component of the address.",
-                      },
-                      {
-                        title:"NSTextCheckingFlightKey",
-                        href:"nstextcheckingflightkey.html",
-                        appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingflightkey?language=objc",
-                        description:"トランジット結果のフライトコンポーネントに対応するキー。",
-                        details:"A key that corresponds to the flight component of a transit result.",
-                      },
-                      {
-                        title:"NSTextCheckingJobTitleKey",
-                        href:"nstextcheckingjobtitlekey.html",
-                        appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingjobtitlekey?language=objc",
-                        description:"アドレスのジョブコンポーネントに対応するキー。",
-                        details:"A key that corresponds to the job component of the address.",
-                      },
-                      {
-                        title:"NSTextCheckingNameKey",
-                        href:"nstextcheckingnamekey.html",
-                        appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingorganizationkey?language=objc",
-                        description:"住所の名前コンポーネントに対応するキー。",
-                        details:"A key that corresponds to the name component of the address.",
-                      },
-                      {
-                        title:"NSTextCheckingOrganizationKey",
-                        href:"nstextcheckingorganizationkey.html",
-                        appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingorganizationkey?language=objc",
-                        description:"アドレスの組織コンポーネントに対応するキー。",
-                        details:"A key that corresponds to the organization component of the address.",
-                      },
-                      {
-                        title:"NSTextCheckingPhoneKey",
-                        href:"nstextcheckingphonekey.html",
-                        appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingphonekey?language=objc",
-                        description:"住所の電話番号コンポーネントに対応するキー。",
-                        details:"A key that corresponds to the phone number component of the address.",
-                      },
-                      {
-                        title:"NSTextCheckingStateKey",
-                        href:"nstextcheckingstatekey.html",
-                        appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingstatekey?language=objc",
-                        description:"住所の都道府県コンポーネントに対応するキー。",
-                        details:"A key that corresponds to the state or province component of the address.",
-                      },
-                      {
-                        title:"NSTextCheckingStreetKey",
-                        href:"nstextcheckingstreetkey.html",
-                        appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingstreetkey?language=objc",
-                        description:"住所の住所コンポーネントに対応するキー。",
-                        details:"A key that corresponds to the street address component of the address.",
-                      },
-                      {
-                        title:"NSTextCheckingZIPKey",
-                        href:"nstextcheckingzipkey.html",
-                        appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingzipkey?language=objc",
-                        description:"住所の郵便番号コンポーネントに対応するキー。",
-                        details:"A key that corresponds to the zip code or postal code component of the address.",
-                      },
-                    ],
-                  },
-                ],
-              },
-            ];
+<div id="section_list"></div>
 
-            </script>
+<script>
+var baseDir = "../foundation/";
+var imgDir = "../";
+createObjectiveCFoundationList(baseDir,imgDir);
+  displaySectionList("section_list",ObjectiveCFoundationList);
+</script>
 
-            <div id="section_list"></div>
+<div id="objectiveC_document_list"></div>
 
-            <script>
-              displaySectionList("section_list",sectionList);
-            </script>
+<script>
+  baseDir = "../";
+  imgDir = "../";
+  createObjectiveCDocumentList(baseDir,imgDir);
+  displaySectionList("objectiveC_document_list",ObjectiveCDocumentList);
+</script>
 
-        <div id="objectiveC_document_list"></div>
-
-        <script>
-        var baseDir = "../";
-        var imgDir = "../";
-        createObjectiveCDocumentList(baseDir,imgDir);
-          displaySectionList("objectiveC_document_list",ObjectiveCDocumentList);
-        </script>
-
-          </main>
+  </main>
 
           <hr id="footer" style="clear:both;"/>
 
