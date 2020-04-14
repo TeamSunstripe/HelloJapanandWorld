@@ -60,7 +60,7 @@
                     <li><a href="../index.html"><h4>TOP</h4></a></li>
                     <li><a name="Framework" href="../index.html#Framework.html"><h4>Framework</h4></a></li>
                     <li><a name="Foundation" href="../foundation.html#main_title"><h4>Foundation</h4></a></li>
-                    <li><a name="FoundationDataTypes" href="foundation_data_types.html#main_title"><h4>Foundation Data Types</h4></a></li>
+                    <li><a name="ScriptingSupport" href="scripting_support.html#main_title"><h4>Scripting Support</h4></a></li>
                 </ul>
             </nav>
 
@@ -78,14 +78,16 @@
               <ul style="list-style:none;">
                 <li>Framework</li>
                 <li>Foundation</li>
-                <li><a href="#Overview">Overview</a></li>
+                <li>On This Page</li>
+                <li hidden><a href="#Overview">Overview</a></li>
                 <li><a href="#Topics">Topics</a></li>
+                <li><a href="#SeeAlso">See Also</a></li>
               </ul>
             </nav>
 
             <section id="Overview" hidden>
               <h2>概要</h2>
-              <a alt="The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking. The classes, protocols, and data types defined by Foundation are used throughout the macOS, iOS, watchOS, and tvOS SDKs." title="The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking. The classes, protocols, and data types defined by Foundation are used throughout the macOS, iOS, watchOS, and tvOS SDKs."><p>Foundationフレームワークは、データストレージと永続性、テキスト処理、日付と時刻の計算、並べ替えとフィルタリング、ネットワークなど、アプリとフレームワークに機能の基本レイヤーを提供します。 Foundationによって定義されたクラス、プロトコル、およびデータ型は、macOS、iOS、watchOS、およびtvOS SDK全体で使用されます。</p>
+              <a alt="The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking. The classes, protocols, and data types defined by Foundation are used throughout the macOS, iOS, watchOS, and tvOS SDKs." title="The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking. The classes, protocols, and data types defined by Foundation are used throughout the macOS, iOS, watchOS, and tvOS SDKs."><p>Foundationフレームワークは、データストレージと永続性、テキスト処理、日付と時刻の計算、並べ替えとフィルタリング、ネットワークなど、アプリとフレームワークに機能の基本レイヤーを提供します。 Foundationによって定義されたクラス、プロトコル、およびデータ型は、macOS、iOS、watchOS、およびtvOS SDK全体で使用されます。</p></a>
             </section>
 
             <div id="section_list"></div>
@@ -94,10 +96,52 @@
             var baseDir = "../foundation/";
             var imgDir = "../";
             createObjectiveCFoundationList(baseDir,imgDir);
-            displaySectionList("section_list",[selectObjectiveCFoundation("foundation_data_types")]);
+            displaySectionList("section_list",[selectObjectiveCFoundation("task_management")]);
             var main_title = document.getElementById("main_title");
-            main_title.innerHTML = displayObjectiveCFoundationTitle("foundation_data_types","header");
+            main_title.innerHTML = displayObjectiveCFoundationTitle("task_management","header");
             </script>
+
+            <h1 id="SeeAlso" class="title py20x40">See Also</h1>
+            <section>
+              <h1>App Support</h1>
+              <article>
+
+                <details open>
+                  <summary>Resources</summary>
+                  <p>
+                    Access assets and other data bundled with your app.
+                  </p>
+                </details>
+
+                <details open>
+                  <summary>Notifications</summary>
+                  <p>
+                    Design patterns for broadcasting information and for subscribing to broadcasts.
+                  </p>
+                </details>
+
+                <details open>
+                  <summary>App Extension Support</summary>
+                  <p>
+                    Manage the interaction between an app extension and its hosting app.
+                  </p>
+                </details>
+
+                <details open>
+                  <summary>Errors and Exceptions</summary>
+                  <p>
+                    Respond to problem situations in your interactions with APIs, and fine-tune your app for better debugging.
+                  </p>
+                </details>
+
+                <details open>
+                  <summary>Scripting Support</summary>
+                  <p>
+                    Allow users to control your app with AppleScript and other automation technologies, or run scripts from within your app.
+                  </p>
+                </details>
+              </article>
+            </section>
 
         <div id="objectiveC_document_list"></div>
 

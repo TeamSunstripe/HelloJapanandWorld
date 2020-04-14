@@ -50,6 +50,16 @@
                 var imgDir = "../../../img/";
                 document.write(displaySideMenuNavList(baseDir,imgDir,sideNavMenus));
               </script>
+
+              <!--li><a href="outline.html"><h4 class="side_text"><img src="./img/school.png" class="side_image"/><span class="side_title">幼稚園の概要</span></h4></a></li>
+                <li><a href="schedule.html"><h4 class="side_text"><img src="./img/schedule.png" class="side_image"/><span class="side_title">スケジュール</span></h4></a></li>
+                <li><a href="facility.html"><h4 class="side_text"><img src="./img/building.png" class="side_image"/><span class="side_title">施設</span></h4></a></li>
+                <li><a href="map.html"><h4 class="side_text"><img src="./img/access.png" class="side_image"/><span class="side_title">アクセス</span></h4></a></li>
+                <li><a href="help.html"><h4 class="side_text"><img src="./img/learning.png" class="side_image"/><span class="side_title">子育ての支援</span></h4></a></li>
+                <li><a href="voice.html"><h4 class="side_text"><img src="./img/message.png" class="side_image"/><span class="side_title">保護者の声</span></h4></a></li>
+                <li><a href="assessment.html"><h4 class="side_text"><img src="./img/star.png" class="side_image"/><span class="side_title">幼稚園の学校評価</h4></a></li>
+                <li><a href="subsidy.html"><h4 class="side_text"><img src="./img/bookmark.png" class="side_image"/><span class="side_title">補助制度</span></h4></a></li>
+                <li><a href="recruitment.html"><h4 class="side_text"><img src="./img/peaple.png" class="side_image"/><span class="side_title">園児募集</span></h4></a></li-->
             </ul>
         </nav>
 
@@ -60,7 +70,7 @@
                     <li><a href="../index.html"><h4>TOP</h4></a></li>
                     <li><a name="Framework" href="../index.html#Framework.html"><h4>Framework</h4></a></li>
                     <li><a name="Foundation" href="../foundation.html#main_title"><h4>Foundation</h4></a></li>
-                    <li><a name="FoundationDataTypes" href="foundation_data_types.html#main_title"><h4>Foundation Data Types</h4></a></li>
+                    <li><a name="NSUndoManager" href="nsundomanager.html#main_title"><h4>NSUndoManager</h4></a></li>
                 </ul>
             </nav>
 
@@ -76,61 +86,81 @@
 
             <nav style="text-align:right;padding-right:10px;">
               <ul style="list-style:none;">
+                <li>SDKs</li>
+                <li>iOS 12.0+</li>
+                <li>macOS 10.14+</li>
+                <li>Mac Catalyst 13.0+</li>
+                <li>tvOS 12.0+</li>
+                <li>watchOS 5.0+</li>
                 <li>Framework</li>
                 <li>Foundation</li>
-                <li><a href="#Overview">Overview</a></li>
-                <li><a href="#Topics">Topics</a></li>
+                <li>On This Page</li>
+                <li hidden><a href="#Overview">Overview</a></li>
+                <li><a href="#Declaration">Declaration</a></li>
+                <li hidden><a href="#Topics">Topics</a></li>
+                <li><a href="#Discussion">Discussion</a></li>
               </ul>
             </nav>
 
-            <section id="Overview" hidden>
-              <h2>概要</h2>
-              <a alt="The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking. The classes, protocols, and data types defined by Foundation are used throughout the macOS, iOS, watchOS, and tvOS SDKs." title="The Foundation framework provides a base layer of functionality for apps and frameworks, including data storage and persistence, text processing, date and time calculations, sorting and filtering, and networking. The classes, protocols, and data types defined by Foundation are used throughout the macOS, iOS, watchOS, and tvOS SDKs."><p>Foundationフレームワークは、データストレージと永続性、テキスト処理、日付と時刻の計算、並べ替えとフィルタリング、ネットワークなど、アプリとフレームワークに機能の基本レイヤーを提供します。 Foundationによって定義されたクラス、プロトコル、およびデータ型は、macOS、iOS、watchOS、およびtvOS SDK全体で使用されます。</p>
+            <h2 id="Declaration" class="title py20x40">Declaration<span>宣言</span></h2>
+<pre class="codeColor objectivecCode"><code>
+<span class="typedefColor">typedef</span> <a href="nsstring.html#main_title" class="objectivecClassColor">NSString</a> *<a href="nsuseractivitypersistentidentifier.html#main_title" class="classColor">NSUserActivityPersistentIdentifier</a>;
+
+</code></pre>
+
+            <h2 id="Discussion" class="title py20x40">Discussion<span>討論</span></h2>
+            <section class="backgroundBasicColor">
+              <p class="backgroundBlackColor">
+                Objective-Cでは、<a href="nsuseractivity.html?code=objectivec#main_title" class="objectivecClassColor">NSUserActivity</a>永続識別子は<a href="nsstring.html?code=objectivec#main_title" class="objectivecClassColor">NSString</a>の型エイリアスです。 Swiftでは、<a href="nsuseractivity.html?code=swift#main_title" class="objectivecClassColor">NSUserActivity</a>永続識別子は<a href="nsuseractivitypersistentidentifier.html?code=swift#main_title" class="objectivecClassColor">NSUserActivityPersistentIdentifier</a>構造を使用します。
+              </p>
+              <p class="backgroundWhiteColor">
+                In Objective-C, <a href="nsuseractivity.html?code=objectivec#main_title" class="objectivecClassColor">NSUserActivity</a> persistent identifiers are a type alias of <a href="nsstring.html?code=objectivec#main_title" class="objectivecClassColor">NSString</a>. In Swift, <a href="nsuseractivity.html?code=swift#main_title" class="objectivecClassColor">NSUserActivity</a> persistent identifiers use the <a href="nsuseractivitypersistentidentifier.html?code=swift#main_title" class="objectivecClassColor">NSUserActivityPersistentIdentifier</a> structure.
+              </p>
             </section>
 
-            <div id="section_list"></div>
+<div id="section_list"></div>
 
-            <script>
-            var baseDir = "../foundation/";
-            var imgDir = "../";
-            createObjectiveCFoundationList(baseDir,imgDir);
-            displaySectionList("section_list",[selectObjectiveCFoundation("foundation_data_types")]);
-            var main_title = document.getElementById("main_title");
-            main_title.innerHTML = displayObjectiveCFoundationTitle("foundation_data_types","header");
-            </script>
+<script>
+var baseDir = "../foundation/";
+var imgDir = "../";
+createObjectiveCFoundationList(baseDir,imgDir);
+displaySectionList("section_list",[selectObjectiveCFoundation("foundation_data_types")]);
+var main_title = document.getElementById("main_title");
+main_title.innerHTML = displayObjectiveCFoundationTitle("foundation_data_types","NSUserActivityPersistentIdentifier");
+</script>
 
-        <div id="objectiveC_document_list"></div>
+<div id="objectiveC_document_list"></div>
 
+<script>
+  baseDir = "../";
+  imgDir = "../";
+  createObjectiveCDocumentList(baseDir,imgDir);
+  displaySectionList("objectiveC_document_list",ObjectiveCDocumentList);
+</script>
+
+</main>
+
+        <hr id="footer" style="clear:both;"/>
+
+        <div id="actcoin" style="background-color:rgba(255,150,150,1.0);text-align:center;padding:20px;">
+          <a href="https://actcoin.jp/" alt="actcoin" title="actcoin" target="_blank"><img src="../../../img/actcoin_logo.png" style="width:200px;"/></a>
+        </div>
+
+        <div id="actcoin_event" style="background:linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url('../../../images/aozora_programming.png');background-attachment: fixed;background-size:100%;background-position: right center;text-align:center;padding:100px;">
+          <a href="https://actcoin.jp/project/detail.php?id=600" alt="actcoin" title="actcoin" target="_blank"><img src="../../../images/aozora_programming.png" style="width:100%;max-width:600px;"/></a>
+        </div>
+
+        <section class="ad">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- リンクユニット縦長(特大) -->
+        <ins class="adsbygoogle"
+        style="display:inline-block;width:200px;height:90px"
+        data-ad-client="ca-pub-1616619771436459"
+        data-ad-slot="2120848581"></ins>
         <script>
-        var baseDir = "../";
-        var imgDir = "../";
-        createObjectiveCDocumentList(baseDir,imgDir);
-          displaySectionList("objectiveC_document_list",ObjectiveCDocumentList);
+        (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
-
-      </main>
-
-              <hr id="footer" style="clear:both;"/>
-
-              <div id="actcoin" style="background-color:rgba(255,150,150,1.0);text-align:center;padding:20px;">
-                <a href="https://actcoin.jp/" alt="actcoin" title="actcoin" target="_blank"><img src="../../../img/actcoin_logo.png" style="width:200px;"/></a>
-              </div>
-
-              <div id="actcoin_event" style="background:linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url('../../../images/aozora_programming.png');background-attachment: fixed;background-size:100%;background-position: right center;text-align:center;padding:100px;">
-                <a href="https://actcoin.jp/project/detail.php?id=600" alt="actcoin" title="actcoin" target="_blank"><img src="../../../images/aozora_programming.png" style="width:100%;max-width:600px;"/></a>
-              </div>
-
-              <section class="ad">
-              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-              <!-- リンクユニット縦長(特大) -->
-              <ins class="adsbygoogle"
-              style="display:inline-block;width:200px;height:90px"
-              data-ad-client="ca-pub-1616619771436459"
-              data-ad-slot="2120848581"></ins>
-              <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-              </script>
-              </section>
+        </section>
 
           <div style="background-color:rgba(5,5,150,1.0);">
 

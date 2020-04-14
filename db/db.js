@@ -725,6 +725,193 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
       ],// items
     },
     /// appkit
+    /// task_management
+    {
+      title:"Task Management",
+      identifier:"Topics",
+      header:{
+        title:"Topics",
+        base:"task_management",
+        appleURL:"https://developer.apple.com/documentation/foundation/task_management?language=objc",
+        description:"Manage your app’s work and how it interacts with system services like Handoff and Shortcuts.",
+        details:"Manage your app’s work and how it interacts with system services like Handoff and Shortcuts.",
+      },
+      items:[
+        /// Undo
+        {
+          title:"Undo",
+          article:[
+            {
+              title:"NSUndoManager",
+              href:baseDir + "nstextcheckingairlinekey.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              description:"A general-purpose recorder of operations that enables undo and redo.",
+              details:"A general-purpose recorder of operations that enables undo and redo.",
+            },
+          ],
+        },
+        /// Progress
+        {
+          title:"Progress",
+          article:[
+            {
+              title:"NSProgressReporting",
+              href:baseDir + "nstextcheckingairlinekey.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              description:"An interface for objects that report progress using a single progress instance.",
+              details:"An interface for objects that report progress using a single progress instance.",
+            },
+            {
+              title:"NSProgress",
+              href:baseDir + "nstextcheckingairlinekey.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              description:"An object that conveys ongoing progress for a given task to the user.",
+              details:"An object that conveys ongoing progress for a given task to the user.",
+            },
+          ],
+        },
+        /// Operations
+        {
+          title:"Operations",
+          article:[
+            {
+              title:"NSOperation",
+              href:baseDir + "nstextcheckingairlinekey.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              description:"An abstract class that represents the code and data associated with a single task.",
+              details:"An abstract class that represents the code and data associated with a single task.",
+            },
+            {
+              title:"NSOperationQueue",
+              href:baseDir + "nstextcheckingairlinekey.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              description:"A queue that regulates the execution of operations.",
+              details:"A queue that regulates the execution of operations.",
+            },
+            {
+              title:"NSBlockOperation",
+              href:baseDir + "nstextcheckingairlinekey.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              description:"An operation that manages the concurrent execution of one or more blocks.",
+              details:"An operation that manages the concurrent execution of one or more blocks.",
+            },
+            {
+              title:"NSInvocationOperation",
+              href:baseDir + "nstextcheckingairlinekey.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              description:"An operation that manages the execution of a single encapsulated task specified as an invocation.",
+              details:"An operation that manages the execution of a single encapsulated task specified as an invocation.",
+            },
+          ],
+        },
+        /// Scheduling
+        {
+          title:"Scheduling",
+          article:[
+            {
+              title:"NSTimer",
+              href:baseDir + "nstextcheckingairlinekey.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              description:"A timer that fires after a certain time interval has elapsed, sending a specified message to a target object.",
+              details:"A timer that fires after a certain time interval has elapsed, sending a specified message to a target object.",
+            },
+          ],
+        },
+        /// Activity Sharing
+        {
+          title:"Activity Sharing",
+          description:"Share the user’s current activity with Handoff, Spotlight, and Siri Shortcuts.",
+          details:"Share the user’s current activity with Handoff, Spotlight, and Siri Shortcuts.",
+          article:[
+            {
+              title:"Increasing App Usage with Suggestions Based on User Activities",
+              href:baseDir + "task_management/" + "increasing_app_usage_with_suggestions_based_on_user_activities.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/task_management/increasing_app_usage_with_suggestions_based_on_user_activities?language=objc",
+              description:"Provide a continuous user experience by capturing information from your app and displaying this information as proactive suggestions across the system.",
+              details:"Provide a continuous user experience by capturing information from your app and displaying this information as proactive suggestions across the system.",
+            },
+            {
+              title:"Implementing Handoff in Your App",
+              href:baseDir + "task_management/" + "implementing_handoff_in_your_app.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/task_management/implementing_handoff_in_your_app?language=objc",
+              description:"Create, send, and receive user activities directly.",
+              details:"Create, send, and receive user activities directly.",
+            },
+            {
+              title:"NSUserActivity",
+              href:baseDir + "nsuseractivity.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsuseractivity?language=objc",
+              description:"A representation of the state of your app at a moment in time.",
+              details:"A representation of the state of your app at a moment in time.",
+            },
+            {
+              title:"NSUserActivityDelegate",
+              href:baseDir + "nsuseractivitydelegate.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsuseractivitydelegate?language=objc",
+              description:"The interface through which a user activity instance notifies its delegate of updates.",
+              details:"The interface through which a user activity instance notifies its delegate of updates.",
+            },
+          ],
+        },
+        /// System Interaction
+        {
+          title:"System Interaction",
+          article:[
+            {
+              title:"NSProcessInfo",
+              href:baseDir + "nsprocessinfo.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsprocessinfo?language=objc",
+              description:"A collection of information about the current process.",
+              details:"A collection of information about the current process.",
+            },
+            {
+              title:"NSBackgroundActivityScheduler",
+              href:baseDir + "nsbackgroundactivityscheduler.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsbackgroundactivityscheduler?language=objc",
+              description:"A task scheduler suitable for low priority operations that can run in the background.",
+              details:"A task scheduler suitable for low priority operations that can run in the background.",
+            },
+          ],
+        },
+        /// User Notifications
+        {
+          title:"User Notifications",
+          article:[
+            {
+              title:"NSUserNotification",
+              href:baseDir + "nsusernotification.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsusernotification?language=objc",
+              description:"A notification that can be scheduled for display in the notification center.",
+              details:"A notification that can be scheduled for display in the notification center.",
+              deprecated:"Deprecated",
+            },
+            {
+              title:"NSUserNotificationAction",
+              href:baseDir + "nsusernotificationaction.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsusernotificationaction?language=objc",
+              description:"An action that the user can take in response to receiving a notification.",
+              details:"An action that the user can take in response to receiving a notification.",
+            },
+            {
+              title:"NSUserNotificationCenter",
+              href:baseDir + "nsusernotificationcenter.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsusernotificationcenter?language=objc",
+              description:"An object that delivers notifications from apps to the user.",
+              details:"An object that delivers notifications from apps to the user.",
+              deprecated:"Deprecated",
+            },
+            {
+              title:"NSUserNotificationCenterDelegate",
+              href:baseDir + "nsusernotificationcenterdelegate.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsusernotificationcenterdelegate?language=objc",
+              description:"An interface that enables customizing the behavior of the default notification center.",
+              details:"An interface that enables customizing the behavior of the default notification center.",
+            },
+          ],
+        },
+      ],// items
+    },
+    /// appkit
     /// foundation_data_types
     {
       title:"Foundation Data Types",
@@ -739,11 +926,11 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
       items:[
         ///Data Types
         {
-          title:"Data Types",
+          title:"Data Types/データ型",
           article:[
             {
               title:"NSTextCheckingKey",
-              type:"Type Alias",
+              type:"Type Alias/別名定義",
               href:baseDir + "nstextcheckingkey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingkey?language=objc",
               description:"概要はありません。",
@@ -751,7 +938,7 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
             },
             {
               title:"NSUserActivityPersistentIdentifier",
-              type:"Type Alias",
+              type:"Type Alias/別名定義",
               href:baseDir + "nsuseractivitypersistentidentifier.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nsuseractivitypersistentidentifier?language=objc",
               description:"ユーザーアクティビティの永続的な識別子の値を定義するタイプ。",
@@ -773,10 +960,11 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
       items:[
         ///Type Properties
         {
-          title:"Data Types",
+          title:"Type Properties/タイププロパティ",
           article:[
             {
               title:"NSTextCheckingAirlineKey",
+              type:"Global Variable/グローバル変数",
               href:baseDir + "nstextcheckingairlinekey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
               description:"トランジット結果の航空会社に対応するキー。",
@@ -784,6 +972,7 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
             },
             {
               title:"NSTextCheckingCityKey",
+              type:"Global Variable/グローバル変数",
               href:baseDir + "nstextcheckingcitykey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingcitykey?language=objc",
               description:"住所の都市コンポーネントに対応するキー。",
@@ -791,6 +980,7 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
             },
             {
               title:"NSTextCheckingCountryKey",
+              type:"Global Variable/グローバル変数",
               href:baseDir + "nstextcheckingcountrykey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingcountrykey?language=objc",
               description:"住所の国コンポーネントに対応するキー。",
@@ -798,6 +988,7 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
             },
             {
               title:"NSTextCheckingFlightKey",
+              type:"Global Variable/グローバル変数",
               href:baseDir + "nstextcheckingflightkey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingflightkey?language=objc",
               description:"トランジット結果のフライトコンポーネントに対応するキー。",
@@ -805,6 +996,7 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
             },
             {
               title:"NSTextCheckingJobTitleKey",
+              type:"Global Variable/グローバル変数",
               href:baseDir + "nstextcheckingjobtitlekey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingjobtitlekey?language=objc",
               description:"アドレスのジョブコンポーネントに対応するキー。",
@@ -812,6 +1004,7 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
             },
             {
               title:"NSTextCheckingNameKey",
+              type:"Global Variable/グローバル変数",
               href:baseDir + "nstextcheckingnamekey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingnamekey?language=objc",
               description:"住所の名前コンポーネントに対応するキー。",
@@ -819,6 +1012,7 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
             },
             {
               title:"NSTextCheckingOrganizationKey",
+              type:"Global Variable/グローバル変数",
               href:baseDir + "nstextcheckingorganizationkey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingorganizationkey?language=objc",
               description:"アドレスの組織コンポーネントに対応するキー。",
@@ -826,6 +1020,7 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
             },
             {
               title:"NSTextCheckingPhoneKey",
+              type:"Global Variable/グローバル変数",
               href:baseDir + "nstextcheckingphonekey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingphonekey?language=objc",
               description:"住所の電話番号コンポーネントに対応するキー。",
@@ -833,6 +1028,7 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
             },
             {
               title:"NSTextCheckingStateKey",
+              type:"Global Variable/グローバル変数",
               href:baseDir + "nstextcheckingstatekey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingstatekey?language=objc",
               description:"住所の都道府県コンポーネントに対応するキー。",
@@ -840,6 +1036,7 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
             },
             {
               title:"NSTextCheckingStreetKey",
+              type:"Global Variable/グローバル変数",
               href:baseDir + "nstextcheckingstreetkey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingstreetkey?language=objc",
               description:"住所の住所コンポーネントに対応するキー。",
@@ -847,6 +1044,7 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
             },
             {
               title:"NSTextCheckingZIPKey",
+              type:"Global Variable/グローバル変数",
               href:baseDir + "nstextcheckingzipkey.html#main_title",
               appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingzipkey?language=objc",
               description:"住所の郵便番号コンポーネントに対応するキー。",

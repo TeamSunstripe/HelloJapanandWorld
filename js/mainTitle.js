@@ -25,7 +25,11 @@ function displayObjectiveCFoundationTitle(base_key,search_key) {
           HTML += list[i].title;
           HTML += '</h1>';
           HTML += '<section class="backgroundBaseColor">';
-          HTML += '<h3>Global Variable</h3>';
+          if (headerInfo.type) {
+            HTML += '<h3>';
+            HTML += headerInfo.type;
+            HTML += '</h3>';
+          }
           HTML += '<a alt="';
           HTML += headerInfo.details;
           HTML += '" title="';
@@ -72,8 +76,6 @@ function displayObjectiveCFoundationTitle(base_key,search_key) {
         HTML += '<h3>';
         HTML += info.type;
         HTML += '</h3>';
-      } else {
-        HTML += '<h3>Global Variable</h3>';
       }
       HTML += '<a alt="';
       HTML += info.details;
