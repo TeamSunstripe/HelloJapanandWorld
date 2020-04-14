@@ -733,7 +733,7 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
         title:"Topics",
         base:"task_management",
         appleURL:"https://developer.apple.com/documentation/foundation/task_management?language=objc",
-        description:"Manage your app’s work and how it interacts with system services like Handoff and Shortcuts.",
+        description:"アプリの作業と、ハンドオフやショートカットなどのシステムサービスとの相互作用を管理します。",
         details:"Manage your app’s work and how it interacts with system services like Handoff and Shortcuts.",
       },
       items:[
@@ -743,8 +743,8 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
           article:[
             {
               title:"NSUndoManager",
-              href:baseDir + "nstextcheckingairlinekey.html#main_title",
-              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              href:baseDir + "nsundomanager.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsundomanager?language=objc",
               description:"A general-purpose recorder of operations that enables undo and redo.",
               details:"A general-purpose recorder of operations that enables undo and redo.",
             },
@@ -756,15 +756,15 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
           article:[
             {
               title:"NSProgressReporting",
-              href:baseDir + "nstextcheckingairlinekey.html#main_title",
-              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              href:baseDir + "nsprogressreporting.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsprogressreporting?language=objc",
               description:"An interface for objects that report progress using a single progress instance.",
               details:"An interface for objects that report progress using a single progress instance.",
             },
             {
               title:"NSProgress",
-              href:baseDir + "nstextcheckingairlinekey.html#main_title",
-              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              href:baseDir + "nsprogress.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsprogress?language=objc",
               description:"An object that conveys ongoing progress for a given task to the user.",
               details:"An object that conveys ongoing progress for a given task to the user.",
             },
@@ -776,29 +776,29 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
           article:[
             {
               title:"NSOperation",
-              href:baseDir + "nstextcheckingairlinekey.html#main_title",
-              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              href:baseDir + "nsoperation.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsoperation?language=objc",
               description:"An abstract class that represents the code and data associated with a single task.",
               details:"An abstract class that represents the code and data associated with a single task.",
             },
             {
               title:"NSOperationQueue",
-              href:baseDir + "nstextcheckingairlinekey.html#main_title",
-              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              href:baseDir + "nsoperationqueue.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsoperationqueue?language=objc",
               description:"A queue that regulates the execution of operations.",
               details:"A queue that regulates the execution of operations.",
             },
             {
               title:"NSBlockOperation",
-              href:baseDir + "nstextcheckingairlinekey.html#main_title",
-              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              href:baseDir + "nsblockoperation.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsblockoperation?language=objc",
               description:"An operation that manages the concurrent execution of one or more blocks.",
               details:"An operation that manages the concurrent execution of one or more blocks.",
             },
             {
               title:"NSInvocationOperation",
-              href:baseDir + "nstextcheckingairlinekey.html#main_title",
-              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              href:baseDir + "nsinvocationoperation.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nsinvocationoperation?language=objc",
               description:"An operation that manages the execution of a single encapsulated task specified as an invocation.",
               details:"An operation that manages the execution of a single encapsulated task specified as an invocation.",
             },
@@ -810,8 +810,8 @@ function createObjectiveCFoundationList(baseDir,imgDir) {
           article:[
             {
               title:"NSTimer",
-              href:baseDir + "nstextcheckingairlinekey.html#main_title",
-              appleURL:"https://developer.apple.com/documentation/foundation/nstextcheckingairlinekey?language=objc",
+              href:baseDir + "nstimer.html#main_title",
+              appleURL:"https://developer.apple.com/documentation/foundation/nstimer?language=objc",
               description:"A timer that fires after a certain time interval has elapsed, sending a specified message to a target object.",
               details:"A timer that fires after a certain time interval has elapsed, sending a specified message to a target object.",
             },
