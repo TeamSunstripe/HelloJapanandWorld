@@ -2,15 +2,24 @@
 <html lang="ja">
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>Hello,Japan and World!!|ようこそシェアプログラミング</title>
+        <title>Hello,ObjectiveC World!!|ようこそシェアプログラミング</title>
         <link rel="stylesheet" type="text/css" href="../css/main.css" />
+        <link rel="stylesheet" type="text/css" href="../css/button.css" />
+        <script type="text/javascript" src="../js/main.js"></script>
         <script type="text/javascript" src="../db/db.js"></script>
     </head>
     <style>
+    .select:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    .backgroundWhiteColor {
+      color:darkgray;
+      background-color: white;
+    }
         </style>
     <body>
         <header>
-            <h2>Hello,Japan and World!!</h2>
+            <h2>Hello,ObjectiveC World!!</h2>
             <h1>ようこそシェアプログラミング</h1>
             <nav id="header-nav">
                 <ul>
@@ -22,11 +31,11 @@
         </header>
 
         <section style="margin:30px auto;text-align:center;">
-            <h1>Hello World!!</h1>
+            <h1>Hello,ObjectiveC World!!</h1>
             <p>
-                Hello World!! 自分たちのプログラミングをみんなにチェックしてもらおう！
+                Hello,ObjectiveC World!! 自分たちのプログラミングをみんなにチェックしてもらおう！
                 <br />
-                みんなで Hellow World!!! 使い方、ここのコードは全てみんなのもの。
+                みんなで Hello,ObjectiveC World!!! 使い方、ここのコードは全てみんなのもの。
                 <br />
                 まずは、GitHub から GitHubの使い方を学びます
             </p>
@@ -36,7 +45,7 @@
               <br />
               かんたん1分<br />
             </p>
-            <button style="width:300px;height:100px;">ご登録はこちら</button>
+            <button style="width:300px;height:100px;" class="button">ご登録はこちら</button>
         </section>
 
         <nav id="side-nav">
@@ -44,64 +53,10 @@
               <script>
                 var baseDir = "../";
                 var imgDir = "../img/";
-                for (var snh = 0;snh < sideNavMenus.length;snh++) {
-                  var headerInfo = sideNavMenus[snh].header;
-                  document.write('<li class="side_header">');
-                  document.write('<h4 class="side_text">');
-                  var headerImageURL = imgDir + headerInfo.img;
-                  if (!headerImageURL) {
-                    headerImageURL = imgDir + "school.png";
-                  }
-                  document.write('<img src="');
-                  document.write(headerImageURL);
-                  document.write('" class="side_image" alt="');
-                  document.write(headerInfo.title);
-                  document.write('" title="');
-                  document.write(headerInfo.title);
-                  document.write('"/>');
-                  document.write('<span class="side_title">');
-                  document.write(headerInfo.title);
-                  document.write('</span>');
-                  document.write('</h4>');
-                  document.write('</li>');
-                  var menuItems = sideNavMenus[snh].items;
-                  for (var snm = 0;snm < menuItems.length;snm++) {
-                    var menuItem = menuItems[snm];
-                    document.write('<li class="side_hover');
-                    if (menuItem.hidden == true) {
-                      document.write(' display_none');
-                    }
-                    document.write('">');
-                    var itemHrefURL = baseDir + menuItem.href;
-                    if (!itemHrefURL) {
-                      itemHrefURL = "#";
-                    }
-                    document.write('<a href="');
-                    document.write(itemHrefURL);
-                    document.write('">');
-                    document.write('<h4 class="side_text">');
-                    var itemImageURL = imgDir + menuItem.img;
-                    if (!itemImageURL) {
-                      itemImageURL = imgDir + "school.png";
-                    }
-                    document.write('<img src="');
-                    document.write(itemImageURL);
-                    document.write('" class="side_image" alt="');
-                    document.write(menuItem.title);
-                    document.write('" title="');
-                    document.write(menuItem.title);
-                    document.write('"/>');
-                    document.write('<span class="side_title">');
-                    document.write(menuItem.title);
-                    document.write('</span>');
-                    document.write('</h4>');
-                    document.write('</a>');
-                    document.write('</li>');
-                  }
-                }
+                document.write(displaySideMenuNavList(baseDir,imgDir,sideNavMenus));
               </script>
 
-                <li><a href="outline.html"><h4 class="side_text"><img src="./img/school.png" class="side_image"/><span class="side_title">幼稚園の概要</span></h4></a></li>
+              <!--li><a href="outline.html"><h4 class="side_text"><img src="./img/school.png" class="side_image"/><span class="side_title">幼稚園の概要</span></h4></a></li>
                 <li><a href="schedule.html"><h4 class="side_text"><img src="./img/schedule.png" class="side_image"/><span class="side_title">スケジュール</span></h4></a></li>
                 <li><a href="facility.html"><h4 class="side_text"><img src="./img/building.png" class="side_image"/><span class="side_title">施設</span></h4></a></li>
                 <li><a href="map.html"><h4 class="side_text"><img src="./img/access.png" class="side_image"/><span class="side_title">アクセス</span></h4></a></li>
@@ -109,7 +64,7 @@
                 <li><a href="voice.html"><h4 class="side_text"><img src="./img/message.png" class="side_image"/><span class="side_title">保護者の声</span></h4></a></li>
                 <li><a href="assessment.html"><h4 class="side_text"><img src="./img/star.png" class="side_image"/><span class="side_title">幼稚園の学校評価</h4></a></li>
                 <li><a href="subsidy.html"><h4 class="side_text"><img src="./img/bookmark.png" class="side_image"/><span class="side_title">補助制度</span></h4></a></li>
-                <li><a href="recruitment.html"><h4 class="side_text"><img src="./img/peaple.png" class="side_image"/><span class="side_title">園児募集</span></h4></a></li>
+                <li><a href="recruitment.html"><h4 class="side_text"><img src="./img/peaple.png" class="side_image"/><span class="side_title">園児募集</span></h4></a></li-->
             </ul>
         </nav>
 
@@ -122,128 +77,880 @@
                 </ul>
             </nav>
 
-            <section name="github">
-              <h1>Github</h1>
-              <p>
-                  <a href="https://techacademy.jp/magazine/6235">https://techacademy.jp/magazine/6235</a>
-              </p>
-            </section>
             <section>
-                <p>各種プログラミングの学習ページを生やしていきます。</p>
+              <h1>ObjectiveC</h1>
+              <a alt="Apple Developer Documentation" title="Apple Developer Documentation"><h1>Apple開発者用ドキュメント</h1></a>
+              <a alt="Browse the latest developer documentation including API reference, articles, and sample code." title="Browse the latest developer documentation including API reference, articles, and sample code."><h2>APIリファレンス、記事、サンプルコードなど、最新の開発者向けドキュメントをご覧ください。</h2></a>
             </section>
 
-            <section>
-                <h1 class="title">HTML / CSS / JavaScript</h1>
-                ./html/
-            </section>
+            <script>
+            var ObjectiveCDocumentList = [
+              // App Frameworks
+              {
+                header:{
+                  title:"App Frameworks",
+                },
+                items:[
+                  {
+                    title:"AppKit",
+                    href:"appkit.html",
+                    URL:"https://developer.apple.com/documentation/appkit?language=objc",
+                    description:"macOSアプリ用のグラフィカルなイベント駆動型ユーザーインターフェイスを構築して管理します。",
+                  },
+                  {title:"Bundle Resources",href:"#BundleResources"},
+                  {title:"Foundation",href:"#Foundation"},
+                  {title:"Swift",href:"#Swift"},
+                  {title:"SwiftUI",href:"#SwiftUI"},
+                  {title:"TVML",href:"#TVML"},
+                  {title:"TVMLKit",href:"#TVMLKit"},
+                  {title:"TVMLKit JS",href:"#TVMLKitJS"},
+                  {title:"TVUIKit",href:"#TVUIKit"},
+                  {title:"UIKit",href:"#UIKit"},
+                  {title:"WatchKit",href:"#WatchKit"},
+                ],
+              },
+              // App Frameworks
+              // Graphics and Games
+              {
+                header:{
+                  title:"Graphics and Games",
+                },
+                items:[
+                  {title:"AGL",href:"#AGL"},
+                  {title:"ARKit",href:"#ARKit"},
+                  {title:"ColorSync",href:"#ColorSync"},
+                  {title:"Core Animation",href:"#CoreAnimation"},
+                  {title:"Core Graphics",href:"#CoreGraphics"},
+                  {title:"Core Image",href:"#CoreImage"},
+                  {title:"Game Controller",href:"#GameController"},
+                  {title:"GameKit",href:"#GameKit"},
+                  {title:"GameplayKit",href:"#GameplayKit"},
+                  {title:"GLKit",href:"#GLKit"},
+                  {title:"Image I/O",href:"#ImageI/O"},
+                  {title:"Metal",href:"#Metal"},
+                  {title:"Metal Performance Shaders",href:"#MetalPerformanceShaders"},
+                  {title:"MetalKit",href:"#MetalKit"},
+                  {title:"Model I/O",href:"#ModelI/O"},
+                  {title:"OpenGL ES",href:"#OpenGLES"},
+                  {title:"PDFKit",href:"#PDFKit"},
+                  {title:"PencilKit",href:"#PencilKit"},
+                  {title:"Quartz",href:"#Quartz"},
+                  {title:"RealityKit",href:"#RealityKit"},
+                  {title:"ReplayKit",href:"#ReplayKit"},
+                  {title:"SceneKit",href:"#SceneKit"},
+                  {title:"SpriteKit",href:"#SpriteKit"},
+                  {title:"Vision",href:"#Vision"},
+                ],
+              },
+              // Graphics and Games
+              // App Services
+              {
+                header:{
+                  title:"App Services",
+                },
+                items:[
+                  {title:"Accounts",href:"#Accounts"},
+                  {title:"AddressBook",href:"#AddressBook"},
+                  {title:"AddressBookUI",href:"#AddressBookUI"},
+                  {title:"AdSupport",href:"#AdSupport"},
+                  {title:"App Store Receipts",href:"#AppStoreReceipts"},
+                  {title:"App Store Server Notifications",href:"#AppStoreServerNotifications"},
+                  {title:"ApplicationServices",href:"#ApplicationServices"},
+                  {title:"AutomaticAssessmentConfiguration",href:"#AutomaticAssessmentConfiguration"},
+                  {title:"BackgroundTasks",href:"#BackgroundTasks"},
+                  {title:"Business Chat",href:"#BusinessChat"},
+                  {title:"Business Chat REST API",href:"#BusinessChatRESTAPI"},
+                  {title:"CallKit",href:"#CallKit"},
+                  {title:"CareKit",href:"#CareKit"},
+                  {title:"CarPlay",href:"#CarPlay"},
+                  {title:"ClassKit",href:"#ClassKit"},
+                  {title:"ClockKit",href:"#ClockKit"},
+                  {title:"CloudKit",href:"#CloudKit"},
+                  {title:"Combine",href:"#Combine"},
+                  {title:"Contacts",href:"#Contacts"},
+                  {title:"ContactsUI",href:"#ContactsUI"},
+                  {title:"Core Data",href:"#CoreData"},
+                  {title:"Core Foundation",href:"#CoreFoundation"},
+                  {title:"Core Location",href:"#CoreLocation"},
+                  {title:"Core ML",href:"#CoreML"},
+                  {title:"Core Motion",href:"#CoreMotion"},
+                  {title:"Core Spotlight",href:"#CoreSpotlight"},
+                  {title:"Core Text",href:"#CoreText"},
+                  {title:"Create ML",href:"#CreateML"},
+                  {title:"DeviceCheck",href:"#DeviceCheck"},
+                  {title:"EventKit",href:"#EventKit"},
+                  {title:"EventKitUI",href:"#EventKitUI"},
+                  {title:"FileProvider",href:"#FileProvider"},
+                  {title:"FileProviderUI",href:"#FileProviderUI"},
+                  {title:"HealthKit",href:"#HealthKit"},
+                  {title:"HomeKit",href:"#HomeKit"},
+                  {title:"iAd",href:"#iAd"},
+                  {title:"JavaScriptCore",href:"#JavaScriptCore"},
+                  {title:"MapKit",href:"#MapKit"},
+                  {title:"Messages",href:"#Messages"},
+                  {title:"MessageUI",href:"#MessageUI"},
+                  {title:"MultipeerConnectivity",href:"#MultipeerConnectivity"},
+                  {title:"Natural Language",href:"#NaturalLanguage"},
+                  {title:"NewsstandKit",href:"#NewsstandKit"},
+                  {title:"NotificationCenter",href:"#NotificationCenter"},
+                  {title:"PassKit (Apple Pay and Wallet)",href:"#PassKit"},
+                  {title:"PreferencePanes",href:"#PreferencePanes"},
+                  {title:"PushKit",href:"#PushKit"},
+                  {title:"QuickLook",href:"#QuickLook"},
+                  {title:"QuickLookThumbnailing",href:"#QuickLookThumbnailing"},
+                  {title:"SafariServices",href:"#SafariServices"},
+                  {title:"SiriKit",href:"#SiriKit"},
+                  {title:"SMS and Call Reporting",href:"#SMSandCallReporting"},
+                  {title:"Social",href:"#Social"},
+                  {title:"Speech",href:"#Speech"},
+                  {title:"StoreKit",href:"#StoreKit"},
+                  {title:"TVServices",href:"#TVServices"},
+                  {title:"UserNotifications",href:"#UserNotifications"},
+                  {title:"UserNotificationsUI",href:"#UserNotificationsUI"},
+                  {title:"Wallet Passes",href:"#WalletPasses"},
+                  {title:"WatchConnectivity",href:"#WatchConnectivity"},
+                  {title:"WebKit",href:"#WebKit"},
+                ],
+              },
+              // App Services
+              // Media
+              {
+                header:{
+                  title:"Media",
+                },
+                items:[
+                  {title:"Apple News",href:"#AppleNews"},
+                  {title:"Apple Search Ads",href:"#AppleSearchAds"},
+                  {title:"AssetsLibrary",href:"#AssetsLibrary"},
+                  {title:"AudioToolbox",href:"#AudioToolbox"},
+                  {title:"AudioUnit",href:"#AudioUnit"},
+                  {title:"AVFoundation",href:"#AVFoundation"},
+                  {title:"AVKit",href:"#AVKit"},
+                  {title:"Core Audio",href:"#CoreAudio"},
+                  {title:"Core Audio Kit",href:"#CoreAudioKit"},
+                  {title:"Core Audio Types",href:"#CoreAudioTypes"},
+                  {title:"Core Haptics",href:"#CoreHaptics"},
+                  {title:"Core Media",href:"#CoreMedia"},
+                  {title:"Core MIDI",href:"#CoreMIDI"},
+                  {title:"Core Video",href:"#CoreVideo"},
+                  {title:"HTTP Live Streaming",href:"#HTTPLiveStreaming"},
+                  {title:"ImageCaptureCore",href:"#ImageCaptureCore"},
+                  {title:"iTunesLibrary",href:"#iTunesLibrary"},
+                  {title:"Media Player",href:"#MediaPlayer"},
+                  {title:"MediaAccessibility",href:"#MediaAccessibility"},
+                  {title:"MediaLibrary",href:"#MediaLibrary"},
+                  {title:"PhotoKit",href:"#PhotoKit"},
+                  {title:"Professional Video Applications",href:"#ProfessionalVideoApplications"},
+                  {title:"QTKit",href:"#QTKit"},
+                  {title:"ScreenSaver",href:"#ScreenSaver"},
+                  {title:"SoundAnalysis",href:"#SoundAnalysis"},
+                  {title:"VideoToolbox",href:"#VideoToolbox"},
+                  {title:"VisionKit",href:"#VisionKit"},
+                ],
+              },
+              // Media
+              // Web
+              {
+                header:{
+                  title:"Web",
+                },
+                items:[
+                  {title:"App Store Connect API",href:"#AppStoreConnectAPI"},
+                  {title:"Apple Music API",href:"#AppleMusicAPI"},
+                  {title:"Apple Pay on the Web",href:"#ApplePayontheWeb"},
+                  {title:"CloudKit JS",href:"#CloudKitJS"},
+                  {title:"LinkPresentation",href:"#LinkPresentation"},
+                  {title:"LivePhotosKit JS",href:"#LivePhotosKitJS"},
+                  {title:"MapKit JS",href:"#MapKitJS"},
+                  {title:"Maps Web Snapshots",href:"#MapsWebSnapshots"},
+                  {title:"Beta",href:"#Beta"},
+                  {title:"MusicKit JS",href:"#MusicKitJS"},
+                  {title:"Safari Extensions JS",href:"#SafariExtensionsJS"},
+                  {title:"Sign in with Apple",href:"#SigninwithApple"},
+                  {title:"WebKit JS",href:"#WebKitJS"},
+                ],
+              },
+              // Web
+              // Developer Tools
+              {
+                header:{
+                  title:"Developer Tools",
+                },
+                items:[
+                  {title:"Automator",href:"#Automator"},
+                  {title:"Code Diagnostics",href:"#CodeDiagnostics"},
+                  {title:"InstallerJS",href:"#InstallerJS"},
+                  {title:"Playground Support",href:"#PlaygroundSupport"},
+                  {title:"PlaygroundBluetooth",href:"#PlaygroundBluetooth"},
+                  {title:"ScriptingBridge",href:"#ScriptingBridge"},
+                  {title:"Swift Packages",href:"#SwiftPackages"},
+                  {title:"Swift Playgrounds",href:"#SwiftPlaygrounds"},
+                  {title:"Xcode",href:"#Xcode"},
+                  {title:"XcodeKit",href:"#XcodeKit"},
+                  {title:"xcselect",href:"#xcselect"},
+                  {title:"XCTest",href:"#XCTest"},
+                ],
+              },
+              // Developer Tools
+              // System
+              {
+                header:{
+                  title:"System",
+                },
+                items:[
+                  {title:"Accelerate",href:"#Accelerate"},
+                  {title:"Apple CryptoKit",href:"#AppleCryptoKit"},
+                  {title:"AuthenticationServices",href:"#AuthenticationServices"},
+                  {title:"CFNetwork",href:"#CFNetwork"},
+                  {title:"Collaboration",href:"#Collaboration"},
+                  {title:"Compression",href:"#Compression"},
+                  {title:"Core Bluetooth",href:"#CoreBluetooth"},
+                  {title:"Core NFC",href:"#CoreNFC"},
+                  {title:"Core Services",href:"#CoreServices"},
+                  {title:"Core Telephony",href:"#CoreTelephony"},
+                  {title:"Core WLAN",href:"#CoreWLAN"},
+                  {title:"CryptoTokenKit",href:"#CryptoTokenKit"},
+                  {title:"DarwinNotify",href:"#DarwinNotify"},
+                  {title:"Device Management",href:"#DeviceManagement"},
+                  {title:"DiskArbitration",href:"#DiskArbitration"},
+                  {title:"Dispatch",href:"#Dispatch"},
+                  {title:"dnssd",href:"#dnssd"},
+                  {title:"DriverKit",href:"#DriverKit"},
+                  {title:"EndpointSecurity",href:"#EndpointSecurity"},
+                  {title:"ExceptionHandling",href:"#ExceptionHandling"},
+                  {title:"ExecutionPolicy",href:"#ExecutionPolicy"},
+                  {title:"ExternalAccessory",href:"#ExternalAccessory"},
+                  {title:"FinderSync",href:"#FinderSync"},
+                  {title:"ForceFeedback",href:"#ForceFeedback"},
+                  {title:"FWAUserLib",href:"#FWAUserLib"},
+                  {title:"GSS",href:"#GSS"},
+                  {title:"HIDDriverKit",href:"#HIDDriverKit"},
+                  {title:"Hypervisor",href:"#Hypervisor"},
+                  {title:"InputMethodKit",href:"#InputMethodKit"},
+                  {title:"IOBluetooth",href:"#IOBluetooth"},
+                  {title:"IOBluetoothUI",href:"#IOBluetoothUI"},
+                  {title:"IOKit",href:"#IOKit"},
+                  {title:"IOSurface",href:"#IOSurface"},
+                  {title:"IOUSBHost",href:"#IOUSBHost"},
+                  {title:"Kernel",href:"#Kernel"},
+                  {title:"LatentSemanticMapping",href:"#LatentSemanticMapping"},
+                  {title:"LocalAuthentication",href:"#LocalAuthentication"},
+                  {title:"MetricKit",href:"#MetricKit"},
+                  {title:"MobileCoreServices",href:"#MobileCoreServices"},
+                  {title:"Network",href:"#Network"},
+                  {title:"NetworkExtension",href:"#NetworkExtension"},
+                  {title:"NetworkingDriverKit",href:"#NetworkingDriverKit"},
+                  {title:"Objective-C Runtime",href:"#Objective-CRuntime"},
+                  {title:"OpenDirectory",href:"#OpenDirectory"},
+                  {title:"os",href:"#os"},
+                  {title:"OSLog",href:"#OSLog"},
+                  {title:"PCIDriverKit",href:"#PCIDriverKit"},
+                  {title:"Security",href:"#Security"},
+                  {title:"SecurityFoundation",href:"#SecurityFoundation"},
+                  {title:"SecurityInterface",href:"#SecurityInterface"},
+                  {title:"SerialDriverKit",href:"#SerialDriverKit"},
+                  {title:"ServiceManagement",href:"#ServiceManagement"},
+                  {title:"simd",href:"#simd"},
+                  {title:"SystemConfiguration",href:"#SystemConfiguration"},
+                  {title:"SystemExtensions",href:"#SystemExtensions"},
+                  {title:"USBDriverKit",href:"#USBDriverKit"},
+                  {title:"USBSerialDriverKit",href:"#USBSerialDriverKit"},
+                  {title:"vmnet",href:"#vmnet"},
+                  {title:"XPC",href:"#XPC"},
+                ],
+              },
+              // System
+              // Release Notes
+              {
+                header:{
+                  title:"Release Notes",
+                },
+                items:[
+                  {title:"iOS & iPadOS Release Notes",href:"#iOS&iPadOSReleaseNotes"},
+                  {title:"macOS Release Notes",href:"#macOSReleaseNotes"},
+                  {title:"Safari Release Notes",href:"#SafariReleaseNotes"},
+                  {title:"tvOS Release Notes",href:"#tvOSReleaseNotes"},
+                  {title:"watchOS Release Notes",href:"#watchOSReleaseNotes"},
+                  {title:"Xcode Release Notes",href:"#XcodeReleaseNotes"},
+                ],
+              },
+              // Release Notes
+              // Resources
+              {
+                header:{
+                  title:"Resources",
+                },
+                items:[
+                  {title:"Human Interface Guidelines",href:"#HumanInterfaceGuidelines"},
+                  {title:"Documentation Archive",href:"#DocumentationArchive"},
+                  {title:"Videos",href:"#Videos"},
+                ],
+              },
+              // Resources
+            ];
 
-            <section>
-                <h1 class="title">PHP</h1>
-                ./php/
-            </section>
+            function displayObjectiveCDocumentList() {
+              var HTML = "";
+              for (var i = 0; i < ObjectiveCDocumentList.length; i++) {
+                  HTML += '<h1 class="title py20x40">';
+                  HTML += ObjectiveCDocumentList[i]["header"].title;
+                  HTML += "</h1>";
+                  HTML += "<section>";
+                  var items = ObjectiveCDocumentList[i]["items"];
+                  if (items) {
+                    for (var l = 0; l < items.length; l++) {
+                        HTML += "<article>";
+                        HTML += "<details>";
 
-            <section>
-                <h1 class="title">PHP</h1>
-                ./php/
-            </section>
+                        HTML += '<summary>';
+                        HTML += items[l].title;
+                        HTML += '</summary>';
 
-            <section>
-                <h1 class="title">Objective-C</h1>
-                ./iOS/ObjectiveC/
-            </section>
+                        HTML += '<a href="';
+                        HTML += items[l].href;
+                        HTML += '" alt="';
+                        HTML += items[l].title;
+                        HTML += '" title="';
+                        HTML += items[l].title;
+                        if (items[l].target) {
+                          HTML += '" target="';
+                          HTML += items[l].target;
+                        }
+                        HTML += '">';
 
-            <section>
-                <h1 class="title">Swift</h1>
-                ./iOS/ObjectiveC/
-            </section>
+                        HTML += '<h3 class="select">';
+                        HTML += items[l].title;
+                        HTML += '</h3>';
+                        HTML += '</a>';
 
-            <section>
-                <h1 class="title">Java</h1>
-                ./Android/Java/
-            </section>
+                        HTML += '<div class="py20x40 backgroundWhiteColor">';
+                        HTML += '<a href="';
+                        HTML += items[l].URL;
+                        HTML += '" alt="';
+                        HTML += items[l].title;
+                        HTML += '" title="';
+                        HTML += items[l].title;
+                        HTML += '" target="';
+                        HTML += "_blank";
+                        HTML += '">';
+                        HTML += '<h5 class="select">';
+                        HTML += items[l].title + "(Apple)";
+                        HTML += '</h5>';
+                        HTML += '</a>';
+                        HTML += items[l].description;
+                        HTML += '</div>';
+                        HTML += "</details>";
+                        HTML += "</article>";
+                    }
+                  }
+                  HTML += "</section>";
+              }
+              return HTML;
+            }
+            </script>
 
-            <section>
-                <h1 class="title">その他</h1>
-                ./other/
-            </section>
+            <div id="objectiveC_document_list"></div>
 
-        </main>
+            <script>
+              var objectiveC_document_list = document.getElementById("objectiveC_document_list");
+              objectiveC_document_list.innerHTML = displayObjectiveCDocumentList();
+            </script>
+          </main>
+          <hr id="footer" style="clear:both;"/>
 
-        <aside id="news">
+          <div id="actcoin" style="background-color:rgba(255,150,150,1.0);text-align:center;padding:20px;">
+            <a href="https://actcoin.jp/" alt="actcoin" title="actcoin" target="_blank"><img src="../img/actcoin_logo.png" style="width:200px;"/></a>
+          </div>
 
-            <section>
-                <h1>公開行事や同窓会などのお知らせ</h1>
-            </section>
+          <div id="actcoin_event" style="background:linear-gradient(to top, rgba(217, 175, 217, 0.7) 0%, rgba(151, 217, 225, 0.7) 100%),url('../images/aozora_programming.png');background-attachment: fixed;background-size:100%;background-position: right center;text-align:center;padding:100px;">
+            <a href="https://actcoin.jp/project/detail.php?id=600" alt="actcoin" title="actcoin" target="_blank"><img src="../images/aozora_programming.png" style="width:100%;max-width:600px;"/></a>
+          </div>
 
-        </aside>
+          <div style="background-color:rgba(5,5,150,1.0);">
 
-        <footer>
-          <section>
-            <h1>公開行事や同窓会などのお知らせ</h1>
+              <h1 class="title py20x40">コンテンツ</h1>
+
+              <section style="background-color:rgba(5,5,5,0.4);">
+
+                      <script>
+                      var baseDir = "../";
+                      var imgDir = "../img/";
+                      for (var snh = 0;snh < sideNavMenus.length;snh++) {
+                        var headerInfo = sideNavMenus[snh].header;
+                        document.write('<section>');
+                        document.write('<h1 class="title">');
+                        document.write('<span class="side_title">');
+                        document.write(headerInfo.title);
+                        document.write('</span>');
+                        document.write('</h1>');
+                        var menuItems = sideNavMenus[snh].items;
+                        for (var snm = 0;snm < menuItems.length;snm++) {
+                          var menuItem = menuItems[snm];
+                          document.write('<article class="');
+                          if (menuItem.hidden == true) {
+          document.write(' display_none');
+                          }
+                          document.write('">');
+                          var itemHrefURL = baseDir + menuItem.href;
+                          if (!itemHrefURL) {
+          itemHrefURL = "#";
+                          }
+                          document.write('<a href="');
+                          document.write(itemHrefURL);
+                          document.write('">');
+                          document.write('<h3 class="">');
+                          document.write('<span class="side_title">');
+                          document.write(menuItem.title);
+                          document.write('</span>');
+                          document.write('</h3>');
+                          document.write('</a>');
+                          document.write('</article>');
+                        }
+                        document.write('</section>');
+                        document.write('<br />');
+                      }
+                    </script>
+
+                    <section name="github">
+                      <h1>Github</h1>
                       <p>
-              IT／WEBエンジニアに特化した学習サイト「Hello World!!」。 プログラミングスキルチェックであなたのプログラミング力をみんなでチェックすることを目的にしていきます。<br />
-              自分の学習のチェックをアウトプット可視化し、スキルも含めみんなでチェックしていけばいくほど、現場とほぼ同じスキルをマスターしていけるという無料コンテンツです。<br />
-              これからIT／WEBエンジニアとして就職や転職をしたいと思っている方には、かなり有利になる画期的なサービスです。<br />
-              さらに、プログラミング初心者向けの学習方法として、それぞれのプロフィール（紹介ページ）を作成して、自分自身のポートフォリオを作成していくことも目的にしていくので<br />
-              みんなのスキルやみんなの成長がみんなで確認できるのである種成長ゲームのようにコンテンツを活用してほしいと思います。<br />
+                          <a href="https://techacademy.jp/magazine/6235">https://techacademy.jp/magazine/6235</a>
                       </p>
-          </section>
-            <nav id="footer-nav">
-                <ul>
-                    <li><a href="outline.html"><h4>幼稚園の概要</h4></a></li>
-                    <li><a href="schedule.html"><h4>スケジュール</h4></a></li>
-                    <li><a href="facility.html"><h4>施設</h4></a></li>
-                    <li><a href="map.html"><h4>アクセス</h4></a></li>
-                    <li><a href="help.html"><h4>子育ての支援</h4></a></li>
-                    <li><a href="voice.html"><h4>保護者の声</h4></a></li>
-                    <li><a href="assessment.html"><h4>幼稚園の学校評価</h4></a></li>
-                    <li><a href="subsidy.html"><h4>補助制度</h4></a></li>
-                    <li><a href="recruitment.html"><h4>園児募集</h4></a></li>
-                </ul>
-            </nav>
+                    </section>
+                    <section>
+                        <p>各種プログラミングの学習ページを生やしていきます。</p>
+                    </section>
 
-            <hr class="clearline">
 
-            <section class="float-left30">
-                <h2>Hello World!!のサービス</h2>
+                  <section>
+                      <p>様々なジャンルでみんなでチェックして、コードを見てもらう習慣を Githubの良さはいつでもどこでもネットで見れます。</p>
+                  </section>
 
-                <!--Hello World!!新卒 就職先<br /-->
-                <!--コードで採用！プログラミング就活<br /-->
-                <!--Hello World!!転職<br /-->
-                <!--コードを書いてシゴト選び<br /-->
-                <!--スキルを磨くシゴト選び<br /-->
-                <h4>Hello World!!ラーニング</h4>
-                課題は、希望者と話して決めていきます。みんなで学ぶ<br />
-                <h4>Hello World!!</h4>
-                プログラミング実行 環境<br />
-                <a href="https://github.com/TeamSunstripe/HelloWorld" target="_blank">Hello World!! Github</a><br />
+            <aside>
+                  <section>
+                      <h1 class="title">Issues で みんなからアドバイス!!</h1>
+                      <p>あなたのIssues を作って、週の目的を明確に決めていきます。</p>
+                  </section>
+
+                  <section>
+                      <h1 class="title">PullRequests でみんなからコードチェック!!</h1>
+                      <p>あなたのコードをみんなでコードレビュー、問題解決やコードの見方</p>
+                  </section>
+
+                  <section>
+                      <h1 class="title">まずはじめに</h1>
+                      <p>自分のブランチを切って、自分のフォルダーで作業してください。 それぞれのフォルダーはこちらで管理していくので、他人のフォルダーを消すのはNGです。 まずは、プロフィールページを作成していきましょう！！</p>
+                  </section>
+
+
+                  <section>
+                      <h1 class="title">プログラミング学習のルーティン</h1>
+                      <ul>
+                      <li>（1）プログラミング 定義・用語・規則 を学びます</li>
+                      <li>（2）プログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
+                      <li>（3）プログラミング Githubの使い方を駆使し、コードの書き方に注意しつつ、自分のコードを、みんなでチェック、コードレビューを学ぼう</li>
+                      <li>（4）プログラミング 発展：支援活動リフレッシュなども学びます。求職活動、サービス展開へのステップアップ、ビジネス展開へのステップアップ</li>
+                      <li>（5）プログラミング プログラミング の　まとめ</li>
+                      </ul>
+                      <p>これの繰り返し(2)へ</p>
+                  </section>
+
+                  <section>
+                      <h1 class="title">ブログラミング学習のルーティン</h1>
+                      <ul>
+                      <li>（1）ブログラミング 定義・用語・規則 を学びます</li>
+                      <li>（2）ブログラミング 目標設定・目標成果・SNS(Twitter)への発信 を学びます</li>
+                      <li>（3）ブログラミング 苦労したことなど note、Qiita にまとめてここで学んだことを自分なりにまとめます</li>
+                      <li>（4）ブログラミング 学んだことを、まとめて発信して動画配信などをアップしていきましょう</li>
+                      <li>（5）ブログラミング ブログラミング の　まとめ</li>
+                      </ul>
+                      <p>これの繰り返し(2)へ</p>
+                  </section>
+              </aside>
+
+              <aside>
+
+                  <section>
+                      困ったらここにつぶやこう！ プログラミングSOS
+                      <br />
+                      <br />
+                      基本的なルールは、全世代問わず トラブルのないように！！ 心配りをご協力お願いいたします。
+                      <br />
+                      <br />
+                      完全公開にしているのでシェアしたものに関しては、みんなのものになるので、個人情報やコンプライアンスを注意をお願いいたします。
+                  </section>
+
+              </aside>
+
             </section>
-            <section class="float-center40">
-                <h2>みんなが作ったコンテンツ</h2>
+              <hr style="clear:both;"/>
+            </div>
 
-                <h2>みんなが作ったコンテンツ</h2>
-                    Hello World!!とは<br />
-                    Hello World!! 運営サークル<br />
-                <!--サイトマップ<br /-->
-                <br />
-                    <a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
-                    <br />
-                <!--中途求人掲載はこちら<br /-->
-                <!--新卒求人掲載はこちら<br /-->
-                <br />
-                <h4>ブログ・SNS</h4>
-                <br />
-                <a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
-                THE メディア
-                <a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
-                <br />
-            </section>
-            <section class="float-right30">
-              a
-            </section>
-            <hr class="clearline">
-            <h5 style="text-align: center;">(C) <a rel="author" href="https://qiita.com/sunstripe2011" target="_blank">サンストライプ</a>(<a href="https://note.com/thecardgame/n/nbb2aab3e8ae6" target="_blank">プログラミング道の駅</a>) 2020.02.29<br />○○○○幼稚園 〒000-0000 住所名</h5>
-        </footer>
+            <section style="background-color:orange;">
+              <aside class="aside-list">
+                  <h1 class="title">記事一覧</h1>
+                  <article style="background-color:white;padding:20px;">
+                  <p>みんながおすすめするブログ・ツール</p>
+                  </article>
 
-    </body>
-</html>
+                  <h3 class="title">ツール一覧</h3>
+
+                  <article style="background-color:white;padding:20px;">
+                  <h2>#Progate　プログラミングの基礎を勉強したい方へ</h2>
+                  <span>2020.02.29</span>
+                  <a href="https://prog-8.com/" target="_blank">#Progate</a>
+                  </article>
+
+                  <article style="background-color:white;padding:20px;">
+                      <h2>note.com　ブログを発信したい方へ</h2>
+                      <span>2020.02.29</span>
+                      <a href="https://note.com/" target="_blank">note.com</a>
+                  </article>
+
+                  <article style="background-color:white;padding:20px;">
+                      <h2>qiita.com　IT技術などの知識を発信したい方へ</h2>
+                      <span>2020.02.29</span>
+                      <a href="https://qiita.com/" target="_blank">qiita.com</a>
+                  </article>
+
+                  <h1 class="title">参加者メンバー 一覧</h1>
+
+                  <article style="background-color:white;padding:20px;">
+                  <h2>THE メディア（代表：大熊 月）</h2>
+                  <span>2020.02.29 - </span>
+                  <a href="https://twitter.com/sunstripe2011" target="_blank"><p>頑張るプログラマーを応援したい</p></a>
+                  </article>
+
+              </aside>
+
+              <aside id="news" class="aside-list">
+                <h2 class="title">公開行事や同窓会などのお知らせ</h2>
+                <article style="background-color:white;padding:20px;">
+                  <a href="https://note.com/thecardgame/n/n2f8ef482ed9a" target="_blank"><p>第７回青空プログラミング</p></a>
+                </article>
+
+                <article style="background-color:white;padding:20px;">
+                  <a href="https://actcoin.jp/project/detail.php?id=600" target="_blank"><p>青空プログラミング</p></a>
+                </article>
+              </aside>
+
+            </section>
+              <footer>
+                <section style="background-color:black;color:white;">
+                  <h1 class="title">サンストライプのお知らせ</h1>
+                  <p>
+                    IT／WEBエンジニアに特化した学習サイト「Hello World!!」。 プログラミングスキルチェックであなたのプログラミング力をみんなでチェックすることを目的にしていきます。<br />
+                    自分の学習のチェックをアウトプット可視化し、スキルも含めみんなでチェックしていけばいくほど、現場とほぼ同じスキルをマスターしていけるという無料コンテンツです。<br />
+                    これからIT／WEBエンジニアとして就職や転職をしたいと思っている方には、かなり有利になる画期的なサービスです。<br />
+                    さらに、プログラミング初心者向けの学習方法として、それぞれのプロフィール（紹介ページ）を作成して、自分自身のポートフォリオを作成していくことも目的にしていくので<br />
+                    みんなのスキルやみんなの成長がみんなで確認できるのである種成長ゲームのようにコンテンツを活用してほしいと思います。<br />
+                  </p>
+                </section>
+
+                  <hr class="clearline">
+                  <div id="site-map">
+                  <section class="float-left30 height_max">
+                      <h2 class="title">サービス</h2>
+
+                      <h4>Hello World!!ラーニング</h4>
+                      課題は、希望者と話して決めていきます。みんなで学ぶ<br />
+                      <h4>Hello World!!</h4>
+                      プログラミング実行 環境<br />
+                      <a href="https://github.com/TeamSunstripe/HelloWorld" target="_blank">Hello World!! Github</a><br />
+                  </section>
+                  <section class="float-center40 height_max">
+                      <h2 class="title">みんなが作ったコンテンツ</h2>
+
+                      <h2>みんなが作ったコンテンツ</h2>
+                          Hello World!!とは<br />
+                          Hello World!! 運営サークル<br />
+                      <br />
+                          <a href="https://twitter.com/sunstripe2011" target="_blank">ご担当者様へ</a><br />
+                          <br />
+                      <br />
+                      <h4>ブログ・SNS</h4>
+                      <br />
+                      <a href="https://note.com/thecardgame" target="_blank">Hello World!! 開発日誌(note.com)</a><br />
+                      THE メディア
+                      <a href="https://twitter.com/sunstripe2011" target="_blank">Twitter</a><br />
+
+                  </section>
+                  <section class="float-right30 height_max">
+                    <h1 class="title">カスタマーサポート</h1>
+                    <p>返信が必要な場合はこちら</p>
+                    <button style="width:100%" onclick="alert('ただいま工事中');">お問い合わせ</button>
+                    <p>サンストライプへのご意見・ご要望をお聞かせください</p>
+                    <textarea style="width:100%;height:400px;" >サービスへのご意見、ご要望をお聞かせください。ご意見・ご要望に返信できないことをあらかじめご了承ください。</textarea>
+                    <button style="width:100%;height:50px;" class="button" onclick="alert('ただいま工事中');">送信する</button>
+                  </section>
+                  </div>
+
+                  <hr class="clearline">
+
+                        <style>
+                        #links-list {
+                          background-color: black;
+                          height: 100%;
+                        }
+                        #links-list a{
+                          color: white;
+                        }
+                        .float-center30 {
+                          float:left;
+                          width:20%;
+                          background-color: black;
+                        }
+                        .float-right40 {
+                          float:right;
+                          width:30%;
+                          background-color: black;
+                        }
+                        </style>
+                  <div id="links-list">
+                    <script>
+
+                    </script>
+                  <section class="float-left30 height_max">
+
+                    <script>
+
+                    var a_links_list = [
+                        {
+                          title:"Qiita@sunstripe2011",
+                          href:"https://qiita.com/sunstripe2011",
+                        },
+                        {
+                          title:"THE CARD GAMEマガジン",
+                          href:"https://note.com/thecardgame"
+                        },
+                    ];
+                      displayList(a_links_list);
+                    </script>
+
+                  </section>
+                  <section class="float-center30 height_max">
+                    <script>
+
+                    var b_links_list = [
+                        {
+                          title:"プログラミング",
+                          href:"https://note.com/thecardgame/m/m5511291011ae",
+                        },
+                        {
+                          title:"青空プログラミング",
+                          href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1220739",
+                        },
+                        {
+                          title:"シェアプログラミング",
+                          href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1274188",
+                        },
+                        {
+                          title:"プログラミング道の駅",
+                          href:"https://note.com/thecardgame/m/m5511291011ae/hashtag/1240438",
+                        },
+                        {
+                          title:"ブログラミング",
+                          href:"https://note.com/thecardgame/m/mcc8f5da850af"
+                        },
+                        {
+                          title:"THE メディアマガジン",
+                          href:"https://note.com/thecardgame/m/ma9eb41a913e2"
+                        },
+                    ];
+                      displayList(b_links_list);
+
+                    </script>
+                  </section>
+                  <section class="float-right40 height_max">
+                    <script>
+                    var c_links_list = [
+                        {
+                          title:"分野別",
+                          href:"#分野別",
+                        },
+                        {
+                          title:"政治・外交",
+                          href:"#政治・外交",
+                        },
+                        {
+                          title:"経済・ビジネス",
+                          href:"#経済・ビジネス",
+                        },
+                        {
+                          title:"国際",
+                          href:"#国際",
+                        },
+                        {
+                          title:"社会",
+                          href:"#社会"
+                        },
+                        {
+                          title:"文化",
+                          href:"#文化"
+                        },
+                        {
+                          title:"技術",
+                          href:"#技術"
+                        },
+                        {
+                          title:"暮らし",
+                          href:"#暮らし"
+                        },
+                        {
+                          title:"スポーツ",
+                          href:"#スポーツ"
+                        },
+                        {
+                          title:"エンタメ",
+                          href:"#エンタメ"
+                        },
+                        {
+                          title:"環境",
+                          href:"#環境"
+                        },
+                        {
+                          title:"仕事・労働",
+                          href:"#仕事・労働"
+                        },
+                        {
+                          title:"家族・家庭",
+                          href:"#家族・家庭"
+                        },
+                        {
+                          title:"健康・医療",
+                          href:"#健康・医療"
+                        },
+                        {
+                          title:"歴史",
+                          href:"#歴史"
+                        },
+                    ];
+                    displayList(c_links_list);
+                              </script>
+                  </section>
+                  <hr class="clearline">
+                  </div>
+
+                  <hr class="clearline">
+                  <div style="background-color:white;color:rgba(0,0,0,0.8);">
+                    <h2 style="text-align:center;">SDGs:持続可能な開発目標</h2>
+                <script>
+                  baseDir = "../";
+                  imgDir = "../images/";
+                  var d_links_list = [
+                      {
+                        title:"プログラミング",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-01.png",
+                      },
+                      {
+                        title:"青空プログラミング",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-02.png",
+                      },
+                      {
+                        title:"シェアプログラミング",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-03.png",
+                      },
+                      {
+                        title:"プログラミング道の駅",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-04.png",
+                      },
+                      {
+                        title:"ブログラミング",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-05.png",
+                      },
+                      {
+                        title:"THE メディアマガジン",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-06.png",
+                      },
+                      {
+                        title:"プログラミング",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-07.png",
+                      },
+                      {
+                        title:"青空プログラミング",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-08.png",
+                      },
+                      {
+                        title:"シェアプログラミング",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-09.png",
+                      },
+                      {
+                        title:"プログラミング道の駅",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-10.png",
+                      },
+                      {
+                        title:"ブログラミング",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-11.png",
+                      },
+                      {
+                        title:"THE メディアマガジン",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-12.png",
+                      },
+                      {
+                        title:"シェアプログラミング",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-13.png",
+                      },
+                      {
+                        title:"プログラミング道の駅",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-14.png",
+                      },
+                      {
+                        title:"ブログラミング",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-15.png",
+                      },
+                      {
+                        title:"THE メディアマガジン",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-16.png",
+                      },
+                      {
+                        title:"THE メディアマガジン",
+                        title_hidden:true,
+                        href:"https://note.com/thecardgame/n/n1a90519ef19e",
+                        img: imgDir + "sdg-ja-17.png",
+                      },
+
+                  ];
+                  displayListWithTag({start:'<span>',end:'</span>'},d_links_list);
+                </script>
+                <img src="../images/sdgs_logo.png" style="width:calc(100%);max-width:calc(210px);margin:0 auto;"/>
+                <h4 style="text-align:center;">私たちは、積極的に活動に参加していきます</h4>
+                <hr class="clearline">
+              </div>
+                  <hr class="clearline">
+                  <h5 style="text-align: center;">(C) <a rel="author" href="https://qiita.com/sunstripe2011" target="_blank">サンストライプ</a>(<a href="https://note.com/thecardgame/n/nbb2aab3e8ae6" target="_blank">プログラミング道の駅</a>) 2020.02.29<br /></h5>
+              </footer>
+
+          </body>
+          </html>
